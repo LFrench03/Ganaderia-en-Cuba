@@ -4,4 +4,4 @@ Integrantes:
 * Jessica
 * Yulia Karla
 * Luis Ernesto Serras Rimada
-[](https://github.com/LFrench03/Proyecto_Final/blob/main/data/img/cow.jpeg)
+![A](https://github.com/LFrench03/Proyecto_Final/blob/main/data/img/cow.jpeg)
