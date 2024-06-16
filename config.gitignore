@@ -1,0 +1,8 @@
+#Carpeta source
+sources
+#Env
+.env
+#Txt
+*.txt
+#Cache
+.sass-cache
