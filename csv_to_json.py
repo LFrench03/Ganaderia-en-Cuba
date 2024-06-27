@@ -17,7 +17,7 @@ def csv_to_json(ruta_csv, ruta_json):
     except Exception as e:
         print(f"Error al procesar el archivo CSV: {e}")
 #Prueba:
-ruta_csv = "data/csv/porcino/9.21-entregas-a-sacrificio-de-ganado-porcino.csv"
+ruta_csv = "data/csv/vacuno/9.16-existencia-de-ganado-vacuno-segun-sexo-y-categorias-en-diciembre-31-.csv"
 ruta_json = 'result.json'
 csv_to_json(ruta_csv,ruta_json)
 
