@@ -1,0 +1,26 @@
+[[pages]]
+path = "Inicio.py"
+name = "Inicio"
+icon = "🏠"
+
+[[pages]]
+path = "Existencia.py"
+name = "Existencia Ganado"
+icon = ":cow:"
+
+[[pages]]
+path = "Nacimientos_Muertes.py"
+name = "Nacimientos/Muertes"
+icon = ":restroom:"
+
+[[pages]]
+path = "Rendimiento_Produccion.py"
+name = "Rendimiento Produccion"
+icon = ":tractor:"
+
+[[pages]]
+path = "Metodologia.py"
+name = "Metodologia"
+icon = "🧰"
+
+url_path = "DataPecuario"

@@ -1,0 +1,41 @@
+[[pages]]
+path = "Inicio.py"
+name = "Inicio"
+icon = "🏠"
+
+[[pages]]
+name = "Ganado"
+icon = ":cow:"
+is_section = true
+
+[[pages]]
+path = "Existencia.py"
+name = "Existencia"
+icon = ":hearts:"
+
+[[pages]]
+path = "Nacimientos_Muertes.py"
+name = "Nacimientos/Muertes"
+icon = ":restroom:"
+
+[[pages]]
+name = "Producción"
+icon = ":glass_of_milk:"
+is_section = true
+
+[[pages]]
+path = "Rendimiento_Produccion.py"
+name = "Rendimiento"
+icon = ":tractor:"
+
+[[pages]]
+name = "Info"
+icon = ":information_source:"
+is_section = true
+
+[[pages]]
+path = "Metodologia.py"
+name = "Metodologia"
+icon = "🧰"
+
+url_path = "DataPecuario"
