@@ -16,13 +16,16 @@ produccion_leche_total = data["vacuno"]["Indicadores produccion leche"]["Producc
 produccion_leche_estatal = data["vacuno"]["Indicadores produccion leche"]["Produccion(Mt)"]["Estatal"]
 produccion_leche_NOestatal = data["vacuno"]["Indicadores produccion leche"]["Produccion(Mt)"]["No Estatal"]
 
-produccionDF = pd.DataFrame({
-    "Total": produccion_leche_total,
+produccionDF = pd.DataFrame({  
     "Estatal": produccion_leche_estatal,
-    "No Estatal": produccion_leche_NOestatal
+    "No Estatal": produccion_leche_NOestatal,
+    "Total": produccion_leche_total
 })
 
+
+
 produccionDF = produccionDF.apply(pd.to_numeric)
+
 
 fig = px.area(produccionDF)
 fig.update_layout(width=800, height=600, 
@@ -32,6 +35,7 @@ fig.update_layout(width=800, height=600,
                     title=dict(text="Producción")
                    )
                  )
+
 
 st.plotly_chart(fig)
 
@@ -48,9 +52,9 @@ for year in cabra_leche_total:
         cabra_NOestatal[year] = round(float(cabra_leche_total[year]) - float(cabra_estatal[year]), 1)
 
 cabraE_NE = pd.DataFrame({
-    "Total": cabra_leche_total,
     "Estatal": cabra_estatal,
-    "No Estatal": cabra_NOestatal
+    "No Estatal": cabra_NOestatal,
+    "Total": cabra_leche_total,
 })
 
 cabraE_NE = cabraE_NE.apply(pd.to_numeric)
@@ -65,4 +69,27 @@ fig.update_layout(width=800, height=600,
                  )
 st.plotly_chart(fig)
 
+
+
+#Vaca vs Cabra
+st.header("¿Qué tipo de leche se ha producido más a lo largo de los años en Cuba?")  
+vaca_cabra = pd.DataFrame({  
+    "Leche de vaca": produccion_leche_total,
+    "Leche de cabra": cabra_leche_total    
+})
+
+
+vaca_cabra = vaca_cabra.apply(pd.to_numeric)
+
+fig = px.line(vaca_cabra)
+fig.update_layout(width=800, height=600, 
+                   yaxis_title = "Cantidad", xaxis_title = "Años", 
+                   title = "Comparación de la producción de leche de vaca y leche de cabra ",
+                   
+                   legend=dict(
+                    title=dict(text="Tipo")
+                   )
+                   
+                 )
+st.plotly_chart(fig)
 
