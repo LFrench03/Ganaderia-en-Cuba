@@ -5,7 +5,7 @@ icon = "🏠"
 
 [[pages]]
 name = "Ganado"
-icon = ":cow:"
+icon = "🐾"
 is_section = true
 
 [[pages]]
@@ -20,8 +20,23 @@ icon = ":restroom:"
 
 [[pages]]
 name = "Producción"
-icon = ":glass_of_milk:"
+icon = "🏭"
 is_section = true
+
+[[pages]]
+path = "Leche.py"
+name = "Producción de leche"
+icon = ":glass_of_milk:"
+
+[[pages]]
+path = "Ordenno.py"
+name = "Ganado de Ordeño"
+icon = "🐮"
+
+[[pages]]
+path = "Huevos.py"
+name = "Producción de huevos"
+icon = "🥚"
 
 [[pages]]
 path = "Rendimiento_Produccion.py"
