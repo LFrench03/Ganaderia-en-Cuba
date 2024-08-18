@@ -95,22 +95,22 @@ list(val)
 
 opciones2 = st.select_slider("  ",[x for x in range (1993,2012)])
 
-
+  
 def crear_grafica(year):
-    
+        
     fig = px.bar(ordenno_cabras_vacasDF.loc[str(year)])
-    fig.update_layout(width=600, height=600, 
-                   yaxis_title = "Cantidad", xaxis_title = "Tipo de ganado",             
-                   legend=dict(
+    fig.update_layout( 
+                yaxis_title = "Cantidad", xaxis_title = "Tipo de ganado",             
+                legend=dict(
                     title=dict(text="Año")
-                   )   ,
-                   showlegend=False
-                 )
-    fig.update_traces(width=0.4,
-                      marker_line_color="black",
-                      marker_line_width=1.5, opacity=0.6)
+                )   ,
+                showlegend=False
+                )
+    fig.update_traces(width=0.3,
+                    marker_line_color="black",
+                    marker_line_width=1.5, opacity=0.6)
     fig.data[0].marker.color = ["#AF8F6F", "#A9A9A9"]
-    
+        
     return fig  
 
 
