@@ -10,6 +10,4 @@ st.write("Existencia")
 with open('inventario_ganado.json',encoding="utf8") as json_data: 
     data = json.load(json_data)  
     
-df = pd.DataFrame(data)
-print(df)
-st.bar_chart(df[Total].keys())
+

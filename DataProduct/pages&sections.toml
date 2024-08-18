@@ -35,8 +35,8 @@ icon = "🐮"
 
 [[pages]]
 path = "Huevos.py"
-name = "Producción de huevos"
-icon = "🥚"
+name = "Producción avícola"
+icon = "🐔"
 
 [[pages]]
 path = "Rendimiento_Produccion.py"

@@ -27,7 +27,7 @@ produccionDF = pd.DataFrame({
 produccionDF = produccionDF.apply(pd.to_numeric)
 
 
-fig = px.area(produccionDF,markers=True)
+fig = px.area(produccionDF,markers=True,color_discrete_sequence=px.colors.qualitative.Pastel1)
 fig.update_layout(width=800, height=600, 
                    yaxis_title = "Cantidad", xaxis_title = "Años", 
                    title = "Producción de leche de vaca (Total)",
@@ -59,7 +59,7 @@ cabraE_NE = pd.DataFrame({
 
 cabraE_NE = cabraE_NE.apply(pd.to_numeric)
 
-fig = px.area(cabraE_NE,markers=True)
+fig = px.area(cabraE_NE,markers=True,color_discrete_sequence=px.colors.qualitative.Pastel1)
 fig.update_layout(width=800, height=600, 
                    yaxis_title = "Cantidad", xaxis_title = "Años", 
                    title = "Producción de leche de cabra (Total)",
@@ -81,7 +81,7 @@ vaca_cabra = pd.DataFrame({
 
 vaca_cabra = vaca_cabra.apply(pd.to_numeric)
 
-fig = px.line(vaca_cabra,markers=True)
+fig = px.line(vaca_cabra,markers=True,color_discrete_sequence=px.colors.qualitative.Pastel1)
 fig.update_layout(width=800, height=600, 
                    yaxis_title = "Cantidad", xaxis_title = "Años", 
                    title = "Comparación de la producción de leche de vaca y leche de cabra ",
@@ -92,4 +92,5 @@ fig.update_layout(width=800, height=600,
                    
                  )
 st.plotly_chart(fig)
+
 
