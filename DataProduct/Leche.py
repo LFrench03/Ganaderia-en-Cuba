@@ -17,9 +17,9 @@ with tab1:
     #Leche de vaca (Total)   
     st.header("Producción de leche de vaca en Cuba (1989-2022)")   
 
-    produccion_leche_total = data["vacuno"]["Indicadores produccion leche"]["Produccion(Mt)"]["Total"]
-    produccion_leche_estatal = data["vacuno"]["Indicadores produccion leche"]["Produccion(Mt)"]["Estatal"]
-    produccion_leche_NOestatal = data["vacuno"]["Indicadores produccion leche"]["Produccion(Mt)"]["No Estatal"]
+    produccion_leche_total = data["vacuno"]["Indicadores produccion leche"]["Produccion(Miles de litros)"]["Total"]
+    produccion_leche_estatal = data["vacuno"]["Indicadores produccion leche"]["Produccion(Miles de litros)"]["Estatal"]
+    produccion_leche_NOestatal = data["vacuno"]["Indicadores produccion leche"]["Produccion(Miles de litros)"]["No Estatal"]
 
     produccionDF = pd.DataFrame({  
         "Estatal": produccion_leche_estatal,
@@ -48,8 +48,8 @@ with tab1:
     #Leche de cabra (Total)   
     st.header("Producción de leche de cabra en Cuba (1993-2011)")   
 
-    cabra_leche_total = data["ovino_caprino"]["Produccion de leche"]["Produccion de leche"]["Total"]
-    cabra_estatal = data["ovino_caprino"]["Produccion de leche"]["Produccion de leche"]["Estatal"]
+    cabra_leche_total = data["ovino_caprino"]["Produccion de leche"]["Produccion de leche(litros)"]["Total"]
+    cabra_estatal = data["ovino_caprino"]["Produccion de leche"]["Produccion de leche(litros)"]["Estatal"]
     cabra_NOestatal = {}
 
     for year in cabra_leche_total:
@@ -125,7 +125,7 @@ with tab2:
         fig.update_traces(hoverinfo='label+percent', textinfo='value', textfont_size=20,
                     marker=dict(colors=colors, line=dict(color='black', width=1.5)))
         fig.update_layout(
-        title_text="Existencia promedio de vacas de ordeño (Miles por cabeza)",
+        title_text="Existencia promedio de vacas de ordeño (Miles de cabezas)",
         width=1300,  
         height=500,  
         margin=dict(l=100, r=100, t=100, b=100)
@@ -136,8 +136,8 @@ with tab2:
 
 
     #Cabras de ordenno
-    cabra_ordennoT = data["ovino_caprino"]["Produccion de leche"]["Cabras de ordeño"]["Ttotal"]
-    cabra_ordennoE = data["ovino_caprino"]["Produccion de leche"]["Cabras de ordeño"]["Estatal"]
+    cabra_ordennoT = data["ovino_caprino"]["Produccion de leche"]["Cabras de ordeño(Cabezas)"]["Total"]
+    cabra_ordennoE = data["ovino_caprino"]["Produccion de leche"]["Cabras de ordeño(Cabezas)"]["Estatal"]
     cabra_ordennoNE = {}
 
     for year in cabra_ordennoT:
