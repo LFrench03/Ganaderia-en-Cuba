@@ -5,35 +5,13 @@ icon = "🏠"
 
 [[pages]]
 path = "Existencia.py"
-name = "Existencia Ganado"
+name = "Existencia del ganado"
 icon = "🐾"
 
 [[pages]]
-path = "Nacimientos_Muertes.py"
-name = "Nacimientos/Muertes"
-icon = ":restroom:"
-
-[[pages]]
 path = "Leche.py"
-name = "Producción de leche"
-icon = ":glass_of_milk:"
-
-[[pages]]
-path = "Ordenno.py"
-name = "Ganado de Ordeño"
-icon = "🐮"
-
-[[pages]]
-path = "Huevos.py"
-name = "Producción avícola"
-icon = "🐔"
-
-[[pages]]
-path = "Rendimiento_Produccion.py"
-name = "Rendimiento Produccion"
-icon = ":tractor:"
-
-
+name = "Producción ganadera"
+icon = "🏭"
 
 [[pages]]
 path = "Metodologia.py"
