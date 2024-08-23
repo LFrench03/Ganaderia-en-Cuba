@@ -2286,10 +2286,11 @@
             "2019": "",
             "2020": "",
             "2021": "",
-            "2022": ""}
+            "2022": ""
           }
         }
       }
+    }
   },
   "ovino_caprino": {
     "Existencia(Mcabz)": {
@@ -4779,6 +4780,3325 @@
           "2022": "17.2"
         }
       }
+    }
+  },
+  "Instituciones": {
+    "Tenientes de tierras": {
+      "2012": {
+        "Cuba": {
+          "Total": 4.856,
+          "y Granjas": 931,
+          "UBPC": 1.872,
+          "CPA": 982,
+          "Otros": 1.071
+        },
+        "Pinar del Rio": {
+          "Total": 321.0,
+          "y Granjas": 45,
+          "UBPC": 77.0,
+          "CPA": 75,
+          "Otros": 124
+        },
+        "Artemisa": {
+          "Total": 256.0,
+          "y Granjas": 57,
+          "UBPC": 60.0,
+          "CPA": 28,
+          "Otros": 111
+        },
+        "La Habana": {
+          "Total": 281.0,
+          "y Granjas": 113,
+          "UBPC": 29.0,
+          "CPA": "-",
+          "Otros": 139
+        },
+        "Mayabeque": {
+          "Total": 314.0,
+          "y Granjas": 67,
+          "UBPC": 77.0,
+          "CPA": 35,
+          "Otros": 135
+        },
+        "Matanzas": {
+          "Total": 301.0,
+          "y Granjas": 99,
+          "UBPC": 100.0,
+          "CPA": 60,
+          "Otros": 42
+        },
+        "Villa Clara ": {
+          "Total": 327.0,
+          "y Granjas": 42,
+          "UBPC": 138.0,
+          "CPA": 81,
+          "Otros": 66
+        },
+        "Cienfuegos": {
+          "Total": 219.0,
+          "y Granjas": 40,
+          "UBPC": 85.0,
+          "CPA": 39,
+          "Otros": 55
+        },
+        "Sancti Spiritus": {
+          "Total": 221.0,
+          "y Granjas": 51,
+          "UBPC": 111.0,
+          "CPA": 45,
+          "Otros": 14
+        },
+        "Ciego de Avila": {
+          "Total": 147.0,
+          "y Granjas": 36,
+          "UBPC": 62.0,
+          "CPA": 49,
+          "Otros": "-"
+        },
+        "Camaguey": {
+          "Total": 439.0,
+          "y Granjas": 76,
+          "UBPC": 205.0,
+          "CPA": 96,
+          "Otros": 62
+        },
+        "Las Tunas": {
+          "Total": 293.0,
+          "y Granjas": 58,
+          "UBPC": 122.0,
+          "CPA": 52,
+          "Otros": 61
+        },
+        "Holguin": {
+          "Total": 402.0,
+          "y Granjas": 63,
+          "UBPC": 162.0,
+          "CPA": 119,
+          "Otros": 58
+        },
+        "Granma": {
+          "Total": 515.0,
+          "y Granjas": 68,
+          "UBPC": 211.0,
+          "CPA": 115,
+          "Otros": 121
+        },
+        "Santiago de Cuba": {
+          "Total": 480.0,
+          "y Granjas": 42,
+          "UBPC": 286.0,
+          "CPA": 95,
+          "Otros": 57
+        },
+        "Guantanamo": {
+          "Total": 324.0,
+          "y Granjas": 66,
+          "UBPC": 140.0,
+          "CPA": 92,
+          "Otros": 26
+        },
+        "Isla de la Juventud": {
+          "Total": 16.0,
+          "y Granjas": 8,
+          "UBPC": 7.0,
+          "CPA": 1,
+          "Otros": "-"
+        }
+      },
+
+      "2013": {
+        "Cuba": {
+          "Total": 5.781,
+          "y Granjas": 413,
+          "UBPC": 1.723,
+          "CPA": 914,
+          "CCS (a)": 1.249
+        },
+        "Pinar del Rio": {
+          "Total": 329.0,
+          "y Granjas": 33,
+          "UBPC": 56.0,
+          "CPA": 71,
+          "CCS (a)": 73.0
+        },
+        "Artemisa": {
+          "Total": 284.0,
+          "y Granjas": 24,
+          "UBPC": 72.0,
+          "CPA": 32,
+          "CCS (a)": 51.0
+        },
+        "La Habana": {
+          "Total": 275.0,
+          "y Granjas": 16,
+          "UBPC": 28.0,
+          "CPA": "-",
+          "CCS (a)": 63.0
+        },
+        "Mayabeque": {
+          "Total": 285.0,
+          "y Granjas": 17,
+          "UBPC": 67.0,
+          "CPA": 36,
+          "CCS (a)": 89.0
+        },
+        "Matanzas": {
+          "Total": 332.0,
+          "y Granjas": 27,
+          "UBPC": 93.0,
+          "CPA": 63,
+          "CCS (a)": 64.0
+        },
+        "Villa Clara ": {
+          "Total": 499.0,
+          "y Granjas": 31,
+          "UBPC": 137.0,
+          "CPA": 72,
+          "CCS (a)": 126.0
+        },
+        "Cienfuegos": {
+          "Total": 235.0,
+          "y Granjas": 26,
+          "UBPC": 78.0,
+          "CPA": 32,
+          "CCS (a)": 35.0
+        },
+        "Sancti Spiritus": {
+          "Total": 278.0,
+          "y Granjas": 23,
+          "UBPC": 86.0,
+          "CPA": 54,
+          "CCS (a)": 72.0
+        },
+        "Ciego de Avila": {
+          "Total": 246.0,
+          "y Granjas": 15,
+          "UBPC": 75.0,
+          "CPA": 51,
+          "CCS (a)": 38.0
+        },
+        "Camaguey": {
+          "Total": 503.0,
+          "y Granjas": 39,
+          "UBPC": 175.0,
+          "CPA": 82,
+          "CCS (a)": 132.0
+        },
+        "Las Tunas": {
+          "Total": 335.0,
+          "y Granjas": 22,
+          "UBPC": 143.0,
+          "CPA": 48,
+          "CCS (a)": 54.0
+        },
+        "Holguin": {
+          "Total": 573.0,
+          "y Granjas": 48,
+          "UBPC": 146.0,
+          "CPA": 100,
+          "CCS (a)": 188.0
+        },
+        "Granma": {
+          "Total": 568.0,
+          "y Granjas": 26,
+          "UBPC": 193.0,
+          "CPA": 112,
+          "CCS (a)": 115.0
+        },
+        "Santiago de Cuba": {
+          "Total": 584.0,
+          "y Granjas": 24,
+          "UBPC": 248.0,
+          "CPA": 89,
+          "CCS (a)": 79.0
+        },
+        "Guantanamo": {
+          "Total": 418.0,
+          "y Granjas": 39,
+          "UBPC": 118.0,
+          "CPA": 71,
+          "CCS (a)": 69.0
+        },
+        "Isla de la Juventud": {
+          "Total": 37.0,
+          "y Granjas": 3,
+          "UBPC": 8.0,
+          "CPA": 1,
+          "CCS (a)": 1.0
+        }
+      },
+      "2014": {
+        "Cuba": {
+          "Total": 7.584,
+          "y Granjas": 779,
+          "UBPC": 1.603,
+          "CPA": 984,
+          "CCS (a)": 1.352,
+          "Otros": 2.866
+        },
+        "Pinar del Rio": {
+          "Total": 746.0,
+          "y Granjas": 33,
+          "UBPC": 57.0,
+          "CPA": 71,
+          "CCS (a)": 76.0,
+          "Otros": 509.0
+        },
+        "Artemisa": {
+          "Total": 336.0,
+          "y Granjas": 64,
+          "UBPC": 63.0,
+          "CPA": 30,
+          "CCS (a)": 62.0,
+          "Otros": 117.0
+        },
+        "La Habana": {
+          "Total": 420.0,
+          "y Granjas": 86,
+          "UBPC": 27.0,
+          "CPA": "-",
+          "CCS (a)": 88.0,
+          "Otros": 219.0
+        },
+        "Mayabeque": {
+          "Total": 308.0,
+          "y Granjas": 43,
+          "UBPC": 47.0,
+          "CPA": 29,
+          "CCS (a)": 87.0,
+          "Otros": 102.0
+        },
+        "Matanzas": {
+          "Total": 442.0,
+          "y Granjas": 72,
+          "UBPC": 90.0,
+          "CPA": 60,
+          "CCS (a)": 97.0,
+          "Otros": 123.0
+        },
+        "Villa Clara ": {
+          "Total": 626.0,
+          "y Granjas": 88,
+          "UBPC": 145.0,
+          "CPA": 107,
+          "CCS (a)": 77.0,
+          "Otros": 209.0
+        },
+        "Cienfuegos": {
+          "Total": 243.0,
+          "y Granjas": 37,
+          "UBPC": 73.0,
+          "CPA": 26,
+          "CCS (a)": 34.0,
+          "Otros": 73.0
+        },
+        "Sancti Spiritus": {
+          "Total": 561.0,
+          "y Granjas": 20,
+          "UBPC": 69.0,
+          "CPA": 40,
+          "CCS (a)": 36.0,
+          "Otros": 396.0
+        },
+        "Ciego de Avila": {
+          "Total": 259.0,
+          "y Granjas": 63,
+          "UBPC": 64.0,
+          "CPA": 38,
+          "CCS (a)": 37.0,
+          "Otros": 57.0
+        },
+        "Camaguey": {
+          "Total": 597.0,
+          "y Granjas": 58,
+          "UBPC": 182.0,
+          "CPA": 74,
+          "CCS (a)": 119.0,
+          "Otros": 164.0
+        },
+        "Las Tunas": {
+          "Total": 395.0,
+          "y Granjas": 43,
+          "UBPC": 134.0,
+          "CPA": 86,
+          "CCS (a)": 57.0,
+          "Otros": 75.0
+        },
+        "Holguin": {
+          "Total": 619.0,
+          "y Granjas": 39,
+          "UBPC": 173.0,
+          "CPA": 142,
+          "CCS (a)": 157.0,
+          "Otros": 108.0
+        },
+        "Granma": {
+          "Total": 778.0,
+          "y Granjas": 67,
+          "UBPC": 182.0,
+          "CPA": 96,
+          "CCS (a)": 143.0,
+          "Otros": 290.0
+        },
+        "Santiago de Cuba": {
+          "Total": 623.0,
+          "y Granjas": 30,
+          "UBPC": 225.0,
+          "CPA": 84,
+          "CCS (a)": 67.0,
+          "Otros": 217.0
+        },
+        "Guantanamo": {
+          "Total": 603.0,
+          "y Granjas": 32,
+          "UBPC": 64.0,
+          "CPA": 100,
+          "CCS (a)": 214.0,
+          "Otros": 193.0
+        },
+        "Isla de la Juventud": {
+          "Total": 28.0,
+          "y Granjas": 4,
+          "UBPC": 8.0,
+          "CPA": 1,
+          "CCS (a)": 1.0,
+          "Otros": 14.0
+        }
+      },
+      "2015": {
+        "Cuba": {
+          "Total": 6.61,
+          "y Granjas": 2.133,
+          "UBPC": 1.651,
+          "CPA": 867,
+          "CCS (a)": 1.223,
+          "Otros": 736
+        },
+        "Pinar del Rio": {
+          "Total": 319.0,
+          "y Granjas": 72.0,
+          "UBPC": 69.0,
+          "CPA": 71,
+          "CCS (a)": 81.0,
+          "Otros": 26
+        },
+        "Artemisa": {
+          "Total": 411.0,
+          "y Granjas": 190.0,
+          "UBPC": 63.0,
+          "CPA": 31,
+          "CCS (a)": 64.0,
+          "Otros": 63
+        },
+        "La Habana": {
+          "Total": 287.0,
+          "y Granjas": 108.0,
+          "UBPC": 27.0,
+          "CPA": "-",
+          "CCS (a)": 54.0,
+          "Otros": 98
+        },
+        "Mayabeque": {
+          "Total": 290.0,
+          "y Granjas": 65.0,
+          "UBPC": 62.0,
+          "CPA": 34,
+          "CCS (a)": 88.0,
+          "Otros": 41
+        },
+        "Matanzas": {
+          "Total": 462.0,
+          "y Granjas": 190.0,
+          "UBPC": 91.0,
+          "CPA": 58,
+          "CCS (a)": 62.0,
+          "Otros": 61
+        },
+        "Villa Clara ": {
+          "Total": 432.0,
+          "y Granjas": 109.0,
+          "UBPC": 130.0,
+          "CPA": 72,
+          "CCS (a)": 65.0,
+          "Otros": 56
+        },
+        "Cienfuegos": {
+          "Total": 229.0,
+          "y Granjas": 71.0,
+          "UBPC": 72.0,
+          "CPA": 31,
+          "CCS (a)": 36.0,
+          "Otros": 19
+        },
+        "Sancti Spiritus": {
+          "Total": 300.0,
+          "y Granjas": 32.0,
+          "UBPC": 93.0,
+          "CPA": 55,
+          "CCS (a)": 49.0,
+          "Otros": 71
+        },
+        "Ciego de Avila": {
+          "Total": 580.0,
+          "y Granjas": 379.0,
+          "UBPC": 72.0,
+          "CPA": 50,
+          "CCS (a)": 44.0,
+          "Otros": 35
+        },
+        "Camaguey": {
+          "Total": 489.0,
+          "y Granjas": 85.0,
+          "UBPC": 181.0,
+          "CPA": 64,
+          "CCS (a)": 114.0,
+          "Otros": 45
+        },
+        "Las Tunas": {
+          "Total": 492.0,
+          "y Granjas": 221.0,
+          "UBPC": 119.0,
+          "CPA": 41,
+          "CCS (a)": 57.0,
+          "Otros": 54
+        },
+        "Holguin": {
+          "Total": 619.0,
+          "y Granjas": 95.0,
+          "UBPC": 140.0,
+          "CPA": 105,
+          "CCS (a)": 220.0,
+          "Otros": 59
+        },
+        "Granma": {
+          "Total": 566.0,
+          "y Granjas": 94.0,
+          "UBPC": 182.0,
+          "CPA": 99,
+          "CCS (a)": 137.0,
+          "Otros": 54
+        },
+        "Santiago de Cuba": {
+          "Total": 599.0,
+          "y Granjas": 193.0,
+          "UBPC": 227.0,
+          "CPA": 82,
+          "CCS (a)": 75.0,
+          "Otros": 22
+        },
+        "Guantanamo": {
+          "Total": 508.0,
+          "y Granjas": 223.0,
+          "UBPC": 115.0,
+          "CPA": 73,
+          "CCS (a)": 74.0,
+          "Otros": 23
+        },
+        "Isla de la Juventud": {
+          "Total": 27.0,
+          "y Granjas": 6.0,
+          "UBPC": 8.0,
+          "CPA": 1,
+          "CCS (a)": 3.0,
+          "Otros": 9
+        }
+      },
+      "2016": {
+        "Cuba": {
+          "Total": 6.702,
+          "y Granjas": 1.874,
+          "UBPC": 1.629,
+          "CPA": 879,
+          "CCS (a)": 1.224,
+          "Otros": 1.096
+        },
+        "Pinar del Rio": {
+          "Total": 331.0,
+          "y Granjas": 74.0,
+          "UBPC": 69.0,
+          "CPA": 71,
+          "CCS (a)": 82.0,
+          "Otros": 35.0
+        },
+        "Artemisa": {
+          "Total": 423.0,
+          "y Granjas": 176.0,
+          "UBPC": 66.0,
+          "CPA": 31,
+          "CCS (a)": 59.0,
+          "Otros": 91.0
+        },
+        "La Habana": {
+          "Total": 330.0,
+          "y Granjas": 132.0,
+          "UBPC": 27.0,
+          "CPA": "-",
+          "CCS (a)": 53.0,
+          "Otros": 118.0
+        },
+        "Mayabeque": {
+          "Total": 334.0,
+          "y Granjas": 62.0,
+          "UBPC": 66.0,
+          "CPA": 35,
+          "CCS (a)": 90.0,
+          "Otros": 81.0
+        },
+        "Matanzas": {
+          "Total": 474.0,
+          "y Granjas": 170.0,
+          "UBPC": 89.0,
+          "CPA": 60,
+          "CCS (a)": 63.0,
+          "Otros": 92.0
+        },
+        "Villa Clara ": {
+          "Total": 467.0,
+          "y Granjas": 110.0,
+          "UBPC": 127.0,
+          "CPA": 70,
+          "CCS (a)": 68.0,
+          "Otros": 92.0
+        },
+        "Cienfuegos": {
+          "Total": 233.0,
+          "y Granjas": 64.0,
+          "UBPC": 72.0,
+          "CPA": 30,
+          "CCS (a)": 38.0,
+          "Otros": 29.0
+        },
+        "Sancti Spiritus": {
+          "Total": 359.0,
+          "y Granjas": 87.0,
+          "UBPC": 96.0,
+          "CPA": 57,
+          "CCS (a)": 44.0,
+          "Otros": 75.0
+        },
+        "Ciego de Avila": {
+          "Total": 271.0,
+          "y Granjas": 54.0,
+          "UBPC": 75.0,
+          "CPA": 50,
+          "CCS (a)": 42.0,
+          "Otros": 50.0
+        },
+        "Camaguey": {
+          "Total": 539.0,
+          "y Granjas": 90.0,
+          "UBPC": 165.0,
+          "CPA": 72,
+          "CCS (a)": 123.0,
+          "Otros": 89.0
+        },
+        "Las Tunas": {
+          "Total": 513.0,
+          "y Granjas": 225.0,
+          "UBPC": 117.0,
+          "CPA": 44,
+          "CCS (a)": 60.0,
+          "Otros": 67.0
+        },
+        "Holguin": {
+          "Total": 653.0,
+          "y Granjas": 107.0,
+          "UBPC": 134.0,
+          "CPA": 105,
+          "CCS (a)": 217.0,
+          "Otros": 90.0
+        },
+        "Granma": {
+          "Total": 587.0,
+          "y Granjas": 86.0,
+          "UBPC": 182.0,
+          "CPA": 97,
+          "CCS (a)": 133.0,
+          "Otros": 89.0
+        },
+        "Santiago de Cuba": {
+          "Total": 634.0,
+          "y Granjas": 199.0,
+          "UBPC": 224.0,
+          "CPA": 86,
+          "CCS (a)": 80.0,
+          "Otros": 45.0
+        },
+        "Guantanamo": {
+          "Total": 526.0,
+          "y Granjas": 232.0,
+          "UBPC": 112.0,
+          "CPA": 70,
+          "CCS (a)": 68.0,
+          "Otros": 44.0
+        },
+        "Isla de la Juventud": {
+          "Total": 28.0,
+          "y Granjas": 6.0,
+          "UBPC": 8.0,
+          "CPA": 1,
+          "CCS (a)": 4.0,
+          "Otros": 9.0
+        }
+      },
+      "2017": {
+        "Cuba": {
+          "Total": 8.578,
+          "y granjas": 2.565,
+          "UBPC": 1.691,
+          "CPA": 962,
+          "CCS (a)": 2.306,
+          "Otros": 1.054
+        },
+        "Pinar del Rio": {
+          "Total": 567.0,
+          "y granjas": 311.0,
+          "UBPC": 66.0,
+          "CPA": 71,
+          "CCS (a)": 80.0,
+          "Otros": 39.0
+        },
+        "Artemisa": {
+          "Total": 436.0,
+          "y granjas": 221.0,
+          "UBPC": 53.0,
+          "CPA": 37,
+          "CCS (a)": 53.0,
+          "Otros": 72.0
+        },
+        "La Habana": {
+          "Total": 306.0,
+          "y granjas": 101.0,
+          "UBPC": 26.0,
+          "CPA": "-",
+          "CCS (a)": 56.0,
+          "Otros": 123.0
+        },
+        "Mayabeque": {
+          "Total": 369.0,
+          "y granjas": 99.0,
+          "UBPC": 61.0,
+          "CPA": 38,
+          "CCS (a)": 92.0,
+          "Otros": 79.0
+        },
+        "Matanzas": {
+          "Total": 532.0,
+          "y granjas": 151.0,
+          "UBPC": 95.0,
+          "CPA": 97,
+          "CCS (a)": 114.0,
+          "Otros": 75.0
+        },
+        "Villa Clara": {
+          "Total": 569.0,
+          "y granjas": 150.0,
+          "UBPC": 142.0,
+          "CPA": 93,
+          "CCS (a)": 72.0,
+          "Otros": 112.0
+        },
+        "Cienfuegos": {
+          "Total": 246.0,
+          "y granjas": 83.0,
+          "UBPC": 72.0,
+          "CPA": 44,
+          "CCS (a)": 19.0,
+          "Otros": 28.0
+        },
+        "Sancti Spiritus": {
+          "Total": 351.0,
+          "y granjas": 55.0,
+          "UBPC": 94.0,
+          "CPA": 64,
+          "CCS (a)": 48.0,
+          "Otros": 90.0
+        },
+        "Ciego de Avila": {
+          "Total": 281.0,
+          "y granjas": 79.0,
+          "UBPC": 63.0,
+          "CPA": 50,
+          "CCS (a)": 39.0,
+          "Otros": 50.0
+        },
+        "Camaguey": {
+          "Total": 1.746,
+          "y granjas": 239.0,
+          "UBPC": 248.0,
+          "CPA": 52,
+          "CCS (a)": 1.159,
+          "Otros": 48.0
+        },
+        "Las Tunas": {
+          "Total": 540.0,
+          "y granjas": 248.0,
+          "UBPC": 116.0,
+          "CPA": 44,
+          "CCS (a)": 58.0,
+          "Otros": 74.0
+        },
+        "Holguin": {
+          "Total": 682.0,
+          "y granjas": 122.0,
+          "UBPC": 144.0,
+          "CPA": 115,
+          "CCS (a)": 213.0,
+          "Otros": 88.0
+        },
+        "Granma": {
+          "Total": 808.0,
+          "y granjas": 291.0,
+          "UBPC": 182.0,
+          "CPA": 102,
+          "CCS (a)": 139.0,
+          "Otros": 94.0
+        },
+        "Santiago de Cuba": {
+          "Total": 608.0,
+          "y granjas": 188.0,
+          "UBPC": 208.0,
+          "CPA": 85,
+          "CCS (a)": 94.0,
+          "Otros": 33.0
+        },
+        "Guantanamo": {
+          "Total": 505.0,
+          "y granjas": 219.0,
+          "UBPC": 113.0,
+          "CPA": 69,
+          "CCS (a)": 66.0,
+          "Otros": 38.0
+        },
+        "Isla de la Juventud": {
+          "Total": 32.0,
+          "y granjas": 8.0,
+          "UBPC": 8.0,
+          "CPA": 1,
+          "CCS (a)": 4.0,
+          "Otros": 11.0
+        }
+      }
+    },
+      "Por Provincias": {
+        "2006": {
+          "Cuba": {
+            "Total": " 12 455 ",
+            "Empresas ": " 3 519 ",
+            "Cooperativas": " 6 843 ",
+            "Presupuestadas": " 2 093 "
+          },
+          "Pinar del Rio": {
+            "Total": "  978 ",
+            "Empresas ": "  189 ",
+            "Cooperativas": "  672 ",
+            "Presupuestadas": "  117 "
+          },
+          "La Habana": {
+            "Total": "  671 ",
+            "Empresas ": "  150 ",
+            "Cooperativas": "  430 ",
+            "Presupuestadas": "  91 "
+          },
+          "Ciudad de La Habana": {
+            "Total": " 2 003 ",
+            "Empresas ": " 1 179 ",
+            "Cooperativas": "  220 ",
+            "Presupuestadas": "  604 "
+          },
+          "Matanzas": {
+            "Total": "  661 ",
+            "Empresas ": "  241 ",
+            "Cooperativas": "  306 ",
+            "Presupuestadas": "  114 "
+          },
+          "Villa Clara": {
+            "Total": "  887 ",
+            "Empresas ": "  225 ",
+            "Cooperativas": "  530 ",
+            "Presupuestadas": "  132 "
+          },
+          "Cienfuegos": {
+            "Total": "  587 ",
+            "Empresas ": "  164 ",
+            "Cooperativas": "  320 ",
+            "Presupuestadas": "  103 "
+          },
+          "Sancti Spiritus": {
+            "Total": "  634 ",
+            "Empresas ": "  135 ",
+            "Cooperativas": "  399 ",
+            "Presupuestadas": "  100 "
+          },
+          "Ciego de Avila": {
+            "Total": "  543 ",
+            "Empresas ": "  132 ",
+            "Cooperativas": "  312 ",
+            "Presupuestadas": "  99 "
+          },
+          "Camaguey": {
+            "Total": "  970 ",
+            "Empresas ": "  201 ",
+            "Cooperativas": "  638 ",
+            "Presupuestadas": "  131 "
+          },
+          "Las Tunas": {
+            "Total": "  627 ",
+            "Empresas ": "  124 ",
+            "Cooperativas": "  413 ",
+            "Presupuestadas": "  90 "
+          },
+          "Holguin": {
+            "Total": "  971 ",
+            "Empresas ": "  224 ",
+            "Cooperativas": "  628 ",
+            "Presupuestadas": "  119 "
+          },
+          "Granma": {
+            "Total": "  945 ",
+            "Empresas ": "  153 ",
+            "Cooperativas": "  683 ",
+            "Presupuestadas": "  109 "
+          },
+          "Santiago de Cuba": {
+            "Total": " 1 074 ",
+            "Empresas ": "  228 ",
+            "Cooperativas": "  718 ",
+            "Presupuestadas": "  128 "
+          },
+          "Guantanamo": {
+            "Total": "  806 ",
+            "Empresas ": "  139 ",
+            "Cooperativas": "  544 ",
+            "Presupuestadas": "  123 "
+          },
+          "Isla de la Juventud": {
+            "Total": "  98 ",
+            "Empresas ": "  35 ",
+            "Cooperativas": "  30 ",
+            "Presupuestadas": "  33 "
+          }},
+        "2007": {
+          "Cuba": {
+            "Total": " 12 314 ",
+            "Empresas ": " 3 417 ",
+            "Cooperativas": " 6 683 ",
+            "Presupuestadas": " 2 214 "
+          },
+          "Pinar del Rio": {
+            "Total": "  984 ",
+            "Empresas ": "  182 ",
+            "Cooperativas": "  667 ",
+            "Presupuestadas": "  135 "
+          },
+          "La Habana": {
+            "Total": "  653 ",
+            "Empresas ": "  131 ",
+            "Cooperativas": "  430 ",
+            "Presupuestadas": "  92 "
+          },
+          "Ciudad de La Habana": {
+            "Total": " 1 984 ",
+            "Empresas ": " 1 154 ",
+            "Cooperativas": "  220 ",
+            "Presupuestadas": "  610 "
+          },
+          "Matanzas": {
+            "Total": "  676 ",
+            "Empresas ": "  230 ",
+            "Cooperativas": "  306 ",
+            "Presupuestadas": "  140 "
+          },
+          "Villa Clara": {
+            "Total": "  823 ",
+            "Empresas ": "  204 ",
+            "Cooperativas": "  485 ",
+            "Presupuestadas": "  134 "
+          },
+          "Cienfuegos": {
+            "Total": "  593 ",
+            "Empresas ": "  161 ",
+            "Cooperativas": "  320 ",
+            "Presupuestadas": "  112 "
+          },
+          "Sancti Spiritus": {
+            "Total": "  631 ",
+            "Empresas ": "  136 ",
+            "Cooperativas": "  393 ",
+            "Presupuestadas": "  102 "
+          },
+          "Ciego de Avila": {
+            "Total": "  547 ",
+            "Empresas ": "  128 ",
+            "Cooperativas": "  307 ",
+            "Presupuestadas": "  112 "
+          },
+          "Camaguey": {
+            "Total": "  980 ",
+            "Empresas ": "  199 ",
+            "Cooperativas": "  632 ",
+            "Presupuestadas": "  149 "
+          },
+          "Las Tunas": {
+            "Total": "  615 ",
+            "Empresas ": "  120 ",
+            "Cooperativas": "  395 ",
+            "Presupuestadas": "  100 "
+          },
+          "Holguin": {
+            "Total": "  971 ",
+            "Empresas ": "  224 ",
+            "Cooperativas": "  628 ",
+            "Presupuestadas": "  119 "
+          },
+          "Granma": {
+            "Total": "  890 ",
+            "Empresas ": "  149 ",
+            "Cooperativas": "  632 ",
+            "Presupuestadas": "  109 "
+          },
+          "Santiago de Cuba": {
+            "Total": " 1 068 ",
+            "Empresas ": "  225 ",
+            "Cooperativas": "  712 ",
+            "Presupuestadas": "  131 "
+          },
+          "Guantanamo": {
+            "Total": "  799 ",
+            "Empresas ": "  138 ",
+            "Cooperativas": "  526 ",
+            "Presupuestadas": "  135 "
+          },
+          "Isla de la Juventud": {
+            "Total": "  100 ",
+            "Empresas ": "  36 ",
+            "Cooperativas": "  30 ",
+            "Presupuestadas": "  34 "
+          }
+        },
+        "2008": {
+          "Cuba": {
+            "Total": " 12 462 ",
+            "Empresas ": " 3 356 ",
+            "Cooperativas": " 6 581 ",
+            "Presupuestadas": " 2 525 "
+          },
+          "Pinar del Rio": {
+            "Total": "  984 ",
+            "Empresas ": "  166 ",
+            "Cooperativas": "  654 ",
+            "Presupuestadas": "  164 "
+          },
+          "La Habana": {
+            "Total": "  777 ",
+            "Empresas ": "  177 ",
+            "Cooperativas": "  413 ",
+            "Presupuestadas": "  187 "
+          },
+          "Ciudad de La Habana": {
+            "Total": " 1 916 ",
+            "Empresas ": " 1 082 ",
+            "Cooperativas": "  222 ",
+            "Presupuestadas": "  612 "
+          },
+          "Matanzas": {
+            "Total": "  682 ",
+            "Empresas ": "  226 ",
+            "Cooperativas": "  292 ",
+            "Presupuestadas": "  164 "
+          },
+          "Villa Clara": {
+            "Total": "  825 ",
+            "Empresas ": "  200 ",
+            "Cooperativas": "  485 ",
+            "Presupuestadas": "  140 "
+          },
+          "Cienfuegos": {
+            "Total": "  600 ",
+            "Empresas ": "  158 ",
+            "Cooperativas": "  318 ",
+            "Presupuestadas": "  124 "
+          },
+          "Sancti Spiritus": {
+            "Total": "  654 ",
+            "Empresas ": "  135 ",
+            "Cooperativas": "  394 ",
+            "Presupuestadas": "  125 "
+          },
+          "Ciego de Avila": {
+            "Total": "  555 ",
+            "Empresas ": "  129 ",
+            "Cooperativas": "  304 ",
+            "Presupuestadas": "  122 "
+          },
+          "Camaguey": {
+            "Total": "  975 ",
+            "Empresas ": "  198 ",
+            "Cooperativas": "  618 ",
+            "Presupuestadas": "  159 "
+          },
+          "Las Tunas": {
+            "Total": "  605 ",
+            "Empresas ": "  121 ",
+            "Cooperativas": "  377 ",
+            "Presupuestadas": "  107 "
+          },
+          "Holguin": {
+            "Total": "  980 ",
+            "Empresas ": "  220 ",
+            "Cooperativas": "  628 ",
+            "Presupuestadas": "  132 "
+          },
+          "Granma": {
+            "Total": "  918 ",
+            "Empresas ": "  146 ",
+            "Cooperativas": "  621 ",
+            "Presupuestadas": "  151 "
+          },
+          "Santiago de Cuba": {
+            "Total": " 1 077 ",
+            "Empresas ": "  222 ",
+            "Cooperativas": "  700 ",
+            "Presupuestadas": "  155 "
+          },
+          "Guantanamo": {
+            "Total": "  811 ",
+            "Empresas ": "  139 ",
+            "Cooperativas": "  524 ",
+            "Presupuestadas": "  148 "
+          },
+          "Isla de la Juventud": {
+            "Total": "  103 ",
+            "Empresas ": "  37 ",
+            "Cooperativas": "  31 ",
+            "Presupuestadas": "  35 "
+          }
+        },
+        "2009": {
+          "Cuba": {
+            "Total": " 12 141 ",
+            "Empresas ": " 3 169 ",
+            "Cooperativas": " 6 398 ",
+            "Presupuestadas": " 2 574 "
+          },
+          "Pinar del Rio": {
+            "Total": "  971 ",
+            "Empresas ": "  153 ",
+            "Cooperativas": "  654 ",
+            "Presupuestadas": "  164 "
+          },
+          "La Habana": {
+            "Total": "  692 ",
+            "Empresas ": "  124 ",
+            "Cooperativas": "  414 ",
+            "Presupuestadas": "  154 "
+          },
+          "Ciudad de La Habana": {
+            "Total": " 1 901 ",
+            "Empresas ": " 1 121 ",
+            "Cooperativas": "  124 ",
+            "Presupuestadas": "  656 "
+          },
+          "Matanzas": {
+            "Total": "  638 ",
+            "Empresas ": "  197 ",
+            "Cooperativas": "  277 ",
+            "Presupuestadas": "  164 "
+          },
+          "Villa Clara": {
+            "Total": "  822 ",
+            "Empresas ": "  192 ",
+            "Cooperativas": "  485 ",
+            "Presupuestadas": "  145 "
+          },
+          "Cienfuegos": {
+            "Total": "  591 ",
+            "Empresas ": "  149 ",
+            "Cooperativas": "  318 ",
+            "Presupuestadas": "  124 "
+          },
+          "Sancti Spiritus": {
+            "Total": "  640 ",
+            "Empresas ": "  126 ",
+            "Cooperativas": "  389 ",
+            "Presupuestadas": "  125 "
+          },
+          "Ciego de Avila": {
+            "Total": "  539 ",
+            "Empresas ": "  123 ",
+            "Cooperativas": "  293 ",
+            "Presupuestadas": "  123 "
+          },
+          "Camaguey": {
+            "Total": "  959 ",
+            "Empresas ": "  181 ",
+            "Cooperativas": "  608 ",
+            "Presupuestadas": "  170 "
+          },
+          "Las Tunas": {
+            "Total": "  593 ",
+            "Empresas ": "  110 ",
+            "Cooperativas": "  376 ",
+            "Presupuestadas": "  107 "
+          },
+          "Holguin": {
+            "Total": "  947 ",
+            "Empresas ": "  195 ",
+            "Cooperativas": "  600 ",
+            "Presupuestadas": "  152 "
+          },
+          "Granma": {
+            "Total": "  909 ",
+            "Empresas ": "  136 ",
+            "Cooperativas": "  621 ",
+            "Presupuestadas": "  152 "
+          },
+          "Santiago de Cuba": {
+            "Total": " 1 054 ",
+            "Empresas ": "  210 ",
+            "Cooperativas": "  689 ",
+            "Presupuestadas": "  155 "
+          },
+          "Guantanamo": {
+            "Total": "  783 ",
+            "Empresas ": "  116 ",
+            "Cooperativas": "  519 ",
+            "Presupuestadas": "  148 "
+          },
+          "Isla de la Juventud": {
+            "Total": "  102 ",
+            "Empresas ": "  36 ",
+            "Cooperativas": "  31 ",
+            "Presupuestadas": "  35 "
+          }
+        },
+        "2010": {
+          "Cuba": {
+            "Total": " 11 857 ",
+            "Empresas ": " 3 090 ",
+            "Cooperativas": " 6 253 ",
+            "Presupuestadas": " 2 514 "
+          },
+          "Pinar del Rio": {
+            "Total": "  930 ",
+            "Empresas ": "  148 ",
+            "Cooperativas": "  624 ",
+            "Presupuestadas": "  158 "
+          },
+          "La Habana": {
+            "Total": "  720 ",
+            "Empresas ": "  171 ",
+            "Cooperativas": "  398 ",
+            "Presupuestadas": "  151 "
+          },
+          "Ciudad de La Habana": {
+            "Total": " 1 779 ",
+            "Empresas ": " 1 057 ",
+            "Cooperativas": "  125 ",
+            "Presupuestadas": "  597 "
+          },
+          "Matanzas": {
+            "Total": "  627 ",
+            "Empresas ": "  190 ",
+            "Cooperativas": "  275 ",
+            "Presupuestadas": "  162 "
+          },
+          "Villa Clara": {
+            "Total": "  831 ",
+            "Empresas ": "  180 ",
+            "Cooperativas": "  485 ",
+            "Presupuestadas": "  166 "
+          },
+          "Cienfuegos": {
+            "Total": "  496 ",
+            "Empresas ": "  145 ",
+            "Cooperativas": "  229 ",
+            "Presupuestadas": "  122 "
+          },
+          "Sancti Spiritus": {
+            "Total": "  642 ",
+            "Empresas ": "  123 ",
+            "Cooperativas": "  394 ",
+            "Presupuestadas": "  125 "
+          },
+          "Ciego de Avila": {
+            "Total": "  522 ",
+            "Empresas ": "  106 ",
+            "Cooperativas": "  290 ",
+            "Presupuestadas": "  126 "
+          },
+          "Camaguey": {
+            "Total": "  955 ",
+            "Empresas ": "  177 ",
+            "Cooperativas": "  607 ",
+            "Presupuestadas": "  171 "
+          },
+          "Las Tunas": {
+            "Total": "  597 ",
+            "Empresas ": "  108 ",
+            "Cooperativas": "  377 ",
+            "Presupuestadas": "  112 "
+          },
+          "Holguin": {
+            "Total": "  930 ",
+            "Empresas ": "  193 ",
+            "Cooperativas": "  586 ",
+            "Presupuestadas": "  151 "
+          },
+          "Granma": {
+            "Total": "  893 ",
+            "Empresas ": "  133 ",
+            "Cooperativas": "  611 ",
+            "Presupuestadas": "  149 "
+          },
+          "Santiago de Cuba": {
+            "Total": " 1 046 ",
+            "Empresas ": "  207 ",
+            "Cooperativas": "  691 ",
+            "Presupuestadas": "  148 "
+          },
+          "Guantanamo": {
+            "Total": "  790 ",
+            "Empresas ": "  115 ",
+            "Cooperativas": "  530 ",
+            "Presupuestadas": "  145 "
+          },
+          "Isla de la Juventud": {
+            "Total": "  99 ",
+            "Empresas ": "  37 ",
+            "Cooperativas": "  31 ",
+            "Presupuestadas": "  31 "
+          }
+        },
+        "2011": {
+          "Cuba": {
+            "Total": " 10 963 ",
+            "Empresas ": " 2 697 ",
+            "Cooperativas": " 5 811 ",
+            "Presupuestadas": " 2 455 "
+          },
+          "Pinar del Rio": {
+            "Total": "  675 ",
+            "Empresas ": "  121 ",
+            "Cooperativas": "  420 ",
+            "Presupuestadas": "  134 "
+          },
+          "Artemisa": {
+            "Total": "  415 ",
+            "Empresas ": "  81 ",
+            "Cooperativas": "  248 ",
+            "Presupuestadas": "  86 "
+          },
+          "La Habana": {
+            "Total": " 1 712 ",
+            "Empresas ": " 1 007 ",
+            "Cooperativas": "  124 ",
+            "Presupuestadas": "  581 "
+          },
+          "Mayabeque": {
+            "Total": "  421 ",
+            "Empresas ": "  72 ",
+            "Cooperativas": "  272 ",
+            "Presupuestadas": "  77 "
+          },
+          "Matanzas": {
+            "Total": "  571 ",
+            "Empresas ": "  149 ",
+            "Cooperativas": "  268 ",
+            "Presupuestadas": "  154 "
+          },
+          "Villa Clara": {
+            "Total": "  772 ",
+            "Empresas ": "  155 ",
+            "Cooperativas": "  454 ",
+            "Presupuestadas": "  163 "
+          },
+          "Cienfuegos": {
+            "Total": "  474 ",
+            "Empresas ": "  126 ",
+            "Cooperativas": "  227 ",
+            "Presupuestadas": "  121 "
+          },
+          "Sancti Spiritus": {
+            "Total": "  561 ",
+            "Empresas ": "  101 ",
+            "Cooperativas": "  341 ",
+            "Presupuestadas": "  119 "
+          },
+          "Ciego de Avila": {
+            "Total": "  472 ",
+            "Empresas ": "  97 ",
+            "Cooperativas": "  248 ",
+            "Presupuestadas": "  127 "
+          },
+          "Camaguey": {
+            "Total": "  782 ",
+            "Empresas ": "  131 ",
+            "Cooperativas": "  488 ",
+            "Presupuestadas": "  163 "
+          },
+          "Las Tunas": {
+            "Total": "  622 ",
+            "Empresas ": "  97 ",
+            "Cooperativas": "  414 ",
+            "Presupuestadas": "  111 "
+          },
+          "Holguin": {
+            "Total": "  897 ",
+            "Empresas ": "  175 ",
+            "Cooperativas": "  573 ",
+            "Presupuestadas": "  149 "
+          },
+          "Granma": {
+            "Total": "  836 ",
+            "Empresas ": "  108 ",
+            "Cooperativas": "  583 ",
+            "Presupuestadas": "  145 "
+          },
+          "Santiago de Cuba": {
+            "Total": "  960 ",
+            "Empresas ": "  143 ",
+            "Cooperativas": "  669 ",
+            "Presupuestadas": "  148 "
+          },
+          "Guantanamo": {
+            "Total": "  702 ",
+            "Empresas ": "  102 ",
+            "Cooperativas": "  455 ",
+            "Presupuestadas": "  145 "
+          },
+          "Isla de la Juventud": {
+            "Total": "  91 ",
+            "Empresas ": "  32 ",
+            "Cooperativas": "  27 ",
+            "Presupuestadas": "  32 "
+          }
+        },
+        "2012": {
+          "Cuba": {
+            "Total": " 10 556 ",
+            "Empresas ": " 2 486 ",
+            "Cooperativas": " 5 688 ",
+            "Presupuestadas": " 2 382 "
+          },
+          "Pinar del Rio": {
+            "Total": "  704 ",
+            "Empresas ": "  107 ",
+            "Cooperativas": "  463 ",
+            "Presupuestadas": "  134 "
+          },
+          "Artemisa": {
+            "Total": "  346 ",
+            "Empresas ": "  71 ",
+            "Cooperativas": "  211 ",
+            "Presupuestadas": "  64 "
+          },
+          "La Habana": {
+            "Total": " 1 636 ",
+            "Empresas ": "  943 ",
+            "Cooperativas": "  125 ",
+            "Presupuestadas": "  568 "
+          },
+          "Mayabeque": {
+            "Total": "  393 ",
+            "Empresas ": "  62 ",
+            "Cooperativas": "  272 ",
+            "Presupuestadas": "  59 "
+          },
+          "Matanzas": {
+            "Total": "  544 ",
+            "Empresas ": "  132 ",
+            "Cooperativas": "  259 ",
+            "Presupuestadas": "  153 "
+          },
+          "Villa Clara": {
+            "Total": "  767 ",
+            "Empresas ": "  137 ",
+            "Cooperativas": "  466 ",
+            "Presupuestadas": "  164 "
+          },
+          "Cienfuegos": {
+            "Total": "  446 ",
+            "Empresas ": "  109 ",
+            "Cooperativas": "  218 ",
+            "Presupuestadas": "  119 "
+          },
+          "Sancti Spiritus": {
+            "Total": "  544 ",
+            "Empresas ": "  90 ",
+            "Cooperativas": "  338 ",
+            "Presupuestadas": "  116 "
+          },
+          "Ciego de Avila": {
+            "Total": "  447 ",
+            "Empresas ": "  94 ",
+            "Cooperativas": "  229 ",
+            "Presupuestadas": "  124 "
+          },
+          "Camaguey": {
+            "Total": "  751 ",
+            "Empresas ": "  131 ",
+            "Cooperativas": "  458 ",
+            "Presupuestadas": "  162 "
+          },
+          "Las Tunas": {
+            "Total": "  596 ",
+            "Empresas ": "  77 ",
+            "Cooperativas": "  411 ",
+            "Presupuestadas": "  108 "
+          },
+          "Holguin": {
+            "Total": "  869 ",
+            "Empresas ": "  160 ",
+            "Cooperativas": "  562 ",
+            "Presupuestadas": "  147 "
+          },
+          "Granma": {
+            "Total": "  790 ",
+            "Empresas ": "  105 ",
+            "Cooperativas": "  541 ",
+            "Presupuestadas": "  144 "
+          },
+          "Santiago de Cuba": {
+            "Total": "  951 ",
+            "Empresas ": "  142 ",
+            "Cooperativas": "  661 ",
+            "Presupuestadas": "  148 "
+          },
+          "Guantanamo": {
+            "Total": "  687 ",
+            "Empresas ": "  97 ",
+            "Cooperativas": "  447 ",
+            "Presupuestadas": "  143 "
+          },
+          "Isla de la Juventud": {
+            "Total": "  85 ",
+            "Empresas ": "  29 ",
+            "Cooperativas": "  27 ",
+            "Presupuestadas": "  29 "
+          }
+        },
+        "2013": {
+          "Cuba": {
+            "Total": "10.048",
+            "Empresas ": 2.235,
+            "Sociedades Mercantiles": "237",
+            "Cooperativas": {
+              "CTotal": 5.222,
+              "UBPC": 1.811,
+              "CPA": 909,
+              "CCS": 2.502,
+              "Presupuestadas": 2.354
+            }
+          },
+          "Pinar del Rio": {
+            "Total": " 626",
+            "Empresas ": 106.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 387.0,
+              "UBPC": 77.0,
+              "CPA": 71,
+              "CCS": 239.0,
+              "Presupuestadas": 133.0
+            }
+          },
+          "Artemisa": {
+            "Total": " 341",
+            "Empresas ": 65.0,
+            "Sociedades Mercantiles": " 4",
+            "Cooperativas": {
+              "CTotal": 209.0,
+              "UBPC": 72.0,
+              "CPA": 59,
+              "CCS": 78.0,
+              "Presupuestadas": 63.0
+            }
+          },
+          "La Habana": {
+            "Total": "1 610",
+            "Empresas ": 714.0,
+            "Sociedades Mercantiles": " 225",
+            "Cooperativas": {
+              "CTotal": 123.0,
+              "UBPC": 31.0,
+              "CPA": 1,
+              "CCS": 91.0,
+              "Presupuestadas": 548.0
+            }
+          },
+          "Mayabeque": {
+            "Total": " 398",
+            "Empresas ": 65.0,
+            "Sociedades Mercantiles": " 2",
+            "Cooperativas": {
+              "CTotal": 273.0,
+              "UBPC": 81.0,
+              "CPA": 16,
+              "CCS": 176.0,
+              "Presupuestadas": 58.0
+            }
+          },
+          "Matanzas": {
+            "Total": " 537",
+            "Empresas ": 131.0,
+            "Sociedades Mercantiles": " 1",
+            "Cooperativas": {
+              "CTotal": 252.0,
+              "UBPC": 94.0,
+              "CPA": 62,
+              "CCS": 96.0,
+              "Presupuestadas": 153.0
+            }
+          },
+          "Villa Clara": {
+            "Total": " 738",
+            "Empresas ": 135.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 439.0,
+              "UBPC": 142.0,
+              "CPA": 72,
+              "CCS": 225.0,
+              "Presupuestadas": 164.0
+            }
+          },
+          "Cienfuegos": {
+            "Total": " 421",
+            "Empresas ": 111.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 191.0,
+              "UBPC": 86.0,
+              "CPA": 32,
+              "CCS": 73.0,
+              "Presupuestadas": 119.0
+            }
+          },
+          "Sancti Spiritus": {
+            "Total": " 530",
+            "Empresas ": 91.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 322.0,
+              "UBPC": 104.0,
+              "CPA": 56,
+              "CCS": 162.0,
+              "Presupuestadas": 117.0
+            }
+          },
+          "Ciego de Avila": {
+            "Total": " 444",
+            "Empresas ": 96.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 224.0,
+              "UBPC": 84.0,
+              "CPA": 51,
+              "CCS": 89.0,
+              "Presupuestadas": 124.0
+            }
+          },
+          "Camaguey": {
+            "Total": " 730",
+            "Empresas ": 129.0,
+            "Sociedades Mercantiles": " 1",
+            "Cooperativas": {
+              "CTotal": 438.0,
+              "UBPC": 180.0,
+              "CPA": 84,
+              "CCS": 174.0,
+              "Presupuestadas": 162.0
+            }
+          },
+          "Las Tunas": {
+            "Total": " 466",
+            "Empresas ": 74.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 284.0,
+              "UBPC": 123.0,
+              "CPA": 44,
+              "CCS": 117.0,
+              "Presupuestadas": 108.0
+            }
+          },
+          "Holguin": {
+            "Total": " 838",
+            "Empresas ": 141.0,
+            "Sociedades Mercantiles": " 3",
+            "Cooperativas": {
+              "CTotal": 545.0,
+              "UBPC": 140.0,
+              "CPA": 106,
+              "CCS": 299.0,
+              "Presupuestadas": 149.0
+            }
+          },
+          "Granma": {
+            "Total": " 771",
+            "Empresas ": 107.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 524.0,
+              "UBPC": 189.0,
+              "CPA": 99,
+              "CCS": 236.0,
+              "Presupuestadas": 140.0
+            }
+          },
+          "Santiago de Cuba": {
+            "Total": " 886",
+            "Empresas ": 139.0,
+            "Sociedades Mercantiles": " 1",
+            "Cooperativas": {
+              "CTotal": 600.0,
+              "UBPC": 275.0,
+              "CPA": 85,
+              "CCS": 240.0,
+              "Presupuestadas": 146.0
+            }
+          },
+          "Guantanamo": {
+            "Total": " 628",
+            "Empresas ": 99.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 386.0,
+              "UBPC": 125.0,
+              "CPA": 70,
+              "CCS": 191.0,
+              "Presupuestadas": 143.0
+            }
+          },
+          "Isla de la Juventud": {
+            "Total": " 84",
+            "Empresas ": 32.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 25.0,
+              "UBPC": 8.0,
+              "CPA": 1,
+              "CCS": 16.0,
+              "Presupuestadas": 27.0
+            }
+          }
+        },
+        "2014": {
+          "Cuba": {
+            "Total": "10.024",
+            "Empresas ": 1.992,
+            "Sociedades Mercantiles": "229",
+            "Cooperativas": {
+              "CTotal": 5.506,
+              "CNoA": 345,
+              "UBPC": 1.754,
+              "CPA": "903",
+              "CCS": 2.504,
+              "Presupuestadas": 2.297
+            }
+          },
+          "Pinar del Rio": {
+            "Total": " 621",
+            "Empresas ": 97.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 397.0,
+              "CNoA": 12,
+              "UBPC": 77.0,
+              "CPA": " 70",
+              "CCS": 238.0,
+              "Presupuestadas": 127.0
+            }
+          },
+          "Artemisa": {
+            "Total": " 383",
+            "Empresas ": 57.0,
+            "Sociedades Mercantiles": " 4",
+            "Cooperativas": {
+              "CTotal": 259.0,
+              "CNoA": 64,
+              "UBPC": 61.0,
+              "CPA": " 54",
+              "CCS": 80.0,
+              "Presupuestadas": 63.0
+            }
+          },
+          "La Habana": {
+            "Total": "1 677",
+            "Empresas ": 633.0,
+            "Sociedades Mercantiles": " 216",
+            "Cooperativas": {
+              "CTotal": 287.0,
+              "CNoA": 173,
+              "UBPC": 26.0,
+              "CPA": "-",
+              "CCS": 88.0,
+              "Presupuestadas": 541.0
+            }
+          },
+          "Mayabeque": {
+            "Total": " 407",
+            "Empresas ": 63.0,
+            "Sociedades Mercantiles": " 3",
+            "Cooperativas": {
+              "CTotal": 284.0,
+              "CNoA": 15,
+              "UBPC": 73.0,
+              "CPA": " 20",
+              "CCS": 176.0,
+              "Presupuestadas": 57.0
+            }
+          },
+          "Matanzas": {
+            "Total": " 532",
+            "Empresas ": 110.0,
+            "Sociedades Mercantiles": " 1",
+            "Cooperativas": {
+              "CTotal": 271.0,
+              "CNoA": 20,
+              "UBPC": 93.0,
+              "CPA": " 61",
+              "CCS": 97.0,
+              "Presupuestadas": 150.0
+            }
+          },
+          "Villa Clara": {
+            "Total": " 707",
+            "Empresas ": 121.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 429.0,
+              "CNoA": 8,
+              "UBPC": 127.0,
+              "CPA": " 71",
+              "CCS": 223.0,
+              "Presupuestadas": 157.0
+            }
+          },
+          "Cienfuegos": {
+            "Total": " 386",
+            "Empresas ": 89.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 189.0,
+              "CNoA": 3,
+              "UBPC": 82.0,
+              "CPA": " 32",
+              "CCS": 72.0,
+              "Presupuestadas": 108.0
+            }
+          },
+          "Sancti Spiritus": {
+            "Total": " 523",
+            "Empresas ": 80.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 328.0,
+              "CNoA": 8,
+              "UBPC": 104.0,
+              "CPA": " 55",
+              "CCS": 161.0,
+              "Presupuestadas": 115.0
+            }
+          },
+          "Ciego de Avila": {
+            "Total": " 426",
+            "Empresas ": 79.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 225.0,
+              "CNoA": 4,
+              "UBPC": 81.0,
+              "CPA": " 51",
+              "CCS": 89.0,
+              "Presupuestadas": 122.0
+            }
+          },
+          "Camaguey": {
+            "Total": " 725",
+            "Empresas ": 117.0,
+            "Sociedades Mercantiles": " 1",
+            "Cooperativas": {
+              "CTotal": 447.0,
+              "CNoA": 8,
+              "UBPC": 177.0,
+              "CPA": " 84",
+              "CCS": 178.0,
+              "Presupuestadas": 160.0
+            }
+          },
+          "Las Tunas": {
+            "Total": " 455",
+            "Empresas ": 69.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 280.0,
+              "CNoA": 2,
+              "UBPC": 117.0,
+              "CPA": " 44",
+              "CCS": 117.0,
+              "Presupuestadas": 106.0
+            }
+          },
+          "Holguin": {
+            "Total": " 825",
+            "Empresas ": 129.0,
+            "Sociedades Mercantiles": " 3",
+            "Cooperativas": {
+              "CTotal": 551.0,
+              "CNoA": 4,
+              "UBPC": 140.0,
+              "CPA": " 106",
+              "CCS": 301.0,
+              "Presupuestadas": 142.0
+            }
+          },
+          "Granma": {
+            "Total": " 765",
+            "Empresas ": 99.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 529.0,
+              "CNoA": 7,
+              "UBPC": 189.0,
+              "CPA": " 99",
+              "CCS": 234.0,
+              "Presupuestadas": 137.0
+            }
+          },
+          "Santiago de Cuba": {
+            "Total": " 881",
+            "Empresas ": 126.0,
+            "Sociedades Mercantiles": " 1",
+            "Cooperativas": {
+              "CTotal": 610.0,
+              "CNoA": 9,
+              "UBPC": 274.0,
+              "CPA": " 85",
+              "CCS": 242.0,
+              "Presupuestadas": 144.0
+            }
+          },
+          "Guantanamo": {
+            "Total": " 626",
+            "Empresas ": 93.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 392.0,
+              "CNoA": 5,
+              "UBPC": 125.0,
+              "CPA": " 70",
+              "CCS": 192.0,
+              "Presupuestadas": 141.0
+            }
+          },
+          "Isla de la Juventud": {
+            "Total": " 85",
+            "Empresas ": 30.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 28.0,
+              "CNoA": 3,
+              "UBPC": 8.0,
+              "CPA": " 1",
+              "CCS": 16.0,
+              "Presupuestadas": 27.0
+            }
+          }
+        },
+        "2015": {
+          "Cuba": {
+            "Total": "10.014",
+            "Empresas ": 1.956,
+            "Sociedades Mercantiles": "224",
+            "Cooperativas": {
+              "CTotal": 5.473,
+              "CNoA": 367,
+              "UBPC": 1.699,
+              "CPA": "897",
+              "CCS": 2.51,
+              "Presupuestadas": 2.361
+            }
+          },
+          "Pinar del Rio": {
+            "Total": " 620",
+            "Empresas ": 96.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 386.0,
+              "CNoA": 12,
+              "UBPC": 67.0,
+              "CPA": " 71",
+              "CCS": 236.0,
+              "Presupuestadas": 138.0
+            }
+          },
+          "Artemisa": {
+            "Total": " 398",
+            "Empresas ": 57.0,
+            "Sociedades Mercantiles": " 4",
+            "Cooperativas": {
+              "CTotal": 274.0,
+              "CNoA": 66,
+              "UBPC": 59.0,
+              "CPA": " 54",
+              "CCS": 95.0,
+              "Presupuestadas": 63.0
+            }
+          },
+          "La Habana": {
+            "Total": "1 687",
+            "Empresas ": 626.0,
+            "Sociedades Mercantiles": " 212",
+            "Cooperativas": {
+              "CTotal": 307.0,
+              "CNoA": 192,
+              "UBPC": 27.0,
+              "CPA": "-",
+              "CCS": 88.0,
+              "Presupuestadas": 542.0
+            }
+          },
+          "Mayabeque": {
+            "Total": " 398",
+            "Empresas ": 62.0,
+            "Sociedades Mercantiles": " 3",
+            "Cooperativas": {
+              "CTotal": 277.0,
+              "CNoA": 15,
+              "UBPC": 68.0,
+              "CPA": " 20",
+              "CCS": 174.0,
+              "Presupuestadas": 56.0
+            }
+          },
+          "Matanzas": {
+            "Total": " 532",
+            "Empresas ": 109.0,
+            "Sociedades Mercantiles": " 1",
+            "Cooperativas": {
+              "CTotal": 262.0,
+              "CNoA": 20,
+              "UBPC": 87.0,
+              "CPA": " 59",
+              "CCS": 96.0,
+              "Presupuestadas": 160.0
+            }
+          },
+          "Villa Clara": {
+            "Total": " 705",
+            "Empresas ": 122.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 427.0,
+              "CNoA": 8,
+              "UBPC": 127.0,
+              "CPA": " 70",
+              "CCS": 222.0,
+              "Presupuestadas": 156.0
+            }
+          },
+          "Cienfuegos": {
+            "Total": " 388",
+            "Empresas ": 89.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 187.0,
+              "CNoA": 4,
+              "UBPC": 79.0,
+              "CPA": " 32",
+              "CCS": 72.0,
+              "Presupuestadas": 112.0
+            }
+          },
+          "Sancti Spiritus": {
+            "Total": " 524",
+            "Empresas ": 79.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 328.0,
+              "CNoA": 8,
+              "UBPC": 104.0,
+              "CPA": " 55",
+              "CCS": 161.0,
+              "Presupuestadas": 117.0
+            }
+          },
+          "Ciego de Avila": {
+            "Total": " 430",
+            "Empresas ": 79.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 225.0,
+              "CNoA": 4,
+              "UBPC": 81.0,
+              "CPA": " 51",
+              "CCS": 89.0,
+              "Presupuestadas": 126.0
+            }
+          },
+          "Camaguey": {
+            "Total": " 726",
+            "Empresas ": 114.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 443.0,
+              "CNoA": 8,
+              "UBPC": 172.0,
+              "CPA": " 84",
+              "CCS": 179.0,
+              "Presupuestadas": 169.0
+            }
+          },
+          "Las Tunas": {
+            "Total": " 465",
+            "Empresas ": 68.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 282.0,
+              "CNoA": 2,
+              "UBPC": 120.0,
+              "CPA": " 43",
+              "CCS": 117.0,
+              "Presupuestadas": 115.0
+            }
+          },
+          "Holguin": {
+            "Total": " 824",
+            "Empresas ": 122.0,
+            "Sociedades Mercantiles": " 3",
+            "Cooperativas": {
+              "CTotal": 545.0,
+              "CNoA": 4,
+              "UBPC": 137.0,
+              "CPA": " 105",
+              "CCS": 299.0,
+              "Presupuestadas": 154.0
+            }
+          },
+          "Granma": {
+            "Total": " 767",
+            "Empresas ": 99.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 520.0,
+              "CNoA": 7,
+              "UBPC": 183.0,
+              "CPA": " 98",
+              "CCS": 232.0,
+              "Presupuestadas": 148.0
+            }
+          },
+          "Santiago de Cuba": {
+            "Total": " 862",
+            "Empresas ": 122.0,
+            "Sociedades Mercantiles": " 1",
+            "Cooperativas": {
+              "CTotal": 592.0,
+              "CNoA": 9,
+              "UBPC": 257.0,
+              "CPA": " 84",
+              "CCS": 242.0,
+              "Presupuestadas": 147.0
+            }
+          },
+          "Guantanamo": {
+            "Total": " 606",
+            "Empresas ": 83.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 390.0,
+              "CNoA": 5,
+              "UBPC": 123.0,
+              "CPA": " 70",
+              "CCS": 192.0,
+              "Presupuestadas": 133.0
+            }
+          },
+          "Isla de la Juventud": {
+            "Total": " 82",
+            "Empresas ": 29.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 28.0,
+              "CNoA": 3,
+              "UBPC": 8.0,
+              "CPA": " 1",
+              "CCS": 16.0,
+              "Presupuestadas": 25.0
+            }
+          }
+        },
+    
+        "2016": {
+          "Cuba": {
+            "Total": "9.833",
+            "Empresas ": 1.904,
+            "Sociedades Mercantiles": "223",
+            "Cooperativas": {
+              "CTotal": 5.361,
+              "CNoA": 397,
+              "UBPC": 1.606,
+              "CPA": "887",
+              "CCS": 2.471,
+              "Presupuestadas": 2.345
+            }
+          },
+          "Pinar del Rio": {
+            "Total": " 614",
+            "Empresas ": 94.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 384.0,
+              "CNoA": 12,
+              "UBPC": 67.0,
+              "CPA": " 69",
+              "CCS": 236.0,
+              "Presupuestadas": 136.0
+            }
+          },
+          "Artemisa": {
+            "Total": " 410",
+            "Empresas ": 57.0,
+            "Sociedades Mercantiles": " 5",
+            "Cooperativas": {
+              "CTotal": 285.0,
+              "CNoA": 68,
+              "UBPC": 67.0,
+              "CPA": " 38",
+              "CCS": 112.0,
+              "Presupuestadas": 63.0
+            }
+          },
+          "La Habana": {
+            "Total": "1 703",
+            "Empresas ": 621.0,
+            "Sociedades Mercantiles": " 210",
+            "Cooperativas": {
+              "CTotal": 336.0,
+              "CNoA": 221,
+              "UBPC": 27.0,
+              "CPA": "-",
+              "CCS": 88.0,
+              "Presupuestadas": 536.0
+            }
+          },
+          "Mayabeque": {
+            "Total": " 362",
+            "Empresas ": 59.0,
+            "Sociedades Mercantiles": " 3",
+            "Cooperativas": {
+              "CTotal": 243.0,
+              "CNoA": 14,
+              "UBPC": 61.0,
+              "CPA": " 32",
+              "CCS": 136.0,
+              "Presupuestadas": 57.0
+            }
+          },
+          "Matanzas": {
+            "Total": " 521",
+            "Empresas ": 103.0,
+            "Sociedades Mercantiles": " 1",
+            "Cooperativas": {
+              "CTotal": 257.0,
+              "CNoA": 20,
+              "UBPC": 82.0,
+              "CPA": " 59",
+              "CCS": 96.0,
+              "Presupuestadas": 160.0
+            }
+          },
+          "Villa Clara": {
+            "Total": " 696",
+            "Empresas ": 115.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 427.0,
+              "CNoA": 8,
+              "UBPC": 127.0,
+              "CPA": " 70",
+              "CCS": 222.0,
+              "Presupuestadas": 154.0
+            }
+          },
+          "Cienfuegos": {
+            "Total": " 383",
+            "Empresas ": 84.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 187.0,
+              "CNoA": 4,
+              "UBPC": 79.0,
+              "CPA": " 32",
+              "CCS": 72.0,
+              "Presupuestadas": 112.0
+            }
+          },
+          "Sancti Spiritus": {
+            "Total": " 518",
+            "Empresas ": 78.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 323.0,
+              "CNoA": 8,
+              "UBPC": 99.0,
+              "CPA": " 55",
+              "CCS": 161.0,
+              "Presupuestadas": 117.0
+            }
+          },
+          "Ciego de Avila": {
+            "Total": " 421",
+            "Empresas ": 79.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 215.0,
+              "CNoA": 4,
+              "UBPC": 74.0,
+              "CPA": " 49",
+              "CCS": 88.0,
+              "Presupuestadas": 127.0
+            }
+          },
+          "Camaguey": {
+            "Total": " 714",
+            "Empresas ": 106.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 443.0,
+              "CNoA": 8,
+              "UBPC": 172.0,
+              "CPA": " 84",
+              "CCS": 179.0,
+              "Presupuestadas": 165.0
+            }
+          },
+          "Las Tunas": {
+            "Total": " 453",
+            "Empresas ": 65.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 274.0,
+              "CNoA": 2,
+              "UBPC": 112.0,
+              "CPA": " 43",
+              "CCS": 117.0,
+              "Presupuestadas": 114.0
+            }
+          },
+          "Holguin": {
+            "Total": " 820",
+            "Empresas ": 118.0,
+            "Sociedades Mercantiles": " 3",
+            "Cooperativas": {
+              "CTotal": 544.0,
+              "CNoA": 4,
+              "UBPC": 136.0,
+              "CPA": " 105",
+              "CCS": 299.0,
+              "Presupuestadas": 155.0
+            }
+          },
+          "Granma": {
+            "Total": " 756",
+            "Empresas ": 93.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 517.0,
+              "CNoA": 7,
+              "UBPC": 182.0,
+              "CPA": " 96",
+              "CCS": 232.0,
+              "Presupuestadas": 146.0
+            }
+          },
+          "Santiago de Cuba": {
+            "Total": " 787",
+            "Empresas ": 119.0,
+            "Sociedades Mercantiles": " 1",
+            "Cooperativas": {
+              "CTotal": 522.0,
+              "CNoA": 9,
+              "UBPC": 202.0,
+              "CPA": " 85",
+              "CCS": 226.0,
+              "Presupuestadas": 145.0
+            }
+          },
+          "Guantanamo": {
+            "Total": " 593",
+            "Empresas ": 84.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 376.0,
+              "CNoA": 5,
+              "UBPC": 111.0,
+              "CPA": " 69",
+              "CCS": 191.0,
+              "Presupuestadas": 133.0
+            }
+          },
+          "Isla de la Juventud": {
+            "Total": " 82",
+            "Empresas ": 29.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 28.0,
+              "CNoA": 3,
+              "UBPC": 8.0,
+              "CPA": " 1",
+              "CCS": 16.0,
+              "Presupuestadas": 25.0
+            }
+          }
+        },
+    
+        "2017": {
+          "Cuba": {
+            "Total": 9.628,
+            "Empresas ": 1.801,
+            "Sociedades Mercantiles": "230",
+            "Cooperativas": {
+              "CTotal": 5.355,
+              "CNoA": 439,
+              "UBPC": 1.563,
+              "CPA": "882",
+              "CCS": 2.471,
+              "Presupuestadas": 2.242
+            }
+          },
+          "Pinar del Rio": {
+            "Total": 603.0,
+            "Empresas ": 88.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 382.0,
+              "CNoA": 12,
+              "UBPC": 65.0,
+              "CPA": "69",
+              "CCS": 236.0,
+              "Presupuestadas": 133.0
+            }
+          },
+          "Artemisa": {
+            "Total": 413.0,
+            "Empresas ": 60.0,
+            "Sociedades Mercantiles": "6",
+            "Cooperativas": {
+              "CTotal": 283.0,
+              "CNoA": 68,
+              "UBPC": 65.0,
+              "CPA": "38",
+              "CCS": 112.0,
+              "Presupuestadas": 64.0
+            }
+          },
+          "La Habana": {
+            "Total": 1.699,
+            "Empresas ": 600.0,
+            "Sociedades Mercantiles": "214",
+            "Cooperativas": {
+              "CTotal": 378.0,
+              "CNoA": 264,
+              "UBPC": 26.0,
+              "CPA": "-",
+              "CCS": 88.0,
+              "Presupuestadas": 507.0
+            }
+          },
+          "Mayabeque": {
+            "Total": 357.0,
+            "Empresas ": 57.0,
+            "Sociedades Mercantiles": "3",
+            "Cooperativas": {
+              "CTotal": 240.0,
+              "CNoA": 14,
+              "UBPC": 58.0,
+              "CPA": "32",
+              "CCS": 136.0,
+              "Presupuestadas": 57.0
+            }
+          },
+          "Matanzas": {
+            "Total": 515.0,
+            "Empresas ": 100.0,
+            "Sociedades Mercantiles": "1",
+            "Cooperativas": {
+              "CTotal": 254.0,
+              "CNoA": 19,
+              "UBPC": 81.0,
+              "CPA": "58",
+              "CCS": 96.0,
+              "Presupuestadas": 160.0
+            }
+          },
+          "Villa Clara": {
+            "Total": 667.0,
+            "Empresas ": 104.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 411.0,
+              "CNoA": 8,
+              "UBPC": 112.0,
+              "CPA": "69",
+              "CCS": 222.0,
+              "Presupuestadas": 152.0
+            }
+          },
+          "Cienfuegos": {
+            "Total": 376.0,
+            "Empresas ": 78.0,
+            "Sociedades Mercantiles": "1",
+            "Cooperativas": {
+              "CTotal": 187.0,
+              "CNoA": 4,
+              "UBPC": 80.0,
+              "CPA": "31",
+              "CCS": 72.0,
+              "Presupuestadas": 110.0
+            }
+          },
+          "Sancti Spiritus": {
+            "Total": 506.0,
+            "Empresas ": 75.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 323.0,
+              "CNoA": 8,
+              "UBPC": 99.0,
+              "CPA": "55",
+              "CCS": 161.0,
+              "Presupuestadas": 108.0
+            }
+          },
+          "Ciego de Avila": {
+            "Total": 406.0,
+            "Empresas ": 75.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 215.0,
+              "CNoA": 4,
+              "UBPC": 74.0,
+              "CPA": "49",
+              "CCS": 88.0,
+              "Presupuestadas": 116.0
+            }
+          },
+          "Camaguey": {
+            "Total": 680.0,
+            "Empresas ": 103.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 426.0,
+              "CNoA": 8,
+              "UBPC": 157.0,
+              "CPA": "82",
+              "CCS": 179.0,
+              "Presupuestadas": 151.0
+            }
+          },
+          "Las Tunas": {
+            "Total": 434.0,
+            "Empresas ": 57.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 274.0,
+              "CNoA": 2,
+              "UBPC": 112.0,
+              "CPA": "43",
+              "CCS": 117.0,
+              "Presupuestadas": 103.0
+            }
+          },
+          "Holguin": {
+            "Total": 809.0,
+            "Empresas ": 108.0,
+            "Sociedades Mercantiles": "4",
+            "Cooperativas": {
+              "CTotal": 542.0,
+              "CNoA": 4,
+              "UBPC": 134.0,
+              "CPA": "105",
+              "CCS": 299.0,
+              "Presupuestadas": 155.0
+            }
+          },
+          "Granma": {
+            "Total": 732.0,
+            "Empresas ": 83.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 517.0,
+              "CNoA": 7,
+              "UBPC": 182.0,
+              "CPA": "96",
+              "CCS": 232.0,
+              "Presupuestadas": 132.0
+            }
+          },
+          "Santiago de Cuba": {
+            "Total": 776.0,
+            "Empresas ": 113.0,
+            "Sociedades Mercantiles": "1",
+            "Cooperativas": {
+              "CTotal": 519.0,
+              "CNoA": 9,
+              "UBPC": 199.0,
+              "CPA": "85",
+              "CCS": 226.0,
+              "Presupuestadas": 143.0
+            }
+          },
+          "Guantanamo": {
+            "Total": 574.0,
+            "Empresas ": 71.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 376.0,
+              "CNoA": 5,
+              "UBPC": 111.0,
+              "CPA": "69",
+              "CCS": 191.0,
+              "Presupuestadas": 127.0
+            }
+          },
+          "Isla de la Juventud": {
+            "Total": 81.0,
+            "Empresas ": 29.0,
+            "Sociedades Mercantiles": "-",
+            "Cooperativas": {
+              "CTotal": 28.0,
+              "CNoA": 3,
+              "UBPC": 8.0,
+              "CPA": "1",
+              "CCS": 16.0,
+              "Presupuestadas": 24.0
+            }
+          }
+        }
+      }
+    },
+    
+    "Entidades": {
+      "1999": {
+        "Total": "12.505",
+        "Empresas": "3.962",
+        "Cooperativas": {
+          "Total": "6.682",
+          "CNoA": "-",
+          "UBPC": "-",
+          "CPA": "-",
+          "CCS": "-"
+        },
+        "Presupuestadas": "1.861"
+      },
+      "2000": {
+        "Total": "12.647",
+        "Empresas": "4.037",
+        "Cooperativas": {
+          "Total": "6.696",
+          "CNoA": "-",
+          "UBPC": "-",
+          "CPA": "-",
+          "CCS": "-"
+        },
+        "Presupuestadas": "1.914"
+      },
+      "2001": {
+        "Total": "12.552",
+        "Empresas": "3.937",
+        "Cooperativas": {
+          "Total": "6.645",
+          "CNoA": "-",
+          "UBPC": "-",
+          "CPA": "-",
+          "CCS": "-"
+        },
+        "Presupuestadas": "1.970"
+      },
+      "2002": {
+        "Total": "12.430",
+        "Empresas": "3.835",
+        "Cooperativas": {
+          "Total": "6.598",
+          "CNoA": "-",
+          "UBPC": "-",
+          "CPA": "-",
+          "CCS": "-"
+        },
+        "Presupuestadas": "1.997"
+      },
+      "2003": {
+        "Total": "12.883",
+        "Empresas": "3.925",
+        "Cooperativas": {
+          "Total": "6.953",
+          "CNoA": "-",
+          "UBPC": "-",
+          "CPA": "-",
+          "CCS": "-"
+        },
+        "Presupuestadas": "2.005"
+      },
+      "2004": {
+        "Total": "12819",
+        "Empresas": "3815",
+        "Cooperativas": {
+          "Total": "6955",
+          "CNoA": "-",
+          "UBPC": "-",
+          "CPA": "-",
+          "CCS": "-"
+        },
+        "Presupuestadas": "2049"
+      },
+      "2005": {
+        "Total": "12772",
+        "Empresas": "3759",
+        "Cooperativas": {
+          "Total": "6931",
+          "CNoA": "-",
+          "UBPC": "-",
+          "CPA": "-",
+          "CCS": "-"
+        },
+        "Presupuestadas": "2082"
+      },
+      "2006": {
+        "Total": "12455",
+        "Empresas": "3519",
+        "Cooperativas": {
+          "Total": "6843",
+          "CNoA": "-",
+          "UBPC": "-",
+          "CPA": "-",
+          "CCS": "-"
+        },
+        "Presupuestadas": "2093"
+      },
+      "2007": {
+        "Total": "12314",
+        "Empresas": "3417",
+        "Cooperativas": {
+          "Total": "6683",
+          "CNoA": "-",
+          "UBPC": "-",
+          "CPA": "-",
+          "CCS": "-"
+        },
+        "Presupuestadas": "2214"
+      },
+      "2008": {
+        "Total": "12643",
+        "Empresas": "3077",
+        "Cooperativas": {
+          "Total": "6762",
+          "CNoA": "-",
+          "UBPC": "2641",
+          "CPA": "1084",
+          "CCS": "3037"
+        },
+        "Presupuestadas": "2525"
+      },
+      "2009": {
+        "Total": "12141",
+        "Empresas": "2886",
+        "Cooperativas": {
+          "Total": "6398",
+          "CNoA": "-",
+          "UBPC": "2283",
+          "CPA": "1078",
+          "CCS": "3037"
+        },
+        "Presupuestadas": "2574"
+      },
+      "2010": {
+        "Total": "11857",
+        "Empresas": "2810",
+        "Cooperativas": {
+          "Total": "6253",
+          "CNoA": "-",
+          "UBPC": "2256",
+          "CPA": "1048",
+          "CCS": "2949"
+        },
+        "Presupuestadas": "2514"
+      },
+      "2011": {
+        "Total": "10963",
+        "Empresas": "2422",
+        "Cooperativas": {
+          "Total": "5811",
+          "CNoA": "-",
+          "UBPC": "2165",
+          "CPA": "1002",
+          "CCS": "2644"
+        },
+        "Presupuestadas": "2455"
+      },
+      "2012": {
+        "Total": "10556",
+        "Empresas": "2250",
+        "Cooperativas": {
+          "Total": "5688",
+          "CNoA": "-",
+          "UBPC": "2038",
+          "CPA": "1006",
+          "CCS": "2644"
+        },
+        "Presupuestadas": "2382"
+      },
+      "2013": {
+        "Total": "10246",
+        "Empresas": "2235",
+        "Cooperativas": {
+          "Total": "5420",
+          "CNoA": "198",
+          "UBPC": "1811",
+          "CPA": "909",
+          "CCS": "2502"
+        },
+        "Presupuestadas": "2354"
+      },
+      "2014": {
+        "Total": "10024",
+        "Empresas": "1992",
+        "Cooperativas": {
+          "Total": "5506",
+          "CNoA": "345",
+          "UBPC": "1754",
+          "CPA": "903",
+          "CCS": "2504"
+        },
+        "Presupuestadas": "2297"
+      },
+      "2015": {
+        "Total": "10014",
+        "Empresas": "1956",
+        "Cooperativas": {
+          "Total": "5473",
+          "CNoA": "367",
+          "UBPC": "1699",
+          "CPA": "897",
+          "CCS": "2510"
+        },
+        "Presupuestadas": "2361"
+      },
+      "2016": {
+        "Total": "9820",
+        "Empresas": "1904",
+        "Cooperativas": {
+          "Total": "5348",
+          "CNoA": "397",
+          "UBPC": "1593",
+          "CPA": "887",
+          "CCS": "2471"
+        },
+        "Presupuestadas": "2345"
+      },
+      "2017": {
+        "Total": "9628",
+        "Empresas": "1801",
+        "Cooperativas": {
+          "Total": "5355",
+          "CNoA": "439",
+          "UBPC": "1563",
+          "CPA": "882",
+          "CCS": "2471"
+        },
+        "Presupuestadas": "2242"
+      },
+      "2018": {
+        "Total": "9563",
+        "Empresas": "176",
+        "Cooperativas": {
+          "Total": "5310",
+          "CNoA": "434",
+          "UBPC": "1529",
+          "CPA": "879",
+          "CCS": "2468"
+        },
+        "Presupuestadas": "2241"
+      },
+      "2019": {
+        "Total": "9542",
+        "Empresas": "1774",
+        "Cooperativas": {
+          "Total": "5290",
+          "CNoA": "431",
+          "UBPC": "1519",
+          "CPA": "876",
+          "CCS": "2464"
+        },
+        "Presupuestadas": "2241"
+      },
+      "2020": {
+        "Total": "9560",
+        "Empresas": "1795",
+        "Cooperativas": {
+          "Total": "5278",
+          "CNoA": "421",
+          "UBPC": "1513",
+          "CPA": "876",
+          "CCS": "2468"
+        },
+        "Presupuestadas": "2232"
+      },
+      "2021": {
+        "Total": "10010",
+        "Empresas": "1867",
+        "Cooperativas": {
+          "Total": "5211",
+          "CNoA": "426",
+          "UBPC": "1459",
+          "CPA": "863",
+          "CCS": "2463"
+        },
+        "Presupuestadas": "2404.0"
+      }
+    },
+  "Caña": {
+    "1981/82": {
+      "SC(Mha)Total": "1327.3",
+      "SC_Estatal": "1115.4",
+      "SC_No Estatal": "211.9",
+      "P(MMt)Total": "73.1",
+      "P_Estatal": "60.2",
+      "P_No Estatal": "12.9",
+      "R(t)Total": "55.1",
+      "R_Estatal": "53.9",
+      "R_No Estatal": "61.0"
+    },
+    "1982/83": {
+      "SC(Mha)Total": "1200.3",
+      "SC_Estatal": "968.1",
+      "SC_No Estatal": "232.2",
+      "P(MMt)Total": "69.7",
+      "P_Estatal": "54.9",
+      "P_No Estatal": "14.8",
+      "R(t)Total": "58.0",
+      "R_Estatal": "56.7",
+      "R_No Estatal": "63.6"
+    },
+    "1983/84": {
+      "SC(Mha)Total": "1349.5",
+      "SC_Estatal": "1102.8",
+      "SC_No Estatal": "246.7",
+      "P(MMt)Total": "77.4",
+      "P_Estatal": "63.2",
+      "P_No Estatal": "14.2",
+      "R(t)Total": "57.4",
+      "R_Estatal": "57.3",
+      "R_No Estatal": "57.6"
+    },
+    "1984/85": {
+      "SC(Mha)Total": "1347.8",
+      "SC_Estatal": "1102.7",
+      "SC_No Estatal": "245.1",
+      "P(MMt)Total": "67.4",
+      "P_Estatal": "55.0",
+      "P_No Estatal": "12.4",
+      "R(t)Total": "50.0",
+      "R_Estatal": "49.8",
+      "R_No Estatal": "50.7"
+    },
+    "1985/86": {
+      "SC(Mha)Total": "1328.6",
+      "SC_Estatal": "1094.5",
+      "SC_No Estatal": "234.1",
+      "P(MMt)Total": "68.5",
+      "P_Estatal": "56.2",
+      "P_No Estatal": "12.3",
+      "R(t)Total": "51.6",
+      "R_Estatal": "51.3",
+      "R_No Estatal": "52.7"
+    },
+    "1986/87": {
+      "SC(Mha)Total": "1358.3",
+      "SC_Estatal": "1126.3",
+      "SC_No Estatal": "232.0",
+      "P(MMt)Total": "70.8",
+      "P_Estatal": "58.2",
+      "P_No Estatal": "12.6",
+      "R(t)Total": "52.1",
+      "R_Estatal": "51.7",
+      "R_No Estatal": "54.5"
+    },
+    "1987/88": {
+      "SC(Mha)Total": "1297.3",
+      "SC_Estatal": "1061.6",
+      "SC_No Estatal": "235.7",
+      "P(MMt)Total": "73.7",
+      "P_Estatal": "59.3",
+      "P_No Estatal": "14.4",
+      "R(t)Total": "56.8",
+      "R_Estatal": "55.9",
+      "R_No Estatal": "61.3"
+    },
+    "1988/89": {
+      "SC(Mha)Total": "1350.6",
+      "SC_Estatal": "1118.3",
+      "SC_No Estatal": "232.3",
+      "P(MMt)Total": "81.0",
+      "P_Estatal": "66.4",
+      "P_No Estatal": "14.6",
+      "R(t)Total": "60.0",
+      "R_Estatal": "59.4",
+      "R_No Estatal": "62.8"
+    },
+    "1989/90": {
+      "SC(Mha)Total": "1420.3",
+      "SC_Estatal": "1192.0",
+      "SC_No Estatal": "228.3",
+      "P(MMt)Total": "81.8",
+      "P_Estatal": "67.0",
+      "P_No Estatal": "14.8",
+      "R(t)Total": "57.6",
+      "R_Estatal": "56.2",
+      "R_No Estatal": "64.8"
+    },
+    "1990/91": {
+      "SC(Mha)Total": "1452.2",
+      "SC_Estatal": "1219.2",
+      "SC_No Estatal": "233.0",
+      "P(MMt)Total": "79.7",
+      "P_Estatal": "64.9",
+      "P_No Estatal": "14.8",
+      "R(t)Total": "54.9",
+      "R_Estatal": "53.2",
+      "R_No Estatal": "63.7"
+    },
+    "1991/92": {
+      "SC(Mha)Total": "1451.7",
+      "SC_Estatal": "1230.6",
+      "SC_No Estatal": "221.1",
+      "P(MMt)Total": "66.3",
+      "P_Estatal": "54.4",
+      "P_No Estatal": "11.9",
+      "R(t)Total": "45.6",
+      "R_Estatal": "44.2",
+      "R_No Estatal": "53.7"
+    },
+    "1992/93": {
+      "SC(Mha)Total": "1211.7",
+      "SC_Estatal": "1013.2",
+      "SC_No Estatal": "198.5",
+      "P(MMt)Total": "43.7",
+      "P_Estatal": "35.4",
+      "P_No Estatal": "8.3",
+      "R(t)Total": "36.0",
+      "R_Estatal": "35.0",
+      "R_No Estatal": "41.4"
+    },
+    "1993/94": {
+      "SC(Mha)Total": "1248.9",
+      "SC_Estatal": "63.8",
+      "SC_No Estatal": "1185.1",
+      "P(MMt)Total": "43.2",
+      "P_Estatal": "2.2",
+      "P_No Estatal": "41.0",
+      "R(t)Total": "34.6",
+      "R_Estatal": "34.1",
+      "R_No Estatal": "34.6"
+    },
+    "1994/95": {
+      "SC(Mha)Total": "1177.4",
+      "SC_Estatal": "60.1",
+      "SC_No Estatal": "1117.3",
+      "P(MMt)Total": "33.6",
+      "P_Estatal": "1.7",
+      "P_No Estatal": "31.9",
+      "R(t)Total": "28.5",
+      "R_Estatal": "28.3",
+      "R_No Estatal": "25.8"
+    },
+    "1995/96": {
+      "SC(Mha)Total": "1244.5",
+      "SC_Estatal": "97.1",
+      "SC_No Estatal": "1147.4",
+      "P(MMt)Total": "41.3",
+      "P_Estatal": "2.7",
+      "P_No Estatal": "38.6",
+      "R(t)Total": "33.2",
+      "R_Estatal": "28.3",
+      "R_No Estatal": "33.6"
+    },
+    "1996/97": {
+      "SC(Mha)Total": "1246.3",
+      "SC_Estatal": "111.3",
+      "SC_No Estatal": "1135.0",
+      "P(MMt)Total": "38.9",
+      "P_Estatal": "2.7",
+      "P_No Estatal": "36.2",
+      "R(t)Total": "31.2",
+      "R_Estatal": "24.3",
+      "R_No Estatal": "31.9"
+    },
+    "1997/98": {
+      "SC(Mha)Total": "1048.5",
+      "SC_Estatal": "67.5",
+      "SC_No Estatal": "981.0",
+      "P(MMt)Total": "32.8",
+      "P_Estatal": "1.7",
+      "P_No Estatal": "31.1",
+      "R(t)Total": "31.3",
+      "R_Estatal": "25.2",
+      "R_No Estatal": "31.7"
+    },
+    "1998/99": {
+      "SC(Mha)Total": "995.8",
+      "SC_Estatal": "82.3",
+      "SC_No Estatal": "913.5",
+      "P(MMt)Total": "34.0",
+      "P_Estatal": "2.6",
+      "P_No Estatal": "31.4",
+      "R(t)Total": "34.1",
+      "R_Estatal": "31.5",
+      "R_No Estatal": "34.4"
+    },
+    "1999/2000": {
+      "SC(Mha)Total": "1040.9",
+      "SC_Estatal": "89.7",
+      "SC_No Estatal": "951.2",
+      "P(MMt)Total": "36.4",
+      "P_Estatal": "2.9",
+      "P_No Estatal": "33.5",
+      "R(t)Total": "35.6",
+      "R_Estatal": "32.2",
+      "R_No Estatal": "35.9"
+    },
+    "2000/2001": {
+      "SC(Mha)Total": "1007.1",
+      "SC_Estatal": "86.6",
+      "SC_No Estatal": "920.5",
+      "P(MMt)Total": "32.1",
+      "P_Estatal": "2.6",
+      "P_No Estatal": "29.5",
+      "R(t)Total": "31.4",
+      "R_Estatal": "31.1",
+      "R_No Estatal": "31.5"
+    },
+    "2001/2002": {
+      "SC(Mha)Total": "1041.2",
+      "SC_Estatal": "89.6",
+      "SC_No Estatal": "951.6",
+      "P(MMt)Total": "34.7",
+      "P_Estatal": "2.8",
+      "P_No Estatal": "31.9",
+      "R(t)Total": "33.3",
+      "R_Estatal": "31.2",
+      "R_No Estatal": "33.5"
+    },
+    "2002/2003": {
+      "SC(Mha)Total": "643.8",
+      "SC_Estatal": "45.2",
+      "SC_No Estatal": "598.6",
+      "P(MMt)Total": "23.0",
+      "P_Estatal": "0.6",
+      "P_No Estatal": "22.4",
+      "R(t)Total": "35.7",
+      "R_Estatal": "13.3",
+      "R_No Estatal": "37.4"
+    },
+    "2003/2004": {
+      "SC(Mha)Total": "661.0",
+      "SC_Estatal": "44.2",
+      "SC_No Estatal": "616.8",
+      "P(MMt)Total": "24.2",
+      "P_Estatal": "1.3",
+      "P_No Estatal": "22.9",
+      "R(t)Total": "36.6",
+      "R_Estatal": "29.4",
+      "R_No Estatal": "37.1"
+    },
+    "2004/2005": {
+      "SC(Mha)Total": "517.2",
+      "SC_Estatal": "21.8",
+      "SC_No Estatal": "495.4",
+      "P(MMt)Total": "11.9",
+      "P_Estatal": "0.4",
+      "P_No Estatal": "11.5",
+      "R(t)Total": "23.0",
+      "R_Estatal": "18.3",
+      "R_No Estatal": "23.2"
+    },
+    "2005/2006": {
+      "SC(Mha)Total": "397.1",
+      "SC_Estatal": "13.8",
+      "SC_No Estatal": "383.3",
+      "P(MMt)Total": "11.2",
+      "P_Estatal": "0.4",
+      "P_No Estatal": "10.8",
+      "R(t)Total": "28.2",
+      "R_Estatal": "24.5",
+      "R_No Estatal": "28.0"
+    },
+    "2006/2007": {
+      "SC(Mha)Total": "329.5",
+      "SC_Estatal": "12.0",
+      "SC_No Estatal": "317.5",
+      "P(MMt)Total": "12.7",
+      "P_Estatal": "0.3",
+      "P_No Estatal": "12.4",
+      "R(t)Total": "38.5",
+      "R_Estatal": "25.0",
+      "R_No Estatal": "39.1"
+    },
+    "2007/2008": {
+      "SC(Mha)Total": "380.3",
+      "SC_Estatal": "10.5",
+      "SC_No Estatal": "369.8",
+      "P(MMt)Total": "15.8",
+      "P_Estatal": "0.4",
+      "P_No Estatal": "15.4",
+      "R(t)Total": "41.5",
+      "R_Estatal": "34.9",
+      "R_No Estatal": "41.6"
+    },
+    "2008/2009": {
+      "SC(Mha)Total": "434.7",
+      "SC_Estatal": "8.8",
+      "SC_No Estatal": "425.9",
+      "P(MMt)Total": "15.0",
+      "P_Estatal": "0.3",
+      "P_No Estatal": "14.7",
+      "R(t)Total": "34.5",
+      "R_Estatal": "34.1",
+      "R_No Estatal": "34.5"
+    },
+    "2009/2010": {
+      "SC(Mha)Total": "431.4",
+      "SC_Estatal": "9.6",
+      "SC_No Estatal": "421.8",
+      "P(MMt)Total": "11.6",
+      "P_Estatal": "0.2",
+      "P_No Estatal": "11.4",
+      "R(t)Total": "26.9",
+      "R_Estatal": "20.8",
+      "R_No Estatal": "27.0"
+    },
+    "2010/2011": {
+      "SC(Mha)Total": "506.1",
+      "SC_Estatal": "13.3",
+      "SC_No Estatal": "492.8",
+      "P(MMt)Total": "11.9",
+      "P_Estatal": "0.5",
+      "P_No Estatal": "11.4",
+      "R(t)Total": "23.5",
+      "R_Estatal": "36.8",
+      "R_No Estatal": "23.1"
+    },
+    "2011/2012": {
+      "SC(Mha)Total": "361.3",
+      "SC_Estatal": "6.6",
+      "SC_No Estatal": "354.7",
+      "P(MMt)Total": "14.7",
+      "P_Estatal": "0.3",
+      "P_No Estatal": "14.4",
+      "R(t)Total": "40.7",
+      "R_Estatal": "45.5",
+      "R_No Estatal": "40.6"
+    },
+    "2012/2013": {
+      "SC(Mha)Total": "400.3",
+      "SC_Estatal": "8.2",
+      "SC_No Estatal": "392.1",
+      "P(MMt)Total": "16.1",
+      "P_Estatal": "0.3",
+      "P_No Estatal": "15.8",
+      "R(t)Total": "40.3",
+      "R_Estatal": "39.8",
+      "R_No Estatal": "40.3"
+    },
+    "2013/2014": {
+      "SC(Mha)Total": "405.2",
+      "SC_Estatal": "8.9",
+      "SC_No Estatal": "396.3",
+      "P(MMt)Total": "17.8",
+      "P_Estatal": "0.3",
+      "P_No Estatal": "17.5",
+      "R(t)Total": "44.0",
+      "R_Estatal": "41.6",
+      "R_No Estatal": "44.1"
+    },
+    "2014/2015": {
+      "SC(Mha)Total": "435.6",
+      "SC_Estatal": "9.5",
+      "SC_No Estatal": "426.1",
+      "P(MMt)Total": "19.3",
+      "P_Estatal": "0.4",
+      "P_No Estatal": "18.9",
+      "R(t)Total": "44.3",
+      "R_Estatal": "42.9",
+      "R_No Estatal": "44.3"
+    },
+    "2015/2016": {
+      "SC(Mha)Total": "421.6",
+      "SC_Estatal": "4.8",
+      "SC_No Estatal": "416.8",
+      "P(MMt)Total": "18.1",
+      "P_Estatal": "0.2",
+      "P_No Estatal": "17.9",
+      "R(t)Total": "43.0",
+      "R_Estatal": "50.4",
+      "R_No Estatal": "42.9"
+    },
+    "2016/2017": {
+      "SC(Mha)Total": "314.4",
+      "SC_Estatal": "4.8",
+      "SC_No Estatal": "309.6",
+      "P(MMt)Total": "19.9",
+      "P_Estatal": "0.2",
+      "P_No Estatal": "19.7",
+      "R(t)Total": "40.4",
+      "R_Estatal": "41.7",
+      "R_No Estatal": "40.3"
+    },
+    "2017/2018": {
+      "SC(Mha)Total": "392.9",
+      "SC_Estatal": "4.8",
+      "SC_No Estatal": "388.1",
+      "P(MMt)Total": "12.6",
+      "P_Estatal": "0.2",
+      "P_No Estatal": "12.4",
+      "R(t)Total": "43.7",
+      "R_Estatal": "41.9",
+      "R_No Estatal": "43.7"
+    },
+    "2018/2019": {
+      "SC(Mha)Total": "393.0",
+      "SC_Estatal": "5.3",
+      "SC_No Estatal": "387.7",
+      "P(MMt)Total": "17.1",
+      "P_Estatal": "0.2",
+      "P_No Estatal": "16.9",
+      "R(t)Total": "43.6",
+      "R_Estatal": "45.3",
+      "R_No Estatal": "43.6"
+    },
+    "2019/2020": {
+      "SC(Mha)Total": "348.0",
+      "SC_Estatal": "4.5",
+      "SC_No Estatal": "343.5",
+      "P(MMt)Total": "13.9",
+      "P_Estatal": "0.2",
+      "P_No Estatal": "13.7",
+      "R(t)Total": "40.0",
+      "R_Estatal": "41.0",
+      "R_No Estatal": "40.0"
+    },
+    "2020/2021": {
+      "SC(Mha)Total": "300.0",
+      "SC_Estatal": "4.6",
+      "SC_No Estatal": "295.4",
+      "P(MMt)Total": "10.2",
+      "P_Estatal": "0.2",
+      "P_No Estatal": "10.0",
+      "R(t)Total": "34.0",
+      "R_Estatal": "43.5",
+      "R_No Estatal": "33.9"
     }
   }
 }

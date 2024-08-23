@@ -3,7 +3,7 @@ from streamlit_timeline import timeline
 
 st.set_page_config(page_title="Timeline Example", layout="wide")
 
-with open('example.json', "r") as f:
+with open('events.json', "r") as f:
     data = f.read()
 
 timeline(data, height=800)

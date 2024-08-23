@@ -1,0 +1,358 @@
+{
+    "title": {
+        "text": {
+            "headline": "Ganaderia en Cuba en Transision<br>Que le ha pasado?",
+            "text": "<p>Timeline desde 1985 para analizar su evolución</p>"
+        }
+    },
+    "events": [
+        {"text":{
+            "headline": "Antes del año 1959",
+            "text": "<p>"
+
+        }
+        },
+        {
+            "text": {
+                "headline": "Año 1985.",
+                "text": "<p>Esto ocurrió en el año 1985.</p"
+            },
+            "start_date": {
+                "year": 1985
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 1986.",
+                "text": "<p>Esto ocurrió en el año 1986.</p"
+            },
+            "start_date": {
+                "year": 1986
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 1987.",
+                "text": "<p>Esto ocurrió en el año 1987.</p"
+            },
+            "start_date": {
+                "year": 1987
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 1988.",
+                "text": "<p>Esto ocurrió en el año 1988.</p"
+            },
+            "start_date": {
+                "year": 1988
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 1989.",
+                "text": "<p>Esto ocurrió en el año 1989.</p"
+            },
+            "start_date": {
+                "year": 1989
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 1990.",
+                "text": "<p>Esto ocurrió en el año 1990.</p"
+            },
+            "start_date": {
+                "year": 1990
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 1991.",
+                "text": "<p>Esto ocurrió en el año 1991.</p"
+            },
+            "start_date": {
+                "year": 1991
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 1992.",
+                "text": "<p>Esto ocurrió en el año 1992.</p"
+            },
+            "start_date": {
+                "year": 1992
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 1993.",
+                "text": "<p>Esto ocurrió en el año 1993.</p"
+            },
+            "start_date": {
+                "year": 1993
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 1994.",
+                "text": "<p>Esto ocurrió en el año 1994.</p"
+            },
+            "start_date": {
+                "year": 1994
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 1995.",
+                "text": "<p>Esto ocurrió en el año 1995.</p"
+            },
+            "start_date": {
+                "year": 1995
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 1996.",
+                "text": "<p>Esto ocurrió en el año 1996.</p"
+            },
+            "start_date": {
+                "year": 1996
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 1997.",
+                "text": "<p>Esto ocurrió en el año 1997.</p"
+            },
+            "start_date": {
+                "year": 1997
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 1998.",
+                "text": "<p>Esto ocurrió en el año 1998.</p"
+            },
+            "start_date": {
+                "year": 1998
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 1999.",
+                "text": "<p>Esto ocurrió en el año 1999.</p"
+            },
+            "start_date": {
+                "year": 1999
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 2000.",
+                "text": "<p>Esto ocurrió en el año 2000.</p"
+            },
+            "start_date": {
+                "year": 2000
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 2001.",
+                "text": "<p>Esto ocurrió en el año 2001.</p"
+            },
+            "start_date": {
+                "year": 2001
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 2002.",
+                "text": "<p>Esto ocurrió en el año 2002.</p"
+            },
+            "start_date": {
+                "year": 2002
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 2003.",
+                "text": "<p>Esto ocurrió en el año 2003.</p"
+            },
+            "start_date": {
+                "year": 2003
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 2004.",
+                "text": "<p>Esto ocurrió en el año 2004.</p"
+            },
+            "start_date": {
+                "year": 2004
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 2005.",
+                "text": "<p>Esto ocurrió en el año 2005.</p"
+            },
+            "start_date": {
+                "year": 2005
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 2006.",
+                "text": "<p>Esto ocurrió en el año 2006.</p"
+            },
+            "start_date": {
+                "year": 2006
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 2007.",
+                "text": "<p>Esto ocurrió en el año 2007.</p"
+            },
+            "start_date": {
+                "year": 2007
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 2008.",
+                "text": "<p>Esto ocurrió en el año 2008.</p"
+            },
+            "start_date": {
+                "year": 2008
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 2009.",
+                "text": "<p>Esto ocurrió en el año 2009.</p"
+            },
+            "start_date": {
+                "year": 2009
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 2010.",
+                "text": "<p>Esto ocurrió en el año 2010.</p"
+            },
+            "start_date": {
+                "year": 2010
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 2011.",
+                "text": "<p>Esto ocurrió en el año 2011.</p"
+            },
+            "start_date": {
+                "year": 2011
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 2012.",
+                "text": "<p>Esto ocurrió en el año 2012.</p"
+            },
+            "start_date": {
+                "year": 2012
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 2013.",
+                "text": "<p>Esto ocurrió en el año 2013.</p"
+            },
+            "start_date": {
+                "year": 2013
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 2014.",
+                "text": "<p>Esto ocurrió en el año 2014.</p"
+            },
+            "start_date": {
+                "year": 2014
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 2015.",
+                "text": "<p>Esto ocurrió en el año 2015.</p"
+            },
+            "start_date": {
+                "year": 2015
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 2016.",
+                "text": "<p>Esto ocurrió en el año 2016.</p"
+            },
+            "start_date": {
+                "year": 2016
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 2017.",
+                "text": "<p>Esto ocurrió en el año 2017.</p"
+            },
+            "start_date": {
+                "year": 2017
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 2018.",
+                "text": "<p>Esto ocurrió en el año 2018.</p"
+            },
+            "start_date": {
+                "year": 2018
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 2019.",
+                "text": "<p>Esto ocurrió en el año 2019.</p"
+            },
+            "start_date": {
+                "year": 2019
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 2020.",
+                "text": "<p>Esto ocurrió en el año 2020.</p"
+            },
+            "start_date": {
+                "year": 2020
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 2021.",
+                "text": "<p>Esto ocurrió en el año 2021.</p"
+            },
+            "start_date": {
+                "year": 2021
+            }
+        },
+        {
+            "text": {
+                "headline": "Año 2022.",
+                "text": "<p>Esto ocurrió en el año 2022.</p"
+            },
+            "start_date": {
+                "year": 2022
+            }
+        }
+    ]
+}
