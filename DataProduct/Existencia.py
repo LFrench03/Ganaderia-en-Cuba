@@ -468,117 +468,113 @@ with tab1:
         with st.container(border=True):
             st.subheader("🪓 Comparación de la cantidad de entregas a sacrificios del ganado porcino de ceba respecto al total")
 
+            slider = st.select_slider(" ",[x for x in range (1989,2013)])
 
+            porcino_total_estatal = data["porcino"]["Entregas a sacrificio"]["Estatal"]["Cabezas(Mcabz)"]["Total"]
             porcino_ceba = data["porcino"]["Entregas a sacrificio"]["Estatal"]["Cabezas(Mcabz)"]["Ceba"]
+
+
+            porcino_ceba_totaalDF = pd.DataFrame({
+              "Ganado porcino de ceba": porcino_ceba,
+              "Ganado porcino estatal": porcino_total_estatal
+
+            })
             
 
+            porcino_ceba_totaalDF = porcino_ceba_totaalDF.apply(pd.to_numeric)
+
+            colors = ['#BC9F8B', '#EEE3CB']
+            def crear_grafica(year):
+                fig = go.Figure(data = go.Pie(labels=["Ganado porcino de ceba", "Ganado porcino estatal"], values = porcino_ceba_totaalDF.loc[str(year)]))
+                fig.update_traces(hoverinfo='label+percent', textinfo='value', textfont_size=15,
+                            marker=dict(colors=colors, line=dict(color='black', width=1.5)))
+                fig.update_layout(
+                    legend=dict(
+                                title=dict(text="Sacrificios")
+                            ),
+                width=2000,  
+                height=500,  
+            
+            )
+                return fig  
+
+            st.plotly_chart(crear_grafica(slider))
+
+
+        with st.container(border=True):
+            st.subheader("🐓 Entregas a sacrificio de pollos de ceba")
+
+            pollosceba_sacrifT = data["aves"]["Entregas a sacrificio"]["Pollos de ceba entrega a sacrificio"]["Cantidad(Mcabz)"]
+
+            pollosceba_sacrif_dataframe = pd.DataFrame({
+              "Pollos de ceba entregados a sacrificio": pollosceba_sacrifT,
+
+            })
+            
+
+            pollosceba_sacrif_dataframe = pollosceba_sacrif_dataframe.apply(pd.to_numeric)
+
+
+            fig = px.area(pollosceba_sacrif_dataframe,markers=True,color_discrete_sequence=px.colors.qualitative.Pastel1)
+            fig.update_layout(width=800, height=600, 
+                    yaxis_title = "Cantidad", xaxis_title = "Años", 
+                    title = "Cantidad total de entregas a sacrificio de pollos de ceba",
+                    showlegend = False)
+
+
+            st.plotly_chart(fig)
+
+
+
+
+            def mostrar(graf):
+                st.plotly_chart(graf)
+
+
+            choices3 = st.selectbox( "Seleccione una opción", ["Pienso consumido por ave", "Conversión de pienso en carne"],)
+
+            pienso_consumido_ave = data["aves"]["Entregas a sacrificio"]["Pollos de ceba entrega a sacrificio"]["Pienso consumido por ave(kg)"]
+            convers_pienso_carne = data["aves"]["Entregas a sacrificio"]["Pollos de ceba entrega a sacrificio"]["Conversion de pienso en carne(kg)"]
+
+            pcDF = pd.DataFrame({
+              "Pienso consumido por ave": pienso_consumido_ave,
+            })
+
+            cpDF = pd.DataFrame({
+              "Conversión de pienso en carne": convers_pienso_carne,
+            })
+
+            pcDF = pcDF.apply(pd.to_numeric)
+
+            cpDF = cpDF.apply(pd.to_numeric)
+
+
+            pc = px.line(pcDF,markers=True,color_discrete_sequence=px.colors.qualitative.Pastel1)
+            pc.update_layout(width=800, height=600, 
+                    yaxis_title = "Cantidad", xaxis_title = "Años", 
+                    title = "Pienso consumido por ave (kg)",
+                    showlegend = False)
+            
+            cp = px.line(cpDF,markers=True,color_discrete_sequence=px.colors.qualitative.Pastel1)
+            cp.update_layout(width=800, height=600, 
+                    yaxis_title = "Cantidad", xaxis_title = "Años", 
+                    title = "Conversión de pienso en carne (kg)",
+                    showlegend = False)
+
+
+
+            if choices3 == "Pienso consumido por ave":
+                mostrar(pc)
+            if choices3 == "Conversión de pienso en carne":
+                mostrar(cp)
+
+
+        with st.expander("Observaciones"):
+                st.write("- La cantidad de todos los tipos de ganado está expresada en miles de cabezas")
+                st.write("- Los valores de los años que son 0, se deben a que no se encuentran los datos en la ONEI")
+                st.write("- Mt: toneladas métricas")
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# def mostrar(g):
-#     st.plotly_chart(g)
-
-# #Vacuno
-# existencia_vacunosT = data["vacuno"]["Total"]
-
-
-# existencia_vacas = pd.DataFrame({  
-#     "Total": existencia_vacunosT
-# })
-
-
-# existencia_vacas = existencia_vacas.apply(pd.to_numeric)
-
-
-# vacuno = px.area(existencia_vacas,markers=True,color_discrete_sequence=px.colors.qualitative.Pastel1)
-# vacuno.update_layout(width=1000, height=600, 
-#                    yaxis_title = "Cantidad", xaxis_title = "Años", 
-
-#                    legend=dict(
-#                     title=dict(text="Tipo")
-#                    )
-                   
-#                  )
-
-# #Porcino
-# existencia_porcinosT = data["porcino"]["Existencia(Mcabz)"]["Total"]
-# existencia_porcinosE = data["porcino"]["Existencia(Mcabz)"]["Estatal"]
-# existencia_porcinosNE = {}
-
-# for year in existencia_porcinosT:
-#     if existencia_porcinosT[year] and existencia_porcinosE[year]:
-#         existencia_porcinosNE[year] = round(float(existencia_porcinosT[year]) - float(existencia_porcinosE[year]), 1)
-        
-# existencia_cerdos = pd.DataFrame({  
-#     "Total": existencia_porcinosT,
-#     "Estatal": existencia_porcinosE,
-#     "No Estatal": existencia_porcinosNE
-# })
-
-
-# existencia_cerdos = existencia_cerdos.apply(pd.to_numeric)
-
-
-# porcino = px.area(existencia_cerdos,markers=True,color_discrete_sequence=px.colors.qualitative.Pastel1)
-# porcino.update_layout(width=1000, height=600, 
-#                    yaxis_title = "Cantidad", xaxis_title = "Años", 
-
-#                    legend=dict(
-#                     title=dict(text="Tipo")
-#                    )
-                   
-#                  )
-
-
-# #Ovino Caprino
-# existencia_o_cT = data["ovino_caprino"]["Existencia(Mcabz)"]["Total"]["Total"]
-# existencia_o_cE = data["ovino_caprino"]["Existencia(Mcabz)"]["Estatal"]["Total"]
-# existencia_o_cNE = {}
-
-# for year in existencia_o_cT:
-#     if existencia_o_cT[year] and existencia_o_cE[year]:
-#         existencia_o_cNE[year] = round(float(existencia_o_cT[year]) - float(existencia_o_cE[year]), 1)
-        
-# existencia_OC = pd.DataFrame({  
-#     "Total": existencia_o_cT,
-#     "Estatal": existencia_o_cE,
-#     "No Estatal": existencia_o_cNE
-# })
-
-
-# existencia_OC = existencia_OC.apply(pd.to_numeric)
-
-
-# oc = px.area(existencia_OC,markers=True,color_discrete_sequence=px.colors.qualitative.Pastel1)
-# oc.update_layout(width=1000, height=600, 
-#                    yaxis_title = "Cantidad", xaxis_title = "Años", 
-
-#                    legend=dict(
-#                     title=dict(text="Tipo")
-#                    )
-                   
-#                  )
