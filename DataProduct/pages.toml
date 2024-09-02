@@ -1,21 +1,41 @@
 [[pages]]
-path = "Inicio.py"
-name = "Inicio"
+path = "pages/Inicio.py"
+name = "DataPecuario"
 icon = "🏠"
 
 [[pages]]
-path = "Existencia.py"
-name = "Existencia del ganado"
-icon = "🐾"
+name = "Ganado"
+is_section = true
+icon = ""
 
 [[pages]]
-path = "Leche.py"
-name = "Producción ganadera"
+path = "pages/Existencia.py"
+name = "Existencia"
+icon = "♥️"
+
+[[pages]]
+path = "pages/Produccion.py"
+name = "Producción"
 icon = "🏭"
 
 [[pages]]
-path = "Metodologia.py"
+name = "Entidades"
+is_section = true
+icon = ""
+
+[[pages]]
+path = "pages/Entidades.py"
+name = "Instituciones"
+icon = "📍"
+
+[[pages]]
+name = "Acerca de"
+is_section = true
+icon = ""
+
+[[pages]]
+path = "pages/Metodologia.py"
 name = "Metodologia"
-icon = "🧰"
+icon = "ℹ️"
 
 url_path = "DataPecuario"
