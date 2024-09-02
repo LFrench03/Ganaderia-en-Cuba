@@ -101,7 +101,7 @@ with tab1:
 
 
 with tab2:
-        
+    st.header("Ganado de ordeño en Cuba")    
     #Vacas de ordenno    
     vacas_ordenno_E = data["vacuno"]["Indicadores produccion leche"]["Existencia promedio de vacas de ordeño(Mcabz)"]["Estatal"]
     vacas_ordenno_NE = data["vacuno"]["Indicadores produccion leche"]["Existencia promedio de vacas de ordeño(Mcabz)"]["No Estatal"]
@@ -210,7 +210,7 @@ with tab2:
     st.plotly_chart(crear_grafica(opciones2))
     
 with tab3:  
-        
+    st.header("Produción avícola en Cuba") 
     #Producc huevos
     produccion_huevos_total = data["aves"]["Produccion de huevos(MMU)"]["Total"]
     produccion_huevos_estatal = data["aves"]["Produccion de huevos(MMU)"]["Empresas avicolas "]
