@@ -418,12 +418,12 @@ with tab2:
                 
 
                 
-                def mostrar(graf):
-                    st.plotly_chart(graf)
+             
                 if opc == "Total":
-                    mostrar(sacrifT)
+                    st.plotly_chart(sacrifT)
                 if opc == "Estatal":
-                    mostrar(sacrifE)
+                    st.plotly_chart(sacrifE)
+
             with col2:
                 with st.expander("Observaciones"):
                     st.markdown("A")
@@ -559,4 +559,168 @@ with tab2:
             
             with st.expander("Obervaciones"):
                 st.write("Natalidad y Mortalidad")
-####################################################AQUI-
+
+
+with tab3:
+    st.subheader("Natalidad y mortalidad")
+    
+    #Datos de los nacimientos y muertes
+    
+
+    nacimientos_vacunos = data["vacuno"]["Nacimientos_muertes(Mcabz)"]["Nacimientos"]["Totales"]
+    muertes_vacuno = data["vacuno"]["Nacimientos_muertes(Mcabz)"]["Muertes"]["Totales"]
+    nacimientos_porcinos = data["porcino"]["Nacimientos (vivos)(Mcabz)"]["Total"]
+    muertes_porcinos = data["porcino"]["Muertes de crías (a)(Mcabz)"]["Total"]
+    
+
+    with st.container(border=True):
+        st.subheader("🐖 Tasa de existencia")
+    
+        nac_vDF = pd.DataFrame({
+            "Nacimientos vacunos": nacimientos_vacunos
+        })
+
+
+        muer_vDF = pd.DataFrame({
+            "Muertes vacunas": muertes_vacuno
+        })
+
+        nac_pDF = pd.DataFrame({
+            "Nacimientos porcinos": nacimientos_porcinos
+ 
+        })
+
+        muer_pDF = pd.DataFrame({
+            "Muertes porcinas": muertes_porcinos
+        })
+
+        nac_vDF = nac_vDF.apply(pd.to_numeric)
+        muer_vDF = muer_vDF.apply(pd.to_numeric)
+        nac_pDF = nac_pDF.apply(pd.to_numeric)
+        muer_pDF = muer_pDF.apply(pd.to_numeric)
+
+        nac_vDF.columns = ["Muertes vacunas"]
+        nac_pDF.columns = ["Muertes porcinas"]
+        
+
+
+        calcular_tasa_vacuno = (nac_vDF/muer_vDF) - 1
+        
+
+        calcular_tasa_porcino = (nac_pDF/muer_pDF) - 1
+        
+
+        tasa_existDF = pd.DataFrame({
+            "Ganado vacuno": calcular_tasa_vacuno.squeeze(),
+            "Ganado porcino": calcular_tasa_porcino.squeeze()
+
+        })
+
+        tasa_existDF = tasa_existDF.apply(pd.to_numeric)
+
+
+        
+        opciones11 = st.select_slider("",[x for x in range (1993,2023)])
+        def crear_grafica(year):
+            df = tasa_existDF.loc[str(year)]
+            df.index.name = "Tipo"
+            fig = px.bar(df, hover_name='value', hover_data={'variable': None, 'value':None}, orientation='h')
+            fig.update_layout(
+            yaxis_title = "Tipo de Ganado", xaxis_title = "Tasa de existencia")       
+            fig.update_traces(width=0.5,
+                    marker_line_color="black",
+                    marker_line_width=1.5, opacity=0.6, 
+                    showlegend = False) 
+            fig.data[0].marker.color = ["#5B99C2","#FF8343"] 
+            return fig  
+
+        st.plotly_chart(crear_grafica(opciones11))  
+
+        
+
+    
+    with st.container(border=True):
+        st.subheader("🐄 Nacimientos y Muertes")
+
+        choices4 = st.selectbox( "", ["Ganado vacuno", "Ganado porcino"])
+
+        nac_muert_vacunosDF = pd.DataFrame({
+            "Nacimientos": nacimientos_vacunos,
+            "Muertes": muertes_vacuno
+        })
+
+        nac_muert_porcinosDF = pd.DataFrame({
+            "Nacimientos": nacimientos_porcinos,
+            "Muertes": muertes_porcinos
+        })
+
+        nac_muert_vacunosDF = nac_muert_vacunosDF.apply(pd.to_numeric)
+        nac_muert_porcinosDF = nac_muert_porcinosDF.apply(pd.to_numeric)
+
+        #Grafico de Linea con selectbox
+        v = px.line(nac_muert_vacunosDF, hover_name='value', hover_data={'variable': None, 'value':None}, markers=True,color_discrete_sequence=custom_colors)
+        v.update_layout(width=800, height=600, 
+                    yaxis_title = "Cantidad", xaxis_title = "Años", 
+                    legend=dict(
+                                title=dict(text="")
+                            )
+                    )
+        
+        p = px.line(nac_muert_porcinosDF, hover_name='value', hover_data={'variable': None, 'value':None}, markers=True,color_discrete_sequence=custom_colors)
+        p.update_layout(width=800, height=600, 
+                    yaxis_title = "Cantidad", xaxis_title = "Años", 
+                    legend=dict(
+                                title=dict(text="")
+                            )
+                    )
+
+
+        if choices4 == "Ganado vacuno":
+            st.plotly_chart(v)
+        if choices4 == "Ganado porcino":
+            st.plotly_chart(p)
+
+
+
+
+    with st.container(border=True):
+        st.subheader("🐔 Existencia y mortalidad de gallinas ponedoras")
+
+        #Datos gallinas ponedoras
+        gp_muertes = data["aves"]["Indicadores seleccionados de gallinas ponedoras"]["Muertes(Mcabz)"]
+        gp_existencia = data["aves"]["Indicadores seleccionados de gallinas ponedoras"]["Existencia promedio(Mcabz)"]
+        gp_tasa_mortalidad = data["aves"]["Indicadores seleccionados de gallinas ponedoras"]["Tasa de mortalidad(%)"]
+
+
+        gp_muertesDF = pd.DataFrame({
+            "Existencia promedio": gp_existencia,
+            "Muertes de gallinas ponedoras": gp_muertes
+    })
+            
+        gp_tasa_mortalidadDF = pd.DataFrame({
+        "Tasa de mortalidad de gallinas ponedoras": gp_tasa_mortalidad
+    })
+            
+
+        #Selectbox para grafico de area y de linea
+        choices5 = st.selectbox( "", ["Existencia y mortalidad", "Tasa de mortalidad"])
+
+        gp_muertesDF.index.name = "Año"
+        mgp = px.line(gp_muertesDF, hover_name='value', hover_data={'variable': None, 'value':None}, markers=True,color_discrete_sequence=custom_colors)
+        mgp.update_layout(width=800, height=600, 
+                    yaxis_title = "Cantidad", xaxis_title = "Años", 
+                    legend=dict(
+                                title=dict(text="")
+                            )
+                    )
+        
+        gp_tasa_mortalidadDF.index.name = "Año"
+        tm = px.line(gp_tasa_mortalidadDF, hover_name='value', hover_data={'variable': None, 'value':None} ,markers=True,color_discrete_sequence=custom_colors)
+        tm.update_layout(width=800, height=600, 
+                    yaxis_title = "Cantidad", xaxis_title = "Años", 
+                    showlegend = False)
+
+        if choices5 == "Existencia y mortalidad":
+            st.plotly_chart(mgp)
+        if choices5 == "Tasa de mortalidad":
+            st.plotly_chart(tm)

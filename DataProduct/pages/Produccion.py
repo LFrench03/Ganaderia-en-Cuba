@@ -8,7 +8,7 @@ import plotly.graph_objects as go
 with open('inventario_ganado.json',encoding = "utf8") as json_data: #Cargar Json
     data = json.load(json_data)  
   
-tab1, tab2, tab3 = st.tabs(["Producción de leche", "Producción avícola", "Alimentación"]) #Tabulaciones
+tab1, tab2, tab3 = st.tabs(["Producción de leche", "Producción avícola", "Alimentación del ganado"]) #Tabulaciones
 with tab1:
     with st.container(border=True):   
         col1, col2 = st.columns(2)
@@ -185,6 +185,7 @@ with tab1:
         if opcion == "Cantidad":
             st.markdown("###### Toneladas (T)")
             st.plotly_chart(graficar(dfC))
+
     
 with tab2:
     with st.container(border=True):
@@ -271,5 +272,65 @@ with tab2:
                 st.write("A")
 
 with tab3:
-    st.write("AQUI")
-####################################################################AQUI
+    st.header("🧑🏻‍🌾 Alimentación del ganado")
+    with st.container(border=True):
+            #Datos Importaciones Carne
+            piensoV = data["Importaciones"]["Pienso para animales (excepto cereales sin moler) Valor (MP)"]
+            tortasC = data["Importaciones"]["Tortas de soja Cantidad (t)"]
+            tortasV = data["Importaciones"]["Tortas de soja Valor (MP)"]
+            harina_piensoC = data["Importaciones"]["Harina animal para pienso Cantidad (t)"]
+            harina_piensoV = data["Importaciones"]["Harina animal para pienso Valor (MP)"]
+            preparadosC = data["Importaciones"]["Preparados del tipo utilizado para la alimentacion de animales Cantidad (t)"]
+            preparadosV = data["Importaciones"]["Preparados del tipo utilizado para la alimentacion de animales Valor (MP)"]
+            diversosV = data["Importaciones"]["Productos y preparados comestibles diversos Valor (MP)"]
+            otrosC = data["Importaciones"]["Otros preparados alimenticios Cantidad (t)"]
+            otrosV = data["Importaciones"]["Otros preparados alimenticios Valor (MP)"]
+
+            #DataFrames
+            dfV = pd.DataFrame({
+                "Pienso para animales (excepto cereales sin moler)": piensoV,
+                "Tortas de soja": tortasV,
+                "Harina animal para pienso": harina_piensoV,
+                "Preparados del tipo utilizado para la alimentación de animales": preparadosV,
+                "Productos y preparados comestibles diversos": diversosV,
+                "Otros preparados alimenticios": otrosV
+            })
+            dfV.index.name = "Año"
+
+            dfC = pd.DataFrame({
+                "Tortas de soja": tortasC,
+                "Harina animal para pienso": harina_piensoC,
+                "Preparados del tipo utilizado para la alimentación de animales": preparadosC,
+                "Otros preparados alimenticios": otrosC
+            })
+            dfC.index.name = "Año"
+
+            dfV = dfV.apply(pd.to_numeric)
+            dfC = dfC.apply(pd.to_numeric)
+
+            #Grafico de Linea con selectbox
+            st.markdown("#### 🥩 Valores de Importaciones de alimentación del ganado")
+            opcion = st.selectbox("Seleccione una opción", ["Valor", "Cantidad"])
+
+            
+            val = px.line(dfV,markers=True,color_discrete_sequence=custom_colors, hover_name='value', hover_data={'variable': None, 'value':None})
+            val.update_layout(width=1200, height=600, 
+                            yaxis_title = "Cantidad", xaxis_title = "Años",
+                            legend=dict(title=dict(text="Tipo")))
+                
+            cant = px.line(dfC,markers=True,color_discrete_sequence=custom_colors, hover_name='value', hover_data={'variable': None, 'value':None})
+            cant.update_layout(width=1200, height=600, 
+                            yaxis_title = "Cantidad", xaxis_title = "Años",
+                            legend=dict(title=dict(text="Tipo")))
+
+
+                
+            if opcion == "Valor":
+                st.markdown("###### Miles de Pesos (MP)")
+                st.plotly_chart(val)
+            if opcion == "Cantidad":
+                st.markdown("###### Toneladas (T)")
+                st.plotly_chart(cant)
+            
+            with st.expander("Obervaciones"):
+                st.write("Natalidad y Mortalidad")
