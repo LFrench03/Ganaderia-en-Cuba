@@ -9,10 +9,14 @@
         {"text":{
             "headline": "Antes del año 1959",
             "text": "<p>A</p>"
-
         }
         },
+        
         {
+            "media": {
+                "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/blob/main/brand/PNG/Identificador_vertical.png",
+                "caption": "<p>A</p"
+              },
             "text": {
                 "headline": "Año 1985.",
                 "text": "<p>Esto ocurrió en el año 1985.</p"
