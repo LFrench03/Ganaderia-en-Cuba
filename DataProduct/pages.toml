@@ -28,6 +28,11 @@ name = "Entidades"
 icon = "📍"
 
 [[pages]]
+path = "pages/Cuentas_Nacionales.py"
+name = "Cuentas Nacionales"
+icon = "💲"
+
+[[pages]]
 name = "Acerca de"
 is_section = true
 icon = ""

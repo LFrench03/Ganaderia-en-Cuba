@@ -174,7 +174,7 @@ with tab1:
         st.markdown("#### 🥛 Valores de Importaciones de Lacteos Seleccionados por Tipos")
         opcion = st.selectbox("Seleccione un grupo", ["Valor", "Cantidad"])
         def graficar(opc):
-            fig = px.line(opc,markers=True,color_discrete_sequence=custom_colors, hover_name='value', hover_data={'variable': None, 'value':None})
+            fig = px.line(opc,markers=True,color_discrete_sequence=custom_colors, hover_name='value', hover_data={'value':None})
             fig.update_layout(width=1200, height=600, 
                                 yaxis_title = "Cantidad", xaxis_title = "Años",
                                 legend=dict(title=dict(text="Tipo de Lacteo")))

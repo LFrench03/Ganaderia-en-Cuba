@@ -5,56 +5,47 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 with open('inventario_ganado.json',encoding = "utf8") as json_data: #Cargar Json 
-    data = json.load(json_data)   
+    data = json.load(json_data)  
+            
+#Datos totales
+vacuno = data["vacuno"]["Total"]  
+porcino = data["porcino"]["Existencia(Mcabz)"]["Total"]
+ovino_caprino = data["ovino_caprino"]["Existencia(Mcabz)"]["Total"]["Total"]
+aves = data["aves"]["Existencia(Mcabz)"]["Existencia total de aves"]
+equido = data["equido"]["Existencia(Mcabz)"]["Total"] 
 
-tab1, tab2, tab3 = st.tabs(["Existencia del ganado", "Entregas a sacrificio", "Natalidad y Mortalidad"])
-
-with tab1: #Tab de Existencia
-    st.markdown("### 〽️ ¿Qué tipos de ganado han predominado en Cuba en el período de 1985-2022?")
-    
-    with st.container(border=True):       
-            opciones = st.selectbox( "Seleccione una grupo", ["Total", "Estatal", "No Estatal"]) #Selectbox de Existencia
+#Datos Porcino Estatal
+porcinoE = data["porcino"]["Existencia(Mcabz)"]["Estatal"]
+porcinoNE = {}
             
-            #Datos totales
-            vacuno = data["vacuno"]["Total"]  
-            porcino = data["porcino"]["Existencia(Mcabz)"]["Total"]
-            ovino_caprino = data["ovino_caprino"]["Existencia(Mcabz)"]["Total"]["Total"]
-            aves = data["aves"]["Existencia(Mcabz)"]["Existencia total de aves"]
-            equido = data["equido"]["Existencia(Mcabz)"]["Total"]
+#Datos Porcino No Estatal
+for year in porcino:
+    porcinoNE[year] = round(float(porcino[year]) - float(porcinoE[year]), 1) 
             
+#Datos Ovino Caprino Estatal
+ovino_caprinoE = data["ovino_caprino"]["Existencia(Mcabz)"]["Estatal"]["Total"]
+ovino_caprinoNE = {}
             
-            #Datos Porcino Estatal
-            porcinoE = data["porcino"]["Existencia(Mcabz)"]["Estatal"]
-            porcinoNE = {}
+#Datos Ovino Caprino No Estatal
+for year in ovino_caprino:
+    if ovino_caprino[year] != ovino_caprinoE[year]:
+        ovino_caprinoNE[year] = round(float(ovino_caprino[year]) - float(ovino_caprinoE[year]), 1) 
             
-            #Datos Porcino No Estatal
-            for year in porcino:
-                porcinoNE[year] = round(float(porcino[year]) - float(porcinoE[year]), 1) 
-            
-            #Datos Ovino Caprino Estatal
-            ovino_caprinoE = data["ovino_caprino"]["Existencia(Mcabz)"]["Estatal"]["Total"]
-            ovino_caprinoNE = {}
-            
-            #Datos Ovino Caprino No Estatal
-            for year in ovino_caprino:
-                if ovino_caprino[year] != ovino_caprinoE[year]:
-                    ovino_caprinoNE[year] = round(float(ovino_caprino[year]) - float(ovino_caprinoE[year]), 1) 
-            
-            #Datos Aves Estatal
-            avesE = data["aves"]["Existencia(Mcabz)"]["Empresas avicolas estatales"]["Existencia total de aves"]
-            avesNE = {}
+#Datos Aves Estatal
+avesE = data["aves"]["Existencia(Mcabz)"]["Empresas avicolas estatales"]["Existencia total de aves"]
+avesNE = {}
                 
-            #Datos Aves No Estatal
-            for year in aves:
-                if aves[year] != avesE[year]:
-                    avesNE[year] = round(float(aves[year]) - float(avesE[year]),1)     
+#Datos Aves No Estatal
+for year in aves:
+    if aves[year] != avesE[year]:
+        avesNE[year] = round(float(aves[year]) - float(avesE[year]),1)     
             
-            #Datos Equido Estatal y No Estatal
-            equidoE = data["equido"]["Existencia(Mcabz)"]["Estatal"]["Total"]
-            equidoNE = data["equido"]["Existencia(Mcabz)"]["No estatal"]["Total"]
-            
-            #Dataframes Existencia
-            ganado_TOTAL = pd.DataFrame({
+#Datos Equido Estatal y No Estatal
+equidoE = data["equido"]["Existencia(Mcabz)"]["Estatal"]["Total"]
+equidoNE = data["equido"]["Existencia(Mcabz)"]["No estatal"]["Total"]
+
+#Dataframes Existencia
+ganado_TOTAL = pd.DataFrame({
                 "Vacuno": vacuno,
                 "Porcino": porcino,
                 "Ovino Caprino": ovino_caprino,
@@ -62,25 +53,61 @@ with tab1: #Tab de Existencia
                 "Equido": equido
                 
             })   
-            ganado_TOTAL.index.name = "Año" #Cambiar nombre de los indices de cada dataframe para que se muestre en el tooltip
-            ganado_ESTATAL = pd.DataFrame({
+ganado_TOTAL.index.name = "Año" #Cambiar nombre de los indices de cada dataframe para que se muestre en el tooltip
+ganado_ESTATAL = pd.DataFrame({
                 "Porcino": porcinoE,
                 "Ovino Caprino": ovino_caprinoE,
                 "Aves": avesE,
                 "Equido": equidoE
             })
-            ganado_ESTATAL.index.name = "Año"
-            ganado_NO_ESTATAL = pd.DataFrame({
+ganado_ESTATAL.index.name = "Año"
+ganado_NO_ESTATAL = pd.DataFrame({
                 "Porcino": porcinoNE,
                 "Ovino Caprino": ovino_caprinoNE,
                 "Aves": avesNE,
             })
-            ganado_NO_ESTATAL.index.name = "Año"
-            ganado_TOTAL = ganado_TOTAL.apply(pd.to_numeric)
-            ganado_ESTATAL = ganado_ESTATAL.apply(pd.to_numeric)
-            ganado_NO_ESTATAL = ganado_NO_ESTATAL.apply(pd.to_numeric)
+ganado_NO_ESTATAL.index.name = "Año"
+ganado_TOTAL = ganado_TOTAL.apply(pd.to_numeric)
+ganado_ESTATAL = ganado_ESTATAL.apply(pd.to_numeric)
+ganado_NO_ESTATAL = ganado_NO_ESTATAL.apply(pd.to_numeric)
             
-            custom_colors = ["#6382f3","#f3639c","#8a8a8a","#e8e85b","#ad5514"] #Secuencia de colores
+custom_colors = ["#6382f3","#f3639c","#8a8a8a","#e8e85b","#ad5514"] #Secuencia de colores
+
+#Tabulaciones
+tab1, tab2, tab3 = st.tabs(["Existencia del ganado", "Entregas a sacrificio", "Natalidad y Mortalidad"])
+
+with tab1: #Tab de Existencia
+    # Sistema de Metricas de diferencia entre dos años
+    with st.container(border=True):
+        st.markdown("#### 📉📈 Desarrollo de diferencias de la existencia total del ganado por tipos entre dos años (X & Y) desde 1990 hasta 2022")
+        ganado_TOTAL = ganado_TOTAL.iloc[5:,:]
+        ganado = st.selectbox("Seleccione un tipo de ganado", list(ganado_TOTAL.columns))
+        col1, col2, col3 = st.columns(3)
+        with col1.popover("Seleccione el Año X"):
+            year1 = st.select_slider("Año X",list(ganado_TOTAL.index))
+        with col3.popover("Seleccione el Año Y"):
+            year2 = st.select_slider("Año Y",list(ganado_TOTAL.index))
+        with col2:
+            result = round(float(ganado_TOTAL.loc[str(year1), ganado] - ganado_TOTAL.loc[str(year2), ganado]),2)
+            botton = st.toggle("Intercambiar métrica")
+            if botton:
+                st.metric(label=ganado, value=f"{ganado_TOTAL.loc[str(year2), ganado]} MCabz", delta=f"{result} MCabz")
+            else:
+                st.metric(label=ganado, value=f"{ganado_TOTAL.loc[str(year1), ganado]} MCabz", delta=f"{result} MCabz")
+            st.markdown("##### Años ")
+            col2_1, col2_2 = st.columns(2)
+            col2_1.markdown(f"X = {year1}")
+            col2_2.markdown(f"Y = {year2}")
+        with st.expander("Explicación"):
+            st.markdown('''- El valor que se muestra en la métrica por defecto es el valor de existencia en el Año X como minuendo de la resta (al activar el toggle mostraria el Año Y en su lugar),
+                        y el subíndice (delta) muestra la diferencia (positiva o negativa) del resultado de la diferencia entre el valor de existencia
+                        en el Año X menos el del Año Y *(todos los valores obviamente correspondientes al tipo de ganado seleccionado)*''')
+            st.markdown('''- Los valores de existencia están dados en Miles de Cabezas (MCabz)''')
+
+    st.markdown("### 〽️ ¿Qué tipos de ganado han predominado en Cuba en el período de 1985-2022?")
+    
+    with st.container(border=True):       
+            opciones = st.selectbox( "Seleccione una grupo", ["Total", "Estatal", "No Estatal"]) #Selectbox de Existencia
 
             #Graficos de Linea de la Existencia
             st.markdown("###### Miles de Cabezas (MCabz)")
@@ -352,28 +379,6 @@ with tab1: #Tab de Existencia
         with col2:
             with st.expander("Observaciones"):
                 st.markdown("# A")
-    # Sistema de Metricas de diferencia entre dos años
-    with st.container(border=True):
-        st.markdown("#### 📉📈 Diferencia de existencia total del ganado por tipos entre dos años (X & Y) desde 1990 hasta 2022")
-        ganado_TOTAL = ganado_TOTAL.iloc[5:,:]
-        ganado = st.selectbox("Seleccione un tipo de ganado", list(ganado_TOTAL.columns))
-        col1, col2, col3 = st.columns(3)
-        with col1.popover("Seleccione el Año X"):
-            year1 = st.select_slider("Año X",list(ganado_TOTAL.index))
-        with col3.popover("Seleccione el Año Y"):
-            year2 = st.select_slider("Año Y",list(ganado_TOTAL.index))
-        with col2:
-            result = round(float(ganado_TOTAL.loc[str(year1), ganado] - ganado_TOTAL.loc[str(year2), ganado]),2)
-            st.metric(label=ganado, value=f"{ganado_TOTAL.loc[str(year2), ganado]} MCabz", delta=f"{result} MCabz")
-            st.markdown("##### Años ")
-            col2_1, col2_2 = st.columns(2)
-            col2_1.markdown(f"X = {year1}")
-            col2_2.markdown(f"Y = {year2}")
-        with st.expander("Observaciones"):
-            st.markdown('''- El valor que se muestra en la métrica es el valor de existencia en el Año Y,
-                        y el subíndice (delta) muestra la diferencia (positiva o negativa) del resultado de la diferencia entre el valor de existencia
-                        en el Año X menos el del Año Y *(todos los valores obviamente correspondientes al tipo de ganado seleccionado)*''')
-            st.markdown('''- Los valores de existencia están dados en Miles de Cabezas (MCabz)''')
 with tab2:
         st.markdown("### 🪓 ¿Qué tipo de ganado tiene mayor frecuencia de entregas a sacrificios?")
     
@@ -636,7 +641,9 @@ with tab3:
             fig.data[0].marker.color = ["#5B99C2","#e0327c"] 
             return fig  
 
-        st.plotly_chart(crear_grafica(opciones11))  
+        st.plotly_chart(crear_grafica(opciones11)) 
+        with st.expander("Observaciones") :
+            st.markdown("")
 
     with st.container(border=True):
         st.markdown("### 🧬 Nacimientos y Muertes")
@@ -672,6 +679,8 @@ with tab3:
             st.plotly_chart(v)
         if answer == "Porcino🐷":
             st.plotly_chart(p)
+        with st.expander("Observaciones") :
+            st.markdown("")
 
     with st.container(border=True):
         st.markdown("### 🐔 Mortalidad de gallinas ponedoras")
@@ -711,3 +720,5 @@ with tab3:
         if choices5 == "Tasa de mortalidad (%)":
             st.markdown("###### Tasa de Mortalidad (%)")
             st.plotly_chart(tm)
+        with st.expander("Observaciones") :
+            st.markdown("")
