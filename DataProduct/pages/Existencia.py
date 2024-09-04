@@ -373,7 +373,7 @@ with tab1: #Tab de Existencia
             st.markdown('''- El valor que se muestra en la métrica es el valor de existencia en el Año Y,
                         y el subíndice (delta) muestra la diferencia (positiva o negativa) del resultado de la diferencia entre el valor de existencia
                         en el Año X menos el del Año Y *(todos los valores obviamente correspondientes al tipo de ganado seleccionado)*''')
-
+            st.markdown('''- Los valores de existencia están dados en Miles de Cabezas (MCabz)''')
 with tab2:
         st.markdown("### 🪓 ¿Qué tipo de ganado tiene mayor frecuencia de entregas a sacrificios?")
     
