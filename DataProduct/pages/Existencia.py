@@ -352,6 +352,28 @@ with tab1: #Tab de Existencia
         with col2:
             with st.expander("Observaciones"):
                 st.markdown("# A")
+    # Sistema de Metricas de diferencia entre dos años
+    with st.container(border=True):
+        st.markdown("#### 📉📈 Diferencia de existencia total del ganado por tipos entre dos años (X & Y) desde 1990 hasta 2022")
+        ganado_TOTAL = ganado_TOTAL.iloc[5:,:]
+        ganado = st.selectbox("Seleccione un tipo de ganado", list(ganado_TOTAL.columns))
+        col1, col2, col3 = st.columns(3)
+        with col1.popover("Seleccione el Año X"):
+            year1 = st.select_slider("Año X",list(ganado_TOTAL.index))
+        with col3.popover("Seleccione el Año Y"):
+            year2 = st.select_slider("Año Y",list(ganado_TOTAL.index))
+        with col2:
+            result = round(float(ganado_TOTAL.loc[str(year1), ganado] - ganado_TOTAL.loc[str(year2), ganado]),2)
+            st.metric(label=ganado, value=f"{ganado_TOTAL.loc[str(year2), ganado]} MCabz", delta=f"{result} MCabz")
+            st.markdown("##### Años ")
+            col2_1, col2_2 = st.columns(2)
+            col2_1.markdown(f"X = {year1}")
+            col2_2.markdown(f"Y = {year2}")
+        with st.expander("Observaciones"):
+            st.markdown('''- El valor que se muestra en la métrica es el valor de existencia en el Año Y,
+                        y el subíndice (delta) muestra la diferencia (positiva o negativa) del resultado de la diferencia entre el valor de existencia
+                        en el Año X menos el del Año Y *(todos los valores obviamente correspondientes al tipo de ganado seleccionado)*''')
+
 with tab2:
         st.markdown("### 🪓 ¿Qué tipo de ganado tiene mayor frecuencia de entregas a sacrificios?")
     
