@@ -13,8 +13,6 @@ with tab1: #Tab de Existencia
     st.markdown("### 〽️ ¿Qué tipos de ganado han predominado en Cuba en el período de 1985-2022?")
     
     with st.container(border=True):       
-        col1, col2 = st.columns(2)   
-        with col1:
             opciones = st.selectbox( "Seleccione una grupo", ["Total", "Estatal", "No Estatal"]) #Selectbox de Existencia
             
             #Datos totales
@@ -85,17 +83,18 @@ with tab1: #Tab de Existencia
             custom_colors = ["#6382f3","#f3639c","#8a8a8a","#e8e85b","#ad5514"] #Secuencia de colores
 
             #Graficos de Linea de la Existencia
-            total = px.line(ganado_TOTAL,markers=True,color_discrete_sequence=custom_colors, hover_name='value', hover_data={'variable': None, 'value':None})
+            st.markdown("###### Miles de Cabezas (MCabz)")
+            total = px.line(ganado_TOTAL,markers=True,color_discrete_sequence=custom_colors, hover_name='value', hover_data={'value':None})
             total.update_layout(width=800, height=600, 
                             yaxis_title = "Cantidad", xaxis_title = "Años",
                             legend=dict(title=dict(text="Tipo de ganado")))
             
-            estatal = px.line(ganado_ESTATAL,markers=True,color_discrete_sequence=custom_colors[1:], hover_name='value', hover_data={'variable': None, 'value':None})
+            estatal = px.line(ganado_ESTATAL,markers=True,color_discrete_sequence=custom_colors[1:], hover_name='value', hover_data={'value':None})
             estatal.update_layout(width=800, height=600, 
                             yaxis_title = "Cantidad", xaxis_title = "Años", 
                             legend=dict(title=dict(text="Tipo de ganado")))    
             
-            NOestatal = px.line(ganado_NO_ESTATAL,markers=True,color_discrete_sequence=custom_colors[1:-1], hover_name='value', hover_data={'variable': None, 'value':None})
+            NOestatal = px.line(ganado_NO_ESTATAL,markers=True,color_discrete_sequence=custom_colors[1:-1], hover_name='value', hover_data={'value':None})
             NOestatal.update_layout(width=800, height=600, 
                             yaxis_title = "Cantidad", xaxis_title = "Años", 
                             legend=dict(title=dict(text="Tipo de ganado")))       
@@ -109,7 +108,6 @@ with tab1: #Tab de Existencia
                 mostrar(estatal)
             if opciones == "No Estatal":
                 mostrar(NOestatal)
-        with col2:
             with st.expander("Observaiones"):
                 st.write("- La cantidad de todos los tipos de ganado está expresada en miles de cabezas")
                 st.write("- Los valores de los años que son 0, se deben a que no se encuentran los datos en la ONEI")
@@ -152,7 +150,7 @@ with tab1: #Tab de Existencia
                 fig.data[0].marker.color = ["#8a8a8a", "#eef124", "#d95330", "#d30808", "#ff9e29", "#3a3d85"]
                     
                 return fig  
-            
+            st.markdown("###### Miles de Cabezas (MCabz)")
             st.plotly_chart(crear_grafica(opciones3))
         #Expansor con observaciones
         with col2:        
@@ -177,7 +175,8 @@ with tab1: #Tab de Existencia
 
             #Grafico de pastel con slider para los años
             st.markdown("#### 🐏🐐 Comparación de la existencia del ganado Ovino-Caprino")
-            opciones1 = st.select_slider("Seleccione un año",[x for x in range (1990,2023)]) 
+            opciones1 = st.select_slider("Seleccione un año",[x for x in range (1990,2023)])
+            st.markdown("###### Cabezas (Cabz)") 
             colors = ['#51829B', '#9BB0C1'] #Colores
             def crear_grafica(year):
                 fig = go.Figure(data = go.Pie(labels=["Ovino", "Caprino"], values = exist_OC.loc[str(year)], pull= 0.1, textposition="outside", hoverinfo='value',textinfo='label+percent', 
@@ -243,7 +242,7 @@ with tab1: #Tab de Existencia
                     showlegend = False) 
             fig.data[0].marker.color = ["#FA7070", "#FA7070","#FA7070", "#FA7070","#4793AF", "#4793AF","#4793AF", "#4793AF","#4793AF", "#4793AF","#4793AF"] #Colores Rojo para Hembras y Azul para Macho
             return fig  
-
+        st.markdown("###### Miles de Cabezas (MCabz)")
         st.plotly_chart(crear_grafica(opciones))   
 
         #Expansor con observaciones
@@ -252,6 +251,7 @@ with tab1: #Tab de Existencia
             st.write("- Los valores de los años que son 0, se deben a que no se encuentran los datos en la ONEI")
         col1, col2 = st.columns(2)
         with col1:
+            #Datos equido
             equinoT = data["equido"]["Existencia(Mcabz)"]["Equino"]["Total"]
             equinoM = data["equido"]["Existencia(Mcabz)"]["Equino"]["machos"]
             equinoH = {}
@@ -286,7 +286,8 @@ with tab1: #Tab de Existencia
             for i in asnalTE:
                 asnalHNE[i] = round(float(asnalTNE[i]) - float(asnalMNE[i]), 1)
             mularNE = data["equido"]["Existencia(Mcabz)"]["No estatal"]["Mular"]            
-                
+
+            #Dataframes equido  
             dfT = pd.DataFrame({
                     "Equino": equinoT,
                     "Asnal": asnalT,
@@ -311,6 +312,8 @@ with tab1: #Tab de Existencia
                     "Macho":asnalM,
                     "Hembra":asnalH
             })
+
+            #Grafico de pastel equido
             st.markdown("### 🐴 Existencia de Ganado Equido por Tipos")
             opcion = st.selectbox("Seleccione un grupo", ["Total", "Equino", "Asnal", "Estatal", "No Estatal"])
             def crear_graficaT(year, df):
@@ -320,15 +323,15 @@ with tab1: #Tab de Existencia
                 fig.update_layout(width=1300,  height=500,  margin=dict(l=100, r=100, t=100, b=100))
                 return fig 
             if opcion == "Total":
-                st.markdown("###### Total (Miles de cabezas)")
+                st.markdown("###### Total (Miles de Cabezas)")
                 opciones1 = st.select_slider("Año",[x for x in range (1985,2023)])
                 st.plotly_chart(crear_graficaT(opciones1, dfT))   
             if opcion == "Estatal":
-                st.markdown("###### Estatal (Miles de cabezas)")
+                st.markdown("###### Estatal (Miles de Cabezas)")
                 opciones1 = st.select_slider("Año",[x for x in range (1985,2023)])
                 st.plotly_chart(crear_graficaT(opciones1, dfE)) 
             if opcion == "No Estatal":
-                st.markdown("###### No Estatal (Miles de cabezas)")
+                st.markdown("###### No Estatal (Miles de Cabezas)")
                 opciones1 = st.select_slider("Año",[x for x in range (1985,2023)])
                 st.plotly_chart(crear_graficaT(opciones1, dfNE))    
                 
@@ -350,11 +353,9 @@ with tab1: #Tab de Existencia
             with st.expander("Observaciones"):
                 st.markdown("# A")
 with tab2:
-        st.markdown("### 🪓 ¿Qué tipo de ganado tiene más densidad de entregas a sacrificios?")
+        st.markdown("### 🪓 ¿Qué tipo de ganado tiene mayor frecuencia de entregas a sacrificios?")
     
         with st.container(border=True): 
-            col1, col2 = st.columns(2)
-            with col1:
                 opc = st.selectbox("Seleccione un grupo", ["Total", "Estatal"]) #Selectbox con opciones 
 
                 #Datos Sacrificios Total
@@ -408,11 +409,11 @@ with tab2:
 
                 
                 #Grafico de Linea
-                sacrifT = px.line(sacrif_TOTAL,markers=True,color_discrete_sequence=custom_colors[:-1],hover_name='value', hover_data={'variable': None, 'value':None})
+                sacrifT = px.line(sacrif_TOTAL,markers=True,color_discrete_sequence=custom_colors[:-1],hover_name='value', hover_data={'value':None})
                 sacrifT.update_layout(width=800, height=600, 
                                 yaxis_title = "Cantidad", xaxis_title = "Años", legend=dict(title=dict(text="Tipo de ganado")))
                 
-                sacrifE = px.line(sacrif_ESTATAL,markers=True,color_discrete_sequence=custom_colors[:-1],hover_name='value', hover_data={'variable': None, 'value':None})
+                sacrifE = px.line(sacrif_ESTATAL,markers=True,color_discrete_sequence=custom_colors[:-1],hover_name='value', hover_data={'value':None})
                 sacrifE.update_layout(width=800, height=600, 
                                 yaxis_title = "Cantidad", xaxis_title = "Años", legend=dict(title=dict(text="Tipo de ganado")))
                 
@@ -420,11 +421,13 @@ with tab2:
                 
              
                 if opc == "Total":
+                    st.markdown("###### Miles de Cabezas (MCabz)")
                     st.plotly_chart(sacrifT)
                 if opc == "Estatal":
+                    st.markdown("###### Miles de Cabezas (MCabz)")
                     st.plotly_chart(sacrifE)
 
-            with col2:
+            
                 with st.expander("Observaciones"):
                     st.markdown("A")
 
@@ -562,38 +565,25 @@ with tab2:
 
 
 with tab3:
-    st.subheader("Natalidad y mortalidad")
-    
     #Datos de los nacimientos y muertes
-    
-
     nacimientos_vacunos = data["vacuno"]["Nacimientos_muertes(Mcabz)"]["Nacimientos"]["Totales"]
     muertes_vacuno = data["vacuno"]["Nacimientos_muertes(Mcabz)"]["Muertes"]["Totales"]
     nacimientos_porcinos = data["porcino"]["Nacimientos (vivos)(Mcabz)"]["Total"]
     muertes_porcinos = data["porcino"]["Muertes de crías (a)(Mcabz)"]["Total"]
     
-
     with st.container(border=True):
-        st.subheader("🐖 Tasa de existencia")
-    
         nac_vDF = pd.DataFrame({
             "Nacimientos vacunos": nacimientos_vacunos
         })
-
-
         muer_vDF = pd.DataFrame({
             "Muertes vacunas": muertes_vacuno
         })
-
         nac_pDF = pd.DataFrame({
             "Nacimientos porcinos": nacimientos_porcinos
- 
         })
-
         muer_pDF = pd.DataFrame({
             "Muertes porcinas": muertes_porcinos
         })
-
         nac_vDF = nac_vDF.apply(pd.to_numeric)
         muer_vDF = muer_vDF.apply(pd.to_numeric)
         nac_pDF = nac_pDF.apply(pd.to_numeric)
@@ -601,59 +591,44 @@ with tab3:
 
         nac_vDF.columns = ["Muertes vacunas"]
         nac_pDF.columns = ["Muertes porcinas"]
-        
 
-
-        calcular_tasa_vacuno = (nac_vDF/muer_vDF) - 1
-        
-
-        calcular_tasa_porcino = (nac_pDF/muer_pDF) - 1
-        
-
+        calcular_tasa_vacuno = round(((nac_vDF/muer_vDF)-1),2)
+        calcular_tasa_porcino = round(((nac_pDF/muer_pDF)-1),2)
         tasa_existDF = pd.DataFrame({
             "Ganado vacuno": calcular_tasa_vacuno.squeeze(),
             "Ganado porcino": calcular_tasa_porcino.squeeze()
-
         })
-
         tasa_existDF = tasa_existDF.apply(pd.to_numeric)
-
-
-        
-        opciones11 = st.select_slider("",[x for x in range (1993,2023)])
+        st.markdown("### 💀 Tasa de Mortalidad")
+        opciones11 = st.select_slider("Año",[x for x in range (1993,2023)])
         def crear_grafica(year):
             df = tasa_existDF.loc[str(year)]
             df.index.name = "Tipo"
             fig = px.bar(df, hover_name='value', hover_data={'variable': None, 'value':None}, orientation='h')
             fig.update_layout(
-            yaxis_title = "Tipo de Ganado", xaxis_title = "Tasa de existencia")       
+            xaxis_title = "Tasa")       
             fig.update_traces(width=0.5,
                     marker_line_color="black",
                     marker_line_width=1.5, opacity=0.6, 
                     showlegend = False) 
-            fig.data[0].marker.color = ["#5B99C2","#FF8343"] 
+            fig.data[0].marker.color = ["#5B99C2","#e0327c"] 
             return fig  
 
         st.plotly_chart(crear_grafica(opciones11))  
 
-        
-
-    
     with st.container(border=True):
-        st.subheader("🐄 Nacimientos y Muertes")
-
-        choices4 = st.selectbox( "", ["Ganado vacuno", "Ganado porcino"])
-
+        st.markdown("### 🧬 Nacimientos y Muertes")
+        answer = st.selectbox("Tipo de Ganado", ["Vacuno🐮", "Porcino🐷"])
         nac_muert_vacunosDF = pd.DataFrame({
             "Nacimientos": nacimientos_vacunos,
             "Muertes": muertes_vacuno
         })
-
+        nac_muert_vacunosDF.index.name = "Año"
         nac_muert_porcinosDF = pd.DataFrame({
             "Nacimientos": nacimientos_porcinos,
             "Muertes": muertes_porcinos
         })
-
+        nac_muert_porcinosDF.index.name = "Año"
         nac_muert_vacunosDF = nac_muert_vacunosDF.apply(pd.to_numeric)
         nac_muert_porcinosDF = nac_muert_porcinosDF.apply(pd.to_numeric)
 
@@ -662,10 +637,7 @@ with tab3:
         v.update_layout(width=800, height=600, 
                     yaxis_title = "Cantidad", xaxis_title = "Años", 
                     legend=dict(
-                                title=dict(text="")
-                            )
-                    )
-        
+                                title=dict(text="")))
         p = px.line(nac_muert_porcinosDF, hover_name='value', hover_data={'variable': None, 'value':None}, markers=True,color_discrete_sequence=custom_colors)
         p.update_layout(width=800, height=600, 
                     yaxis_title = "Cantidad", xaxis_title = "Años", 
@@ -673,25 +645,18 @@ with tab3:
                                 title=dict(text="")
                             )
                     )
-
-
-        if choices4 == "Ganado vacuno":
+        st.markdown("###### Miles de Cabezas (MCabz)")
+        if answer == "Vacuno🐮":
             st.plotly_chart(v)
-        if choices4 == "Ganado porcino":
+        if answer == "Porcino🐷":
             st.plotly_chart(p)
 
-
-
-
     with st.container(border=True):
-        st.subheader("🐔 Existencia y mortalidad de gallinas ponedoras")
-
+        st.markdown("### 🐔 Mortalidad de gallinas ponedoras")
         #Datos gallinas ponedoras
         gp_muertes = data["aves"]["Indicadores seleccionados de gallinas ponedoras"]["Muertes(Mcabz)"]
         gp_existencia = data["aves"]["Indicadores seleccionados de gallinas ponedoras"]["Existencia promedio(Mcabz)"]
         gp_tasa_mortalidad = data["aves"]["Indicadores seleccionados de gallinas ponedoras"]["Tasa de mortalidad(%)"]
-
-
         gp_muertesDF = pd.DataFrame({
             "Existencia promedio": gp_existencia,
             "Muertes de gallinas ponedoras": gp_muertes
@@ -701,10 +666,8 @@ with tab3:
         "Tasa de mortalidad de gallinas ponedoras": gp_tasa_mortalidad
     })
             
-
         #Selectbox para grafico de area y de linea
-        choices5 = st.selectbox( "", ["Existencia y mortalidad", "Tasa de mortalidad"])
-
+        choices5 = st.selectbox( "Selecciona", ["Existencia promedio y mortalidad", "Tasa de mortalidad (%)"])
         gp_muertesDF.index.name = "Año"
         mgp = px.line(gp_muertesDF, hover_name='value', hover_data={'variable': None, 'value':None}, markers=True,color_discrete_sequence=custom_colors)
         mgp.update_layout(width=800, height=600, 
@@ -715,12 +678,14 @@ with tab3:
                     )
         
         gp_tasa_mortalidadDF.index.name = "Año"
-        tm = px.line(gp_tasa_mortalidadDF, hover_name='value', hover_data={'variable': None, 'value':None} ,markers=True,color_discrete_sequence=custom_colors)
+        tm = px.line(gp_tasa_mortalidadDF, hover_name='value', hover_data={'variable': None, 'value':None} ,markers=True,color_discrete_sequence=["#bb0A00"])
         tm.update_layout(width=800, height=600, 
                     yaxis_title = "Cantidad", xaxis_title = "Años", 
                     showlegend = False)
 
-        if choices5 == "Existencia y mortalidad":
+        if choices5 == "Existencia promedio y mortalidad":
+            st.markdown("###### Existencia promedio (Miles de Cabezas)")
             st.plotly_chart(mgp)
-        if choices5 == "Tasa de mortalidad":
+        if choices5 == "Tasa de mortalidad (%)":
+            st.markdown("###### Tasa de Mortalidad (%)")
             st.plotly_chart(tm)

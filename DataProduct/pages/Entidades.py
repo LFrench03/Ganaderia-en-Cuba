@@ -178,7 +178,7 @@ if choice == "Entidades por provincia":
                 fill_color='OrRd',
                 fill_opacity=0.7,
                 line_opacity=0.2,
-                legend_name='Entidades',
+                legend_name='Entidades (Unidad)',
                 reset=True,
                 control=False
             ).add_to(m)
@@ -220,7 +220,7 @@ if choice == "Entidades por provincia":
 if choice == "Tenientes de tierras por provincia":
     st.markdown("#### 🗺 Tenientes de tierra por provincia")
     l1 = [dt2012,dt2013,dt2014,dt2015,dt2016,dt2017]
-    years = [x for x in range(2012, 2018)]
+    years = [x for x in range(2012, 2017)]
     year = st.select_slider("Año", years)
     def mapa(year):
         #Instanciando Mapa
@@ -294,7 +294,7 @@ dfc = pd.DataFrame(cooperativas)
 dfc = dfc.transpose()
 dfc = dfc.iloc[9:,:]
 dfc = dfc.iloc[:,1:]
-opciones = st.selectbox("Selecciones", ["General", "Cooperativas"])
+opciones = st.selectbox("Seleccione", ["General", "Cooperativas"])
 col1, col2 = st.columns(2)
 with col1:
     def crear_grafica(year):
