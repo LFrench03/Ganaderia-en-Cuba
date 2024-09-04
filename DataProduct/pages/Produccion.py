@@ -91,7 +91,7 @@ with tab1:
             opciones = st.selectbox("Seleccione un grupo", ["Vacas de ordeño", "Cabras de ordeño"])
             def crear_grafica1(year):
                 colors = ['#c560a0', '#4f2d57']
-                fig = go.Figure(data = go.Pie(labels=["No Estatal", "Estatal", "Total"], values = vacas_ordennoDF.loc[str(year)],pull= 0.1, textposition="outside", hoverinfo='value',textinfo='label+percent', 
+                fig = go.Figure(data = go.Pie(labels=["No Estatal", "Estatal"], values = vacas_ordennoDF.loc[str(year)],pull= 0.1, textposition="outside", hoverinfo='value',textinfo='label+percent', 
                                 marker=dict(colors=colors, line=dict(color='black', width=3))))
                 fig.update_layout(
                 width=1300,  
