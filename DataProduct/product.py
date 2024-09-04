@@ -5,6 +5,8 @@ st.set_page_config(layout="wide")
 
 nav = get_nav_from_toml("DataProduct/pages.toml")
 
+st.logo("brand/PNG/Identificador horizontal.png")
+
 pg = st.navigation(nav)
 
 add_page_title(pg)

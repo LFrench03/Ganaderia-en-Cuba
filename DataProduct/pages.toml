@@ -1,7 +1,6 @@
 [[pages]]
 path = "pages/Inicio.py"
 name = "DataPecuario"
-icon = "🏠"
 
 [[pages]]
 name = "Ganado"
@@ -16,7 +15,7 @@ icon = "♥️"
 [[pages]]
 path = "pages/Produccion.py"
 name = "Producción"
-icon = "🏭"
+icon = "🛄"
 
 [[pages]]
 name = "Entidades"

@@ -309,22 +309,18 @@ with tab3:
             dfC = dfC.apply(pd.to_numeric)
 
             #Grafico de Linea con selectbox
-            st.markdown("#### 🥩 Valores de Importaciones de alimentación del ganado")
+            st.markdown("#### Valores de Importaciones con destino a la alimentación del ganado")
             opcion = st.selectbox("Seleccione una opción", ["Valor", "Cantidad"])
-
             
-            val = px.line(dfV,markers=True,color_discrete_sequence=custom_colors, hover_name='value', hover_data={'variable': None, 'value':None})
+            val = px.line(dfV,markers=True,color_discrete_sequence=custom_colors, hover_name='value', hover_data={'value':None})
             val.update_layout(width=1200, height=600, 
                             yaxis_title = "Cantidad", xaxis_title = "Años",
                             legend=dict(title=dict(text="Tipo")))
                 
-            cant = px.line(dfC,markers=True,color_discrete_sequence=custom_colors, hover_name='value', hover_data={'variable': None, 'value':None})
+            cant = px.line(dfC,markers=True,color_discrete_sequence=custom_colors, hover_name='value', hover_data={'value':None})
             cant.update_layout(width=1200, height=600, 
                             yaxis_title = "Cantidad", xaxis_title = "Años",
                             legend=dict(title=dict(text="Tipo")))
-
-
-                
             if opcion == "Valor":
                 st.markdown("###### Miles de Pesos (MP)")
                 st.plotly_chart(val)
@@ -333,4 +329,7 @@ with tab3:
                 st.plotly_chart(cant)
             
             with st.expander("Obervaciones"):
-                st.write("Natalidad y Mortalidad")
+                st.write("")
+
+    with st.container(border=True):
+        st.write("Scatter Plot")
