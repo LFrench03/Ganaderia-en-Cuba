@@ -159,7 +159,6 @@ if choice == "Entidades por provincia":
                 tooltip=tooltip,
                 control=False
             ).add_to(m)
-
             return st_folium(m, use_container_width=True, height=550)
         map_data = mapa(year)
 

@@ -332,4 +332,50 @@ with tab3:
                 st.write("")
 
     with st.container(border=True):
-        st.write("Scatter Plot")
+        pienso_por_ave = data["aves"]["Indicadores seleccionados de gallinas ponedoras"]["Pienso consumido por ave(kg)"]
+        pienso_to_huevo = data["aves"]["Indicadores seleccionados de gallinas ponedoras"]["Conversion de pienso en huevo(g)"]
+        exist_prom= data["aves"]["Indicadores seleccionados de gallinas ponedoras"]["Existencia promedio(Mcabz)"]
+        prod_huevo= data["aves"]["Indicadores seleccionados de gallinas ponedoras"]["Produccion de huevos(MMU)"]
+        df1 = pd.DataFrame({"Pienso consumido por Ave (Kg)":pienso_por_ave,
+                            "Existencia Promedio (MCabz)": exist_prom})
+        df2 = pd.DataFrame({"Pienso en Huevo (g)":pienso_to_huevo,
+                            "Produccion de huevos(MMU)": prod_huevo})
+        df1.index.name = "Año"
+        df2.index.name = "Año"
+        st.markdown("### 🐓🥚 Relaciones de Consumo de Pienso en Aves")
+        with st.popover("Filtrado de datos"):
+            val = st.selectbox("Seleccione", ["Pienso por Ave", "Pienso en Huevo"])
+        if val == "Pienso por Ave":
+            toggle = st.toggle("Intercambiar valores")
+            if toggle:
+                st.markdown("###### Tamaño : Existencia Promedio (MCabz)")
+                fig = px.scatter(df1, size="Existencia Promedio (MCabz)", color_discrete_sequence=["#d3b003"],hover_name='value', hover_data={'variable':None,'value':None})
+                fig.update_layout(width=1200, height=600,
+                                    yaxis_title = "Cantidad (Kg)",
+                                    legend=dict(title=dict(text="Eje Y")))
+            else:
+                st.markdown("###### Tamaño : Pienso consumido por Ave (Kg)")
+                fig = px.scatter(df1, size="Pienso consumido por Ave (Kg)", color_discrete_sequence=["#c81919"],hover_name='value', hover_data={'variable':None,'value':None})
+                fig.update_layout(width=1200, height=600,
+                                    yaxis_title = "Cantidad (MCabz)",
+                                    legend=dict(title=dict(text="Eje Y")))
+            st.plotly_chart(fig)
+            with st.expander("Observaciones"):
+                st.write("")
+        else:
+            toggle = st.toggle("Intercambiar valores")
+            if toggle:
+                st.markdown("###### Tamaño : Produccion de huevos(MMU)")
+                fig = px.scatter(df2, size="Produccion de huevos(MMU)", color_discrete_sequence=["#ffe165"],hover_name='value', hover_data={'variable':None,'value':None})
+                fig.update_layout(width=1200, height=600,
+                                    yaxis_title = "Cantidad (g)",
+                                    legend=dict(title=dict(text="Eje Y")))
+            else:
+                st.markdown("###### Tamaño : Pienso en Huevo (g)")
+                fig = px.scatter(df2, size="Pienso en Huevo (g)", color_discrete_sequence=["#ff6565"],hover_name='value', hover_data={'variable':None,'value':None})
+                fig.update_layout(width=1200, height=600,
+                                    yaxis_title = "Cantidad (MMU)",
+                                    legend=dict(title=dict(text="Eje Y")))
+            st.plotly_chart(fig)
+            with st.expander("Observaciones"):
+                st.write("")
