@@ -79,7 +79,7 @@ tab1, tab2, tab3 = st.tabs(["Existencia del ganado", "Entregas a sacrificio", "N
 with tab1: #Tab de Existencia
     # Sistema de Metricas de diferencia entre dos años
     with st.container(border=True):
-        st.markdown("#### 📉📈 Desarrollo de diferencias de la existencia total del ganado por tipos entre dos años (X & Y) desde 1990 hasta 2022")
+        st.markdown("#### 📉📈 Desarrollo de diferencias de la existencia total del ganado cubano desde 1990 hasta 2022")
         ganado_TOTAL = ganado_TOTAL.iloc[5:,:]
         ganado = st.selectbox("Seleccione un tipo de ganado", list(ganado_TOTAL.columns))
         col1, col2, col3 = st.columns(3)
@@ -88,7 +88,7 @@ with tab1: #Tab de Existencia
         with col3.popover("Seleccione el Año Y"):
             year2 = st.select_slider("Año Y",list(ganado_TOTAL.index))
         with col2:
-            result = round(float(ganado_TOTAL.loc[str(year1), ganado] - ganado_TOTAL.loc[str(year2), ganado]),2)
+            result = round(float(ganado_TOTAL.loc[str(year2), ganado])-ganado_TOTAL.loc[str(year1), ganado],2)
             botton = st.toggle("Intercambiar métrica")
             if botton:
                 st.metric(label=ganado, value=f"{ganado_TOTAL.loc[str(year2), ganado]} MCabz", delta=f"{result} MCabz")
@@ -153,7 +153,6 @@ with tab1: #Tab de Existencia
             
             #DataFrame diferentes Tipos de Aves
             aves_estatales_tipos = pd.DataFrame({
-                "Gallinas ponedoras": ponedoras,
                 "Pollos de ceba": pollos_ceba,
                 "Reproductoras": reproductoras,
                 "De carne": carne,
@@ -174,7 +173,7 @@ with tab1: #Tab de Existencia
                                 marker_line_color="black",
                                 marker_line_width=1.5, opacity=0.6,
                                 showlegend=False)
-                fig.data[0].marker.color = ["#8a8a8a", "#eef124", "#d95330", "#d30808", "#ff9e29", "#3a3d85"]
+                fig.data[0].marker.color = ["#eef124", "#d95330", "#8a8a8a", "#ff9e29", "#3a3d85"]
                     
                 return fig  
             st.markdown("###### Miles de Cabezas (MCabz)")

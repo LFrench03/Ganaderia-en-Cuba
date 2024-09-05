@@ -185,6 +185,8 @@ with tab1:
         if opcion == "Cantidad":
             st.markdown("###### Toneladas (T)")
             st.plotly_chart(graficar(dfC))
+        with st.expander("Observaciones"):
+            st.markdown("")
 
     
 with tab2:
@@ -379,3 +381,50 @@ with tab3:
             st.plotly_chart(fig)
             with st.expander("Observaciones"):
                 st.write("")
+    keys = ['Producto interno bruto',
+        'Agricultura ganaderia y silvicultura']
+
+    corrientes = data["pib"]["corrientes"]
+    constantes = data["pib"]["constantes"]
+    datacorrientes = {}
+    dataconstantes = {}
+    for key in keys:
+        datacorrientes[key] = {}
+        for year in corrientes:
+            datacorrientes[key][str(year)] = corrientes[str(year)][key]
+    df1 = pd.DataFrame(datacorrientes)
+    for key in keys:
+        dataconstantes[key] = {}
+        for year in constantes:
+            dataconstantes[key][str(year)] = (constantes[str(year)][key])/1000
+    df2 = pd.DataFrame(dataconstantes)
+
+    with st.container(border=True):
+        st.markdown("### 💲 Cuentas Nacionales")
+        with st.popover("Filtrado de datos", use_container_width=True):
+            col1, col2 = st.columns(2)
+            with col1:
+                opcion1 = st.selectbox("Seleccione", ["Constantes","Corrientes" ])
+            with col2:
+                opcion2 = st.selectbox("Seleccione", ["Total", "Agricultura ganaderia y silvicultura"])
+        if opcion1 == "Corrientes":
+            st.markdown("##### Producto Interno Bruto (PIB) a precios corrientes")
+            df = df1
+        if opcion1 == "Constantes":
+            st.markdown("##### Producto Interno Bruto (PIB) a precios constantes")
+            df = df2
+        if opcion2 == "Total":
+            color = ["#2a9515"]
+            df = df.loc[:,:"Producto interno bruto"] 
+        if opcion2 == "Agricultura ganaderia y silvicultura":
+            color = ["#157a95"]
+            df = df.loc[:,"Agricultura ganaderia y silvicultura":]
+        st.markdown("###### 💰Millones de Pesos")
+        df.index.name = "Año"
+        fig = px.line(df,markers=True,color_discrete_sequence=color,hover_name='value', line_dash_sequence=["dash"],hover_data={'variable':None,'value':None})
+        fig.update_layout(width=1200, height=600,
+                                            yaxis_title = "Cantidad" ,
+                                            legend=dict(title=dict(text="")))
+        st.plotly_chart(fig)
+        with st.expander(""):
+            st.markdown("")
