@@ -293,15 +293,13 @@ with tab1: #Tab de Existencia
         sex = st.toggle("Separar por sexo")
         def crear_grafica(year):
             if sex:
-                with st.popover("Seleccione el sexo", use_container_width=True):
-                    sex0 = st.selectbox("", ["Hembras", "Machos"])
+                sex0 = st.selectbox("###### Sexo", ["Hembras", "Machos"])
                 if sex0 == "Hembras":
                     df = vacasDF.loc[str(year), :"Vacas"] 
                     pint = ["#FA7070", "#FA7070","#FA7070", "#FA7070"]
                 else:
                     df = vacasDF.loc[str(year),"Terneros":]    
                     pint = ["#4793AF", "#4793AF","#4793AF", "#4793AF","#4793AF", "#4793AF","#4793AF"]
-                st.markdown(f"###### {sex0}")
             else:
                 df = vacasDF.loc[str(year)]
                 pint = ["#FA7070", "#FA7070","#FA7070", "#FA7070","#4793AF", "#4793AF","#4793AF", "#4793AF","#4793AF", "#4793AF","#4793AF"] #Colores Rojo para Hembras y Azul para Macho
@@ -324,8 +322,7 @@ with tab1: #Tab de Existencia
             st.markdown("- Las barras vacias en algunos años corresponden a valores nulos.")
             st.markdown("- Al activar el interruptor se aislan se muestra un desplegable para seleccionar un sexo para mostrar individualmente.")
             st.markdown("- Se asignaron colores a las barras acorde a cada sexo (rojo para hembras y azul para machos).")
-            with st.popover("Sexo", use_container_width=True):
-                sex = st.selectbox("", ["Hembras", "Machos"], label_visibility="collapsed")
+            sex = st.selectbox("######  Sexo", ["Hembras", "Machos"])
             st.markdown(f"###### {sex}")
             if sex == "Hembras":
                 h1, h2, h3, h4= st.tabs(["Terneras", "Añojas","Novillas", "Vacas"])
@@ -455,7 +452,7 @@ with tab1: #Tab de Existencia
             st.plotly_chart(crear_graficaE(opciones1, dfasnal))
         
         with st.expander("Observaciones"):
-            st.markdown("- Las selecciones de los grupos 'Equino' y 'Asnal se dividen por sexo (Hembras y Machos)")
+            st.markdown("- Las selecciones de los grupos 'Equino' y 'Asnal' se dividen por sexo (Hembras y Machos)")
 
 with tab2:
         st.markdown("### 🪓 ¿Qué tipo de ganado tiene mayor frecuencia de entregas a sacrificios?")
