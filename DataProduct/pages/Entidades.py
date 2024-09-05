@@ -315,12 +315,14 @@ with col1:
                 margin=dict(l=100, r=100, t=100, b=100))
         return fig
     if opciones == "General" :
-        st.markdown("#### Número de Entidades")
+        st.markdown("#### Distribución de entidades por tipos")
         date = st.select_slider("Año", [x for x in range(1999, 2022)])
+        st.markdown("###### Unidades")
         st.plotly_chart(crear_grafica(date))
     if opciones == "Cooperativas" :
-        st.markdown("#### Número de Cooperativas")
+        st.markdown("#### Distribución de cooperativas por tipos")
         date = st.select_slider("Año", [x for x in range(2008, 2022)])
+        st.markdown("###### Unidades")
         st.plotly_chart(crear_grafica2(date))
 with col2:
     with st.expander("Observaciones"):

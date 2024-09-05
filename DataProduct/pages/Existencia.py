@@ -149,27 +149,38 @@ with tab1: #Tab de Existencia
         with col1:
             #Datos diferentes Tipos de Aves
             ponedoras = data["aves"]["Existencia(Mcabz)"]["Empresas avicolas estatales"]["Gallinas ponedoras"]
+            reemplazos = data["aves"]["Existencia(Mcabz)"]["Empresas avicolas estatales"]["Reemplazos de gallinas ponedoras"]
             pollos_ceba = data["aves"]["Existencia(Mcabz)"]["Empresas avicolas estatales"]["Pollos de ceba(Miles de cabezas"]
-            reproductoras = data["aves"]["Existencia(Mcabz)"]["Empresas avicolas estatales"]["Reproductoras "]
             carne = data["aves"]["Existencia(Mcabz)"]["Empresas avicolas estatales"]["De carne"]
-            ponedoras = data["aves"]["Existencia(Mcabz)"]["Empresas avicolas estatales"]["De ponedoras"]
+            pon1 = data["aves"]["Existencia(Mcabz)"]["Empresas avicolas estatales"]["De ponedoras"]
+            reemplazos1 = data["aves"]["Existencia(Mcabz)"]["Empresas avicolas estatales"]["Reemplazos"]["De carne"]
+            reemplazos2 = data["aves"]["Existencia(Mcabz)"]["Empresas avicolas estatales"]["Reemplazos"]["De ponedoras"]
             otras = data["aves"]["Existencia(Mcabz)"]["Empresas avicolas estatales"]["Otras"]     
             
             #DataFrame diferentes Tipos de Aves
             aves_estatales_tipos = pd.DataFrame({
+                "Ponedoras" : ponedoras,
+                "Reemplazosª": reemplazos,
                 "Pollos de ceba": pollos_ceba,
-                "Reproductoras": reproductoras,
-                "De carne": carne,
-                "De ponedoras": ponedoras,
+                "De Carne": carne,
+                "De Ponedoras": pon1,
+                "De Carneª": reemplazos1,
+                "De Ponedorasª": reemplazos2,
                 "Otras": otras       
             })
             aves_estatales_tipos = aves_estatales_tipos.apply(pd.to_numeric)
             
             #Grafico de Barras de Frecuencia de Existencia de los diferentes Tipos de Aves
             opciones3 = st.select_slider("Seleccione un año",[x for x in range (1985,2023)])
-            st.markdown("#### 🐓 Frecuencia de la existencia de los diferentes Tipos de Aves")
+            st.markdown("#### 🐓 Frecuencia de la existencia de los diferentes tipos de aves")
+            av = st.toggle("Excluir ponedoras, reemplazos y de ceba")
             def crear_grafica(year):
-                df = aves_estatales_tipos.loc[str(year)]
+                if av:
+                    df = aves_estatales_tipos.loc[str(year), "De Carne":] 
+                    colores = ["#ed307a", "#ff6ea7", "#9430ed", "#ba80ed"]
+                else:
+                    df = aves_estatales_tipos.loc[str(year)]
+                    colores = ["#ff9940", "#d1925c","#eef124", "#ed307a", "#ff6ea7", "#9430ed", "#ba80ed"]
                 df.index.name = "Tipo"
                 fig = px.bar(df,hover_name='value', hover_data={'variable': None, 'value':None})
                 fig.update_layout( yaxis_title = "Cantidad", xaxis_title = "Tipo de ganado")
@@ -177,7 +188,7 @@ with tab1: #Tab de Existencia
                                 marker_line_color="black",
                                 marker_line_width=1.5, opacity=0.6,
                                 showlegend=False)
-                fig.data[0].marker.color = ["#eef124", "#d95330", "#8a8a8a", "#ff9e29", "#3a3d85"]
+                fig.data[0].marker.color = colores
                     
                 return fig  
             st.markdown("###### Miles de Cabezas (MCabz)")
@@ -185,46 +196,67 @@ with tab1: #Tab de Existencia
         #Expansor con observaciones
         with col2:        
             with st.expander("Observaciones"):
-                st.markdown("-Las barras vacias en algunos años corresponden a valores nulos.")
-                
-        col1, col2 = st.columns(2)
-
-        with col1:
-            #Datos Existencia Ovino y Caprino por separado
-            exist_ovino = data["ovino_caprino"]["Existencia(Mcabz)"]["Total"]["Ovino"]
-            exist_caprino = data["ovino_caprino"]["Existencia(Mcabz)"]["Total"]["Caprino"]
+                st.markdown("- Las barras vacias en algunos años corresponden a valores nulos.")
+                st.markdown("- Al activar el interruptor se aislan los grupos de ponedoras, reemplazos y pollos de ceba totales.")
+                st.markdown("- Se asignaron tonalidades cercanas de un mismo color para los valores relacionados a un mismo conjunto.")
+                st.markdown("- Reemplazosª: Reemplazos de gallinas ponedoras.")
+                st.markdown("- Los grupos 'De Carne' y 'De Ponedoras' pertenecen al conjunto de Reproductoras.")
+                st.markdown("- Los grupos 'De Carneª' y 'De Ponedorasª'se refieren a sus correspondientes grupos de reemplazos.")
+                t1, t2, t3, t4= st.tabs(["Gallinas ponedoras", "Pollos de ceba","Reproductoras", "Reemplazos"])
+                with t1:
+                    st.markdown('<p style=font-size:14px;font-weight:bold;color:gray;text-align:center;"><i>Son aquellas gallinas que se caracterizan por ser eficientes convertidoras de alimentos en huevos.</i></p>', unsafe_allow_html=True)
+                with t2:
+                    st.markdown('<p style=font-size:14px;font-weight:bold;color:gray;text-align:center;"><i>Aves que se crían única y exclusivamente para la obtención de la carne.</i></p>', unsafe_allow_html=True)   
+                with t3:
+                    st.markdown('<p style=font-size:14px;font-weight:bold;color:gray;text-align:center;"><i>Son las destinadas a mantener o perpetuar la especie de aves de raza ligera para la producción de huevos y pesadas para la producción de carne.</i></p>', unsafe_allow_html=True)
+                with t4:
+                    st.markdown('<p style=font-size:14px;font-weight:bold;color:gray;text-align:center;"><i>Son las que se encuentran en proceso de desarrollo con el fin de convertirlas en pie de cría, ponedoras o reproductoras cuando reúnan las condiciones.</i></p>', unsafe_allow_html=True)                  
+        #Datos Existencia Ovino y Caprino por separado
+        exist_ovino = data["ovino_caprino"]["Existencia(Mcabz)"]["Total"]["Ovino"]
+        exist_caprino = data["ovino_caprino"]["Existencia(Mcabz)"]["Total"]["Caprino"]
+        exist_ovinoE = data["ovino_caprino"]["Existencia(Mcabz)"]["Estatal"]["Ovino"]
+        exist_caprinoE = data["ovino_caprino"]["Existencia(Mcabz)"]["Estatal"]["Caprino"]
             
-            #DataFrame Existencia Ovino y Caprino por separado
-            exist_OC = pd.DataFrame({    
+        #DataFrame Existencia Ovino y Caprino por separado
+        exist_OC = pd.DataFrame({    
                 "Ovino": exist_ovino,
                 "Caprino": exist_caprino,    
             })
-                
-            exist_OC = exist_OC.apply(pd.to_numeric)
-
-            #Grafico de pastel con slider para los años
-            st.markdown("#### 🐏🐐 Comparación de la existencia del ganado Ovino-Caprino")
-            opciones1 = st.select_slider("Seleccione un año",[x for x in range (1990,2023)])
-            st.markdown("###### Cabezas (Cabz)") 
-            colors = ['#51829B', '#9BB0C1'] #Colores
-            def crear_grafica(year):
-                fig = go.Figure(data = go.Pie(labels=["Ovino", "Caprino"], values = exist_OC.loc[str(year)], pull= 0.1, textposition="outside", hoverinfo='value',textinfo='label+percent', 
-                    marker=dict(colors=colors, line=dict(color='black', width=3))))
-                fig.update_layout(
+        exist_OCE = pd.DataFrame({    
+                "Ovino": exist_ovinoE,
+                "Caprino": exist_caprinoE,    
+            })                
+        exist_OC = exist_OC.apply(pd.to_numeric)
+        exist_OCE = exist_OCE.apply(pd.to_numeric)
+        #Grafico de pastel con slider para los años
+        st.markdown("#### 🐏🐐 Comparación de las densidades del ganado ovino-caprino por tipos")
+        resp = st.selectbox("Grupo", ["Total", "Estatal"])
+        opciones1 = st.select_slider("Seleccione un año",[x for x in range (1990,2023)])
+        st.markdown("###### Miles de Cabezas (MCabz)") 
+        colors = ['#51829B', '#9BB0C1'] #Colores
+        def crear_grafica(year):
+            if resp == "Estatal":
+                dataframe = exist_OCE.loc[str(year)]
+                lab = ["Ovino", "Caprino"]
+            else:
+                dataframe = exist_OC.loc[str(year)]
+                lab = ["Ovino", "Caprino"]
+            fig = go.Figure(data = go.Pie(labels=lab, values = dataframe, pull= 0.1, textposition="outside", hoverinfo='value',textinfo='label+percent', 
+                marker=dict(colors=colors, line=dict(color='black', width=3))))
+            fig.update_layout(
                 width=1300,  
                 height=500,  
                 margin=dict(l=100, r=100, t=100, b=100)
             )
-                
-                return fig  
-
-            st.plotly_chart(crear_grafica(opciones1))
+            return fig  
+        st.plotly_chart(crear_grafica(opciones1))
 
         #Expansor con observaciones
-        with col2:        
-            with st.expander("Observaciones"):
-                st.write("- La cantidad de todos los tipos de ganado está expresada en miles de cabezas")
-                st.write("- Los valores de los años que son 0, se deben a que no se encuentran los datos en la ONEI")
+            
+        with st.expander("Observaciones"):
+            st.markdown("- Los datos que ofrece la ONEI se encuentran a partir de 1990.")
+            st.markdown("- En los primeros 5 años los valores totales son los estatales.")
+            
         
         #Datos tipos de Ganado Vacuno
         ternerasH = data["vacuno"]["Hembras"]["Terneras"]
@@ -256,11 +288,23 @@ with tab1: #Tab de Existencia
         vacasDF = vacasDF.apply(pd.to_numeric)
 
         #Grafico de Barra con Slider para los Tipos de Ganado Vacuno
-        st.markdown("### 🐄🐂 Distribución de los diferentes tipos de Ganado Vacuno")
-        
+        st.markdown("### 🐄🐂 Distribución del rebaño vacuno por catagorías")
         opciones = st.select_slider(" Año",[x for x in range (1985,2023)])
+        sex = st.toggle("Separar por sexo")
         def crear_grafica(year):
-            df = vacasDF.loc[str(year)]
+            if sex:
+                with st.popover("Seleccione el sexo", use_container_width=True):
+                    sex0 = st.selectbox("", ["Hembras", "Machos"])
+                if sex0 == "Hembras":
+                    df = vacasDF.loc[str(year), :"Vacas"] 
+                    pint = ["#FA7070", "#FA7070","#FA7070", "#FA7070"]
+                else:
+                    df = vacasDF.loc[str(year),"Terneros":]    
+                    pint = ["#4793AF", "#4793AF","#4793AF", "#4793AF","#4793AF", "#4793AF","#4793AF"]
+                st.markdown(f"###### {sex0}")
+            else:
+                df = vacasDF.loc[str(year)]
+                pint = ["#FA7070", "#FA7070","#FA7070", "#FA7070","#4793AF", "#4793AF","#4793AF", "#4793AF","#4793AF", "#4793AF","#4793AF"] #Colores Rojo para Hembras y Azul para Macho
             df.index.name = "Tipo"
             fig = px.bar(df, hover_name='value', hover_data={'variable': None, 'value':None})
             fig.update_layout(
@@ -269,117 +313,150 @@ with tab1: #Tab de Existencia
                     marker_line_color="black",
                     marker_line_width=1.5, opacity=0.6,
                     showlegend = False) 
-            fig.data[0].marker.color = ["#FA7070", "#FA7070","#FA7070", "#FA7070","#4793AF", "#4793AF","#4793AF", "#4793AF","#4793AF", "#4793AF","#4793AF"] #Colores Rojo para Hembras y Azul para Macho
+            fig.data[0].marker.color = pint
             return fig  
+
         st.markdown("###### Miles de Cabezas (MCabz)")
         st.plotly_chart(crear_grafica(opciones))   
 
         #Expansor con observaciones
         with st.expander("Observaciones"):
-            st.write("")
+            st.markdown("- Las barras vacias en algunos años corresponden a valores nulos.")
+            st.markdown("- Al activar el interruptor se aislan se muestra un desplegable para seleccionar un sexo para mostrar individualmente.")
+            st.markdown("- Se asignaron colores a las barras acorde a cada sexo (rojo para hembras y azul para machos).")
+            with st.popover("Sexo", use_container_width=True):
+                sex = st.selectbox("", ["Hembras", "Machos"], label_visibility="collapsed")
+            st.markdown(f"###### {sex}")
+            if sex == "Hembras":
+                h1, h2, h3, h4= st.tabs(["Terneras", "Añojas","Novillas", "Vacas"])
+                with h1:
+                    st.markdown('<p style=font-size:14px;font-weight:bold;color:gray;text-align:center;"><i>Son los vacunos hembras comprendidos desde el nacimiento y que no sobrepasen los doce meses de edad.</i></p>', unsafe_allow_html=True)
+                with h2:
+                    st.markdown('<p style=font-size:14px;font-weight:bold;color:gray;text-align:center;"><i>Son los vacunos hembras mayores de doce meses y que no sobrepasan los dieciocho meses de edad.</i></p>', unsafe_allow_html=True)   
+                with h3:
+                    st.markdown('<p style=font-size:14px;font-weight:bold;color:gray;text-align:center;"><i>Son los vacunos hembras mayores de dieciocho meses y que no han tenido partoo  aborto.</i></p>', unsafe_allow_html=True)
+                with h4:
+                    st.markdown('<p style=font-size:14px;font-weight:bold;color:gray;text-align:center;"><i>Son los vacunos hembras que han tenido por lo menos un parto o aborto.</i></p>', unsafe_allow_html=True)                  
+            else:
+                m1, m2, m3, m4, m5, m6, m7= st.tabs(["Terneros", "Añojos", "Toretes", "Toros de ceba","Bueyes", "Sementales", "Receladores"])
+                with m1:
+                    st.markdown('<p style=font-size:14px;font-weight:bold;color:gray;text-align:center;"><i>Son los vacunos machos comprendidos desde el nacimiento y que no sobrepasen los doce meses de edad.</i></p>', unsafe_allow_html=True)
+                with m2:
+                    st.markdown('<p style=font-size:14px;font-weight:bold;color:gray;text-align:center;"><i>Son los vacunos machos mayores de doce meses y que no sobrepasen los dieciocho meses de edad.</i></p>', unsafe_allow_html=True)   
+                with m3:
+                    st.markdown('<p style=font-size:14px;font-weight:bold;color:gray;text-align:center;"><i>Son los vacunos machos mayores de dieciocho meses y que no sobrepasen los veinticuatro meses de edad.</i></p>', unsafe_allow_html=True)
+                with m4:
+                    st.markdown('<p style=font-size:14px;font-weight:bold;color:gray;text-align:center;"><i>Son los vacunos machos mayores de veinticuatro meses de edad que se encuentran en proceso de crecimiento y engorde para su posterior sacrificio.</i></p>', unsafe_allow_html=True)                              
+                with m5:
+                    st.markdown('<p style=font-size:14px;font-weight:bold;color:gray;text-align:center;"><i>Son los vacunos adultos machos destinados a cualquier tipo de trabajo.</i></p>', unsafe_allow_html=True)                              
+                with m6:
+                    st.markdown('<p style=font-size:14px;font-weight:bold;color:gray;text-align:center;"><i>Son los vacunos machos destinados a la reproducción, ya sea por monta natural o extracción del semen para la inseminación artificial.</i></p>', unsafe_allow_html=True)                              
+                with m7:
+                    st.markdown('<p style=font-size:14px;font-weight:bold;color:gray;text-align:center;"><i>Son los vacunos machos destinados como "celadores" o "detectores de celos" con vistas a mejorar el porcentaje de gestación y nacimientos.</i></p>', unsafe_allow_html=True)                              
         col1, col2 = st.columns(2)
-        with col1:
-            #Datos equido
-            equinoT = data["equido"]["Existencia(Mcabz)"]["Equino"]["Total"]
-            equinoM = data["equido"]["Existencia(Mcabz)"]["Equino"]["machos"]
-            equinoH = {}
-            for i in equinoT:
-                equinoH[i] = round(float(equinoT[i]) - float(equinoM[i]), 1)
-            asnalT = data["equido"]["Existencia(Mcabz)"]["Asnal"]["Total"]
-            asnalM = data["equido"]["Existencia(Mcabz)"]["Asnal"]["machos"]
-            asnalH = {}
-            for i in asnalT:
-                asnalH[i] = round(float(asnalT[i]) - float(asnalM[i]), 1)
-            mular = data["equido"]["Existencia(Mcabz)"]["Mular"]
+        
+        #Datos equido
+        equinoT = data["equido"]["Existencia(Mcabz)"]["Equino"]["Total"]
+        equinoM = data["equido"]["Existencia(Mcabz)"]["Equino"]["machos"]
+        equinoH = {}
+        for i in equinoT:
+            equinoH[i] = round(float(equinoT[i]) - float(equinoM[i]), 1)
+        asnalT = data["equido"]["Existencia(Mcabz)"]["Asnal"]["Total"]
+        asnalM = data["equido"]["Existencia(Mcabz)"]["Asnal"]["machos"]
+        asnalH = {}
+        for i in asnalT:
+            asnalH[i] = round(float(asnalT[i]) - float(asnalM[i]), 1)
+        mular = data["equido"]["Existencia(Mcabz)"]["Mular"]
             
-            equinoTE = data["equido"]["Existencia(Mcabz)"]["Estatal"]["Equino"]["Total"]
-            equinoME = data["equido"]["Existencia(Mcabz)"]["Estatal"]["Equino"]["machos"]
-            equinoHE = {}
-            for i in equinoT:
-                equinoHE[i] = round(float(equinoTE[i]) - float(equinoME[i]), 1)
-            asnalTE = data["equido"]["Existencia(Mcabz)"]["Estatal"]["Asnal"]["Total"]
-            asnalME = data["equido"]["Existencia(Mcabz)"]["Estatal"]["Asnal"]["machos"]
-            asnalHE = {}
-            for i in asnalTE:
-                asnalHE[i] = round(float(asnalTE[i]) - float(asnalME[i]), 1)
-            mularE = data["equido"]["Existencia(Mcabz)"]["Estatal"]["Mular"]
-            equinoTNE = data["equido"]["Existencia(Mcabz)"]["No estatal"]["Equino"]["Total"]
-            equinoMNE = data["equido"]["Existencia(Mcabz)"]["No estatal"]["Equino"]["machos"]
-            equinoHNE = {}
-            for i in equinoT:
-                equinoHNE[i] = round(float(equinoTNE[i]) - float(equinoMNE[i]), 1)
-            asnalTNE = data["equido"]["Existencia(Mcabz)"]["No estatal"]["Asnal"]["Total"]
-            asnalMNE = data["equido"]["Existencia(Mcabz)"]["No estatal"]["Asnal"]["machos"]
-            asnalHNE = {}
-            for i in asnalTE:
-                asnalHNE[i] = round(float(asnalTNE[i]) - float(asnalMNE[i]), 1)
-            mularNE = data["equido"]["Existencia(Mcabz)"]["No estatal"]["Mular"]            
+        equinoTE = data["equido"]["Existencia(Mcabz)"]["Estatal"]["Equino"]["Total"]
+        equinoME = data["equido"]["Existencia(Mcabz)"]["Estatal"]["Equino"]["machos"]
+        equinoHE = {}
+        for i in equinoT:
+            equinoHE[i] = round(float(equinoTE[i]) - float(equinoME[i]), 1)
+        asnalTE = data["equido"]["Existencia(Mcabz)"]["Estatal"]["Asnal"]["Total"]
+        asnalME = data["equido"]["Existencia(Mcabz)"]["Estatal"]["Asnal"]["machos"]
+        asnalHE = {}
+        for i in asnalTE:
+            asnalHE[i] = round(float(asnalTE[i]) - float(asnalME[i]), 1)
+        mularE = data["equido"]["Existencia(Mcabz)"]["Estatal"]["Mular"]
+        equinoTNE = data["equido"]["Existencia(Mcabz)"]["No estatal"]["Equino"]["Total"]
+        equinoMNE = data["equido"]["Existencia(Mcabz)"]["No estatal"]["Equino"]["machos"]
+        equinoHNE = {}
+        for i in equinoT:
+            equinoHNE[i] = round(float(equinoTNE[i]) - float(equinoMNE[i]), 1)
+        asnalTNE = data["equido"]["Existencia(Mcabz)"]["No estatal"]["Asnal"]["Total"]
+        asnalMNE = data["equido"]["Existencia(Mcabz)"]["No estatal"]["Asnal"]["machos"]
+        asnalHNE = {}
+        for i in asnalTE:
+            asnalHNE[i] = round(float(asnalTNE[i]) - float(asnalMNE[i]), 1)
+        mularNE = data["equido"]["Existencia(Mcabz)"]["No estatal"]["Mular"]            
 
-            #Dataframes equido  
-            dfT = pd.DataFrame({
+        #Dataframes equido  
+        dfT = pd.DataFrame({
                     "Equino": equinoT,
                     "Asnal": asnalT,
                     "Mular": mular
-            })
-            dfE = pd.DataFrame({
+        })
+        dfE = pd.DataFrame({
                     "Equino": equinoTE,
                     "Asnal": asnalTE,
                     "Mular": mularE
-            })
-            dfNE = pd.DataFrame({
+        })
+        dfNE = pd.DataFrame({
                     "Equino": equinoTNE,
                     "Asnal": asnalTNE,
                     "Mular": mularNE
-            })
-            dfequino = pd.DataFrame({
+        })
+        dfequino = pd.DataFrame({
                     "Macho":equinoM,
                     "Hembra":equinoH
-            })
+        })
 
-            dfasnal = pd.DataFrame({
+        dfasnal = pd.DataFrame({
                     "Macho":asnalM,
                     "Hembra":asnalH
-            })
+        })
 
-            #Grafico de pastel equido
-            st.markdown("### 🐴 Existencia de Ganado Equido por Tipos")
-            opcion = st.selectbox("Seleccione un grupo", ["Total", "Equino", "Asnal", "Estatal", "No Estatal"])
-            def crear_graficaT(year, df):
-                colors = ['#e59c57', '#ddb38c', "#856b53"]
-                fig = go.Figure(data = go.Pie(labels=["Equino", "Asnal", "Mular"], values = df.loc[str(year)],pull= 0.1, textposition="outside", hoverinfo='value',textinfo='label+percent', 
+        #Grafico de pastel equido
+        st.markdown("### 🐴 Comparanza de existencias del ganado equido por grupos")
+        opcion = st.selectbox("Seleccione un grupo", ["Total", "Equino", "Asnal", "Estatal", "No Estatal"])
+        def crear_graficaT(year, df):
+            colors = ['#e59c57', '#ddb38c', "#856b53"]
+            fig = go.Figure(data = go.Pie(labels=["Equino", "Asnal", "Mular"], values = df.loc[str(year)],pull= 0.1, textposition="outside", hoverinfo='value',textinfo='label+percent', 
                                 marker=dict(colors=colors, line=dict(color='black', width=3))))
-                fig.update_layout(width=1300,  height=500,  margin=dict(l=100, r=100, t=100, b=100))
-                return fig 
-            if opcion == "Total":
-                st.markdown("###### Total (Miles de Cabezas)")
-                opciones1 = st.select_slider("Año",[x for x in range (1985,2023)])
-                st.plotly_chart(crear_graficaT(opciones1, dfT))   
-            if opcion == "Estatal":
-                st.markdown("###### Estatal (Miles de Cabezas)")
-                opciones1 = st.select_slider("Año",[x for x in range (1985,2023)])
-                st.plotly_chart(crear_graficaT(opciones1, dfE)) 
-            if opcion == "No Estatal":
-                st.markdown("###### No Estatal (Miles de Cabezas)")
-                opciones1 = st.select_slider("Año",[x for x in range (1985,2023)])
-                st.plotly_chart(crear_graficaT(opciones1, dfNE))    
+            fig.update_layout(width=1300,  height=500,  margin=dict(l=100, r=100, t=100, b=100))
+            return fig 
+        if opcion == "Total":
+            st.markdown("###### Total (Miles de Cabezas)")
+            opciones1 = st.select_slider("Año",[x for x in range (1985,2023)])
+            st.plotly_chart(crear_graficaT(opciones1, dfT))   
+        if opcion == "Estatal":
+            st.markdown("###### Estatal (Miles de Cabezas)")
+            opciones1 = st.select_slider("Año",[x for x in range (1985,2023)])
+            st.plotly_chart(crear_graficaT(opciones1, dfE)) 
+        if opcion == "No Estatal":
+            st.markdown("###### No Estatal (Miles de Cabezas)")
+            opciones1 = st.select_slider("Año",[x for x in range (1985,2023)])
+            st.plotly_chart(crear_graficaT(opciones1, dfNE))    
                 
-            def crear_graficaE(year, df):
-                colors = ["#4793AF","#FA7070"]
-                fig = go.Figure(data = go.Pie(labels=["Macho", "Hembra"], values = df.loc[str(year)],pull= 0.1, textposition="outside", hoverinfo='value',textinfo='label+percent', 
-                                marker=dict(colors=colors, line=dict(color='black', width=3))))
-                fig.update_layout(width=1300,  height=500,  margin=dict(l=100, r=100, t=100, b=100))
-                return fig 
-            if opcion == "Equino":
-                st.markdown("###### Equino (Miles de cabezas)")
-                opciones1 = st.select_slider("Año",[x for x in range (1985,2023)])
-                st.plotly_chart(crear_graficaE(opciones1, dfequino))  
-            if opcion == "Asnal":
-                st.markdown("###### Asnal (Miles de cabezas)")
-                opciones1 = st.select_slider("Año",[x for x in range (1985,2023)])
-                st.plotly_chart(crear_graficaE(opciones1, dfasnal))
-        with col2:
-            with st.expander("Observaciones"):
-                st.markdown("# A")
+        def crear_graficaE(year, df):
+            colors = ["#4793AF","#FA7070"]
+            fig = go.Figure(data = go.Pie(labels=["Macho", "Hembra"], values = df.loc[str(year)],pull= 0.1, textposition="outside", hoverinfo='value',textinfo='label+percent', 
+                            marker=dict(colors=colors, line=dict(color='black', width=3))))
+            fig.update_layout(width=1300,  height=500,  margin=dict(l=100, r=100, t=100, b=100))
+            return fig 
+        if opcion == "Equino":
+            st.markdown("###### Equino (Miles de cabezas)")
+            opciones1 = st.select_slider("Año",[x for x in range (1985,2023)])
+            st.plotly_chart(crear_graficaE(opciones1, dfequino))  
+        if opcion == "Asnal":
+            st.markdown("###### Asnal (Miles de cabezas)")
+            opciones1 = st.select_slider("Año",[x for x in range (1985,2023)])
+            st.plotly_chart(crear_graficaE(opciones1, dfasnal))
+        
+        with st.expander("Observaciones"):
+            st.markdown("- Las selecciones de los grupos 'Equino' y 'Asnal se dividen por sexo (Hembras y Machos)")
+
 with tab2:
         st.markdown("### 🪓 ¿Qué tipo de ganado tiene mayor frecuencia de entregas a sacrificios?")
     
