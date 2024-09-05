@@ -10,7 +10,7 @@ icon = ""
 [[pages]]
 path = "pages/Existencia.py"
 name = "Existencia"
-icon = "🐾"
+icon = "📊"
 
 [[pages]]
 path = "pages/Produccion.py"
@@ -24,7 +24,7 @@ icon = ""
 
 [[pages]]
 path = "pages/Entidades.py"
-name = "Entidades"
+name = "Instituciones"
 icon = "📍"
 
 [[pages]]

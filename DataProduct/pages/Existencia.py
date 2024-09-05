@@ -99,8 +99,8 @@ with tab1: #Tab de Existencia
             col2_1.markdown(f"X = {year1}")
             col2_2.markdown(f"Y = {year2}")
         with st.expander("Explicación"):
-            st.markdown('''- El valor que se muestra en la métrica por defecto es el valor de existencia en el Año X como minuendo de la resta (al activar el toggle mostraria el Año Y en su lugar),
-                        y el subíndice (delta) muestra la diferencia (positiva o negativa) del resultado de la diferencia entre el valor de existencia
+            st.markdown('''- El valor que se muestra en la métrica por defecto es el valor de existencia en el Año X como minuendo de la resta Año X - Año Y (al activar el toggle mostraria el Año Y en su lugar),
+                        y el subíndice (delta) muestra la diferencia resultante (positiva o negativa) entre el valor de existencia
                         en el Año X menos el del Año Y *(todos los valores obviamente correspondientes al tipo de ganado seleccionado)*''')
             st.markdown('''- Los valores de existencia están dados en Miles de Cabezas (MCabz)''')
 
@@ -136,8 +136,12 @@ with tab1: #Tab de Existencia
             if opciones == "No Estatal":
                 mostrar(NOestatal)
             with st.expander("Observaiones"):
-                st.write("- La cantidad de todos los tipos de ganado está expresada en miles de cabezas")
-                st.write("- Los valores de los años que son 0, se deben a que no se encuentran los datos en la ONEI")
+                st.markdown("- En la leyenda se pueden elegir los valores que se muestren en la gráfica pulsando en la linea de color al lado del nombre del tipo de ganado (si se pulsa dos veces se descartan el resto de valores y solo se muestra el pulsado de forma individual).")
+                st.markdown("- En el cuerpo de la gráfica se puedem seleccionar los marcadores de cada pico para que se muestren los valores exactos en un cartel (tooltip).")
+                st.markdown("- Sólo se muestra el ganado vacuno en el grupo total porque no se hayaron las divisiones en sectores de ninguna fuente confiable.")
+                st.markdown("- Se excluye el ganado equido en el sector no estatal por una aparente dificultad del procesamiento de las diferencias de escalas y picos de las diferentes lineas presentes en la gráfica que hacía que se cortara la línea.")
+
+                
     with st.container(border=True):
 
         col1, col2 = st.columns(2)
@@ -162,7 +166,7 @@ with tab1: #Tab de Existencia
             aves_estatales_tipos = aves_estatales_tipos.apply(pd.to_numeric)
             
             #Grafico de Barras de Frecuencia de Existencia de los diferentes Tipos de Aves
-            opciones3 = st.select_slider("Seleccione un año",[x for x in range (1995,2023)])
+            opciones3 = st.select_slider("Seleccione un año",[x for x in range (1985,2023)])
             st.markdown("#### 🐓 Frecuencia de la existencia de los diferentes Tipos de Aves")
             def crear_grafica(year):
                 df = aves_estatales_tipos.loc[str(year)]
@@ -181,8 +185,7 @@ with tab1: #Tab de Existencia
         #Expansor con observaciones
         with col2:        
             with st.expander("Observaciones"):
-                st.write("- La cantidad de todos los tipos de ganado está expresada en miles de cabezas")
-                st.write("- Los valores de los años que son 0, se deben a que no se encuentran los datos en la ONEI")
+                st.markdown("-Las barras vacias en algunos años corresponden a valores nulos.")
                 
         col1, col2 = st.columns(2)
 
@@ -255,7 +258,7 @@ with tab1: #Tab de Existencia
         #Grafico de Barra con Slider para los Tipos de Ganado Vacuno
         st.markdown("### 🐄🐂 Distribución de los diferentes tipos de Ganado Vacuno")
         
-        opciones = st.select_slider("Seleccione un año",[x for x in range (1985,2023)])
+        opciones = st.select_slider(" Año",[x for x in range (1985,2023)])
         def crear_grafica(year):
             df = vacasDF.loc[str(year)]
             df.index.name = "Tipo"
@@ -273,8 +276,7 @@ with tab1: #Tab de Existencia
 
         #Expansor con observaciones
         with st.expander("Observaciones"):
-            st.write("- La cantidad de todos los tipos de ganado está expresada en miles de cabezas")
-            st.write("- Los valores de los años que son 0, se deben a que no se encuentran los datos en la ONEI")
+            st.write("")
         col1, col2 = st.columns(2)
         with col1:
             #Datos equido

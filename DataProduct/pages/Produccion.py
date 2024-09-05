@@ -344,7 +344,7 @@ with tab3:
                             "Produccion de huevos(MMU)": prod_huevo})
         df1.index.name = "Año"
         df2.index.name = "Año"
-        st.markdown("### 🐓🥚 Relaciones de Consumo de Pienso en Aves")
+        st.markdown("#### 🐓🥚 Relaciones de Consumo de Pienso en Aves")
         with st.popover("Filtrado de datos"):
             val = st.selectbox("Seleccione", ["Pienso por Ave", "Pienso en Huevo"])
         if val == "Pienso por Ave":
@@ -400,7 +400,7 @@ with tab3:
     df2 = pd.DataFrame(dataconstantes)
 
     with st.container(border=True):
-        st.markdown("### 💲 Cuentas Nacionales")
+        st.markdown("#### 💲 Cuentas Nacionales")
         with st.popover("Filtrado de datos", use_container_width=True):
             col1, col2 = st.columns(2)
             with col1:

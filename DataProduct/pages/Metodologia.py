@@ -19,5 +19,5 @@ def descargar_json(ruta_archivo):
             file_name='inventario_ganado.json',
             mime='application/json'
         )
-ruta = "D:\Ganaderia-en-Cuba-main\inventario_ganado.json"
+ruta = "inventario_ganado.json"
 descargar_json(ruta)
