@@ -341,7 +341,7 @@ with col2:
                             file_name="cooperativas.csv",
                             mime="text/csv")
         
-with st.expander("###### Detalles y características de las entidades y cooperativas"):
+with st.expander("###### Detalles y características de las cooperativas"):
     st.markdown("En las cooperativas se incluyen, Cooperativas No Agropecuarias (CNoA), las Unidades Básicas de Producción Cooperativa (UBPC), Cooperativas de Producción Agropecuaria (CPA) y las Cooperativas de Créditos y Servicios (CCS).")
     st.markdown('* <p style=font-size:22px;font-weight:bold;color:rgb(216,0,0);"><i>Cooperativas No Agropecuarias (CNoA):</i></p>', unsafe_allow_html=True)
     st.markdown('''<p style="font-size:17px;font-weight:bold;color:gray;"><i>Es una organización con fines económicos y sociales, que

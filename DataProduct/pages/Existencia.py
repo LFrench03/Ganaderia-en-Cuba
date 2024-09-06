@@ -237,7 +237,7 @@ with tab1: #Tab de Existencia
                 st.markdown("- Se asignaron tonalidades cercanas de un mismo color para los valores relacionados a un mismo conjunto.")
                 st.markdown("- Reemplazosª: Reemplazos de gallinas ponedoras.")
                 st.markdown("- Los grupos 'De Carne' y 'De Ponedoras' pertenecen al conjunto de Reproductoras.")
-                st.markdown("- Los grupos 'De Carneª' y 'De Ponedorasª'se refieren a sus correspondientes grupos de reemplazos.")
+                st.markdown("- Los grupos 'De Carneª' y 'De Ponedorasª'se refieren a sus correspondientes grupos de los Reemplazos.")
                 t1, t2, t3, t4= st.tabs(["Gallinas ponedoras", "Pollos de ceba","Reproductoras", "Reemplazos"])
                 with t1:
                     st.markdown('<p style=font-size:14px;font-weight:bold;color:gray;text-align:center;"><i>Son aquellas gallinas que se caracterizan por ser eficientes convertidoras de alimentos en huevos.</i></p>', unsafe_allow_html=True)
@@ -768,7 +768,7 @@ with tab2:
                 "De Ceba": porcino_estatalCeba,
                 "Resto": porcino_estatalResto
             })
-            st.markdown("#### 🐷 Comparación de entregas a sacrificio del Ganado Porcino de Ceba con los valores restantes")
+            st.markdown("#### 🐷 Comparación de entregas a sacrificio del ganado porcino de ceba con los valores restantes")
             year = st.select_slider("Año", [x for x in range(1989, 2013)])
             st.markdown("###### Miles de Cabezas (MCabz)")
             def graficar(year):
@@ -818,7 +818,7 @@ with tab2:
             dfC.index.name = "Año"
 
             #Grafico de Linea con selectbox
-            st.markdown("#### 🥩 Valores de Importaciones de Carne Seleccionados por Tipos")
+            st.markdown("#### 🥩 Valores de importaciones de carne seleccionados por tipos")
             opcion = st.selectbox("Seleccione un grupo", ["Valor", "Cantidad"])
             def graficar(opc):
                 fig = px.line(opc,markers=True,color_discrete_sequence=custom_colors, hover_name='value', hover_data={'value':None})

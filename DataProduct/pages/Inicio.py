@@ -29,6 +29,6 @@ st.markdown("Producción: De igual forma que la sección anterior contiene tres 
 st.markdown('<p style=font-size:24px;font-weight:bold;color:rgb(0,33,66);"><i>- Entidades:</i></p>', unsafe_allow_html=True)
 st.markdown("Instituciones: En esta página individual sin pestañas se contiene la distribucion geográfica interactiva por provincias de las diferentes instituciones y tierras de la isla en un período de tiempo desde el 2012 hasta el 2016. En la parte inferior se considera el número de entidades (de forma general y por tipo de cooperativas) en un período de tiempo más prolongado.")
 st.markdown('<p style=font-size:24px;font-weight:bold;color:rgb(0,33,66);"><i>- Acerca de:</i></p>', unsafe_allow_html=True)
-st.markdown("Metodología: Referencias, contenido descargable de los datos utilizados (procesados y sin procesar), entre otros.")
+st.markdown("Metodología: Referencias, contenido descargable de los datos utilizados, entre otros.")
 
-st.markdown('<p style=font-size:15px;font-weight:bold;color:rgb(0,87,214);"><i>Posdata: Notar que para cada gráfica se incluyen desplegables con información adicional e indicaciones sobre la interactividad de las mismas.</i></p>', unsafe_allow_html=True)
+st.markdown('<p style=font-size:15px;font-weight:bold;color:rgb(0,87,214);"><i>Posdata: Notar que para cada gráfica se incluyen desplegables con información adicional, un botones de descarga en formato CSV de los dataframes utilizados e indicaciones sobre la interactividad de las mismas.</i></p>', unsafe_allow_html=True)
