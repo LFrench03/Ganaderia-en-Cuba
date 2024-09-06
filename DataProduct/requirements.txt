@@ -5,5 +5,5 @@ pandas==2.2.2
 geopandas==1.0.1
 folium==0.17.0
 streamlit_folium
+plotly==5.23.0
 plotly.express
-plotly.graph_objects
