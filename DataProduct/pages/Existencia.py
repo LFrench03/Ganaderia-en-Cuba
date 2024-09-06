@@ -20,7 +20,8 @@ porcinoNE = {}
             
 #Datos Porcino No Estatal
 for year in porcino:
-    porcinoNE[year] = round(float(porcino[year]) - float(porcinoE[year]), 1) 
+    if porcino[year] != porcinoE[year]:
+        porcinoNE[year] = round(float(porcino[year]) - float(porcinoE[year]), 1) 
             
 #Datos Ovino Caprino Estatal
 ovino_caprinoE = data["ovino_caprino"]["Existencia(Mcabz)"]["Estatal"]["Total"]
@@ -28,7 +29,7 @@ ovino_caprinoNE = {}
             
 #Datos Ovino Caprino No Estatal
 for year in ovino_caprino:
-    if ovino_caprino[year] != ovino_caprinoE[year]:
+    if ovino_caprino[year] != "":
         ovino_caprinoNE[year] = round(float(ovino_caprino[year]) - float(ovino_caprinoE[year]), 1) 
             
 #Datos Aves Estatal
@@ -62,9 +63,9 @@ ganado_ESTATAL = pd.DataFrame({
             })
 ganado_ESTATAL.index.name = "Año"
 ganado_NO_ESTATAL = pd.DataFrame({
+                "Equido": equidoNE,
                 "Porcino": porcinoNE,
-                "Ovino Caprino": ovino_caprinoNE,
-                "Aves": avesNE,
+                "Aves": avesNE
             })
 ganado_NO_ESTATAL.index.name = "Año"
 ganado_TOTAL = ganado_TOTAL.apply(pd.to_numeric)
@@ -94,19 +95,16 @@ with tab1: #Tab de Existencia
                 st.metric(label=ganado, value=f"{ganado_TOTAL.loc[str(year2), ganado]} MCabz", delta=f"{result} MCabz")
             else:
                 st.metric(label=ganado, value=f"{ganado_TOTAL.loc[str(year1), ganado]} MCabz", delta=f"{result} MCabz")
-            st.markdown("##### Años ")
-            col2_1, col2_2 = st.columns(2)
-            col2_1.markdown(f"X = {year1}")
-            col2_2.markdown(f"Y = {year2}")
+            col1.markdown(f"Año X = {year1}")
+            col3.markdown(f"Año Y = {year2}")
         with st.expander("Explicación"):
             st.markdown('''- El valor que se muestra en la métrica por defecto es el valor de existencia en el Año X como minuendo de la resta Año X - Año Y (al activar el toggle mostraria el Año Y en su lugar),
                         y el subíndice (delta) muestra la diferencia resultante (positiva o negativa) entre el valor de existencia
                         en el Año X menos el del Año Y *(todos los valores obviamente correspondientes al tipo de ganado seleccionado)*''')
             st.markdown('''- Los valores de existencia están dados en Miles de Cabezas (MCabz)''')
-
-    st.markdown("### 〽️ ¿Qué tipos de ganado han predominado en Cuba en el período de 1985-2022?")
     
     with st.container(border=True):       
+            st.markdown("### 〽️ ¿Qué tipos de ganado han predominado en Cuba en el período de 1985-2022?")
             opciones = st.selectbox( "Seleccione una grupo", ["Total", "Estatal", "No Estatal"]) #Selectbox de Existencia
 
             #Graficos de Linea de la Existencia
@@ -121,7 +119,7 @@ with tab1: #Tab de Existencia
                             yaxis_title = "Cantidad", xaxis_title = "Años", 
                             legend=dict(title=dict(text="Tipo de ganado")))    
             
-            NOestatal = px.line(ganado_NO_ESTATAL,markers=True,color_discrete_sequence=custom_colors[1:-1], hover_name='value', hover_data={'value':None})
+            NOestatal = px.line(ganado_NO_ESTATAL,markers=True,color_discrete_sequence=["#ad5514","#f3639c","#8a8a8a","#e8e85b"]) #Secuencia de colores, hover_name='value', hover_data={'value':None})
             NOestatal.update_layout(width=800, height=600, 
                             yaxis_title = "Cantidad", xaxis_title = "Años", 
                             legend=dict(title=dict(text="Tipo de ganado")))       
@@ -137,9 +135,11 @@ with tab1: #Tab de Existencia
                 mostrar(NOestatal)
             with st.expander("Observaiones"):
                 st.markdown("- En la leyenda se pueden elegir los valores que se muestren en la gráfica pulsando en la linea de color al lado del nombre del tipo de ganado (si se pulsa dos veces se descartan el resto de valores y solo se muestra el pulsado de forma individual).")
-                st.markdown("- En el cuerpo de la gráfica se puedem seleccionar los marcadores de cada pico para que se muestren los valores exactos en un cartel (tooltip).")
+                st.markdown("- Para una mejor visión general se recomienda desactivar las aves en la leyenda.")
+                st.markdown("- En el cuerpo de la gráfica se muestra en los marcadores de cada pico para que se muestren los valores exactos en un cartel (tooltip).")
                 st.markdown("- Sólo se muestra el ganado vacuno en el grupo total porque no se hayaron las divisiones en sectores de ninguna fuente confiable.")
-                st.markdown("- Se excluye el ganado equido en el sector no estatal por una aparente dificultad del procesamiento de las diferencias de escalas y picos de las diferentes lineas presentes en la gráfica que hacía que se cortara la línea.")
+                st.markdown("- Los años faltantes en los grupos estatales y no estatales se debe a que no se tienen registros de valores para dichos tiempos en la ONEI")
+                st.markdown("- Por un aparente problema de ajuste de la gráfica no se muestran los valores del tiempo 1985-1990 en el grupo total")
 
                 
     with st.container(border=True):
@@ -455,10 +455,10 @@ with tab1: #Tab de Existencia
             st.markdown("- Las selecciones de los grupos 'Equino' y 'Asnal' se dividen por sexo (Hembras y Machos)")
 
 with tab2:
-        st.markdown("### 🪓 ¿Qué tipo de ganado tiene mayor frecuencia de entregas a sacrificios?")
-    
+        
         with st.container(border=True): 
-                opc = st.selectbox("Seleccione un grupo", ["Total", "Estatal"]) #Selectbox con opciones 
+                st.markdown("### 🪓 ¿Qué tipo de ganado tiene mayor frecuencia de entregas a sacrificios?")
+                opc = st.selectbox("Seleccione un grupo", ["Total", "Estatal", "No Estatal"]) #Selectbox con opciones 
 
                 #Datos Sacrificios Total
                 sacrif_vacunoT = data["vacuno"]["Sacrificios"]["Cabezas(M)"]["Total"]
@@ -504,39 +504,49 @@ with tab2:
                     "Pollos de Ceba": sacrif_aves
                 })
 
+                sacrif_NOESTATAL = pd.DataFrame({
+                    "Porcino": sacrif_porcinoNE,
+                    "Ovino Caprino": sacrif_ovNE,
+                    "Vacuno": sacrif_vacunoNE
+                })
                 sacrif_TOTAL = sacrif_TOTAL.apply(pd.to_numeric)
                 sacrif_TOTAL.index.name = "Año"
                 sacrif_ESTATAL = sacrif_ESTATAL.apply(pd.to_numeric)
                 sacrif_ESTATAL.index.name = "Año"
-
+                sacrif_NOESTATAL = sacrif_NOESTATAL.apply(pd.to_numeric)
+                sacrif_NOESTATAL.index.name = "Año"
                 
                 #Grafico de Linea
-                sacrifT = px.line(sacrif_TOTAL,markers=True,color_discrete_sequence=custom_colors[:-1],hover_name='value', hover_data={'value':None})
-                sacrifT.update_layout(width=800, height=600, 
-                                yaxis_title = "Cantidad", xaxis_title = "Años", legend=dict(title=dict(text="Tipo de ganado")))
-                
-                sacrifE = px.line(sacrif_ESTATAL,markers=True,color_discrete_sequence=custom_colors[:-1],hover_name='value', hover_data={'value':None})
-                sacrifE.update_layout(width=800, height=600, 
-                                yaxis_title = "Cantidad", xaxis_title = "Años", legend=dict(title=dict(text="Tipo de ganado")))
-                
-
-                
-             
                 if opc == "Total":
-                    st.markdown("###### Miles de Cabezas (MCabz)")
+                    sacrifT = px.line(sacrif_TOTAL,markers=True,color_discrete_sequence=custom_colors[:-1],hover_name='value', hover_data={'value':None})
+                    sacrifT.update_layout(width=800, height=600, 
+                                    yaxis_title = "Cantidad", xaxis_title = "Años", legend=dict(title=dict(text="Tipo de ganado")))
                     st.plotly_chart(sacrifT)
                 if opc == "Estatal":
-                    st.markdown("###### Miles de Cabezas (MCabz)")
+                    sacrifE = px.line(sacrif_ESTATAL,markers=True,color_discrete_sequence=custom_colors[:-1],hover_name='value', hover_data={'value':None})
+                    sacrifE.update_layout(width=800, height=600, 
+                                    yaxis_title = "Cantidad", xaxis_title = "Años", legend=dict(title=dict(text="Tipo de ganado")))
                     st.plotly_chart(sacrifE)
-
+                if opc == "No Estatal":
+                    sacrifNE = px.line(sacrif_NOESTATAL,markers=True,color_discrete_sequence=["#f3639c","#6382f3","#8a8a8a"],hover_name='value', hover_data={'value':None})
+                    sacrifNE.update_layout(width=800, height=600, 
+                                    yaxis_title = "Cantidad", xaxis_title = "Años", legend=dict(title=dict(text="Tipo de ganado")))                
+                    st.markdown("###### Miles de Cabezas (MCabz)")           
+                    st.plotly_chart(sacrifNE)                        
             
                 with st.expander("Observaciones"):
-                    st.markdown("A")
+                    
+                    st.markdown("- Entregas a sacrificio: Comprende a los animales vendidos para el el sacrificio y los sacrificados en la propia unidad productora. Se determina en cabezas y peso en pie. En la ganadería vacuna se incluyen animales con este fin que fueron previamente comprados a productores no estatales. Para los rebaños porcinos, ovino-caprino y avícola en los casos que no se contó con toda la cobertura informativa se realizaron calculos indirectos -ONEI-")
+                    st.markdown("- Hasta el año 2008 los valores de sacrificios del rebaño vacuno eran los del sector estatal")
+                    st.markdown("- Los datos de sacrificios porcinos se tienen a partir del año 1989")
+                    st.markdown("- Las entregas del ganado ovino caprino se tienen a partir del año 2007")
+                    st.markdown("- En la leyenda se pueden elegir los valores que se muestren en la gráfica pulsando en la linea de color al lado del nombre del tipo de ganado (si se pulsa dos veces se descartan el resto de valores y solo se muestra el pulsado de forma individual).")
+                    st.markdown("- Para una mejor visión general se recomienda desactivar los pollos de ceba en la leyenda.")
+                    st.markdown("- En el cuerpo de la gráfica se muestra en los marcadores de cada pico para que se muestren los valores exactos en un cartel (tooltip).")                
 
         with st.container(border=True):
-            st.subheader("⚖️ Peso en pie y peso promedio del ganado de tipo productor")
-
-        
+            st.markdown("#### ⚖️ Peso en pie del ganado de tipo productor")
+            #Datos peso en pie y promedio
             pesoenpie_vacuno = data["vacuno"]["Sacrificios"]["Peso en pie(Mt)"]["Total"]
             pesoenpie_porcino = data["porcino"]["Entregas a sacrificio"]["Total"]["Peso en pie(Mt)"]
             pesoenpie_aves = data["aves"]["Entregas a sacrificio"]["Pollos de ceba entrega a sacrificio"]["Peso en pie(Mt)"]
@@ -545,8 +555,6 @@ with tab2:
             pesoprom_porcino = data["porcino"]["Entregas a sacrificio"]["Total"]["Peso promedio(kg)"]
             pesoprom_aves = data["aves"]["Entregas a sacrificio"]["Pollos de ceba entrega a sacrificio"]["Peso promedio(kg)"]
             pesoenprom_ovino_carpino = data["ovino_caprino"]["Entregas a sacrificio"]["Peso promedio(kg)"]["Total"]
-
-
 
             pie = pd.DataFrame({
             "Vacuno": pesoenpie_vacuno,
@@ -563,16 +571,28 @@ with tab2:
             promedio = promedio.apply(pd.to_numeric)
 
             choice = st.selectbox("Seleccione una opcion", ["Peso en Pie", "Peso Promedio"])
-            opciones2 = st.select_slider("Año",[x for x in range (1991,2023)])
+            opciones2 = st.select_slider("Año",[x for x in range (1991,2023)], 2007)
             def crear_grafica(year, choice):
                 if choice == "Peso en Pie":
-                    df = pie.loc[str(year)]                
-                    df.index.name = "Tipo"             
-                    fig = px.bar(df, hover_name='value', hover_data={'variable': None, 'value':None}, orientation="h")
-                    fig.update_layout(
-                    yaxis_title = "Tipo de Ganado", xaxis_title = "Peso en Pie(Mt)")
-                    fig.data[0].marker.color = ["#6382f3","#f3639c","#e8e85b","#8a8a8a"] #Secuencia de colores
+                    boton = st.toggle("Excluir ganados vacuno y porcino")
+                    st.markdown("##### Peso en pie")
+                    color = ["#6382f3","#f3639c","#e8e85b","#8a8a8a"] 
+                    if boton:
+                        df = pie.loc[str(year), "Aves":]    
+                        df.index.name = "Tipo"             
+                        fig = px.bar(df, hover_name='value', hover_data={'variable': None, 'value':None}, orientation="h")
+                        fig.update_layout(
+                        yaxis_title = "Tipo de Ganado", xaxis_title = "Peso en Pie(Mt)")
+                        fig.data[0].marker.color = color[2:] #Secuencia de colores
+                    else:
+                        df = pie.loc[str(year)]  
+                        df.index.name = "Tipo"               
+                        fig = px.bar(df, hover_name='value', hover_data={'variable': None, 'value':None}, orientation="h")
+                        fig.update_layout(
+                        yaxis_title = "Tipo de Ganado", xaxis_title = "Peso en Pie(Mt)")
+                        fig.data[0].marker.color = color #Secuencia de colores                                              
                 else:
+                    st.markdown("##### Peso en pie promedio")
                     df = promedio.loc[str(year)] 
                     df.index.name = "Tipo"                            
                     fig = px.bar(df, hover_name='value', hover_data={'variable': None, 'value':None}, orientation="h")
@@ -589,7 +609,11 @@ with tab2:
             st.plotly_chart(crear_grafica(opciones2, choice))     
 
             with st.expander("Observaciones"):
-                st.write("A")
+                st.markdown("- Peso promedio en pie de ganado para sacrificio: Es el resultado de la división del peso en pie total del ganado a sacrifio entre el número de las cabezas correspondientes")
+                st.markdown("- Peso promedio en pie de ganado para sacrificio: Es el resultado de la división del peso en pie total del ganado a sacrifio entre el número de las cabezas correspondientes")
+                st.markdown("- Sólo se tienen valores del rebaño ovino caprino a partir el año 2007")
+                st.markdown("- En el sector de peso en pie, al activar el interruptor se aislan los tipos de ganado vacuno y porcino para lograr una comparación directa para las barras de menor magnitud")
+                st.markdown("- La representación del peso promedio en pie no tiene mucho sentido comparativo pero se incluye como observación")
         
         with st.container(border=True):
             #Datos Porcino Estatal Entregas de Sacrificio Estatal
@@ -616,7 +640,7 @@ with tab2:
             st.plotly_chart(graficar(year))
 
             with st.expander("Observaciones"):
-                st.markdown("A")
+                st.markdown("- Sólo se tienen valores del sacrificios de ceba hasta el 2012")
 
         with st.container(border=True):
             #Datos Importaciones Carne
@@ -650,7 +674,7 @@ with tab2:
             st.markdown("#### 🥩 Valores de Importaciones de Carne Seleccionados por Tipos")
             opcion = st.selectbox("Seleccione un grupo", ["Valor", "Cantidad"])
             def graficar(opc):
-                fig = px.line(opc,markers=True,color_discrete_sequence=custom_colors, hover_name='value', hover_data={'variable': None, 'value':None})
+                fig = px.line(opc,markers=True,color_discrete_sequence=custom_colors, hover_name='value', hover_data={'value':None})
                 fig.update_layout(width=1200, height=600, 
                                 yaxis_title = "Cantidad", xaxis_title = "Años",
                                 legend=dict(title=dict(text="Tipo de Carne")))
@@ -662,53 +686,37 @@ with tab2:
                 st.markdown("###### Toneladas (T)")
                 st.plotly_chart(graficar(dfC))
             
-            with st.expander("Obervaciones"):
-                st.write("Natalidad y Mortalidad")
+            with st.expander("Observaciones"):
+                st.markdown("- Se incluyen estos valores por ser una de las fuentes más significativas de obtención de carnes para la distribución en nuestro pais.")
 
 
 with tab3:
-    #Datos de los nacimientos y muertes
-    nacimientos_vacunos = data["vacuno"]["Nacimientos_muertes(Mcabz)"]["Nacimientos"]["Totales"]
-    muertes_vacuno = data["vacuno"]["Nacimientos_muertes(Mcabz)"]["Muertes"]["Totales"]
-    nacimientos_porcinos = data["porcino"]["Nacimientos (vivos)(Mcabz)"]["Total"]
-    muertes_porcinos = data["porcino"]["Muertes de crías (a)(Mcabz)"]["Total"]
-    
     with st.container(border=True):
-        nac_vDF = pd.DataFrame({
-            "Nacimientos vacunos": nacimientos_vacunos
-        })
-        muer_vDF = pd.DataFrame({
-            "Muertes vacunas": muertes_vacuno
-        })
-        nac_pDF = pd.DataFrame({
-            "Nacimientos porcinos": nacimientos_porcinos
-        })
-        muer_pDF = pd.DataFrame({
-            "Muertes porcinas": muertes_porcinos
-        })
-        nac_vDF = nac_vDF.apply(pd.to_numeric)
-        muer_vDF = muer_vDF.apply(pd.to_numeric)
-        nac_pDF = nac_pDF.apply(pd.to_numeric)
-        muer_pDF = muer_pDF.apply(pd.to_numeric)
-
-        nac_vDF.columns = ["Muertes vacunas"]
-        nac_pDF.columns = ["Muertes porcinas"]
-
-        calcular_tasa_vacuno = round(((nac_vDF/muer_vDF)-1),2)
-        calcular_tasa_porcino = round(((nac_pDF/muer_pDF)-1),2)
-        tasa_existDF = pd.DataFrame({
-            "Ganado vacuno": calcular_tasa_vacuno.squeeze(),
-            "Ganado porcino": calcular_tasa_porcino.squeeze()
-        })
-        tasa_existDF = tasa_existDF.apply(pd.to_numeric)
-        st.markdown("### 💀 Tasa de Mortalidad")
+        #Datos de los nacimientos y muertes
+        nacimientos_vacunos = data["vacuno"]["Nacimientos_muertes(Mcabz)"]["Nacimientos"]["Totales"]
+        muertes_vacuno = data["vacuno"]["Nacimientos_muertes(Mcabz)"]["Muertes"]["Totales"]
+        nacimientos_porcinos = data["porcino"]["Nacimientos (vivos)(Mcabz)"]["Total"]
+        muertes_porcinos = data["porcino"]["Muertes de crías (a)(Mcabz)"]["Total"]
+        tasa_vacuno = {}
+        tasa_porcino = data["porcino"]["Tasa de mortalidad (por 100nacidos)(%)"]["Total"]
+        promedio = 0
+        for year in vacuno:
+            promedio += vacuno[year]
+        promedio = promedio/len(list(vacuno))
+        for year in vacuno:
+            tasa_vacuno[year] = round((muertes_vacuno[year]/promedio)*100,2)
+        st.markdown("### 💀 Tasa de Mortalidad")                     
+        tasas = pd.DataFrame({
+                                "Vacuno":tasa_vacuno,
+                                "Porcino":tasa_porcino})
+        tasas = tasas.iloc[8:,:].apply(pd.to_numeric)
         opciones11 = st.select_slider("Año",[x for x in range (1993,2023)])
         def crear_grafica(year):
-            df = tasa_existDF.loc[str(year)]
+            df = tasas.loc[str(year)]
             df.index.name = "Tipo"
             fig = px.bar(df, hover_name='value', hover_data={'variable': None, 'value':None}, orientation='h')
-            fig.update_layout(
-            xaxis_title = "Tasa")       
+            fig.update_layout(yaxis_title="Tipo",
+            xaxis_title = "Tasa (%)")       
             fig.update_traces(width=0.5,
                     marker_line_color="black",
                     marker_line_width=1.5, opacity=0.6, 
@@ -717,47 +725,7 @@ with tab3:
             return fig  
 
         st.plotly_chart(crear_grafica(opciones11)) 
-        with st.expander("Observaciones") :
-            st.markdown("")
-
-    with st.container(border=True):
-        st.markdown("### 🧬 Nacimientos y Muertes")
-        answer = st.selectbox("Tipo de Ganado", ["Vacuno🐮", "Porcino🐷"])
-        nac_muert_vacunosDF = pd.DataFrame({
-            "Nacimientos": nacimientos_vacunos,
-            "Muertes": muertes_vacuno
-        })
-        nac_muert_vacunosDF.index.name = "Año"
-        nac_muert_porcinosDF = pd.DataFrame({
-            "Nacimientos": nacimientos_porcinos,
-            "Muertes": muertes_porcinos
-        })
-        nac_muert_porcinosDF.index.name = "Año"
-        nac_muert_vacunosDF = nac_muert_vacunosDF.apply(pd.to_numeric)
-        nac_muert_porcinosDF = nac_muert_porcinosDF.apply(pd.to_numeric)
-
-        #Grafico de Linea con selectbox
-        v = px.line(nac_muert_vacunosDF, hover_name='value', hover_data={'variable': None, 'value':None}, markers=True,color_discrete_sequence=custom_colors)
-        v.update_layout(width=800, height=600, 
-                    yaxis_title = "Cantidad", xaxis_title = "Años", 
-                    legend=dict(
-                                title=dict(text="")))
-        p = px.line(nac_muert_porcinosDF, hover_name='value', hover_data={'variable': None, 'value':None}, markers=True,color_discrete_sequence=custom_colors)
-        p.update_layout(width=800, height=600, 
-                    yaxis_title = "Cantidad", xaxis_title = "Años", 
-                    legend=dict(
-                                title=dict(text="")
-                            )
-                    )
-        st.markdown("###### Miles de Cabezas (MCabz)")
-        if answer == "Vacuno🐮":
-            st.plotly_chart(v)
-        if answer == "Porcino🐷":
-            st.plotly_chart(p)
-        with st.expander("Observaciones") :
-            st.markdown("")
-
-    with st.container(border=True):
+        st.divider()
         st.markdown("### 🐔 Mortalidad de gallinas ponedoras")
         #Datos gallinas ponedoras
         gp_muertes = data["aves"]["Indicadores seleccionados de gallinas ponedoras"]["Muertes(Mcabz)"]
@@ -796,4 +764,48 @@ with tab3:
             st.markdown("###### Tasa de Mortalidad (%)")
             st.plotly_chart(tm)
         with st.expander("Observaciones") :
-            st.markdown("")
+            st.markdown("- Tasa de mortalidad (por ciento): Se aplica como el resultado de dividir la cantidad de muertes entre la cantidad de nacimientos ocurridos, excepto en avicultura, cuyo resultado surge de la división del total de aves muertas entre la existencia promedio de aves de un período determinado.")
+            st.markdown("- Los valores de tasa del ganado porcino con los que se cuenta parten del año 1993.")
+            st.markdown("- La tasa vacuna representada fue calculada por nuestro equipo por medio de la división del número de muertes totales entre el promedio de los valore de existencia total desde 1985 hasta 2022 multiplicado por 100 (por 100 ).")
+    with st.container(border=True):
+        st.markdown("### 🧬 Nacimientos y Muertes")
+        answer = st.selectbox("Tipo de Ganado", ["Vacuno🐮", "Porcino🐷"])
+        nac_muert_vacunosDF = pd.DataFrame({
+            "Nacimientos": nacimientos_vacunos,
+            "Muertes": muertes_vacuno
+        })
+        nac_muert_vacunosDF.index.name = "Año"
+        nac_muert_porcinosDF = pd.DataFrame({
+            "Nacimientos (vivos)": nacimientos_porcinos,
+            "Muertes de crías": muertes_porcinos
+        })
+        nac_muert_porcinosDF.index.name = "Año"
+        nac_muert_vacunosDF = nac_muert_vacunosDF.apply(pd.to_numeric)
+        nac_muert_porcinosDF = nac_muert_porcinosDF.apply(pd.to_numeric)
+
+        #Grafico de Linea con selectbox
+        v = px.line(nac_muert_vacunosDF, hover_name='value', hover_data={'variable': None, 'value':None}, markers=True,color_discrete_sequence=custom_colors)
+        v.update_layout(width=800, height=600, 
+                    yaxis_title = "Cantidad", xaxis_title = "Años", 
+                    legend=dict(
+                                title=dict(text="")))
+        p = px.line(nac_muert_porcinosDF, hover_name='value', hover_data={'variable': None, 'value':None}, markers=True,color_discrete_sequence=custom_colors)
+        p.update_layout(width=800, height=600, 
+                    yaxis_title = "Cantidad", xaxis_title = "Años", 
+                    legend=dict(
+                                title=dict(text="")
+                            )
+                    )
+        st.markdown("###### Miles de Cabezas (MCabz)")
+        if answer == "Vacuno🐮":
+            st.plotly_chart(v)
+        if answer == "Porcino🐷":
+            st.plotly_chart(p)
+        with st.expander("Observaciones") :
+            st.markdown("- Los valores del ganado porcino con los que se cuenta comienzan en el año 1993")
+            st.markdown("- Nacimientos: Es el comienzo de la vida del animal por la expulsión completa o extracción a la madre de un producto de concepción, independientemente de la duracion de la gestación, según si después de tal separación respira o muestra evidencia de vida, como el latido del corazón o un movimiento definitivo de músculos voluntarios. En el caso de la ganadería vacuna se considerará el parto a término de donde el ternero nazca vivo o muerto, y en el parto prematuro donde el ternero nazca vivo. En el caso de las aves se consideraría cuando la cría rompe el cascarón y abandona el huevo.")
+            st.markdown("- Muertes: Son aquellos animales en los que desaparece definitivamente la vida, natural o accidentalmente, incluye las crías muertas.")
+            st.markdown("- Las muertes porcinas mostradas son de crías, y los nacimientos se refieren solo a los vivos.")
+            st.markdown("- Los nacimientos y muertes porcinas excluyen los patios y parcelas de los hogares.")
+    
+
