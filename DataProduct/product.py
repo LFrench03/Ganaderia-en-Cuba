@@ -3,7 +3,7 @@ from st_pages import add_page_title, get_nav_from_toml
 
 st.set_page_config(page_title="DataPecuario", layout="wide")
 
-nav = get_nav_from_toml("DataProduct/config.toml")
+nav = get_nav_from_toml("DataProduct/.streamlit/pages.toml")
 
 st.logo("brand/PNG/Identificador_horizontal.png")
 
