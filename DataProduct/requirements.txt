@@ -1,1 +1,9 @@
-- e.
+streamlit==1.38.0 
+st_pages
+numpy==2.0.1
+pandas==2.2.2
+geopandas==1.0.1
+folium==0.17.0
+streamlit_folium
+plotly.express
+plotly.graph_objects
