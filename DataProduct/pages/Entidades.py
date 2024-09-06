@@ -7,15 +7,17 @@ import plotly.graph_objects as go
 from numpy import nan
 import json 
 
+@st.cache_data
+def convert_df(df):
+    return df.to_csv().encode("utf-8")
+
 #Datos
 with open("inventario_ganado.json") as json_file:
     data = json.load(json_file)
 
 province_geo = "data/geojsons/cuba.geojson"
-ids = ["art","cam","cav","cfg", "gra", "gtm", "hol" , "ijv" ,"lha","ltu" ,"mat"
-       ,"may","pri","ssp","stg","vcl"]
-lista_prov = ["Artemisa", "Camaguey","Ciego de Avila","Cienfuegos","Granma","La Habana","Matanzas","Sancti Spiritus","Las Tunas","Holguin","Santiago de Cuba","Isla de la Juventud"
-              ,"Villa Clara","Guantanamo","Pinar del Rio","Mayabeque"]
+ids = ["art","cam","cav","cfg", "gra", "gtm", "hol" , "ijv" ,"lha","ltu" ,"mat","may","pri","ssp","stg","vcl"]
+lista_prov = ["Artemisa", "Camaguey","Ciego de Avila","Cienfuegos","Granma","La Habana","Matanzas","Sancti Spiritus","Las Tunas","Holguin","Santiago de Cuba","Isla de la Juventud","Villa Clara","Guantanamo","Pinar del Rio","Mayabeque"]
 lista_prov = sorted(lista_prov)
 dt2012 = {}
 dt2013 = {}
@@ -324,6 +326,50 @@ with col1:
         date = st.select_slider("Año", [x for x in range(2008, 2022)])
         st.markdown("###### Unidades")
         st.plotly_chart(crear_grafica2(date))
+
 with col2:
-    with st.expander("Observaciones"):
-        st.write("A")
+    with st.expander("###### Observaciones"):
+        st.markdown("- En el mapa de densidad se muestra la distribución por provincias de las entidades y tenientes de tierras del territorio cubano.")
+        st.markdown("- En el mapa además están presentes los componentes de un cartel al pulsar la zona de una provincia determinada(popup) y el cartel que se muestra simplemente pasando el cursor (tooltip); ambos mostrando el nombre de la provincia y la distribución disponible para la misma del grupo que esté seleccionado en el filtrado de datos.")
+        st.markdown("- Cómo se puede observar, para el grupo de las entidades se añade un interruptor para excluir la Habana de la dispersión de densidad para que se distribuya correctamente en el resto de provincias, dado que de lo contrario, por su enorme superioridad de concentración hace que se concentre demasiado el color.")
+        st.markdown("- En la parte inferior, para la distribución por cooperativas se comienza desde el año 2008 dado que las divisiones por tipos de cooperativas que se tienen datan desde esa fecha.")
+        st.markdown("- De igual forma en el mapa no se muestran dichas divisiones hasta a partir del 2013.")
+        csv = convert_df(dfc)
+        st.download_button( 
+                            label="Descargar CSV",
+                            data=csv,
+                            file_name="cooperativas.csv",
+                            mime="text/csv")
+        
+with st.expander("###### Detalles y características de las entidades y cooperativas"):
+    st.markdown("En las cooperativas se incluyen, Cooperativas No Agropecuarias (CNoA), las Unidades Básicas de Producción Cooperativa (UBPC), Cooperativas de Producción Agropecuaria (CPA) y las Cooperativas de Créditos y Servicios (CCS).")
+    st.markdown('* <p style=font-size:22px;font-weight:bold;color:rgb(216,0,0);"><i>Cooperativas No Agropecuarias (CNoA):</i></p>', unsafe_allow_html=True)
+    st.markdown('''<p style="font-size:17px;font-weight:bold;color:gray;"><i>Es una organización con fines económicos y sociales, que
+se constituye voluntariamente sobre la base del aporte de bienes y derechos y se sustenta en el
+trabajo de sus socios, cuyo objetivo general es la producción de bienes y la prestación de servicios
+mediante la gestión colectiva, para la satisfacción del interés social y el de los socios. Tiene
+personalidad jurídica y patrimonio propio; usa, disfruta y dispone de los bienes de su propiedad; cubre
+sus gastos con sus ingresos y responde de sus obligaciones con su patrimonio. Se constituyen por
+escritura notarial que se inscriben en el Registro Mercantil.</i></p>''', unsafe_allow_html=True)
+    st.markdown('* <p style=font-size:22px;font-weight:bold;color:rgb(216,0,0);"><i>Unidades Básicas de Producción Cooperativa (UBPC):</i></p>', unsafe_allow_html=True)
+    st.markdown('''<p style="font-size:17px;font-weight:bold;color:gray;"><i>Son cooperativas agropecuarias donde la
+producción se realiza en común, siendo igualmente común la propiedad de los medios. Tienen
+personalidad jurídica y patrimonio propio. Utilizan tierra estatal como usufructo. Se constituyen de
+acuerdo con las disposiciones vigentes, las que se inscriben en el Registro Estatal de Unidades
+Básicas de Producción Cooperativa (REUCO).</i></p>''', unsafe_allow_html=True)   
+    st.markdown('* <p style=font-size:22px;font-weight:bold;color:rgb(216,0,0);"><i>Cooperativas de Producción Agropecuaria (CPA):</i></p>', unsafe_allow_html=True)
+    st.markdown('''<p style="font-size:17px;font-weight:bold;color:gray;"><i>Son entidades económicas que representan una
+forma avanzada y eficiente de la producción socialista, con personalidad jurídica y patrimonio propio,
+constituidas con la tierra y otros bienes aportados por los agricultores pequeños, a la cual se integran
+otras personas para lograr una producción agropecuaria sostenible. Se constituyen de acuerdo con las
+disposiciones vigentes, se inscriben en el Registro Estatal de Entidades Agropecuarias no Estatales
+(REEANE).</i></p>''', unsafe_allow_html=True)      
+    st.markdown('* <p style=font-size:22px;font-weight:bold;color:rgb(216,0,0);"><i>Cooperativas de Créditos y Servicios (CCS):</i></p>', unsafe_allow_html=True)
+    st.markdown('''<p style="font-size:17px;font-weight:bold;color:gray;"><i>Son las cooperativas por asociación voluntaria de los
+agricultores pequeños que tienen la propiedad o el usufructo de sus respectivas tierras y demás
+medios de producción, así como de la producción que obtienen. Es una forma de cooperación agraria,
+mediante la cual se tramita y viabiliza la asistencia técnica, financiera y material que el Estado brinda
+para aumentar la producción de los agricultores pequeños y facilitar su comercialización. Tienen
+personalidad jurídica y patrimonio propio con el cual responden por sus actos. Se constituyen de
+acuerdo con la legislación vigente y se inscriben en el Registro Estatal de Entidades Agropecuarias no
+Estatales (REEANE).</i></p>''', unsafe_allow_html=True) 

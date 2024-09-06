@@ -4,6 +4,11 @@ import json
 import plotly.express as px
 import plotly.graph_objects as go
 
+@st.cache_data
+def convert_df(df):
+    return df.to_csv().encode("utf-8")
+
+
 with open('inventario_ganado.json',encoding = "utf8") as json_data: #Cargar Json 
     data = json.load(json_data)  
             
@@ -102,6 +107,14 @@ with tab1: #Tab de Existencia
                         y el subíndice (delta) muestra la diferencia resultante (positiva o negativa) entre el valor de existencia
                         en el Año X menos el del Año Y *(todos los valores obviamente correspondientes al tipo de ganado seleccionado)*''')
             st.markdown('''- Los valores de existencia están dados en Miles de Cabezas (MCabz)''')
+            csv = convert_df(ganado_TOTAL)
+            d1, d2 = st.columns(2)
+            with d1:
+                st.download_button( 
+                        label="Descargar CSV",
+                        data=csv,
+                        file_name="ganado_TOTAL.csv",
+                        mime="text/csv")                  
     
     with st.container(border=True):       
             st.markdown("### 〽️ ¿Qué tipos de ganado han predominado en Cuba en el período de 1985-2022?")
@@ -133,14 +146,37 @@ with tab1: #Tab de Existencia
                 mostrar(estatal)
             if opciones == "No Estatal":
                 mostrar(NOestatal)
-            with st.expander("Observaiones"):
-                st.markdown("- En la leyenda se pueden elegir los valores que se muestren en la gráfica pulsando en la linea de color al lado del nombre del tipo de ganado (si se pulsa dos veces se descartan el resto de valores y solo se muestra el pulsado de forma individual).")
+            with st.expander("Observaciones"):
+                st.markdown("- En la leyenda se pueden elegir los valores que se muestren o no en la gráfica pulsando en la línea de color al lado del nombre del tipo de ganado (si se pulsa dos veces se descartan el resto de valores y solo se muestra el pulsado de forma individual).")
                 st.markdown("- Para una mejor visión general se recomienda desactivar las aves en la leyenda.")
                 st.markdown("- En el cuerpo de la gráfica se muestra en los marcadores de cada pico para que se muestren los valores exactos en un cartel (tooltip).")
                 st.markdown("- Sólo se muestra el ganado vacuno en el grupo total porque no se hayaron las divisiones en sectores de ninguna fuente confiable.")
                 st.markdown("- Los años faltantes en los grupos estatales y no estatales se debe a que no se tienen registros de valores para dichos tiempos en la ONEI")
                 st.markdown("- Por un aparente problema de ajuste de la gráfica no se muestran los valores del tiempo 1985-1990 en el grupo total")
-
+                csv1 = convert_df(ganado_TOTAL)
+                csv2 = convert_df(ganado_ESTATAL)
+                csv3 = convert_df(ganado_NO_ESTATAL)
+                columna1, column2 = st.columns(2)
+                with st.popover("Descargar CSV"):
+                    d1, d2, d3 = st.columns(3)
+                    with d1:
+                        st.download_button( 
+                                label="Total",
+                                data=csv1,
+                                file_name="ganado_TOTAL.csv",
+                                mime="text/csv")                  
+                    with d2:
+                        st.download_button( 
+                                label="Estatal",
+                                data=csv2,
+                                file_name="ganado_Estatal.csv",
+                                mime="text/csv")  
+                    with d3:
+                        st.download_button( 
+                                label="No Estatal",
+                                data=csv3,
+                                file_name="ganado_NOEstatal.csv",
+                                mime="text/csv")                                              
                 
     with st.container(border=True):
 
@@ -211,6 +247,14 @@ with tab1: #Tab de Existencia
                     st.markdown('<p style=font-size:14px;font-weight:bold;color:gray;text-align:center;"><i>Son las destinadas a mantener o perpetuar la especie de aves de raza ligera para la producción de huevos y pesadas para la producción de carne.</i></p>', unsafe_allow_html=True)
                 with t4:
                     st.markdown('<p style=font-size:14px;font-weight:bold;color:gray;text-align:center;"><i>Son las que se encuentran en proceso de desarrollo con el fin de convertirlas en pie de cría, ponedoras o reproductoras cuando reúnan las condiciones.</i></p>', unsafe_allow_html=True)                  
+                csv4 = convert_df(aves_estatales_tipos)
+                d1, d2 = st.columns(2)
+                with d1:
+                    st.download_button( 
+                            label="Descargar CSV",
+                            data=csv4,
+                            file_name="aves_estatales_por_tipos.csv",
+                            mime="text/csv")                 
         #Datos Existencia Ovino y Caprino por separado
         exist_ovino = data["ovino_caprino"]["Existencia(Mcabz)"]["Total"]["Ovino"]
         exist_caprino = data["ovino_caprino"]["Existencia(Mcabz)"]["Total"]["Caprino"]
@@ -228,6 +272,7 @@ with tab1: #Tab de Existencia
             })                
         exist_OC = exist_OC.apply(pd.to_numeric)
         exist_OCE = exist_OCE.apply(pd.to_numeric)
+        st.divider()
         #Grafico de pastel con slider para los años
         st.markdown("#### 🐏🐐 Comparación de las densidades del ganado ovino-caprino por tipos")
         resp = st.selectbox("Grupo", ["Total", "Estatal"])
@@ -256,7 +301,22 @@ with tab1: #Tab de Existencia
         with st.expander("Observaciones"):
             st.markdown("- Los datos que ofrece la ONEI se encuentran a partir de 1990.")
             st.markdown("- En los primeros 5 años los valores totales son los estatales.")
-            
+            csv5_1 = convert_df(exist_OC)
+            csv5_2 = convert_df(exist_OCE)
+            with st.popover("Descargar CSV"):
+                d1, d2 = st.columns(2)
+                with d1:
+                    st.download_button( 
+                            label="Total",
+                            data=csv5_1,
+                            file_name="existencia_ovino_caprino_total.csv",
+                            mime="text/csv")   
+                with d2:
+                    st.download_button( 
+                            label="Estatal",
+                            data=csv5_2,
+                            file_name="existencia_ovino_caprino_estatal.csv",
+                            mime="text/csv")                                     
         
         #Datos tipos de Ganado Vacuno
         ternerasH = data["vacuno"]["Hembras"]["Terneras"]
@@ -350,6 +410,17 @@ with tab1: #Tab de Existencia
                     st.markdown('<p style=font-size:14px;font-weight:bold;color:gray;text-align:center;"><i>Son los vacunos machos destinados a la reproducción, ya sea por monta natural o extracción del semen para la inseminación artificial.</i></p>', unsafe_allow_html=True)                              
                 with m7:
                     st.markdown('<p style=font-size:14px;font-weight:bold;color:gray;text-align:center;"><i>Son los vacunos machos destinados como "celadores" o "detectores de celos" con vistas a mejorar el porcentaje de gestación y nacimientos.</i></p>', unsafe_allow_html=True)                              
+            
+            csv6 = convert_df(vacasDF)
+            d1, d2 = st.columns(2)
+            with d1:
+                st.download_button( 
+                            label="Descargar CSV",
+                            data=csv6,
+                            file_name="vacuno_.tipos.csv",
+                            mime="text/csv")                
+
+
         col1, col2 = st.columns(2)
         
         #Datos equido
@@ -453,7 +524,37 @@ with tab1: #Tab de Existencia
         
         with st.expander("Observaciones"):
             st.markdown("- Las selecciones de los grupos 'Equino' y 'Asnal' se dividen por sexo (Hembras y Machos)")
-
+            csv7_1 = convert_df(dfT)
+            csv7_2 = convert_df(dfE)
+            csv7_3 = convert_df(dfNE)
+            csv7_4 = convert_df(dfequino)
+            csv7_5 = convert_df(dfasnal)
+            with st.popover("Descargar CSV"):
+                st.download_button( 
+                                label="Total",
+                                data=csv7_1,
+                                file_name="df_equido_total.csv",
+                                mime="text/csv")
+                st.download_button( 
+                                label="Estatal",
+                                data=csv7_2,
+                                file_name="df_equido_estatal.csv",
+                                mime="text/csv") 
+                st.download_button( 
+                                label="No Estatal",
+                                data=csv7_3,
+                                file_name="df_equido_noestatal.csv",
+                                mime="text/csv") 
+                st.download_button( 
+                                label="Equino",
+                                data=csv4,
+                                file_name="df_equido_equino.csv",
+                                mime="text/csv") 
+                st.download_button( 
+                                label="Asnal",
+                                data=csv7_5,
+                                file_name="df_equido_asnal.csv",
+                                mime="text/csv")                                                     
 with tab2:
         
         with st.container(border=True): 
@@ -536,14 +637,37 @@ with tab2:
             
                 with st.expander("Observaciones"):
                     
-                    st.markdown("- Entregas a sacrificio: Comprende a los animales vendidos para el el sacrificio y los sacrificados en la propia unidad productora. Se determina en cabezas y peso en pie. En la ganadería vacuna se incluyen animales con este fin que fueron previamente comprados a productores no estatales. Para los rebaños porcinos, ovino-caprino y avícola en los casos que no se contó con toda la cobertura informativa se realizaron calculos indirectos -ONEI-")
-                    st.markdown("- Hasta el año 2008 los valores de sacrificios del rebaño vacuno eran los del sector estatal")
-                    st.markdown("- Los datos de sacrificios porcinos se tienen a partir del año 1989")
-                    st.markdown("- Las entregas del ganado ovino caprino se tienen a partir del año 2007")
+                    st.markdown("- Entregas a sacrificio: Comprende a los animales vendidos para el el sacrificio y los sacrificados en la propia unidad productora. Se determina en cabezas y peso en pie. En la ganadería vacuna se incluyen animales con este fin que fueron previamente comprados a productores no estatales. Para los rebaños porcinos, ovino-caprino y avícola en los casos que no se contó con toda la cobertura informativa se realizaron calculos indirectos -ONEI-.")
+                    st.markdown("- Hasta el año 2008 los valores de sacrificios del rebaño vacuno eran los del sector estatal.")
+                    st.markdown("- Los datos de sacrificios porcinos se tienen a partir del año 1989.")
+                    st.markdown("- Las entregas del ganado ovino caprino se tienen a partir del año 2007.")
                     st.markdown("- En la leyenda se pueden elegir los valores que se muestren en la gráfica pulsando en la linea de color al lado del nombre del tipo de ganado (si se pulsa dos veces se descartan el resto de valores y solo se muestra el pulsado de forma individual).")
                     st.markdown("- Para una mejor visión general se recomienda desactivar los pollos de ceba en la leyenda.")
                     st.markdown("- En el cuerpo de la gráfica se muestra en los marcadores de cada pico para que se muestren los valores exactos en un cartel (tooltip).")                
-
+                    csv8_1 = convert_df(sacrif_TOTAL)
+                    csv8_2 = convert_df(sacrif_ESTATAL)
+                    csv8_3 = convert_df(sacrif_NOESTATAL)
+                    columna1, column2 = st.columns(2)
+                    with st.popover("Descargar CSV"):
+                        d1, d2, d3 = st.columns(3)
+                        with d1:
+                            st.download_button( 
+                                    label="Total",
+                                    data=csv8_1,
+                                    file_name="ganado_sacrif_TOTAL.csv",
+                                    mime="text/csv")                  
+                        with d2:
+                            st.download_button( 
+                                    label="Estatal",
+                                    data=csv8_2,
+                                    file_name="ganado_sacrif_Estatal.csv",
+                                    mime="text/csv")  
+                        with d3:
+                            st.download_button( 
+                                    label="No Estatal",
+                                    data=csv8_3,
+                                    file_name="ganado_sacrif_NOEstatal.csv",
+                                    mime="text/csv")    
         with st.container(border=True):
             st.markdown("#### ⚖️ Peso en pie del ganado de tipo productor")
             #Datos peso en pie y promedio
@@ -609,12 +733,27 @@ with tab2:
             st.plotly_chart(crear_grafica(opciones2, choice))     
 
             with st.expander("Observaciones"):
-                st.markdown("- Peso promedio en pie de ganado para sacrificio: Es el resultado de la división del peso en pie total del ganado a sacrifio entre el número de las cabezas correspondientes")
-                st.markdown("- Peso promedio en pie de ganado para sacrificio: Es el resultado de la división del peso en pie total del ganado a sacrifio entre el número de las cabezas correspondientes")
-                st.markdown("- Sólo se tienen valores del rebaño ovino caprino a partir el año 2007")
-                st.markdown("- En el sector de peso en pie, al activar el interruptor se aislan los tipos de ganado vacuno y porcino para lograr una comparación directa para las barras de menor magnitud")
-                st.markdown("- La representación del peso promedio en pie no tiene mucho sentido comparativo pero se incluye como observación")
-        
+                st.markdown("- Peso promedio en pie de ganado para sacrificio: Es el resultado de la división del peso en pie total del ganado a sacrifio entre el número de las cabezas correspondientes.")
+                st.markdown("- Sólo se tienen valores del rebaño ovino caprino a partir el año 2007.")
+                st.markdown("- En el sector de peso en pie, al activar el interruptor se aislan los tipos de ganado vacuno y porcino para lograr una comparación directa para las barras de menor magnitud.")
+                st.markdown("- La representación del peso promedio en pie no tiene mucho sentido comparativo pero se incluye como observación.")
+                csv9_1 = convert_df(pie)
+                csv9_2 = convert_df(promedio)
+                with st.popover("Descargar CSV"):
+                    d1, d2 = st.columns(2)
+                    with d1:
+                        st.download_button( 
+                                label="Peso en Pie",
+                                data=csv9_1,
+                                file_name="peso_en_pie.csv",
+                                mime="text/csv")   
+                    with d2:
+                        st.download_button( 
+                                label="Peso Promedio",
+                                data=csv9_2,
+                                file_name="peso_promedio.csv",
+                                mime="text/csv") 
+
         with st.container(border=True):
             #Datos Porcino Estatal Entregas de Sacrificio Estatal
             porcino_estatalT= data['porcino']['Entregas a sacrificio']['Estatal']['Cabezas(Mcabz)']['Total']
@@ -641,6 +780,14 @@ with tab2:
 
             with st.expander("Observaciones"):
                 st.markdown("- Sólo se tienen valores del sacrificios de ceba hasta el 2012")
+                csv10 = convert_df(df)
+                d1, d2 = st.columns(2)
+                with d1:
+                    st.download_button( 
+                            label="Descargar CSV",
+                            data=csv10,
+                            file_name="cerdos_ceba_otros.csv",
+                            mime="text/csv")                   
 
         with st.container(border=True):
             #Datos Importaciones Carne
@@ -688,45 +835,67 @@ with tab2:
             
             with st.expander("Observaciones"):
                 st.markdown("- Se incluyen estos valores por ser una de las fuentes más significativas de obtención de carnes para la distribución en nuestro pais.")
-
-
+                st.markdown("- De los datos sobre los pocos productos seleccionados para exportaciones sólo se tenía el valor por lo que se decidió no incluirlo en el dataproduct.")
+                st.markdown("- En la leyenda se pueden elegir los valores que se muestren o no en la gráfica pulsando en la línea de color al lado del nombre del tipo de importación (si se pulsa dos veces se descartan el resto de valores y solo se muestra el pulsado de forma individual).")
+                st.markdown("- En el cuerpo de la gráfica se muestra en los marcadores de cada pico para que se muestren los valores exactos en un cartel (tooltip).")
+                csv11_1 = convert_df(dfV)
+                csv11_2 = convert_df(dfC)
+                with st.popover("Descargar CSV"):
+                    d1, d2 = st.columns(2)
+                    with d1:
+                        st.download_button( 
+                                label="Valor",
+                                data=csv11_1,
+                                file_name="valor.csv",
+                                mime="text/csv")   
+                    with d2:
+                        st.download_button( 
+                                label="Cantidad",
+                                data=csv11_2,
+                                file_name="cantidad.csv",
+                                mime="text/csv")  
 with tab3:
     with st.container(border=True):
-        #Datos de los nacimientos y muertes
-        nacimientos_vacunos = data["vacuno"]["Nacimientos_muertes(Mcabz)"]["Nacimientos"]["Totales"]
-        muertes_vacuno = data["vacuno"]["Nacimientos_muertes(Mcabz)"]["Muertes"]["Totales"]
-        nacimientos_porcinos = data["porcino"]["Nacimientos (vivos)(Mcabz)"]["Total"]
-        muertes_porcinos = data["porcino"]["Muertes de crías (a)(Mcabz)"]["Total"]
-        tasa_vacuno = {}
-        tasa_porcino = data["porcino"]["Tasa de mortalidad (por 100nacidos)(%)"]["Total"]
-        promedio = 0
-        for year in vacuno:
-            promedio += vacuno[year]
-        promedio = promedio/len(list(vacuno))
-        for year in vacuno:
-            tasa_vacuno[year] = round((muertes_vacuno[year]/promedio)*100,2)
-        st.markdown("### 💀 Tasa de Mortalidad")                     
-        tasas = pd.DataFrame({
-                                "Vacuno":tasa_vacuno,
-                                "Porcino":tasa_porcino})
-        tasas = tasas.iloc[8:,:].apply(pd.to_numeric)
-        opciones11 = st.select_slider("Año",[x for x in range (1993,2023)])
-        def crear_grafica(year):
-            df = tasas.loc[str(year)]
-            df.index.name = "Tipo"
-            fig = px.bar(df, hover_name='value', hover_data={'variable': None, 'value':None}, orientation='h')
-            fig.update_layout(yaxis_title="Tipo",
-            xaxis_title = "Tasa (%)")       
-            fig.update_traces(width=0.5,
-                    marker_line_color="black",
-                    marker_line_width=1.5, opacity=0.6, 
-                    showlegend = False) 
-            fig.data[0].marker.color = ["#5B99C2","#e0327c"] 
-            return fig  
-
-        st.plotly_chart(crear_grafica(opciones11)) 
-        st.divider()
-        st.markdown("### 🐔 Mortalidad de gallinas ponedoras")
+        col1, col2 =  st.columns(2)
+        colors = ["rgb(0,87,214)","rgb(216,0,0)","rgb(0,33,66)"]
+        with col2: 
+            #Datos de los nacimientos y muertes
+            nacimientos_vacunos = data["vacuno"]["Nacimientos_muertes(Mcabz)"]["Nacimientos"]["Totales"]
+            muertes_vacuno = data["vacuno"]["Nacimientos_muertes(Mcabz)"]["Muertes"]["Totales"]
+            nacimientos_porcinos = data["porcino"]["Nacimientos (vivos)(Mcabz)"]["Total"]
+            muertes_porcinos = data["porcino"]["Muertes de crías (a)(Mcabz)"]["Total"]
+            tasa_vacuno = {}
+            tasa_porcino = data["porcino"]["Tasa de mortalidad (por 100nacidos)(%)"]["Total"]
+            promedio = 0
+            for year in vacuno:
+                promedio += vacuno[year]
+            promedio = promedio/len(list(vacuno))
+            for year in vacuno:
+                tasa_vacuno[year] = round((muertes_vacuno[year]/promedio)*100,2)
+            st.markdown("### 🐮🐷 Mortalidad de rebaños vacuno y porcino")                     
+            tasas = pd.DataFrame({
+                                    "Vacuno":tasa_vacuno,
+                                    "Porcino":tasa_porcino})
+            tasas = tasas.iloc[8:,:].apply(pd.to_numeric)
+            opciones11 = st.select_slider("Año",[x for x in range (1993,2023)])
+            def crear_grafica(year):
+                df = tasas.loc[str(year)]
+                df.index.name = "Tipo"
+                fig = px.bar(df, hover_name='value', hover_data={'variable': None, 'value':None}, orientation='h')
+                fig.update_layout(yaxis_title="Tipo",
+                xaxis_title = "Tasa (%)")       
+                fig.update_traces(width=0.5,
+                        marker_line_color="black",
+                        marker_line_width=1.5, opacity=0.6, 
+                        showlegend = False) 
+                fig.data[0].marker.color = ["#5B99C2","#e0327c"] 
+                return fig  
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")    
+            st.write("")   
+            st.plotly_chart(crear_grafica(opciones11))
         #Datos gallinas ponedoras
         gp_muertes = data["aves"]["Indicadores seleccionados de gallinas ponedoras"]["Muertes(Mcabz)"]
         gp_existencia = data["aves"]["Indicadores seleccionados de gallinas ponedoras"]["Existencia promedio(Mcabz)"]
@@ -739,34 +908,59 @@ with tab3:
         gp_tasa_mortalidadDF = pd.DataFrame({
         "Tasa de mortalidad de gallinas ponedoras": gp_tasa_mortalidad
     })
-            
+        with col1:    
         #Selectbox para grafico de area y de linea
-        choices5 = st.selectbox( "Selecciona", ["Existencia promedio y mortalidad", "Tasa de mortalidad (%)"])
-        gp_muertesDF.index.name = "Año"
-        mgp = px.line(gp_muertesDF, hover_name='value', hover_data={'variable': None, 'value':None}, markers=True,color_discrete_sequence=custom_colors)
-        mgp.update_layout(width=800, height=600, 
-                    yaxis_title = "Cantidad", xaxis_title = "Años", 
-                    legend=dict(
-                                title=dict(text="")
-                            )
-                    )
-        
-        gp_tasa_mortalidadDF.index.name = "Año"
-        tm = px.line(gp_tasa_mortalidadDF, hover_name='value', hover_data={'variable': None, 'value':None} ,markers=True,color_discrete_sequence=["#bb0A00"])
-        tm.update_layout(width=800, height=600, 
-                    yaxis_title = "Cantidad", xaxis_title = "Años", 
-                    showlegend = False)
+            st.markdown("### 🐔 Mortalidad de gallinas ponedoras")
+            choices5 = st.selectbox( "Selecciona", ["Existencia promedio y mortalidad", "Tasa de mortalidad (%)"])
+            gp_muertesDF.index.name = "Año"
+            mgp = px.line(gp_muertesDF, hover_name='value', hover_data={'variable': None, 'value':None}, markers=True,color_discrete_sequence=colors[:-1])
+            mgp.update_layout(width=1000, height=600, 
+                        yaxis_title = "Cantidad", xaxis_title = "Años", 
+                        legend=dict(
+                                    title=dict(text="")
+                                )
+                        )
+            
+            gp_tasa_mortalidadDF.index.name = "Año"
+            tm = px.line(gp_tasa_mortalidadDF, hover_name='value', hover_data={'variable': None, 'value':None} ,markers=True,color_discrete_sequence=["rgb(216,0,0)"])
+            tm.update_layout(width=800, height=600, 
+                        yaxis_title = "Cantidad", xaxis_title = "Años", 
+                        showlegend = False)
 
-        if choices5 == "Existencia promedio y mortalidad":
-            st.markdown("###### Existencia promedio (Miles de Cabezas)")
-            st.plotly_chart(mgp)
-        if choices5 == "Tasa de mortalidad (%)":
-            st.markdown("###### Tasa de Mortalidad (%)")
-            st.plotly_chart(tm)
+            if choices5 == "Existencia promedio y mortalidad":
+                st.markdown("###### Existencia promedio (Miles de Cabezas)")
+                st.plotly_chart(mgp)
+            if choices5 == "Tasa de mortalidad (%)":
+                st.markdown("###### Tasa de Mortalidad (%)")
+                st.plotly_chart(tm) 
         with st.expander("Observaciones") :
             st.markdown("- Tasa de mortalidad (por ciento): Se aplica como el resultado de dividir la cantidad de muertes entre la cantidad de nacimientos ocurridos, excepto en avicultura, cuyo resultado surge de la división del total de aves muertas entre la existencia promedio de aves de un período determinado.")
             st.markdown("- Los valores de tasa del ganado porcino con los que se cuenta parten del año 1993.")
-            st.markdown("- La tasa vacuna representada fue calculada por nuestro equipo por medio de la división del número de muertes totales entre el promedio de los valore de existencia total desde 1985 hasta 2022 multiplicado por 100 (por 100 ).")
+            st.markdown("- La tasa vacuna representada fue calculada por nuestro equipo por medio de la división del número de muertes totales entre el promedio de los valore de existencia total desde 1985 hasta 2022 multiplicado por 100.")
+            csv12_1 = convert_df(gp_muertesDF)
+            csv12_2 = convert_df(gp_tasa_mortalidadDF)
+            csv12_3 = convert_df(tasas)            
+            with st.popover("Descargar CSV"):
+                d1, d2, d3= st.columns(3)
+                with d1:
+                    st.download_button( 
+                                label="Muertes Ponedoras ",
+                                data=csv12_1,
+                                file_name="muertes_ponedoras.csv",
+                                mime="text/csv")   
+                with d2:
+                    st.download_button( 
+                                label="Tasa Ponedoras",
+                                data=csv12_2,
+                                file_name="tasa_ponedoras.csv",
+                                mime="text/csv")    
+                with d3:
+                    st.download_button( 
+                                label="Tasas Vacuno & Porcino",
+                                data=csv12_3,
+                                file_name="tasas.csv",
+                                mime="text/csv")                    
+                    
     with st.container(border=True):
         st.markdown("### 🧬 Nacimientos y Muertes")
         answer = st.selectbox("Tipo de Ganado", ["Vacuno🐮", "Porcino🐷"])
@@ -784,28 +978,39 @@ with tab3:
         nac_muert_porcinosDF = nac_muert_porcinosDF.apply(pd.to_numeric)
 
         #Grafico de Linea con selectbox
-        v = px.line(nac_muert_vacunosDF, hover_name='value', hover_data={'variable': None, 'value':None}, markers=True,color_discrete_sequence=custom_colors)
-        v.update_layout(width=800, height=600, 
+        v = px.line(nac_muert_vacunosDF, hover_name='value', hover_data={'variable': None, 'value':None}, markers=True,color_discrete_sequence=colors[:2])
+        v.update_layout(width=1250, height=600, 
                     yaxis_title = "Cantidad", xaxis_title = "Años", 
-                    legend=dict(
-                                title=dict(text="")))
-        p = px.line(nac_muert_porcinosDF, hover_name='value', hover_data={'variable': None, 'value':None}, markers=True,color_discrete_sequence=custom_colors)
-        p.update_layout(width=800, height=600, 
+                    legend=dict(title=dict(text="")))
+        p = px.line(nac_muert_porcinosDF, hover_name='value', hover_data={'variable': None, 'value':None}, markers=True,color_discrete_sequence=colors[:2])
+        p.update_layout(width=1250, height=600, 
                     yaxis_title = "Cantidad", xaxis_title = "Años", 
-                    legend=dict(
-                                title=dict(text="")
-                            )
-                    )
+                    legend=dict(title=dict(text="")))
         st.markdown("###### Miles de Cabezas (MCabz)")
         if answer == "Vacuno🐮":
             st.plotly_chart(v)
         if answer == "Porcino🐷":
             st.plotly_chart(p)
         with st.expander("Observaciones") :
-            st.markdown("- Los valores del ganado porcino con los que se cuenta comienzan en el año 1993")
+            st.markdown("- Los valores del ganado porcino con los que se cuenta comienzan en el año 1993.")
             st.markdown("- Nacimientos: Es el comienzo de la vida del animal por la expulsión completa o extracción a la madre de un producto de concepción, independientemente de la duracion de la gestación, según si después de tal separación respira o muestra evidencia de vida, como el latido del corazón o un movimiento definitivo de músculos voluntarios. En el caso de la ganadería vacuna se considerará el parto a término de donde el ternero nazca vivo o muerto, y en el parto prematuro donde el ternero nazca vivo. En el caso de las aves se consideraría cuando la cría rompe el cascarón y abandona el huevo.")
             st.markdown("- Muertes: Son aquellos animales en los que desaparece definitivamente la vida, natural o accidentalmente, incluye las crías muertas.")
             st.markdown("- Las muertes porcinas mostradas son de crías, y los nacimientos se refieren solo a los vivos.")
             st.markdown("- Los nacimientos y muertes porcinas excluyen los patios y parcelas de los hogares.")
-    
+            csv13_1 = convert_df(nac_muert_vacunosDF)
+            csv13_2 = convert_df(nac_muert_porcinosDF)            
+            with st.popover("Descargar CSV"):
+                d1, d2= st.columns(2)
+                with d1:
+                    st.download_button( 
+                                label="Vacuno",
+                                data=csv13_1,
+                                file_name="nac_muertes_vacuno.csv",
+                                mime="text/csv")   
+                with d2:
+                    st.download_button( 
+                                label="Porcino",
+                                data=csv13_2,
+                                file_name="nac_muertes_porcino.csv",
+                                mime="text/csv")     
 

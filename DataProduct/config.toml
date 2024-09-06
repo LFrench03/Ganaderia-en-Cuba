@@ -33,8 +33,8 @@ is_section = true
 icon = ""
 
 [[pages]]
-path = "pages/Metodologia.py"
-name = "Metodologia"
+path = "pages/Metodología.py"
+name = "Metodología"
 icon = "ℹ️"
 
 url_path = "DataPecuario"
