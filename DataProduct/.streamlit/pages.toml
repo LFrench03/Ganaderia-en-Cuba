@@ -1,5 +1,5 @@
 [[pages]]
-path = "pages/Inicio.py"
+path = "Inicio.py"
 name = ""
 
 [[pages]]
@@ -8,12 +8,12 @@ is_section = true
 icon = ""
 
 [[pages]]
-path = "pages/Existencia.py"
+path = "Existencia.py"
 name = "Existencia"
 icon = "📊"
 
 [[pages]]
-path = "pages/Produccion.py"
+path = "Produccion.py"
 name = "Producción"
 icon = "🛄"
 
@@ -23,7 +23,7 @@ is_section = true
 icon = ""
 
 [[pages]]
-path = "pages/Entidades.py"
+path = "Entidades.py"
 name = "Instituciones"
 icon = "📍"
 
@@ -33,7 +33,7 @@ is_section = true
 icon = ""
 
 [[pages]]
-path = "pages/Metodología.py"
+path = "Metodología.py"
 name = "Metodología"
 icon = "ℹ️"
 
