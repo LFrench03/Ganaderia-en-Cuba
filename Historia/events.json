@@ -4,7 +4,7 @@
       "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/brand/PNG/Identificador_principal.png"
     },
     "text": {
-      "headline": "Ganaderia en Cuba en Transición<br>¿Que le ha pasado?",
+      "headline": "Ganaderia en Cuba en Transición<br>¿Qué le ha pasado?",
       "text": "<p>Timeline para analizar su evolución</p>"
     }
   },
@@ -85,12 +85,13 @@
           "caption": "Adelante.cu. (<a target=\"_blank\" href='https://www.adelante.cu/images/2019/julio/18/agricultura/ganado.jpg'>credits</a>)"
         },
         "text": {
-          "headline": "Llegan las CCS",
-          "text": "<p>La revolución cubana de 1959 trajo consigo profundos cambios en todos los ámbitos de la sociedad. En el campo agrícola, estas transformaciones se manifestaron principalmente a través de las leyes de reforma agraria, que alteraron radicalmente la estructura de la propiedad rural. En este contexto, surgió la cooperativa de crédito y servicio (CCS) como una herramienta estatal para organizar la producción de los pequeños propietarios rurales y integrarlos activamente en la vida política del país. La Asociación Nacional de Agricultores Pequeños (ANAP) jugó un papel crucial en la promoción y apoyo a estas cooperativas. Para Luis, dueño de la finca Ojo de Agua, esta situación se presentó como una oportunidad y un desafío simultáneo. Mientras que la revolución había nacionalizado muchas tierras, la finca de Luis, ya en manos privadas, escapó a estas expropiaciones..</p>"
+          "headline": "Llegan las Cooperativas Agropecuarias",
+          "text": "<p>Una de las medidas principales en el campo agrícola fue el surgimiento de la Cooperativa de Crédito y Servicio (CCS) como una herramienta estatal para organizar la producción de los pequeños propietarios rurales y integrarlos activamente en la vida política del país. La Asociación Nacional de Agricultores Pequeños (ANAP) jugó un papel crucial en la promoción y apoyo a estas cooperativas. Para Luis, dueño de la finca Ojo de Agua, esta situación se presentó como una oportunidad y un desafío simultáneo. Mientras que la revolución había nacionalizado muchas tierras, la finca de Luis escapó de las expropiaciones y fue adoptada como patrón asociado por la CCS 'Juan Orama Llerena'. Posteriormente, en el periodo 1975-1985 se expandió la industrialización de la economía cubana, estimulada por la cooperación con los países del campo socialista. Como parte de ese proceso, en el Primer Congreso del Partido Comunista de Cuba (PCC) (1975) se planteó como prioridad acelerar el movimiento cooperativo, pero sobre todo encaminarlo a la integración de los campesinos de las CCS a lo que se denominó CPA, las cuales socializan los medios de producción, entre ellos la tierra, que deja de ser propiedad privada individual y pasa a ser propiedad colectiva. Tiempo después como contramedida a las repercusiones de la próxima crisis económica de 1990 se fundan las Unidades Básicas de Producción Cooperativa (UBPC), constituidas en 1993 </p>"
         },
         "start_date": {
           "year": 1960
-        }
+        },
+        "end_date":{"year":2012}
       },
     {
         "media": {
@@ -129,7 +130,7 @@
           "text": "<p>La sequía que azotó Cuba desde 1984 hasta 1989 presentó un desafío monumental para la agricultura y la ganadería del país. Cuando el gobierno declaró la emergencia ganadera, Luis se movilizó rápidamente para proteger su rebaño. Construyó lotes secos temporales en su finca, utilizando técnicas aprendidas de otros ganaderos locales. Además, siguió la recomendación oficial de desviar una parte de su ganado a los centros de acopio y limpieza de caña de azúcar. Por otro lado lo que realmente cambió la situación para Luis fue el descubrimiento de la utilidad de los residuos cañeros como alimento para su ganado. Comprendió que estos residuos, junto con la miel, la urea, la cachaza y el agua, formaban una dieta equilibrada y nutritiva para sus animales. Consciente de la importancia de diversificar las fuentes de alimento, Luis comenzó a buscar otras opciones. Descubrió que la industria azucarera, que había sido históricamente una fuente importante de empleo y riqueza en Cuba, ahora ofrecía una alternativa vital para la supervivencia ganadera. En 1986-87, el 35% de los alimentos utilizados por el ganado vacuno provenían de la industria azucarera. Para Luis, esto significaba que tenía acceso a una reserva importante de recursos alimenticios para sus animales. Como resultado, al final de la sequía, en 1989, la industria azucarera había casi duplicado su producción de alimentos para el ganado. </p"
         },
         "start_date": {
-          "year": 1984
+          "year": 1990
         },
         "end_date": { "year": 1989 }
       }

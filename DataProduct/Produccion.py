@@ -50,13 +50,13 @@ with tab1:
             fig1 = px.area(produccionDF,markers=True,color_discrete_sequence=colors,hover_name='value', hover_data={'variable': None, 'value':None})
             fig1.update_layout(width=800, height=600,
                             yaxis_title = "Cantidad", xaxis_title = "Años", 
-                            title = "🐄 Producción de leche de vaca (Miles de litros)",
+                            title = "🐄 Producción de leche de vaca (Miles de toneladas)",
                             legend=dict(title=dict(text="Producción")))
             
             fig2 = px.area(cabraE_NE,markers=True,color_discrete_sequence=colors,hover_name='value', hover_data={'variable': None, 'value':None})
             fig2.update_layout(width=800, height=600, 
                             yaxis_title = "Cantidad", xaxis_title = "Años", 
-                            title = "🐐 Producción de leche de cabra (Litros)",
+                            title = "🐐 Producción de leche de cabra (Toneladas)",
                             legend=dict(title=dict(text="Producción")))
             
             def mostrar(graf):
