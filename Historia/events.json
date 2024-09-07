@@ -1,435 +1,137 @@
 {
-    "title": {
-        "media": {
-            "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/brand/PNG/Identificador_principal.png"
-          },
-        "text": {
-            "headline": "Ganaderia en Cuba en Transición<br>¿Que le ha pasado?",
-            "text": "<p>Timeline para analizar su evolución</p>"
-        }
+  "title": {
+    "media": {
+      "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/brand/PNG/Identificador_principal.png"
     },
-    "events": [
-        {
-            "media": {
-                "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/LuisSerra.jpeg",
-                "caption": "Imágen generada por el generador de imágenes de Microsoft Bing. (<a target=\"_blank\" href='https://copilot.microsoft.com/images/create?'>credits</a>)"
-              },
-            "text":{
-            "headline": "Pasaje a la propiedad",
-            "text": "<p>Luis Serra Torres, un joven de Las Tunas, llegó a La Habana en busca de cumplir su servicio militar. Se instaló en el poblado de La Gallega, dentro del municipio de Guanabacoa. Durante esos tres años de servicio, conoció a un anciano respetado por su comunidad. El hombre, que se convirtió en un padre adoptivo para Luis, lo acogió con generosidad en momentos difíciles. Una vez finalizado su servicio, el anciano, después de muchos años de lucha y sin familiares cercanos, decidió intercambiar sus viviendas. Mientras él permanecía en el pueblo, Luis se quedaba con la propiedad de la finca. Este acuerdo marcó el inicio de una nueva etapa para el joven, convertido ahora en dueño legítimo de las tierras que había conocido durante su servicio.</p>"
-            },
-            "start_date": {
-                "year": 1943
-            },
-            "end_date" : {"year": 1946}
+    "text": {
+      "headline": "Ganaderia en Cuba en Transición<br>¿Que le ha pasado?",
+      "text": "<p>Timeline para analizar su evolución</p>"
+    }
+  },
+  "events": [
+    {
+      "media": {
+        "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/LuisSerra.jpeg",
+        "caption": "Imágen generada por el generador de imágenes de Microsoft Bing. (<a target=\"_blank\" href='https://copilot.microsoft.com/images/create?'>credits</a>)"
+      },
+      "text": {
+        "headline": "Pasaje a la propiedad",
+        "text": "<p>Luis Serra Torres, un joven de Las Tunas, llegó a La Habana en busca de cumplir su servicio militar. Se instaló en el poblado de La Gallega, dentro del municipio de Guanabacoa. Durante esos tres años de servicio, conoció a un anciano respetado por su comunidad. El hombre, que se convirtió en un padre adoptivo para Luis, lo acogió con generosidad en momentos difíciles. Una vez finalizado su servicio, el anciano, después de muchos años de lucha y sin familiares cercanos, decidió intercambiar sus viviendas. Mientras él permanecía en el pueblo, Luis se quedaba con la propiedad de la finca. Este acuerdo marcó el inicio de una nueva etapa para el joven, convertido ahora en dueño legítimo de las tierras que había conocido durante su servicio.</p>"
+      },
+      "start_date": {
+        "year": 1943
+      },
+      "end_date": { "year": 1946 }
+    },
+    {
+      "media": {
+        "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/finca1.jpeg",
+        "caption": "Imágen generada por el generador de imágenes de Microsoft Bing. (<a target=\"_blank\" href='https://copilot.microsoft.com/images/create?'>credits</a>)"
+      },
+      "text": {
+        "headline": "El Renacimiento de Ojo de Agua",
+        "text": "<p>Los primeros años de Luis como teniente de la finca Ojo de Agua, actualmente con la Cooperativa de Creditos y Servicios (CSS) 'Juan Oramas Llerena' como patrón asociado, comenzó con grandes desafíos. La finca, antes descuidada, se encontraba en un estado terrible. Sin embargo, con el apoyo financiero que le dejó el anciano fallecido y sus propios ahorros obtenidos a través de diversos trabajos, Luis tenía un plan ambicioso. Llevo a cabo numerosas inversiones e intercambios para la adquisición de parejas de ganado, alimentos, cultivos, herramientas, mano de obra entre otros. Estas acciones fueron cruciales para establecer una base sólida para la futura producción agrícola. A medida que pasaban los años, la finca Ojo de Agua comenzó a cambiar. Lo que antes era una extensión baldía se convirtió en un próspero campo agrícola. Luis, con su dedicación y visión, estaba llevando a cabo un verdadero milagro en el terreno abandonado que le había heredado.</p>"
+      },
+      "start_date": {
+        "year": 1946
+      },
+      "end_date": { "year": 1949 }
+    },
+    {
+      "media": {
+        "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/venta_vaca.png",
+        "caption": "Apuntes para una historia de la ganadería y el consumo de carne en Cuba hasta el año 1959. (<a target=\"_blank\" href='https://m.facebook.com/groups/collectcuba/posts/Apuntes-para-una-historia-de-la-ganader%C3%ADa-y-el-consumo-de-carne-en-Cuba-hasta-el-a%C3%B1o-1959/2138086819634782/'>credits</a>)"
+      },
+      "text": {
+        "headline": "Antes del triunfo de la revolución",
+        "text": "<p>En el contexto nacional, antes de 1959, la producción de carne vacuna y leche era la segunda actividad económica agrícola de Cuba, después de la caña de azúcar. Se contaban 160.000 fincas de 57 ha cada una, incluyendo latifundios. La producción de carne se priorizaba sobre la leche, excepto en áreas urbanas cercanas. Los ingenios azucareros en la región oriental mantenían rebaños bovinos, utilizando importaciones de razas específicas para cruzamientos. Algunos ingenios comenzaron a utilizar caña y miel como suplemento para el ganado desde la década de 1950. En 1955, empresas estadounidenses introdujeron mieles con urea, y en 1959, 13 ingenios ya vendían este producto.</p>"
+      },
+      "start_date": {
+        "year": 1950
+      },
+      "end_date": { "year": 1959 }
+    },
+    {
+      "media": {
+        "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/reformaagraria2.jpg",
+        "caption": "Cubadebate. (<a target=\"_blank\" href='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT29VadeIopDUxlSadAeBbPHSf4LWrrR_1DkA&s'>credits</a>)"
+      },
+      "text": {
+        "headline": "Despúes del triunfo de la revolución",
+        "text": "<p>La finca Ojo de Agua, propiedad de Luis, siguió su propio camino de desarrollo hasta 1985, mientras Cuba experimentaba cambios significativos en su estructura agraria y económica.</p>"
+      },
+      "start_date": {
+        "year": 1959
+      },
+      "end_date": { "year": 1985 }
+    },
+    {
+      "media": {
+        "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/reformaagraria.jpg",
+        "caption": "Tribuna de la Habana. (<a target=\"_blank\" href='https://www.tribuna.cu/file/img/2020/05/medium/f0013061.jpg'>credits</a>)"
+      },
+      "text": {
+        "headline": "Leyes de Reforma Agraria",
+        "text": "<p>En 1959 y 1963, Cuba llevó a cabo reformas agrarias que nacionalizaron gran parte de las tierras dedicadas a la ganadería. Esta política afectó directamente a muchas fincas, incluyendo posiblemente algunas cercanas a Ojo de Agua. Sin embargo, la finca de Luis, al poseer para ese entonces apenas 2 hectareas de dimension en terreno, escapó de estas expropiaciones.</p>"
+      },
+      "start_date": {
+        "year": 1959
+      },
+      "end_date": { "year": 1963 }
+    },
+    {
+        "media": {
+          "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/cooperativas.jpg",
+          "caption": "Adelante.cu. (<a target=\"_blank\" href='https://www.adelante.cu/images/2019/julio/18/agricultura/ganado.jpg'>credits</a>)"
         },
-        {
-            "media": {
-                "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/finca1.jpeg",
-                "caption": "Imágen generada por el generador de imágenes de Microsoft Bing. (<a target=\"_blank\" href='https://copilot.microsoft.com/images/create?'>credits</a>)"
-              },
-            "text":{
-            "headline": "El Renacimiento de Ojo de Agua",
-            "text": "<p>Los primeros años de Luis como teniente de la finca Ojo de Agua, actualmente con la Cooperativa de Creditos y Servicios (CSS) 'Juan Oramas Llerena' como patrón asociado, comenzó con grandes desafíos. La finca, antes descuidada, se encontraba en un estado terrible. Sin embargo, con el apoyo financiero que le dejó el anciano fallecido y sus propios ahorros obtenidos a través de diversos trabajos, Luis tenía un plan ambicioso. Llevo a cabo numerosas inversiones e intercambios para la adquisición de parejas de ganado, alimentos, cultivos, herramientas, mano de obra entre otros. Estas acciones fueron cruciales para establecer una base sólida para la futura producción agrícola. A medida que pasaban los años, la finca Ojo de Agua comenzó a cambiar. Lo que antes era una extensión baldía se convirtió en un próspero campo agrícola. Luis, con su dedicación y visión, estaba llevando a cabo un verdadero milagro en el terreno abandonado que le había heredado.</p>"
-            },
-            "start_date": {
-                "year": 1946
-            },
-            "end_date" : {"year": 1949}
-        },
-        {
-            "media": {
-                "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/venta_vaca.png",
-                "caption": "Apuntes para una historia de la ganadería y el consumo de carne en Cuba hasta el año 1959. (<a target=\"_blank\" href='https://m.facebook.com/groups/collectcuba/posts/Apuntes-para-una-historia-de-la-ganader%C3%ADa-y-el-consumo-de-carne-en-Cuba-hasta-el-a%C3%B1o-1959/2138086819634782/'>credits</a>)"
-              },
-            "text":{
-            "headline": "Antes del triunfo de la revolución",
-            "text": "<p>En el contexto nacional, antes de 1959, la producción de carne vacuna y leche era la segunda actividad económica agrícola de Cuba, después de la caña de azúcar. Se contaban 160.000 fincas de 57 ha cada una, incluyendo latifundios. La producción de carne se priorizaba sobre la leche, excepto en áreas urbanas cercanas. Los ingenios azucareros en la región oriental mantenían rebaños bovinos, utilizando importaciones de razas específicas para cruzamientos. Algunos ingenios comenzaron a utilizar caña y miel como suplemento para el ganado desde la década de 1950. En 1955, empresas estadounidenses introdujeron mieles con urea, y en 1959, 13 ingenios ya vendían este producto.</p>"
-            },
-            "start_date": {
-                "year": 1950
-            },
-            "end_date" : {"year": 1959}
-        },
-        {
-            "media": {
-                "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/reformaagraria2.jpg",
-                "caption": "Cubadebate. (<a target=\"_blank\" href='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT29VadeIopDUxlSadAeBbPHSf4LWrrR_1DkA&s'>credits</a>)"
-              },
-            "text":{
-            "headline": "Despúes del triunfo de la revolución",
-            "text": "<p>La finca Ojo de Agua, propiedad de Luis, siguió su propio camino de desarrollo hasta 1985, mientras Cuba experimentaba cambios significativos en su estructura agraria y económica.</p>"
-            },
-            "start_date": {
-                "year": 1959
-            },
-            "end_date" : {"year": 1985}
-        },
-        {
-            "media": {
-                "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/reformaagraria.jpg",
-                "caption": "Tribuna de la Habana. (<a target=\"_blank\" href='https://www.tribuna.cu/file/img/2020/05/medium/f0013061.jpg'>credits</a>)"
-              },
-            "text":{
-            "headline": "Ley de Reforma Agraria",
-            "text": "<p>En 1959 y 1963, Cuba llevó a cabo reformas agrarias que nacionalizaron gran parte de las tierras dedicadas a la ganadería. Esta política afectó directamente a muchas fincas, incluyendo posiblemente algunas cercanas a Ojo de Agua. Sin embargo, la finca de Luis, al poseer para ese entonces apenas 2 hectareas de dimension en terreno, escapó de estas expropiaciones.</p>"
-            },
-            "start_date": {
-                "year": 1959
-            },
-            "end_date" : {"year": 1963}
-        },
-
-        {"media": {
-            "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/vacafidel.jpg",
-            "caption": "Cubanet. (<a target=\"_blank\" href='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk2u6IHa1DZxKYQykk2soCrgouhJQymugHqSRhOcXkblY8hEYZUK2cq5LFyfbpFWJ_fNg&usqp=CAU'>credits</a>)"
-          },
-        "text":{
-        "headline": "La genética",
-        "text": "<p>Cabe mencionar además que los años 1967 en adelante marcaron un punto de inflexión en la agricultura cubana. La Revolución consolidó los procesos de nacionalización y administración estatal de la mayoría de las tierras agrícolas. Esto dio lugar a la creación de institutos y centros de especialización e investigación en producción agropecuaria. Estas instituciones jugaron un papel crucial en el desarrollo tecnológico y científico de la agricultura cubana. Para abordar el desafío de adaptar ganado extranjero al clima caribeño, se crearon complejos específicos para su cuidado y desarrollo. Estos programas permitieron mejorar la productividad y la resistencia de las especies bovinas en Cuba.</p>"
+        "text": {
+          "headline": "Llegan las CCS",
+          "text": "<p>La revolución cubana de 1959 trajo consigo profundos cambios en todos los ámbitos de la sociedad. En el campo agrícola, estas transformaciones se manifestaron principalmente a través de las leyes de reforma agraria, que alteraron radicalmente la estructura de la propiedad rural. En este contexto, surgió la cooperativa de crédito y servicio (CCS) como una herramienta estatal para organizar la producción de los pequeños propietarios rurales y integrarlos activamente en la vida política del país. La Asociación Nacional de Agricultores Pequeños (ANAP) jugó un papel crucial en la promoción y apoyo a estas cooperativas. Para Luis, dueño de la finca Ojo de Agua, esta situación se presentó como una oportunidad y un desafío simultáneo. Mientras que la revolución había nacionalizado muchas tierras, la finca de Luis, ya en manos privadas, escapó a estas expropiaciones..</p>"
         },
         "start_date": {
-            "year": 1967
-        },
-        "end_date" : {"year": 1990}
-        },
-        {
-            "media": {
-                "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/seca.jpg",
-                "caption": "Cubadebate. (<a target=\"_blank\" href='https://i.pinimg.com/originals/10/67/e2/1067e202f491c5ea3811af9f4e744e3f.jpg'>credits</a>)"
-              },       
-            "text": {
-                "headline": "Superando la sequía.",
-                "text": "<p>La sequía que azotó Cuba desde 1984 hasta 1989 presentó un desafío monumental para la agricultura y la ganadería del país. Cuando el gobierno declaró la emergencia ganadera, Luis se movilizó rápidamente para proteger su rebaño. Construyó lotes secos temporales en su finca, utilizando técnicas aprendidas de otros ganaderos locales. Además, siguió la recomendación oficial de desviar una parte de su ganado a los centros de acopio y limpieza de caña de azúcar. Por otro lado lo que realmente cambió la situación para Luis fue el descubrimiento de la utilidad de los residuos cañeros como alimento para su ganado. Comprendió que estos residuos, junto con la miel, la urea, la cachaza y el agua, formaban una dieta equilibrada y nutritiva para sus animales. Consciente de la importancia de diversificar las fuentes de alimento, Luis comenzó a buscar otras opciones. Descubrió que la industria azucarera, que había sido históricamente una fuente importante de empleo y riqueza en Cuba, ahora ofrecía una alternativa vital para la supervivencia ganadera. En 1986-87, el 35% de los alimentos utilizados por el ganado vacuno provenían de la industria azucarera. Para Luis, esto significaba que tenía acceso a una reserva importante de recursos alimenticios para sus animales. Como resultado, al final de la sequía, en 1989, la industria azucarera había casi duplicado su producción de alimentos para el ganado. </p"
-            },
-            "start_date": {
-                "year": 1984   
-            },
-            "end_date" : {"year": 1989}            
-        },
-        {
-            "text": {
-                "headline": "Año 1987.",
-                "text": "<p>Esto ocurrió en el año 1987.</p"
-            },
-            "start_date": {
-                "year": 1987
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 1988.",
-                "text": "<p>Esto ocurrió en el año 1988.</p"
-            },
-            "start_date": {
-                "year": 1988
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 1989.",
-                "text": "<p>Esto ocurrió en el año 1989.</p"
-            },
-            "start_date": {
-                "year": 1989
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 1990.",
-                "text": "<p>Esto ocurrió en el año 1990.</p"
-            },
-            "start_date": {
-                "year": 1990
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 1991.",
-                "text": "<p>Esto ocurrió en el año 1991.</p"
-            },
-            "start_date": {
-                "year": 1991
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 1992.",
-                "text": "<p>Esto ocurrió en el año 1992.</p"
-            },
-            "start_date": {
-                "year": 1992
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 1993.",
-                "text": "<p>Esto ocurrió en el año 1993.</p"
-            },
-            "start_date": {
-                "year": 1993
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 1994.",
-                "text": "<p>Esto ocurrió en el año 1994.</p"
-            },
-            "start_date": {
-                "year": 1994
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 1995.",
-                "text": "<p>Esto ocurrió en el año 1995.</p"
-            },
-            "start_date": {
-                "year": 1995
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 1996.",
-                "text": "<p>Esto ocurrió en el año 1996.</p"
-            },
-            "start_date": {
-                "year": 1996
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 1997.",
-                "text": "<p>Esto ocurrió en el año 1997.</p"
-            },
-            "start_date": {
-                "year": 1997
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 1998.",
-                "text": "<p>Esto ocurrió en el año 1998.</p"
-            },
-            "start_date": {
-                "year": 1998
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 1999.",
-                "text": "<p>Esto ocurrió en el año 1999.</p"
-            },
-            "start_date": {
-                "year": 1999
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 2000.",
-                "text": "<p>Esto ocurrió en el año 2000.</p"
-            },
-            "start_date": {
-                "year": 2000
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 2001.",
-                "text": "<p>Esto ocurrió en el año 2001.</p"
-            },
-            "start_date": {
-                "year": 2001
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 2002.",
-                "text": "<p>Esto ocurrió en el año 2002.</p"
-            },
-            "start_date": {
-                "year": 2002
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 2003.",
-                "text": "<p>Esto ocurrió en el año 2003.</p"
-            },
-            "start_date": {
-                "year": 2003
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 2004.",
-                "text": "<p>Esto ocurrió en el año 2004.</p"
-            },
-            "start_date": {
-                "year": 2004
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 2005.",
-                "text": "<p>Esto ocurrió en el año 2005.</p"
-            },
-            "start_date": {
-                "year": 2005
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 2006.",
-                "text": "<p>Esto ocurrió en el año 2006.</p"
-            },
-            "start_date": {
-                "year": 2006
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 2007.",
-                "text": "<p>Esto ocurrió en el año 2007.</p"
-            },
-            "start_date": {
-                "year": 2007
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 2008.",
-                "text": "<p>Esto ocurrió en el año 2008.</p"
-            },
-            "start_date": {
-                "year": 2008
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 2009.",
-                "text": "<p>Esto ocurrió en el año 2009.</p"
-            },
-            "start_date": {
-                "year": 2009
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 2010.",
-                "text": "<p>Esto ocurrió en el año 2010.</p"
-            },
-            "start_date": {
-                "year": 2010
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 2011.",
-                "text": "<p>Esto ocurrió en el año 2011.</p"
-            },
-            "start_date": {
-                "year": 2011
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 2012.",
-                "text": "<p>Esto ocurrió en el año 2012.</p"
-            },
-            "start_date": {
-                "year": 2012
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 2013.",
-                "text": "<p>Esto ocurrió en el año 2013.</p"
-            },
-            "start_date": {
-                "year": 2013
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 2014.",
-                "text": "<p>Esto ocurrió en el año 2014.</p"
-            },
-            "start_date": {
-                "year": 2014
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 2015.",
-                "text": "<p>Esto ocurrió en el año 2015.</p"
-            },
-            "start_date": {
-                "year": 2015
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 2016.",
-                "text": "<p>Esto ocurrió en el año 2016.</p"
-            },
-            "start_date": {
-                "year": 2016
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 2017.",
-                "text": "<p>Esto ocurrió en el año 2017.</p"
-            },
-            "start_date": {
-                "year": 2017
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 2018.",
-                "text": "<p>Esto ocurrió en el año 2018.</p"
-            },
-            "start_date": {
-                "year": 2018
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 2019.",
-                "text": "<p>Esto ocurrió en el año 2019.</p"
-            },
-            "start_date": {
-                "year": 2019
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 2020.",
-                "text": "<p>Esto ocurrió en el año 2020.</p"
-            },
-            "start_date": {
-                "year": 2020
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 2021.",
-                "text": "<p>Esto ocurrió en el año 2021.</p"
-            },
-            "start_date": {
-                "year": 2021
-            }
-        },
-        {
-            "text": {
-                "headline": "Año 2022.",
-                "text": "<p>Esto ocurrió en el año 2022.</p"
-            },
-            "start_date": {
-                "year": 2022
-            }
+          "year": 1960
         }
-    ]
+      },
+    {
+        "media": {
+          "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/vacafidel.jpg",
+          "caption": "Cubanet. (<a target=\"_blank\" href='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk2u6IHa1DZxKYQykk2soCrgouhJQymugHqSRhOcXkblY8hEYZUK2cq5LFyfbpFWJ_fNg&usqp=CAU'>credits</a>)"
+        },
+        "text": {
+          "headline": "La genética",
+          "text": "<p>Cabe mencionar además que los años 1967 en adelante marcaron un punto de inflexión en la agricultura cubana. La Revolución consolidó los procesos de nacionalización y administración estatal de la mayoría de las tierras agrícolas. Esto dio lugar a la creación de institutos y centros de especialización e investigación en producción agropecuaria. Estas instituciones jugaron un papel crucial en el desarrollo tecnológico y científico de la agricultura cubana. Para abordar el desafío de adaptar ganado extranjero al clima caribeño, se crearon complejos específicos para su cuidado y desarrollo. Estos programas permitieron mejorar la productividad y la resistencia de las especies bovinas en Cuba. Haber creado en Cuba un rebaño vacuno lechero subtropical, y realizado inversiones en todo el país para desarrollar una nueva infraestructura ganadera basada en la inseminación artificial ha representado un desafío. En ningún otro país de la región se han aplicado, a escala nacional, los métodos de la ciencia y la técnica ganadera; sin embargo, al cabo de 30 años, el talón de Aquiles de la ganadería cubana sigue siendo el crecimiento de la masa ganadera. Aunque se trata sin duda de un problema reproductivo, su relación fundamental es con el suministro de agua, la alimentación, los minerales, el manejo de los animales y la comercialización por los productores.</p>"
+        },
+        "start_date": {
+          "year": 1967
+        }
+      },
+    {
+      "media": {
+        "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/seca.jpg",
+        "caption": "Cubadebate. (<a target=\"_blank\" href='https://i.pinimg.com/originals/10/67/e2/1067e202f491c5ea3811af9f4e744e3f.jpg'>credits</a>)"
+      },
+      "text": {
+        "headline": "Superando la sequía.",
+        "text": "<p>La sequía que azotó Cuba desde 1984 hasta 1989 presentó un desafío monumental para la agricultura y la ganadería del país. Cuando el gobierno declaró la emergencia ganadera, Luis se movilizó rápidamente para proteger su rebaño. Construyó lotes secos temporales en su finca, utilizando técnicas aprendidas de otros ganaderos locales. Además, siguió la recomendación oficial de desviar una parte de su ganado a los centros de acopio y limpieza de caña de azúcar. Por otro lado lo que realmente cambió la situación para Luis fue el descubrimiento de la utilidad de los residuos cañeros como alimento para su ganado. Comprendió que estos residuos, junto con la miel, la urea, la cachaza y el agua, formaban una dieta equilibrada y nutritiva para sus animales. Consciente de la importancia de diversificar las fuentes de alimento, Luis comenzó a buscar otras opciones. Descubrió que la industria azucarera, que había sido históricamente una fuente importante de empleo y riqueza en Cuba, ahora ofrecía una alternativa vital para la supervivencia ganadera. En 1986-87, el 35% de los alimentos utilizados por el ganado vacuno provenían de la industria azucarera. Para Luis, esto significaba que tenía acceso a una reserva importante de recursos alimenticios para sus animales. Como resultado, al final de la sequía, en 1989, la industria azucarera había casi duplicado su producción de alimentos para el ganado. </p"
+      },
+      "start_date": {
+        "year": 1984
+      },
+      "end_date": { "year": 1989 }
+    },
+    {
+        "media": {
+          "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/seca.jpg",
+          "caption": "Cubadebate. (<a target=\"_blank\" href='https://i.pinimg.com/originals/10/67/e2/1067e202f491c5ea3811af9f4e744e3f.jpg'>credits</a>)"
+        },
+        "text": {
+          "headline": "Superando la sequía.",
+          "text": "<p>La sequía que azotó Cuba desde 1984 hasta 1989 presentó un desafío monumental para la agricultura y la ganadería del país. Cuando el gobierno declaró la emergencia ganadera, Luis se movilizó rápidamente para proteger su rebaño. Construyó lotes secos temporales en su finca, utilizando técnicas aprendidas de otros ganaderos locales. Además, siguió la recomendación oficial de desviar una parte de su ganado a los centros de acopio y limpieza de caña de azúcar. Por otro lado lo que realmente cambió la situación para Luis fue el descubrimiento de la utilidad de los residuos cañeros como alimento para su ganado. Comprendió que estos residuos, junto con la miel, la urea, la cachaza y el agua, formaban una dieta equilibrada y nutritiva para sus animales. Consciente de la importancia de diversificar las fuentes de alimento, Luis comenzó a buscar otras opciones. Descubrió que la industria azucarera, que había sido históricamente una fuente importante de empleo y riqueza en Cuba, ahora ofrecía una alternativa vital para la supervivencia ganadera. En 1986-87, el 35% de los alimentos utilizados por el ganado vacuno provenían de la industria azucarera. Para Luis, esto significaba que tenía acceso a una reserva importante de recursos alimenticios para sus animales. Como resultado, al final de la sequía, en 1989, la industria azucarera había casi duplicado su producción de alimentos para el ganado. </p"
+        },
+        "start_date": {
+          "year": 1984
+        },
+        "end_date": { "year": 1989 }
+      }
+  ]
 }
