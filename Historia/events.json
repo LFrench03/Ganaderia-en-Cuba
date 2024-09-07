@@ -9,7 +9,8 @@
         }
     },
     "events": [
-        {"text":{
+        {
+            "text":{
             "headline": "Antes del año 1959",
             "text": "<p>A</p>"
         }
