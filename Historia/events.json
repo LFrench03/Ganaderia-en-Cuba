@@ -4,17 +4,82 @@
             "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/brand/PNG/Identificador_principal.png"
           },
         "text": {
-            "headline": "Ganaderia en Cuba en Transision<br>Que le ha pasado?",
-            "text": "<p>Timeline desde 1985 para analizar su evolución</p>"
+            "headline": "Ganaderia en Cuba en Transición<br>¿Que le ha pasado?",
+            "text": "<p>Timeline para analizar su evolución</p>"
         }
     },
     "events": [
         {
+            "media": {
+                "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/LuisSerra.jpeg",
+                "caption": "Imágen generada por el generador de imágenes de Microsoft Bing. (<a target=\"_blank\" href='https://copilot.microsoft.com/images/create?'>credits</a>)"
+              },
             "text":{
-            "headline": "Antes del año 1959",
-            "text": "<p>A</p>"
-        }
+            "headline": "Pasaje a la propiedad",
+            "text": "<p>Luis Serra Torres, un joven de Las Tunas, llegó a La Habana en busca de cumplir su servicio militar. Se instaló en el poblado de La Gallega, dentro del municipio de Guanabacoa. Durante esos tres años de servicio, conoció a un anciano respetado por su comunidad. El hombre, que se convirtió en un padre adoptivo para Luis, lo acogió con generosidad en momentos difíciles. Una vez finalizado su servicio, el anciano, después de muchos años de lucha y sin familiares cercanos, decidió intercambiar sus viviendas. Mientras él permanecía en el pueblo, Luis se quedaba con la propiedad de la finca. Este acuerdo marcó el inicio de una nueva etapa para el joven, convertido ahora en dueño legítimo de las tierras que había conocido durante su servicio.</p>"
+            },
+            "start_date": {
+                "year": 1943
+            },
+            "end_date" : {"year": 1946}
         },
+        {
+            "media": {
+                "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/finca1.jpeg",
+                "caption": "Imágen generada por el generador de imágenes de Microsoft Bing. (<a target=\"_blank\" href='https://copilot.microsoft.com/images/create?'>credits</a>)"
+              },
+            "text":{
+            "headline": "El Renacimiento de Ojo de Agua",
+            "text": "<p>Los primeros años de Luis como teniente de la finca Ojo de Agua, con la Cooperativa de Creditos y Servicios (CSS) 'Juan Oramas Llerena' como patrón asociado, comenzó con grandes desafíos. La finca, antes descuidada, se encontraba en un estado terrible. Sin embargo, con el apoyo financiero que le dejó el anciano fallecido y sus propios ahorros obtenidos a través de diversos trabajos, Luis tenía un plan ambicioso. Llevo a cabo numerosas inversiones e intercambios para la adquisición de parejas de ganado, alimentos, cultivos, herramientas, mano de obra entre otros. Estas acciones fueron cruciales para establecer una base sólida para la futura producción agrícola. A medida que pasaban los años, la finca Ojo de Agua comenzó a cambiar. Lo que antes era una extensión baldía se convirtió en un próspero campo agrícola. Luis, con su dedicación y visión, estaba llevando a cabo un verdadero milagro en el terreno abandonado que le había heredado.</p>"
+            },
+            "start_date": {
+                "year": 1946
+            },
+            "end_date" : {"year": 1949}
+        },
+        {
+            "media": {
+                "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/venta_vaca.png",
+                "caption": "Apuntes para una historia de la ganadería y el consumo de carne en Cuba hasta el año 1959. (<a target=\"_blank\" href='https://m.facebook.com/groups/collectcuba/posts/Apuntes-para-una-historia-de-la-ganader%C3%ADa-y-el-consumo-de-carne-en-Cuba-hasta-el-a%C3%B1o-1959/2138086819634782/'>credits</a>)"
+              },
+            "text":{
+            "headline": "Antes del triunfo de la revolución",
+            "text": "<p>En el contexto nacional, antes de 1959, la producción de carne vacuna y leche era la segunda actividad económica agrícola de Cuba, después de la caña de azúcar. Se contaban 160.000 fincas de 57 ha cada una, incluyendo latifundios. La producción de carne se priorizaba sobre la leche, excepto en áreas urbanas cercanas. Los ingenios azucareros en la región oriental mantenían rebaños bovinos, utilizando importaciones de razas específicas para cruzamientos. Algunos ingenios comenzaron a utilizar caña y miel como suplemento para el ganado desde la década de 1950. En 1955, empresas estadounidenses introdujeron mieles con urea, y en 1959, 13 ingenios ya vendían este producto.</p>"
+            },
+            "start_date": {
+                "year": 1950
+            },
+            "end_date" : {"year": 1959}
+        },
+        {
+            "media": {
+                "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/finca2.png",
+                "caption": "Apuntes para una historia de la ganadería y el consumo de carne en Cuba hasta el año 1959. (<a target=\"_blank\" href='https://m.facebook.com/groups/collectcuba/posts/Apuntes-para-una-historia-de-la-ganader%C3%ADa-y-el-consumo-de-carne-en-Cuba-hasta-el-a%C3%B1o-1959/2138086819634782/'>credits</a>)"
+              },
+            "text":{
+            "headline": "Despúes del triunfo de la revolución",
+            "text": "<p>La finca Ojo de Agua, propiedad de Luis, siguió su propio camino de desarrollo entre 1960 y 1985, mientras Cuba experimentaba cambios significativos en su estructura agraria y económica.</p>"
+            },
+            "start_date": {
+                "year": 1959
+            },
+            "end_date" : {"year": 1985}
+        },
+        {
+            "media": {
+                "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/finca2.png",
+                "caption": "Apuntes para una historia de la ganadería y el consumo de carne en Cuba hasta el año 1959. (<a target=\"_blank\" href='https://m.facebook.com/groups/collectcuba/posts/Apuntes-para-una-historia-de-la-ganader%C3%ADa-y-el-consumo-de-carne-en-Cuba-hasta-el-a%C3%B1o-1959/2138086819634782/'>credits</a>)"
+              },
+            "text":{
+            "headline": "Antes del triunfo de la revolución",
+            "text": "<p>En 1959 y 1963, Cuba llevó a cabo reformas agrarias que nacionalizaron gran parte de las tierras dedicadas a la ganadería. Esta política afectó directamente a muchas fincas, incluyendo posiblemente algunas cercanas a Ojo de Agua. Sin embargo, la finca de Luis, ya en manos privadas, escapó a estas expropiaciones.</p>"
+            },
+            "start_date": {
+                "year": 1959
+            },
+            "end_date" : {"year": 1963}
+        },
+        
         
         {
             "text": {
