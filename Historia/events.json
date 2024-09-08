@@ -57,7 +57,7 @@
         "caption": "Cubadebate. (<a target=\"_blank\" href='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT29VadeIopDUxlSadAeBbPHSf4LWrrR_1DkA&s'>credits</a>)"
       },
       "text": {
-        "headline": "Despúes del Triunfo de la Revolución",
+        "headline": "Después del Triunfo de la Revolución",
         "text": "<p>La finca Ojo de Agua, propiedad de Luis, siguió su propio camino de desarrollo hasta 1985, mientras Cuba experimentaba cambios significativos en su estructura agraria y económica.</p>"
       },
       "start_date": {
@@ -146,7 +146,7 @@
     },
     {
       "media": {
-        "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/graph/lechee.png",
+        "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/prod_leche.jpeg.png",
         "caption": "DataPecuario en la sección 'Ganado' dentro de la producción. (<a target=\"_blank\" href='https://data-pecuario.streamlit.app/'>credits</a>)"
       },
       "text": {
@@ -200,12 +200,12 @@
       "end_date": { "year": 2000 }},
     {
         "media": {
-          "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/graph/plots_exist.png",
-          "caption": "DataPecuario en la sección 'Existencia'. (<a target=\"_blank\" href='https://data-pecuario.streamlit.app/'>credits</a>)"
+          "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/porcino.jpeg",
+          "caption": "Cubanet. (<a target=\"_blank\" href='https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTthp-WjKNie5NSFPE_RVrU8KvJQ2BoV1EpeJel41TKlHBRcxsY'>credits</a>)"
         },
         "text": {
-          "headline": "Carnicos",
-          "text": "<p>Para pasados los años 1997 los valores de existencia generales a nivel nacional ya mostraban un visible crecimiento como resultado de las medidas de recuperación, de igual forma, Ernesto junto a los cambios y con fuerte dedicación consiguió mejorar su situación pero nunca demasiado ni de forma lineal, se mantuvo sin salir del todo del bache. El hurto por el descuido del terreno, la producción que ya empezaba a no rendir todas las cuentas que se deseaban, entre otros factores que mantuvieron a Ojo de Agua en las dificultades</p"
+          "headline": "Cárnicos",
+          "text": "<p>La situación del ganado cubano con respecto a las entregas de sacrificio ha experimentado fluctuaciones significativas desde finales del siglo XX hasta la actualidad. Desde 1990, durante el período de crisis económica, las entregas de sacrificio han estado en declive constante. Esta tendencia descendente se mantuvo por varios años, afectando principalmente al ganado bovino y avícola. Sin embargo, en los últimos decenios, se observará un ligero aumento en las entregas de estos dos tipos de ganado. Este pequeño repunte en la producción de carne bovina y avícola ocurrió después de un período prolongado de disminución, aunque no logró revertir completamente la tendencia general de declive. Por otro lado, el sector porcino presentó un comportamiento diametralmente opuesto. Mientras que el ganado bovino y avícola continuaba sufriendo una reducción en las entregas de sacrificio, el porcino logró mantenerse estable e, incluso, experimentar un crecimiento sostenido hasta el año 2018. Esta disparidad entre los diferentes tipos de ganado refleja las particularidades de cada sector dentro del contexto económico cubano. El porcino, que históricamente ha sido más resistente a las condiciones adversas, logró mantener su producción y crecimiento durante este período.</p"
         },
         "start_date": {
           "year": 1995
@@ -214,12 +214,12 @@
       },
       {
         "media": {
-          "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/graph/plots_exist.png",
-          "caption": "DataPecuario en la sección 'Existencia'. (<a target=\"_blank\" href='https://data-pecuario.streamlit.app/'>credits</a>)"
+          "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/lacteo-avicola.png",
+          "caption": "(<a target=\"_blank\" href='https://media.licdn.com/dms/image/D4D12AQEiOua4GEvhaA/article-cover_image-shrink_600_2000/0/1702569714427?e=2147483647&v=beta&t=iOmayJOSn1VOogWMzSSBXHonWA28vqMrDyk0mGW-P7g'>credits</a>)"
         },
         "text": {
-          "headline": "Hacen falta huevos",
-          "text": "<p>Para pasados los años 1997 los valores de existencia generales a nivel nacional ya mostraban un visible crecimiento como resultado de las medidas de recuperación, de igual forma, Ernesto junto a los cambios y con fuerte dedicación consiguió mejorar su situación pero nunca demasiado ni de forma lineal, se mantuvo sin salir del todo del bache. El hurto por el descuido del terreno, la producción que ya empezaba a no rendir todas las cuentas que se deseaban, entre otros factores que mantuvieron a Ojo de Agua en las dificultades</p"
+          "headline": "La recuperación lacteo-avícola",
+          "text": "<p>La producción de huevos en Cuba experimentó un desarrollo complejo desde finales del siglo XX hasta principios del 2000. Durante la crisis económica que comenzó en 1990, la producción de huevos sufrió una fuerte caída. Esta disminución se debió a varios factores, incluyendo la falta de recursos y la dificultad para importar materias primas necesarias. Sin embargo, a partir de la década de 1990, se inició un proceso de recuperación gradual en la industria lácteo-avícola cubana. Esto llevó a un aumento lento pero sostenido en la producción de huevos hasta los años 2000. La recuperación se logró mediante una serie de estrategias implementadas por el gobierno cubano y las empresas estatales encargadas de la producción avícola.</p"
         },
         "start_date": {
           "year": 1995
@@ -228,31 +228,42 @@
       },
       {
         "media": {
-          "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/graph/plots_exist.png",
-          "caption": "DataPecuario en la sección 'Existencia'. (<a target=\"_blank\" href='https://data-pecuario.streamlit.app/'>credits</a>)"
+          "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/cooperativas.jpg",
+          "caption": "Adelante.cu. (<a target=\"_blank\" href='https://www.adelante.cu/images/2019/julio/18/agricultura/ganado.jpg'>credits</a>)"
+        },
+        "text": {
+          "headline": "Ubre blanca, la super vacuna",
+          "text": "<p>Ubre Blanca fue una vaca cubana famosa por su prodigiosa producción de leche, que se convirtió en un símbolo del esfuerzo de modernización económica de Fidel Castro en la década de 1980.1. Sus principales logros fueron: Produjo 109,5 litros de leche en un solo día en 1982, más de cuatro veces la producción media de una vaca corriente; consiguió producir 24.268,9 litros de leche en 305 días de lactancia hasta finales de febrero de 1982. Ambas hazañas fueron reconocidas como récords mundiales por el Libro Guinness de los récords. En cuanto a sus especificaciones genéticas: Era un cruce entre un toro Holstein y un cebú1 y se convierte en un animal protegido por fuertes medidas de seguridad debido a su importancia política. La vaca sigue siendo objeto de interés científico, aunque sin éxito, ya que desde entonces han tratado de clonarla empleando muestras de tejido congelado.</p>"
+        },
+        "start_date": {
+            "year": 1982
+          }
+        },
+      {
+        "media": {
+          "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/graph/mapa.png",
+          "caption": "DataPecuario en la sección 'Instituciones'. (<a target=\"_blank\" href='https://data-pecuario.streamlit.app/'>credits</a>)"
         },
         "text": {
           "headline": "Distribución institucional",
-          "text": "<p>Para pasados los años 1997 los valores de existencia generales a nivel nacional ya mostraban un visible crecimiento como resultado de las medidas de recuperación, de igual forma, Ernesto junto a los cambios y con fuerte dedicación consiguió mejorar su situación pero nunca demasiado ni de forma lineal, se mantuvo sin salir del todo del bache. El hurto por el descuido del terreno, la producción que ya empezaba a no rendir todas las cuentas que se deseaban, entre otros factores que mantuvieron a Ojo de Agua en las dificultades</p"
+          "text": "<p>Desde un inicio, la distribución territorial de las diferentes entidades en la isla siempre estuvo mayormente concentrada en la capital, no obstante, si se excluye la capital como en el mapa de densidad derecho de la figura se puede observar como las mayores concentraciones hacia la zona oriental y en Pinar del Río. Y con una disposición de forma general de 55,1% de Cooperativas, 23,1% Unidades Presupuestadas, y un 21,8% de Empresas, y de forma más concentrada con 46,5% de CCS, 35,8% UBPC y 17,7% de CPA. </p"
         },
         "start_date": {
-          "year": 1995
-        },
-        "end_date": { "year": 2000 }
-      },
+          "year": 2012
+        }},
       {
         "media": {
-          "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/graph/plots_exist.png",
-          "caption": "DataPecuario en la sección 'Existencia'. (<a target=\"_blank\" href='https://data-pecuario.streamlit.app/'>credits</a>)"
-        },
+            "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/finca2.png",
+            "caption": "Imágen generada por el generador de imágenes de Microsoft Bing. (<a target=\"_blank\" href='https://copilot.microsoft.com/images/create?'>credits</a>)"
+          },
         "text": {
           "headline": "Generalizando",
-          "text": "<p>Para pasados los años 1997 los valores de existencia generales a nivel nacional ya mostraban un visible crecimiento como resultado de las medidas de recuperación, de igual forma, Ernesto junto a los cambios y con fuerte dedicación consiguió mejorar su situación pero nunca demasiado ni de forma lineal, se mantuvo sin salir del todo del bache. El hurto por el descuido del terreno, la producción que ya empezaba a no rendir todas las cuentas que se deseaban, entre otros factores que mantuvieron a Ojo de Agua en las dificultades</p"
+          "text": "<p>Durante este período y enfrentando las realidades de todos los procesos que se desarrollaron después de la complicada crissi de los 90, la finca, dirigida por Ernesto, aunque tuvo una considerable mejora de forma general en la producción y bienes pecuarios, se mantuvo sometido a constantes complicaciones y sin generar demasiados beneficios. A pesar de estas mejoras generales, la finca se enfrentó a numerosos desafíos específicos que limitaron su potencial de crecimiento y rentabilidad. Uno de los principales obstáculos fue la escasez de recursos financieros, que dificultó la inversión en equipos modernos necesarios para aumentar la eficiencia productiva. Además, la falta de acceso a mercados externos debido a las restricciones comerciales impuestas por el bloqueo estadounidense, afectó significativamente la capacidad de la finca para diversificar sus productos y mejorar su competitividad en el mercado interno. A pesar de estos desafíos, la dirección de Ernesto demostró una perseverancia notable al mantener la producción a flote y buscar soluciones creativas para superar las barreras que se le presentaban. Sin embargo, la realidad era que la finca operaba en un entorno económico muy restrictivo, no tenian los recursos, empleadores de confianza (ocurrieron numerosos hurtos) y mano de obra suficientes para lo que hacía difícil generar beneficios significativos a pesar de los esfuerzos por mejorar. La situación se complicaba aún más por la presión para cumplir con los objetivos de producción planteados por el Estado, lo que obligaba a mantener altos niveles de producción a pesar de las limitaciones materiales y financieras. Esto llevó a momentos de gran tensión y esfuerzo en el equipo de trabajo de la finca.</p"
         },
         "start_date": {
-          "year": 1995
+          "year": 1997
         },
-        "end_date": { "year": 2000 }
+        "end_date": { "year": 2015 }
       },
     {
       "media": {
@@ -291,7 +302,7 @@
       },
       "text": {
         "headline": "Fallece Luis Serra Torres",
-        "text": "<p>.</p"
+        "text": "<p>Como resultado de un debilitamiento general producto de los estragos de la pandermia, muere de un paro cardiaco durante el mediodia mientras descansaba en la cama. Luis dejó atrás una herencia invaluable: su ejemplo de perseverancia, su amor por la naturaleza y su compromiso con la comunidad. Sus logros en la finca, aunque modestos en términos materiales, fueron enormes en términos de inspiración y motivación para quienes lo conocieron, y este proyecto, inspirado en su historia como homenaje, es un ejemplo de ello.</p"
       },
       "start_date": {
         "year": 2022,
