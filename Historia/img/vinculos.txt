@@ -12,3 +12,4 @@ caballo = https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRemP4GFVLLYKXYIo
 ubre blanca = https://www.juventudrebelde.cu/thumbs/400x/crc/images/medias/2011/02/11918-fotografia-g.jpg
 leche fidel = https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk2u6IHa1DZxKYQykk2soCrgouhJQymugHqSRhOcXkblY8hEYZUK2cq5LFyfbpFWJ_fNg&usqp=CAU
 precios carne, venta vaca, venta carne = https://m.facebook.com/groups/collectcuba/posts/Apuntes-para-una-historia-de-la-ganader%C3%ADa-y-el-consumo-de-carne-en-Cuba-hasta-el-a%C3%B1o-1959/2138086819634782/
+
