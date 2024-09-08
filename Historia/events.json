@@ -187,11 +187,65 @@
                     },
                     "text": {
                       "headline": "Saliendo de la crisis. ¿Cómo estaba la cosa?",
-                      "text": "<p>Ahora, con nuevas responsanilidades, Ernesto debía hacerse cargo de la situación. Evaluando un poco de forma general debía enfrentar primeramente la disminución de la existencia de la mayor parte del ganado productor (porcino y avícola) con una disminución de la existencia de 1995 con respecto a la  de 1990 de 170.6, 476.6, 16205.3 millones de cabezas para los ganados vacuno, porcino y avícola respectivamente. Por otro lado los ovino-caprinos mantuvieron un linea de crecimiento bastante constante hasta el 2006.</p"
+                      "text": "<p>Ahora, con nuevas responsabilidades, Ernesto debía hacerse cargo de la situación. Evaluando un poco de forma general debía enfrentar primeramente la disminución de la existencia de la mayor parte del ganado productor (porcino y avícola) con una disminución de la existencia de 1995 con respecto a la  de 1990 de 170.6, 476.6, 16205.3 millones de cabezas para los ganados vacuno, porcino y avícola respectivamente. Por otro lado los ovino-caprinos mantuvieron un linea de crecimiento bastante constante hasta el año 2006.</p"
                     },
                     "start_date": {
                       "year": 1995}, 
                         "end_date": { "year": 2000 }
-                    }                          
+                    },
+                    {
+                        "media": {
+                          "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/graph/plots_exist.png",
+                          "caption": "DataPecuario en la sección 'Existencia'. (<a target=\"_blank\" href='https://data-pecuario.streamlit.app/'>credits</a>)"
+                        },
+                        "text": {
+                          "headline": "La cosa mejora",
+                          "text": "<p>Para pasados los años 1997 los valores de existencia generales a nivel nacional ya mostraban un visible crecimiento como resultado de las medidas de recuperación, de igual forma, Ernesto junto a los cambios y con fuerte dedicación consiguió mejorar su situación pero nunca demasiado ni de forma lineal, se mantuvo sin salir del todo del bache. El hurto por el descuido del terreno, la producción que ya empezaba a no rendir todas las cuentas que se deseaban, entre otros factores que mantuvieron a Ojo de Agua en las dificultades</p"
+                        },
+                        "start_date": {
+                          "year": 1995}, 
+                            "end_date": { "year": 2000 }
+                        },
+                        {                            
+                            "media": {
+                              "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/Ciclonestropicales.jpg",
+                              "caption": "EcuRed. (<a target=\"_blank\" href='https://www.ecured.cu/images/5/5e/Ciclonestropicales.jpg'>credits</a>)"
+                            },
+                            "text": {
+                              "headline": "El fenómeno del clima",
+                              "text": "<p>Los huracanes y el cambio climático han causado numerosas afectaciones al sector ganadero en Cuba, generando impactos significativos en la infraestructura, producción y bienestar de los animales. Los huracanes, con sus fuerzas destructivas, han arrasado pastizales, destruido instalaciones ganaderas y dejado sin electricidad y servicios básicos a muchas áreas rurales, dificultando la atención y mantenimiento de los animales. Además, el cambio climático ha provocado sequías prolongadas que han reducido la disponibilidad de forraje y agua, mientras que las temperaturas más altas han aumentado el riesgo de enfermedades y plagio parasitarios. Estas condiciones adversas han llevado a pérdidas importantes de ganado, especialmente en especies sensibles como los bovinos y caprinos, y han obligado a muchos productores a abandonar temporalmente sus actividades. El impacto económico ha sido significativo, ya que muchas familias dependen de la ganadería como fuente de ingresos, y la reconstrucción de infraestructuras y la readaptación de sistemas de producción han requerido inversiones sustanciales. Además, el cambio climático ha alterado patrones de precipitación y temperatura, lo que ha afectado la calidad y cantidad de forrajes, y ha modificado la distribución geográfica de plagio y enfermedades, haciendo más difícil la planificación y ejecución de estrategias de control. Y pues claramente Ernesto se vió afectado de todo esto, para aquel entonces la finca estaba en uno de sus peores momentos y el asunto se agravaba aun más cuando el clima le impedía visitar la finca.</p"
+                            },
+                            "start_date": {
+                                "year": 2000},
+                                "end_date": { "year": 2022 }
+                            },                              
+                        {
+                            "media": {
+                              "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/coronavairus.jpg",
+                              "caption": "Portal Cuba. (<a target=\"_blank\" href='https://lh3.googleusercontent.com/proxy/sLiF_iDrmb2sCHuNQbUYuQN4G8nTRmbHy8_IwGlB3PEJycoVkRBMMbYQZl4FOCGYZcs71kIdQ5m0QiOSSTU97ut0C21rvj0'>credits</a>)"
+                            },
+                            "text": {
+                              "headline": "Ese 11 de marzo del 2020",
+                              "text": "<p>Para Ernesto, al igual que para el resto de ganaderos, el confinamiento y restricciones de movilidad llevaron a una disminución en la atención veterinaria adecuada, dificultando el cuidado y mantenimiento adecuado de los animales. Esto resultó en un deterioro de la salud animal y potenciales pérdidas financieras significativas para los productores. Las cadenas de suministro fueron afectadas, limitando el acceso a insumos esenciales como alimentos para animales, biotecnologías y medicamentos veterinarios. Esto puso en riesgo la salud y productividad del ganado. Se producen despidos en el sector ganadero, lo que reduce la capacidad laboral para mantener y cuidar el ganado. Además, la actividad comercial y de exportación del sector sufrió un impacto significativo. El turismo, que era una actividad complementaria importante para muchos productores ganaderos, se vio severamente afectado, lo que tuvo un efecto cascada en la economía local relacionada con el ganado. A pesar de estas adversidades, el sector ganadero cubano demostró cierta resiliencia, manteniendo operaciones básicas y minimizando pérdidas.</p"
+                            },
+                            "start_date": {
+                                "year": 2020,
+                                "month": 3,
+                                "day": 11}, 
+                                "end_date": { "year": 2022 }
+                            },
+                            {"media": {
+                                "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/LuisSerra.jpeg",
+                                "caption": "Imágen generada por el generador de imágenes de Microsoft Bing. (<a target=\"_blank\" href='https://copilot.microsoft.com/images/create?'>credits</a>)"
+                              },
+                              "text": {
+                                "headline": "Fallece Luis Serra Torres",
+                                "text": "<p>.</p"
+                              },
+                              "start_date": {
+                                  "year": 2022,
+                                  "month": 22,
+                                  "day": 9}
+                              }                             
   ]
 }
