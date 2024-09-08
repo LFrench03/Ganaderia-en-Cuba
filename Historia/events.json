@@ -16,7 +16,7 @@
       },
       "text": {
         "headline": "Pasaje a la propiedad",
-        "text": "<p>Luis Serra Torres, un joven de Las Tunas, llegó a La Habana en busca de cumplir su servicio militar. Se instaló en el poblado de La Gallega, dentro del municipio de Guanabacoa. Durante esos tres años de servicio, conoció a un anciano respetado por su comunidad. El hombre, que se convirtió en un padre adoptivo para Luis, lo acogió con generosidad en momentos difíciles. Una vez finalizado su servicio, el anciano, después de muchos años de lucha y sin familiares cercanos, decidió intercambiar sus viviendas. Mientras él permanecía en el pueblo, Luis se quedaba con la propiedad de la finca. Este acuerdo marcó el inicio de una nueva etapa para el joven, convertido ahora en dueño legítimo de las tierras que había conocido durante su servicio.</p>"
+        "text": "<p>Luis Serra Torres, un joven originario de Las Tunas, llegó a La Habana en busca de cumplir su servicio militar. Se instaló en el poblado de La Gallega, dentro del municipio de Guanabacoa. Durante esos tres años de servicio, conoció a un anciano respetado por su comunidad. El hombre, que se convirtió en un padre adoptivo para Luis, lo acogió con generosidad en momentos difíciles. Una vez finalizado su servicio, el anciano, después de muchos años de lucha y sin familiares cercanos, decidió intercambiar sus viviendas. Mientras él permanecía en el pueblo, Luis se quedaba con la propiedad de la finca. Este acuerdo marcó el inicio de una nueva etapa para el joven, convertido ahora en dueño legítimo de las tierras que había conocido durante su servicio.</p>"
       },
       "start_date": {
         "year": 1943
@@ -135,7 +135,7 @@
         "end_date": { "year": 1997 }
       },
         {"text": {
-          "headline": "Crisis económica.",
+          "headline": "",
           "text": "<p>Cuba experimentó un notable cambio en su estructura ganadera, con un 63% de la masa ganadera dedicada a la producción láctea. Esta tendencia reflejaba una estrategia de desarrollo agrícola enfocada en la producción de productos lácteos. La alimentación de estos animales estaba bien planificada, adaptándose a las dos estaciones del año. Durante la época de lluvias, los animales se alimentaban principalmente de pastos y forrajes, complementados con ensilaje y heno. En la época seca, cuando el pastoreo era imposible, se recurría a subproductos de la industria azucarera. Un aspecto destacado de la alimentación láctea era la adición de concentrados. Cada vaca recibía 0,46 kg de estos concentrados a partir del quinto litro de leche producido, lo que indicaba un enfoque en la mejora de la calidad y cantidad de la producción láctea. La infraestructura necesaria para mantener esta producción láctea era impresionante. Anualmente, se importaban aproximadamente 400 000 toneladas de fertilizantes, así como miles de toneladas de alambre, pesticidas y herbicidas. Además, se requirió la importación de 16 000 tractores y 90 000 toneladas de petróleo para los trabajos agrícolas y la distribución de forraje. La alimentación del sector ganadero cubano dependía en gran medida de importaciones y subproductos industriales. Anualmente, se importaban aproximadamente 600 000 toneladas de materia prima para elaborar concentrados para el ganado, incluyendo 90 000 toneladas de urea, 70 000 toneladas de harina de soja y girasol, 30 000 toneladas de sales y minerales, y 7 000 toneladas de sosa cáustica para procesar el bagazo de los ingenios azucareros. </p"
         },
         "start_date": {
@@ -148,12 +148,25 @@
             "caption": "DataPecuario en la sección 'Ganado' dentro de la producción. (<a target=\"_blank\" href='https://data-pecuario.streamlit.app/'>credits</a>)"
           },
           "text": {
-            "headline": "Crisis económica.",
-            "text": "<p>En el año 1990 el pais alcanzó un pico de rendimiento y producción lactea con 1034.4 miles de toneladas de leche y 1855kg de leche por vaca. Sin embargo, apenas dos años después, en 1992, la producción había caído dramáticamente casi un 50%, quedando en 622.3 millones de litros. Esta abrupta disminución tuvo un impacto devastador en la infraestructura ganadera que Luis había trabajado tanto para establecer. La condición física de los rebaños lecheros, que habían tardado 25 a 30 años en consolidarse, empeoró significativamente. Para Luis, dueño de la finca Ojo de Agua, esta situación representó un golpe duro, sus inversiones en infraestructura ganadera y su esfuerzo por mejorar la productividad se vieron directamente afectados por esta crisis. La disminución en la producción láctea afectó no solo la economía de su finca, sino también su capacidad para mantener y expandir su rebaño ganadero En respuesta a esta crisis, el gobierno cubano inició un proceso de transformación en el sistema de producción de pastos. Se abandonó el método tradicional de pastoreo acuartonado y se adoptó un nuevo sistema de rotación de alta carga diaria. Este cambio, aunque necesario, planteó nuevos desafíos para los productores como Luis, quienes tendrían que adaptar sus prácticas de manejo y alimentación de los animales. Además, el nuevo sistema de producción introdujo la idea de 'microvaquerías', donde los trabajadores y sus familias vivían directamente en las instalaciones de crianza. Esto permitía una mejor distribución geográfica de la producción láctea, ubicando las vacas cerca de los centros urbanos.</p"
+            "headline": "La leche!",
+            "text": "<p>En el año 1990 el pais alcanzó un pico de rendimiento y producción lactea con 1034.4 miles de toneladas de leche y 1855kg de leche por vaca. Sin embargo, apenas dos años después, en 1992, la producción había caído dramáticamente casi un 50%, quedando en 622.3 millones de litros. Esta abrupta disminución tuvo un impacto devastador en la infraestructura ganadera que Luis había trabajado tanto para establecer. La condición física de los rebaños lecheros, que habían tardado 25 a 30 años en consolidarse, empeoró significativamente. Para Luis, dueño de la finca Ojo de Agua, esta situación representó un golpe duro, sus inversiones en infraestructura ganadera y su esfuerzo por mejorar la productividad se vieron directamente afectados por esta crisis. La disminución en la producción láctea afectó no solo la economía de su finca, sino también su capacidad para mantener y expandir su rebaño ganadero En respuesta a esta crisis, el gobierno cubano inició un proceso de transformación en el sistema de producción de pastos. Se abandonó el método tradicional de pastoreo acuartonado y se adoptó un nuevo sistema de rotación de alta carga diaria. Este cambio, aunque necesario, planteó nuevos desafíos para los productores como Luis, quienes tendrían que adaptar sus prácticas de manejo y alimentación de los animales. Además, el nuevo sistema de producción introdujo la idea de 'microvaquerías', donde los trabajadores y sus familias vivían directamente en las instalaciones de crianza. Esto permitía una mejor distribución geográfica de la producción láctea, ubicando las vacas cerca de los centros urbanos. Y finalmente para los años 1995-1997, considerados el 'fin del período especial', la producción ya se había levantado un poco y estabilizado de momento.</p"
           },
           "start_date": {
             "year": 1990}, 
               "end_date": { "year": 1997 }
-          }
+          },
+          {
+            "media": {
+              "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/graph/leche_polvo.png",
+              "caption": "DataPecuario en la sección 'Ganado' dentro de la producción. (<a target=\"_blank\" href='https://data-pecuario.streamlit.app/'>credits</a>)"
+            },
+            "text": {
+              "headline": "Importaciones de leche en polvo...bueno o malo?.",
+              "text": "<p>Desde 1967-68, se importaba entre 30 000 y 35 000 toneladas de leche en polvo al año para cubrir aproximadamente la mitad de las necesidades del país. Durante la crisis económica, aumentó la importación y se restringió la distribución a niños y ancianos. Además, para los proximos años, como resultado del incremento de la demanda de alimentos procesados, los valores de importaciones siguieron creciendo hasta un pico en el año 2005, para luego descender nuevamenteLa crisis afectó significativamente la ganadería y la industria azucarera, reduciendo las zafras cañeras en un 40% y mermando la producción de miel y otros productos derivados. Consecuencias que fueron afectando directamente a Luis, quien se encontraba enfrentandose a ello sumado a los cambios en la demanda de la leche, presón para aumentar la producción y la competencia que representó.</p"
+            },
+            "start_date": {
+              "year": 1990}, 
+                "end_date": { "year": 1997 }
+            }
   ]
 }
