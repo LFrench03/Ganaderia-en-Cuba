@@ -4,8 +4,8 @@
       "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/brand/PNG/Identificador_principal.png"
     },
     "text": {
-      "headline": "Ganaderia cubana<br>Evolución y desarrollo de la industria",
-      "text": "<p>Timeline desde antes del triunfo de la revolución para analizar su evolución</p>>"
+      "headline": "Ganaderia cubana<br>Su desarrollo y evolución",
+      "text": "<p>Timeline desde antes del triunfo de la revolución</p>"
     }
   },
   "events": [
@@ -16,7 +16,7 @@
       },
       "text": {
         "headline": "Pasaje a la propiedad",
-        "text": "<p>Luis Serra Torres, un joven originario de Las Tunas, llegó a La Habana en busca de cumplir su servicio militar. Se instaló en el poblado de La Gallega, dentro del municipio de Guanabacoa. Durante esos tres años de servicio, conoció a un anciano respetado por su comunidad. El hombre, que se convirtió en un padre adoptivo para Luis, lo acogió con generosidad en momentos difíciles. Una vez finalizado su servicio, el anciano, después de muchos años de lucha y sin familiares cercanos, decidió intercambiar sus viviendas. Mientras él permanecía en el pueblo, Luis se quedaba con la propiedad de la finca. Este acuerdo marcó el inicio de una nueva etapa para el joven, convertido ahora en dueño legítimo de las tierras que había conocido durante su servicio.</p>>"
+        "text": "<p>Luis Serra Torres, un joven originario de Las Tunas, llegó a La Habana en busca de cumplir su servicio militar. Se instaló en el poblado de La Gallega, dentro del municipio de Guanabacoa. Durante esos tres años de servicio, conoció a un anciano respetado por su comunidad. El hombre, que se convirtió en un padre adoptivo para Luis, lo acogió con generosidad en momentos difíciles. Una vez finalizado su servicio, el anciano, después de muchos años de lucha y sin familiares cercanos, decidió intercambiar sus viviendas. Mientras él permanecía en el pueblo, Luis se quedaba con la propiedad de la finca. Este acuerdo marcó el inicio de una nueva etapa para el joven, convertido ahora en dueño legítimo de las tierras que había conocido durante su servicio.</p>"
       },
       "start_date": {
         "year": 1943
@@ -30,7 +30,7 @@
       },
       "text": {
         "headline": "El Renacimiento de Ojo de Agua",
-        "text": "<p>Los primeros años de Luis como teniente de la finca Ojo de Agua, actualmente con la Cooperativa de Creditos y Servicios (CSS) 'Juan Oramas Llerena' como patrón asociado, comenzó con grandes desafíos. La finca, antes descuidada, se encontraba en un estado terrible. Sin embargo, con el apoyo financiero que le dejó el anciano fallecido y sus propios ahorros obtenidos a través de diversos trabajos, Luis tenía un plan ambicioso. Llevo a cabo numerosas inversiones e intercambios para la adquisición de parejas de ganado, alimentos, cultivos, herramientas, mano de obra entre otros. Estas acciones fueron cruciales para establecer una base sólida para la futura producción agrícola. A medida que pasaban los años, la finca Ojo de Agua comenzó a cambiar. Lo que antes era una extensión baldía se convirtió en un próspero campo agrícola. Luis, con su dedicación y visión, estaba llevando a cabo un verdadero milagro en el terreno abandonado que le había heredado.</p>>"
+        "text": "<p>Los primeros años de Luis como teniente de la finca Ojo de Agua, actualmente con la Cooperativa de Creditos y Servicios (CSS) 'Juan Oramas Llerena' como patrón asociado, comenzó con grandes desafíos. La finca, antes descuidada, se encontraba en un estado terrible. Sin embargo, con el apoyo financiero que le dejó el anciano fallecido y sus propios ahorros obtenidos a través de diversos trabajos, Luis tenía un plan ambicioso. Llevo a cabo numerosas inversiones e intercambios para la adquisición de parejas de ganado, alimentos, cultivos, herramientas, mano de obra entre otros. Estas acciones fueron cruciales para establecer una base sólida para la futura producción agrícola. A medida que pasaban los años, la finca Ojo de Agua comenzó a cambiar. Lo que antes era una extensión baldía se convirtió en un próspero campo agrícola. Luis, con su dedicación y visión, estaba llevando a cabo un verdadero milagro en el terreno abandonado que le había heredado.</p>"
       },
       "start_date": {
         "year": 1946
@@ -44,7 +44,7 @@
       },
       "text": {
         "headline": "Antes del Triunfo de la Revolución",
-        "text": "<p>En el contexto nacional, antes de 1959, la producción de carne vacuna y leche era la segunda actividad económica agrícola de Cuba, después de la caña de azúcar. Se contaban 160.000 fincas de 57 ha cada una, incluyendo latifundios. La producción de carne se priorizaba sobre la leche, excepto en áreas urbanas cercanas. Los ingenios azucareros en la región oriental mantenían rebaños bovinos, utilizando importaciones de razas específicas para cruzamientos. Algunos ingenios comenzaron a utilizar caña y miel como suplemento para el ganado desde la década de 1950. En 1955, empresas estadounidenses introdujeron mieles con urea, y en 1959, 13 ingenios ya vendían este producto.</p>>"
+        "text": "<p>En el contexto nacional, antes de 1959, la producción de carne vacuna y leche era la segunda actividad económica agrícola de Cuba, después de la caña de azúcar. Se contaban 160.000 fincas de 57 ha cada una, incluyendo latifundios. La producción de carne se priorizaba sobre la leche, excepto en áreas urbanas cercanas. Los ingenios azucareros en la región oriental mantenían rebaños bovinos, utilizando importaciones de razas específicas para cruzamientos. Algunos ingenios comenzaron a utilizar caña y miel como suplemento para el ganado desde la década de 1950. En 1955, empresas estadounidenses introdujeron mieles con urea, y en 1959, 13 ingenios ya vendían este producto.</p>"
       },
       "start_date": {
         "year": 1950
@@ -58,7 +58,7 @@
       },
       "text": {
         "headline": "Después del Triunfo de la Revolución",
-        "text": "<p>La finca Ojo de Agua, propiedad de Luis, siguió su propio camino de desarrollo hasta 1985, mientras Cuba experimentaba cambios significativos en su estructura agraria y económica.</p>>"
+        "text": "<p>La finca Ojo de Agua, propiedad de Luis, siguió su propio camino de desarrollo hasta 1985, mientras Cuba experimentaba cambios significativos en su estructura agraria y económica.</p>"
       },
       "start_date": {
         "year": 1959
@@ -72,7 +72,7 @@
       },
       "text": {
         "headline": "Leyes de Reforma Agraria",
-        "text": "<p>En 1959 y 1963, Cuba llevó a cabo reformas agrarias que nacionalizaron gran parte de las tierras dedicadas a la ganadería. Esta política afectó directamente a muchas fincas, incluyendo posiblemente algunas cercanas a Ojo de Agua. Sin embargo, la finca de Luis, al poseer para ese entonces apenas 2 hectareas de dimension en terreno, escapó de estas expropiaciones.</p>>"
+        "text": "<p>En 1959 y 1963, Cuba llevó a cabo reformas agrarias que nacionalizaron gran parte de las tierras dedicadas a la ganadería. Esta política afectó directamente a muchas fincas, incluyendo posiblemente algunas cercanas a Ojo de Agua. Sin embargo, la finca de Luis, al poseer para ese entonces apenas 2 hectareas de dimension en terreno, escapó de estas expropiaciones.</p>"
       },
       "start_date": {
         "year": 1959
@@ -86,7 +86,7 @@
       },
       "text": {
         "headline": "Llegan las Cooperativas Agropecuarias",
-        "text": "<p>Una de las medidas principales en el campo agrícola fue el surgimiento de la Cooperativa de Crédito y Servicio (CCS) como una herramienta estatal para organizar la producción de los pequeños propietarios rurales y integrarlos activamente en la vida política del país. La Asociación Nacional de Agricultores Pequeños (ANAP) jugó un papel crucial en la promoción y apoyo a estas cooperativas. Para Luis, dueño de la finca Ojo de Agua, esta situación se presentó como una oportunidad y un desafío simultáneo. Mientras que la revolución había nacionalizado muchas tierras, la finca de Luis escapó de las expropiaciones y fue adoptada como patrón asociado por la CCS 'Juan Orama Llerena'. Posteriormente, en el periodo 1975-1985 se expandió la industrialización de la economía cubana, estimulada por la cooperación con los países del campo socialista. Como parte de ese proceso, en el Primer Congreso del Partido Comunista de Cuba (PCC) (1975) se planteó como prioridad acelerar el movimiento cooperativo, pero sobre todo encaminarlo a la integración de los campesinos de las CCS a lo que se denominó CPA, las cuales socializan los medios de producción, entre ellos la tierra, que deja de ser propiedad privada individual y pasa a ser propiedad colectiva. Tiempo después como contramedida a las repercusiones de la próxima crisis económica de 1990 se fundan las Unidades Básicas de Producción Cooperativa (UBPC), constituidas en 1993 </p>>"
+        "text": "<p>Una de las medidas principales en el campo agrícola fue el surgimiento de la Cooperativa de Crédito y Servicio (CCS) como una herramienta estatal para organizar la producción de los pequeños propietarios rurales y integrarlos activamente en la vida política del país. La Asociación Nacional de Agricultores Pequeños (ANAP) jugó un papel crucial en la promoción y apoyo a estas cooperativas. Para Luis, dueño de la finca Ojo de Agua, esta situación se presentó como una oportunidad y un desafío simultáneo. Mientras que la revolución había nacionalizado muchas tierras, la finca de Luis escapó de las expropiaciones y fue adoptada como patrón asociado por la CCS 'Juan Orama Llerena'. Posteriormente, en el periodo 1975-1985 se expandió la industrialización de la economía cubana, estimulada por la cooperación con los países del campo socialista. Como parte de ese proceso, en el Primer Congreso del Partido Comunista de Cuba (PCC) (1975) se planteó como prioridad acelerar el movimiento cooperativo, pero sobre todo encaminarlo a la integración de los campesinos de las CCS a lo que se denominó CPA, las cuales socializan los medios de producción, entre ellos la tierra, que deja de ser propiedad privada individual y pasa a ser propiedad colectiva. Tiempo después como contramedida a las repercusiones de la próxima crisis económica de 1990 se fundan las Unidades Básicas de Producción Cooperativa (UBPC), constituidas en 1993 </p>"
       },
       "start_date": {
         "year": 1960
@@ -100,7 +100,7 @@
       },
       "text": {
         "headline": "La genética",
-        "text": "<p>Cabe mencionar además que los años 1967 en adelante marcaron un punto de inflexión en la agricultura cubana. La Revolución consolidó los procesos de nacionalización y administración estatal de la mayoría de las tierras agrícolas. Esto dio lugar a la creación de institutos y centros de especialización e investigación en producción agropecuaria. Estas instituciones jugaron un papel crucial en el desarrollo tecnológico y científico de la agricultura cubana. Para abordar el desafío de adaptar ganado extranjero al clima caribeño, se crearon complejos específicos para su cuidado y desarrollo. Estos programas permitieron mejorar la productividad y la resistencia de las especies bovinas en Cuba. Haber creado en Cuba un rebaño vacuno lechero subtropical, y realizado inversiones en todo el país para desarrollar una nueva infraestructura ganadera basada en la inseminación artificial ha representado un desafío. En ningún otro país de la región se han aplicado, a escala nacional, los métodos de la ciencia y la técnica ganadera; sin embargo, al cabo de 30 años, el talón de Aquiles de la ganadería cubana sigue siendo el crecimiento de la masa ganadera. Aunque se trata sin duda de un problema reproductivo, su relación fundamental es con el suministro de agua, la alimentación, los minerales, el manejo de los animales y la comercialización por los productores.</p>>"
+        "text": "<p>Cabe mencionar además que los años 1967 en adelante marcaron un punto de inflexión en la agricultura cubana. La Revolución consolidó los procesos de nacionalización y administración estatal de la mayoría de las tierras agrícolas. Esto dio lugar a la creación de institutos y centros de especialización e investigación en producción agropecuaria. Estas instituciones jugaron un papel crucial en el desarrollo tecnológico y científico de la agricultura cubana. Para abordar el desafío de adaptar ganado extranjero al clima caribeño, se crearon complejos específicos para su cuidado y desarrollo. Estos programas permitieron mejorar la productividad y la resistencia de las especies bovinas en Cuba. Haber creado en Cuba un rebaño vacuno lechero subtropical, y realizado inversiones en todo el país para desarrollar una nueva infraestructura ganadera basada en la inseminación artificial ha representado un desafío. En ningún otro país de la región se han aplicado, a escala nacional, los métodos de la ciencia y la técnica ganadera; sin embargo, al cabo de 30 años, el talón de Aquiles de la ganadería cubana sigue siendo el crecimiento de la masa ganadera. Aunque se trata sin duda de un problema reproductivo, su relación fundamental es con el suministro de agua, la alimentación, los minerales, el manejo de los animales y la comercialización por los productores.</p>"
       },
       "start_date": {
         "year": 1967
@@ -127,7 +127,7 @@
         },
     "text": {
         "headline": "Ubre blanca, la super vacuna",
-        "text": "<p>Durante toda esta transición uno de los logros mas significativos en el contexto internacional del mejoramiento genético de los procesos de mejoramiento genético en el ganado cubano fue Ubre Blanca, una vaca cubana famosa por su prodigiosa producción de leche, que se convirtió en un símbolo del esfuerzo de modernización económica de Fidel Castro en la década de 1980.1. Sus principales logros fueron: Produjo 109,5 litros de leche en un solo día en 1982, más de cuatro veces la producción media de una vaca corriente; consiguió producir 24.268,9 litros de leche en 305 días de lactancia hasta finales de febrero de 1982. Ambas hazañas fueron reconocidas como récords mundiales por el Libro Guinness de los récords. En cuanto a sus especificaciones genéticas: Era un cruce entre un toro Holstein y un cebú1 y se convierte en un animal protegido por fuertes medidas de seguridad debido a su importancia política. La vaca sigue siendo objeto de interés científico, aunque sin éxito, ya que desde entonces han tratado de clonarla empleando muestras de tejido congelado.</p>>"
+        "text": "<p>Durante toda esta transición uno de los logros mas significativos en el contexto internacional del mejoramiento genético de los procesos de mejoramiento genético en el ganado cubano fue Ubre Blanca, una vaca cubana famosa por su prodigiosa producción de leche, que se convirtió en un símbolo del esfuerzo de modernización económica de Fidel Castro en la década de 1980.1. Sus principales logros fueron: Produjo 109,5 litros de leche en un solo día en 1982, más de cuatro veces la producción media de una vaca corriente; consiguió producir 24.268,9 litros de leche en 305 días de lactancia hasta finales de febrero de 1982. Ambas hazañas fueron reconocidas como récords mundiales por el Libro Guinness de los récords. En cuanto a sus especificaciones genéticas: Era un cruce entre un toro Holstein y un cebú1 y se convierte en un animal protegido por fuertes medidas de seguridad debido a su importancia política. La vaca sigue siendo objeto de interés científico, aunque sin éxito, ya que desde entonces han tratado de clonarla empleando muestras de tejido congelado.</p>"
       },
       "start_date": {
           "year": 1982
@@ -251,7 +251,7 @@
         },
         "text": {
           "headline": "Distribución institucional",
-          "text": "<p>Desde un inicio, la distribución territorial de las diferentes entidades en la isla siempre estuvo mayormente concentrada en la capital, no obstante, si se excluye la capital como en el mapa de densidad derecho de la figura se puede observar como las mayores concentraciones hacia la zona oriental y en Pinar del Río. Y con una disposición de forma general de 55,1% de Cooperativas, 23,1% Unidades Presupuestadas, y un 21,8% de Empresas, y de forma más concentrada con 46,5% de CCS, 35,8% UBPC y 17,7% de CPA. </p>"
+          "text": "<p>Desde un inicio, la distribución territorial de las diferentes entidades en la isla siempre estuvo mayormente concentrada en la capital, no obstante, si se excluye la capital como en el mapa de densidad derecho de la figura se puede observar como las mayores concentraciones hacia la zona oriental-media del país y en Pinar del Río por lo general como se muestra en la imagen de ejemplo para este año. Y, con un total de 10556 entidades reparitidas de forma general de 55,1% de Cooperativas, 23,1% Unidades Presupuestadas, y un 21,8% de Empresas, y de forma más concentrada, para 5688 cooperativas con 46,5% de CCS, 35,8% UBPC y 17,7% de CPA. </p>"
         },
         "start_date": {
           "year": 2012
@@ -301,24 +301,18 @@
       "end_date": { "year": 2022 }
     },
     {
-      "media": {
-        "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/LuisSerra.jpeg",
-        "caption": "Imágen generada por el generador de imágenes de Microsoft Bing. (<a target=\"_blank\" href='https://copilot.microsoft.com/images/create?'>credits</a>)"
-      },
       "text": {
         "headline": "Fallece Luis Serra Torres",
-        "text": "<p>Como resultado de un debilitamiento general producto de los estragos de la pandermia, muere de un paro cardiaco durante el mediodia mientras descansaba en la cama. Luis dejó atrás una herencia invaluable: su ejemplo de perseverancia, su amor por la naturaleza y su compromiso con la comunidad. Sus logros en la finca, aunque modestos en términos materiales, fueron enormes en términos de inspiración y motivación para quienes lo conocieron, y este proyecto, inspirado en su historia como homenaje, es un ejemplo de ello.</p>"
+        "text": "<p>Como resultado de un debilitamiento general producto de los estragos de la pandermia, muere de un paro cardiaco durante el mediodia mientras descansaba en la cama. Luis dejó atrás una herencia invaluable: su ejemplo de perseverancia, su amor por la naturaleza y su compromiso con la comunidad. Sus logros en la finca, aunque modestos en términos materiales, fueron enormes en términos de inspiración y motivación para quienes lo conocieron, y este proyecto, inspirado en su historia como homenaje, es un ejemplo de ello. La finca 'Ojo de Agua' hoy en día sigue operada por Ernesto, desde entonces no ha desistido a pesar de que las situaciones no han dejado de ser adversas, sigamos al expectantes a como se desarrolla este fenómeno que es la ganadería cubana. </p>"
       },
       "start_date": {
-        "year": 2022,
-        "month": 22,
-        "day": 9
+        "year": 2022
       }
     },
     {
       "text": {
       "headline": "Feedback",
-      "text": "<p>Como resultado de un debilitamiento general producto de los estragos de la pandermia, muere de un paro cardiaco durante el mediodia mientras descansaba en la cama. Luis dejó atrás una herencia invaluable: su ejemplo de perseverancia, su amor por la naturaleza y su compromiso con la comunidad. Sus logros en la finca, aunque modestos en términos materiales, fueron enormes en términos de inspiración y motivación para quienes lo conocieron, y este proyecto, inspirado en su historia como homenaje, es un ejemplo de ello(<a target=\"_blank\" href='https://copilot.microsoft.com/images/create?'>credits</a>).</p>>"
+      "text": "<p>Esta aplicación está diseñada por medio de una base de datos de eventos incluidos luego de un análisis exploratorio extensivo sobre este fenómeno nacional que es la ganadería con toda su transición. Si identificaste alguna información que consideras incierta o faltante y tienes las respuestas con fuentes para respaldarlas te invito a que por medio de este emlace accedas a nuestro repositorio de GitHub y puedas dejarnos tus sugerencias. Enlace:(<a target=\"_blank\" href='https://github.com/LFrench03/Ganaderia-en-Cuba.git'>Repositorio de GitHub</a>). Muchas gracias :)"
     },
     "start_date": {
       "year": 2024,
