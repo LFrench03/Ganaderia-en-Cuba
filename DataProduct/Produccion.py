@@ -14,7 +14,7 @@ with open('inventario_ganado.json',encoding = "utf8") as json_data: #Cargar Json
 tab1, tab2, tab3 = st.tabs(["Producción de leche", "Producción avícola", "Alimentación del ganado"]) #Tabulaciones
 with tab1:
     with st.container(border=True):   
-        col1, col2 = st.columns(2)
+        col1, col2 = st.tabs(["Producción", "Rendimiento"])
         with col1:
             #Datos Leche de Vaca Total
             produccion_leche_total = data["vacuno"]["Indicadores produccion leche"]["Produccion(Miles de litros)"]["Total"]
@@ -102,12 +102,7 @@ with tab1:
             df.index.name = "Año"
             #Grafico de Area para el Rendimiento Anual de Vacas de Ordeño
             st.markdown("### 🐄 Rendimiento anual de vacas de ordeño")
-            st.write("")
-            st.write("")
-            st.write("")
-            st.write("")
-            st.write("")
-            st.write("")
+
             fig = px.area(df,markers=True,color_discrete_sequence=colors,hover_name='value', hover_data={'variable': None, 'value':None})
             fig.update_layout(width=800, height=600,
                             yaxis_title = "Cantidad", xaxis_title = "Años",
@@ -258,76 +253,54 @@ with tab2:
         #Produccion huevos
         produccion_huevos_total = data["aves"]["Produccion de huevos(MMU)"]["Total"]
         produccion_huevos_estatal = data["aves"]["Produccion de huevos(MMU)"]["Empresas avicolas "]
-        produccion_huevos_NOestatal = {}
-
         produccion_huevos_ponedoras = data["aves"]["Indicadores seleccionados de gallinas ponedoras"]["Produccion de huevos(MMU)"]
-        produccion_huevos_otros = {}
-        col1, col2 = st.columns(2)
-        with col1:
-                #Huevos x gallina
-                st.markdown("#### 🥚🥩 Rendimiento de Producción de Huevos y Carne de Ave")
-                huevos_gallina = data["aves"]["Indicadores seleccionados de gallinas ponedoras"]["Huevos por gallina(U)"]
-                egg = pd.DataFrame({  
+
+        huevos = pd.DataFrame({
+                "Total": produccion_huevos_total
+            })
+        huevos = huevos.apply(pd.to_numeric)
+
+        ponedoras = pd.DataFrame({
+                "Aves Ponedoras": produccion_huevos_ponedoras
+            })
+        #Huevos x gallina
+        st.markdown("#### 🥚🥩 Rendimiento de Producción de Huevos y Carne de Ave")
+        huevos_gallina = data["aves"]["Indicadores seleccionados de gallinas ponedoras"]["Huevos por gallina(U)"]
+        egg = pd.DataFrame({  
                     "Huevos por gallina": huevos_gallina  
                 })
-                egg = egg.apply(pd.to_numeric)
-                #Carne de ave
-                produccion_carne = data["aves"]["Entregas a sacrificio"]["Empresas avicolas estatales"]["Produccion total de carne de ave"]
-                carneDF = pd.DataFrame({  
+        egg = egg.apply(pd.to_numeric)
+
+        #Carne de ave
+        produccion_carne = data["aves"]["Entregas a sacrificio"]["Empresas avicolas estatales"]["Produccion total de carne de ave"]
+
+        carneDF = pd.DataFrame({  
                     "Producción de carne de ave": produccion_carne  
                 })
-                carneDF = carneDF.apply(pd.to_numeric)
-                choice = st.selectbox("Selecciona un grupo", ["Huevos por Gallina", "Producción Total de Carne"])
-                if choice == "Huevos por Gallina":
-                    df = egg
-                    st.markdown("###### Miles de Millones de Unidades (MMU)")
-                    color = ["#ec7416"]
-                else:
-                    df = carneDF
-                    st.markdown("###### Miles de Toneladas (Mt)")
-                    color = ["#e21616"]
-                df.index.name = "Año"
-                fig = px.line(df,markers=True,color_discrete_sequence=color, hover_name='value', hover_data={'variable': None, 'value':None})
-                fig.update_layout(width=800, height=600, 
-                                    yaxis_title = "Cantidad", xaxis_title = "Años",showlegend = False)
-                st.plotly_chart(fig)
-        with col2:
-            for year in produccion_huevos_total:
-                if produccion_huevos_total[year] != produccion_huevos_estatal[year]:
-                    produccion_huevos_NOestatal[year] = round(float(produccion_huevos_total[year]) - float(produccion_huevos_estatal[year]), 1)
-            for year in produccion_huevos_total:
-                if produccion_huevos_total[year] and produccion_huevos_ponedoras[year]:
-                    produccion_huevos_otros[year] = round(float(produccion_huevos_total[year]) - float(produccion_huevos_ponedoras[year]), 1)
-            huevos = pd.DataFrame({
-                "Empresas Avicolas": produccion_huevos_estatal,
-                "Otros": produccion_huevos_NOestatal,
-            })
-            huevos = huevos.apply(pd.to_numeric)
+        carneDF = carneDF.apply(pd.to_numeric)
 
-            ponedoras = pd.DataFrame({
-                "Aves Ponedoras": produccion_huevos_ponedoras,
-                "Otros": produccion_huevos_otros
-            })
-            st.markdown("#### 🥚 Producción de Huevos")
-            
-            choice = st.selectbox("Seleccione un grupo", ["Total", "Empresas Avícolas"])
-            year = st.select_slider("Año ", [x for x in range(1989, 2023)])
+        choice = st.selectbox("Selecciona un grupo", ["Huevos por Gallina", "Producción Total de Carne", "Total", "Aves ponedoras"])
+        if choice == "Huevos por Gallina":
+            df = egg
             st.markdown("###### Miles de Millones de Unidades (MMU)")
-            if choice == "Total":
-                def crear_grafica(year):
-                    colors = ["#e4e42d","#deaa49"]
-                    fig = go.Figure(data=go.Pie(labels=["Empresas Avicolas", "Otros"], values= huevos.loc[str(year)], pull = 0.1, textposition="outside", hoverinfo="value", textinfo='label+percent',
-                                                marker=dict(colors=colors, line = dict(color='black', width=3))))
-                    fig.update_layout(width=1300,  height=500,  margin=dict(l=100, r=100, t=100, b=100))
-                    return fig 
-            else:
-                def crear_grafica(year):
-                    colors = ["#e4e42d","#deaa49"]
-                    fig = go.Figure(data=go.Pie(labels=["Aves Ponedoras", "Otros"], values= ponedoras.loc[str(year)], pull = 0.1, textposition="outside", hoverinfo="value", textinfo='label+percent',
-                                                marker=dict(colors=colors, line = dict(color='black', width=3))))
-                    fig.update_layout(width=1300,  height=500,  margin=dict(l=100, r=100, t=100, b=100))
-                    return fig 
-            st.plotly_chart(crear_grafica(year))
+            color = ["#ec7416"]
+        elif choice == "Total":
+            df = huevos
+            st.markdown("###### Miles de Millones de Unidades (MMU)")
+            color = ["#e21616"]
+        elif choice == "Aves ponedoras":
+            df = ponedoras
+            st.markdown("###### Miles de Millones de Unidades (MMU)")
+            color = ["#ec7416"]            
+        else:
+            df = carneDF
+            st.markdown("###### Miles de Toneladas (Mt)")
+            color = ["#e21616"]
+        df.index.name = "Año"
+        fig = px.line(df,markers=True,color_discrete_sequence=color, hover_name='value', hover_data={'variable': None, 'value':None})
+        fig.update_layout(width=1300, height=600, 
+                                    yaxis_title = "Cantidad", xaxis_title = "Años",showlegend = False)
+        st.plotly_chart(fig)
         with st.expander("Observaciones"):
             st.markdown("- Producción de huevos: Se considera como tal todos los que se obtengan de las aves independientemente de su destino, calidad, tamaño o estado (sano, cascado o roto).")
             st.markdown("- Huevos por gallina: Es el resultado de dividir la producción de gallinas ponedoras entre la existencia promedio de ponedoras.")

@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import json
+from numpy import nan
 import plotly.express as px
 import plotly.graph_objects as go
 
@@ -123,17 +124,17 @@ with tab1: #Tab de Existencia
             #Graficos de Linea de la Existencia
             st.markdown("###### Miles de Cabezas (MCabz)")
             total = px.line(ganado_TOTAL,markers=True,color_discrete_sequence=custom_colors, hover_name='value', hover_data={'value':None})
-            total.update_layout(width=800, height=600, 
+            total.update_layout(width=1300, height=600, 
                             yaxis_title = "Cantidad", xaxis_title = "Años",
                             legend=dict(title=dict(text="Tipo de ganado")))
             
             estatal = px.line(ganado_ESTATAL,markers=True,color_discrete_sequence=custom_colors[1:], hover_name='value', hover_data={'value':None})
-            estatal.update_layout(width=800, height=600, 
+            estatal.update_layout(width=1300, height=600, 
                             yaxis_title = "Cantidad", xaxis_title = "Años", 
                             legend=dict(title=dict(text="Tipo de ganado")))    
             
             NOestatal = px.line(ganado_NO_ESTATAL,markers=True,color_discrete_sequence=["#ad5514","#f3639c","#8a8a8a","#e8e85b"]) #Secuencia de colores, hover_name='value', hover_data={'value':None})
-            NOestatal.update_layout(width=800, height=600, 
+            NOestatal.update_layout(width=1300, height=600, 
                             yaxis_title = "Cantidad", xaxis_title = "Años", 
                             legend=dict(title=dict(text="Tipo de ganado")))       
             
@@ -620,17 +621,17 @@ with tab2:
                 #Grafico de Linea
                 if opc == "Total":
                     sacrifT = px.line(sacrif_TOTAL,markers=True,color_discrete_sequence=custom_colors[:-1],hover_name='value', hover_data={'value':None})
-                    sacrifT.update_layout(width=800, height=600, 
+                    sacrifT.update_layout(width=1300, height=600, 
                                     yaxis_title = "Cantidad", xaxis_title = "Años", legend=dict(title=dict(text="Tipo de ganado")))
                     st.plotly_chart(sacrifT)
                 if opc == "Estatal":
                     sacrifE = px.line(sacrif_ESTATAL,markers=True,color_discrete_sequence=custom_colors[:-1],hover_name='value', hover_data={'value':None})
-                    sacrifE.update_layout(width=800, height=600, 
+                    sacrifE.update_layout(width=1300, height=600, 
                                     yaxis_title = "Cantidad", xaxis_title = "Años", legend=dict(title=dict(text="Tipo de ganado")))
                     st.plotly_chart(sacrifE)
                 if opc == "No Estatal":
                     sacrifNE = px.line(sacrif_NOESTATAL,markers=True,color_discrete_sequence=["#f3639c","#6382f3","#8a8a8a"],hover_name='value', hover_data={'value':None})
-                    sacrifNE.update_layout(width=800, height=600, 
+                    sacrifNE.update_layout(width=1300, height=600, 
                                     yaxis_title = "Cantidad", xaxis_title = "Años", legend=dict(title=dict(text="Tipo de ganado")))                
                     st.markdown("###### Miles de Cabezas (MCabz)")           
                     st.plotly_chart(sacrifNE)                        
@@ -822,7 +823,7 @@ with tab2:
             opcion = st.selectbox("Seleccione un grupo", ["Valor", "Cantidad"])
             def graficar(opc):
                 fig = px.line(opc,markers=True,color_discrete_sequence=custom_colors, hover_name='value', hover_data={'value':None})
-                fig.update_layout(width=1200, height=600, 
+                fig.update_layout(width=1300, height=600, 
                                 yaxis_title = "Cantidad", xaxis_title = "Años",
                                 legend=dict(title=dict(text="Tipo de Carne")))
                 return fig
@@ -856,46 +857,21 @@ with tab2:
                                 mime="text/csv")  
 with tab3:
     with st.container(border=True):
-        col1, col2 =  st.columns(2)
         colors = ["rgb(0,87,214)","rgb(216,0,0)","rgb(0,33,66)"]
-        with col2: 
-            #Datos de los nacimientos y muertes
-            nacimientos_vacunos = data["vacuno"]["Nacimientos_muertes(Mcabz)"]["Nacimientos"]["Totales"]
-            muertes_vacuno = data["vacuno"]["Nacimientos_muertes(Mcabz)"]["Muertes"]["Totales"]
-            nacimientos_porcinos = data["porcino"]["Nacimientos (vivos)(Mcabz)"]["Total"]
-            muertes_porcinos = data["porcino"]["Muertes de crías (a)(Mcabz)"]["Total"]
-            tasa_vacuno = {}
-            tasa_porcino = data["porcino"]["Tasa de mortalidad (por 100nacidos)(%)"]["Total"]
-            promedio = 0
-            for year in vacuno:
-                promedio += vacuno[year]
-            promedio = promedio/len(list(vacuno))
-            for year in vacuno:
-                tasa_vacuno[year] = round((muertes_vacuno[year]/promedio)*100,2)
-            st.markdown("### 🐮🐷 Mortalidad de rebaños vacuno y porcino")                     
-            tasas = pd.DataFrame({
-                                    "Vacuno":tasa_vacuno,
-                                    "Porcino":tasa_porcino})
-            tasas = tasas.iloc[8:,:].apply(pd.to_numeric)
-            opciones11 = st.select_slider("Año",[x for x in range (1993,2023)])
-            def crear_grafica(year):
-                df = tasas.loc[str(year)]
-                df.index.name = "Tipo"
-                fig = px.bar(df, hover_name='value', hover_data={'variable': None, 'value':None}, orientation='h')
-                fig.update_layout(yaxis_title="Tipo",
-                xaxis_title = "Tasa (%)")       
-                fig.update_traces(width=0.5,
-                        marker_line_color="black",
-                        marker_line_width=1.5, opacity=0.6, 
-                        showlegend = False) 
-                fig.data[0].marker.color = ["#5B99C2","#e0327c"] 
-                return fig  
-            st.write("")
-            st.write("")
-            st.write("")
-            st.write("")    
-            st.write("")   
-            st.plotly_chart(crear_grafica(opciones11))
+        
+        #Datos de los nacimientos y muertes
+        nacimientos_vacunos = data["vacuno"]["Nacimientos_muertes(Mcabz)"]["Nacimientos"]["Totales"]
+        muertes_vacuno = data["vacuno"]["Nacimientos_muertes(Mcabz)"]["Muertes"]["Totales"]
+        nacimientos_porcinos = data["porcino"]["Nacimientos (vivos)(Mcabz)"]["Total"]
+        muertes_porcinos = data["porcino"]["Muertes de crías (a)(Mcabz)"]["Total"]
+        tasa_vacuno = {}
+        tasa_porcino = data["porcino"]["Tasa de mortalidad (por 100nacidos)(%)"]["Total"]
+        promedio = 0
+        for year in vacuno:
+            promedio += vacuno[year]
+        promedio = promedio/len(list(vacuno))
+        for year in vacuno:
+            tasa_vacuno[year] = round((muertes_vacuno[year]/promedio)*100,2)
         #Datos gallinas ponedoras
         gp_muertes = data["aves"]["Indicadores seleccionados de gallinas ponedoras"]["Muertes(Mcabz)"]
         gp_existencia = data["aves"]["Indicadores seleccionados de gallinas ponedoras"]["Existencia promedio(Mcabz)"]
@@ -906,64 +882,31 @@ with tab3:
     })
             
         gp_tasa_mortalidadDF = pd.DataFrame({
-        "Tasa de mortalidad de gallinas ponedoras": gp_tasa_mortalidad
+        "Tasa de mortalidad de gallinas ponedoras (%)": gp_tasa_mortalidad,
+        "Tasa de mortalidad de vacunos": tasa_vacuno, 
+        "Tasa de mortalidad de porcinos": tasa_porcino
     })
-        with col1:    
+        gp_tasa_mortalidadDF.apply(pd.to_numeric)    
+        gp_tasa_mortalidadDF.index.name = "Año"    
         #Selectbox para grafico de area y de linea
-            st.markdown("### 🐔 Mortalidad de gallinas ponedoras")
-            choices5 = st.selectbox( "Selecciona", ["Existencia promedio y mortalidad", "Tasa de mortalidad (%)"])
-            gp_muertesDF.index.name = "Año"
-            mgp = px.line(gp_muertesDF, hover_name='value', hover_data={'variable': None, 'value':None}, markers=True,color_discrete_sequence=colors[:-1])
-            mgp.update_layout(width=1000, height=600, 
-                        yaxis_title = "Cantidad", xaxis_title = "Años", 
-                        legend=dict(
-                                    title=dict(text="")
-                                )
-                        )
-            
-            gp_tasa_mortalidadDF.index.name = "Año"
-            tm = px.line(gp_tasa_mortalidadDF, hover_name='value', hover_data={'variable': None, 'value':None} ,markers=True,color_discrete_sequence=["rgb(216,0,0)"])
-            tm.update_layout(width=800, height=600, 
-                        yaxis_title = "Cantidad", xaxis_title = "Años", 
-                        showlegend = False)
-
-            if choices5 == "Existencia promedio y mortalidad":
-                st.markdown("###### Existencia promedio (Miles de Cabezas)")
-                st.plotly_chart(mgp)
-            if choices5 == "Tasa de mortalidad (%)":
-                st.markdown("###### Tasa de Mortalidad (%)")
-                st.plotly_chart(tm) 
+        st.markdown("### 💀 Tasas de Mortalidad")
+        tm = px.line(gp_tasa_mortalidadDF, hover_name='value', hover_data={'variable': None, 'value':None} ,markers=True,color_discrete_sequence=["rgb(216,0,0)", "rgb(0,87,214)", "rgb(0,33,66)"])
+        tm.update_layout(width=1300, height=600, 
+                    yaxis_title = "Cantidad", xaxis_title = "Años", legend=dict(title=dict(text="Tipo")))
+        st.plotly_chart(tm) 
         with st.expander("Observaciones") :
             st.markdown("- Tasa de mortalidad (por ciento): Se aplica como el resultado de dividir la cantidad de muertes entre la cantidad de nacimientos ocurridos, excepto en avicultura, cuyo resultado surge de la división del total de aves muertas entre la existencia promedio de aves de un período determinado.")
-            st.markdown("- Los valores de tasa del ganado porcino con los que se cuenta parten del año 1993.")
             st.markdown("- La tasa vacuna representada fue calculada por nuestro equipo por medio de la división del número de muertes totales entre el promedio de los valore de existencia total desde 1985 hasta 2022 multiplicado por 100.")
-            csv12_1 = convert_df(gp_muertesDF)
-            csv12_2 = convert_df(gp_tasa_mortalidadDF)
-            csv12_3 = convert_df(tasas)            
-            with st.popover("Descargar CSV"):
-                d1, d2, d3= st.columns(3)
-                with d1:
-                    st.download_button( 
-                                label="Muertes Ponedoras ",
-                                data=csv12_1,
-                                file_name="muertes_ponedoras.csv",
-                                mime="text/csv")   
-                with d2:
-                    st.download_button( 
-                                label="Tasa Ponedoras",
+            csv12_2 = convert_df(gp_tasa_mortalidadDF)                
+            st.download_button( 
+                                label="Descargar CSV",
                                 data=csv12_2,
                                 file_name="tasa_ponedoras.csv",
-                                mime="text/csv")    
-                with d3:
-                    st.download_button( 
-                                label="Tasas Vacuno & Porcino",
-                                data=csv12_3,
-                                file_name="tasas.csv",
-                                mime="text/csv")                    
+                                mime="text/csv")                     
                     
     with st.container(border=True):
         st.markdown("### 🧬 Nacimientos y Muertes")
-        answer = st.selectbox("Tipo de Ganado", ["Vacuno🐮", "Porcino🐷"])
+        answer = st.selectbox("Tipo de Ganado", ["Vacuno🐮", "Porcino🐷", "Avícola🐥"])
         nac_muert_vacunosDF = pd.DataFrame({
             "Nacimientos": nacimientos_vacunos,
             "Muertes": muertes_vacuno
@@ -976,6 +919,16 @@ with tab3:
         nac_muert_porcinosDF.index.name = "Año"
         nac_muert_vacunosDF = nac_muert_vacunosDF.apply(pd.to_numeric)
         nac_muert_porcinosDF = nac_muert_porcinosDF.apply(pd.to_numeric)
+        
+        gp_muertesDF.index.name = "Año"
+        mgp = px.line(gp_muertesDF, hover_name='value', hover_data={'variable': None, 'value':None}, markers=True,color_discrete_sequence=colors[:-1])
+        mgp.update_layout(width=1300, height=600, 
+                        yaxis_title = "Cantidad", xaxis_title = "Años", 
+                        legend=dict(
+                                    title=dict(text="")
+                                )
+                        )  
+        gp_tasa_mortalidadDF.index.name = "Año"        
 
         #Grafico de Linea con selectbox
         v = px.line(nac_muert_vacunosDF, hover_name='value', hover_data={'variable': None, 'value':None}, markers=True,color_discrete_sequence=colors[:2])
@@ -989,8 +942,10 @@ with tab3:
         st.markdown("###### Miles de Cabezas (MCabz)")
         if answer == "Vacuno🐮":
             st.plotly_chart(v)
-        if answer == "Porcino🐷":
+        elif answer == "Porcino🐷":
             st.plotly_chart(p)
+        else:
+            st.plotly_chart(mgp)            
         with st.expander("Observaciones") :
             st.markdown("- Los valores del ganado porcino con los que se cuenta comienzan en el año 1993.")
             st.markdown("- Nacimientos: Es el comienzo de la vida del animal por la expulsión completa o extracción a la madre de un producto de concepción, independientemente de la duracion de la gestación, según si después de tal separación respira o muestra evidencia de vida, como el latido del corazón o un movimiento definitivo de músculos voluntarios. En el caso de la ganadería vacuna se considerará el parto a término de donde el ternero nazca vivo o muerto, y en el parto prematuro donde el ternero nazca vivo. En el caso de las aves se consideraría cuando la cría rompe el cascarón y abandona el huevo.")
@@ -998,9 +953,10 @@ with tab3:
             st.markdown("- Las muertes porcinas mostradas son de crías, y los nacimientos se refieren solo a los vivos.")
             st.markdown("- Los nacimientos y muertes porcinas excluyen los patios y parcelas de los hogares.")
             csv13_1 = convert_df(nac_muert_vacunosDF)
-            csv13_2 = convert_df(nac_muert_porcinosDF)            
+            csv13_2 = convert_df(nac_muert_porcinosDF)  
+            csv13_3 = convert_df(gp_muertesDF)          
             with st.popover("Descargar CSV"):
-                d1, d2= st.columns(2)
+                d1, d2, d3= st.columns(3)
                 with d1:
                     st.download_button( 
                                 label="Vacuno",
@@ -1012,5 +968,11 @@ with tab3:
                                 label="Porcino",
                                 data=csv13_2,
                                 file_name="nac_muertes_porcino.csv",
-                                mime="text/csv")     
+                                mime="text/csv")   
+                with d3:
+                    st.download_button( 
+                                label="Avicola",
+                                data=csv13_2,
+                                file_name="nac_muertes_Aves.csv",
+                                mime="text/csv")                         
 
