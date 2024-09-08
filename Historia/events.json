@@ -161,7 +161,7 @@
               "caption": "DataPecuario en la sección 'Ganado' dentro de la producción. (<a target=\"_blank\" href='https://data-pecuario.streamlit.app/'>credits</a>)"
             },
             "text": {
-              "headline": "Importaciones de leche en polvo...bueno o malo?",
+              "headline": "Importaciones de leche en polvo...¿bueno o malo?",
               "text": "<p>Desde 1967-68, se importaba entre 30 000 y 35 000 toneladas de leche en polvo al año para cubrir aproximadamente la mitad de las necesidades del país. Durante la crisis económica, aumentó la importación y se restringió la distribución a niños y ancianos. Además, para los proximos años, como resultado del incremento de la demanda de alimentos procesados, los valores de importaciones siguieron creciendo hasta un pico en el año 2005, para luego descender nuevamente. La crisis afectó significativamente la ganadería y la industria azucarera, reduciendo las zafras cañeras en un 40% y mermando la producción de miel y otros productos derivados. Consecuencias que fueron afectando directamente a Luis, quien se encontraba enfrentandose a ello sumado a los cambios en la demanda de la leche, presón para aumentar la producción y la competencia que representó.</p"
             },
             "start_date": {
@@ -171,14 +171,27 @@
             {
                 "media": {
                   "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/Ernesto2.jpeg",
-                  "caption": "DataPecuario en la sección 'Ganado' dentro de la producción. (<a target=\"_blank\" href='https://data-pecuario.streamlit.app/'>credits</a>)"
+                  "caption": "Imágen generada por el generador de imágenes de Microsoft Bing. (<a target=\"_blank\" href='https://copilot.microsoft.com/images/create?'>credits</a>)"
                 },
                 "text": {
                   "headline": "Relevo",
-                  "text": "<p>Luis se enfrentó a numerosos desafíos durante esa década difícil. Sin embargo, Luis perseveró, trabajando día y noche para mantener su finca a flote. Pero la presión acumulada comenzó a tomar su peaje en la salud de Luis, La tensión y el estrés crónico llevaron a que desarrollara una severa hipertensión arterial y además se le diagnosticó de diabetes. Estas enfermedades, junto con otros problemas de salud, poco a poco fueron debilitándolo. Mientras tanto, su hijo Ernesto Serra, (el cual tuvo con una mujer que conoció en el poblado de Las Minas, llamada Adelina Díaz Morín), que desde su juventud había estado asistiendo a su padre en el trabajo de la finca, observaba con preocupación cómo su progenitor se iba deteriorando. Ernesto, que siempre había mostrado interés en el manejo ganadero, sintió un fuerte impulso de querer continuar con el legado de su padre. Cuando Luis finalmente se vio obligado a dejar la dirección de la finca debido a su mala salud, Ernesto se ofreció sin dudar para tomar el relevo. A pesar de ser joven, tenía la experiencia necesaria y el amor por el campo que su padre le había transmitido.</p"
+                  "text": "<p>Luis se enfrentó a numerosos desafíos durante esa década difícil. Sin embargo, Luis perseveró, trabajando día y noche para mantener su finca a flote. Pero la presión acumulada comenzó a tomar su peaje en la salud de Luis, la tensión y el estrés crónico llevaron a que desarrollara una severa hipertensión arterial y además se le diagnosticó de diabetes. Estas enfermedades, junto con otros problemas de salud, poco a poco fueron debilitándolo. Mientras tanto, Ernesto Serra (hijo tuvo con una mujer que conoció en el poblado de Las Minas, llamada Adelina Díaz Morín), que desde su juventud había estado asistiendo a su padre en el trabajo de la finca, observaba con preocupación cómo su progenitor se iba deteriorando. Ernesto, que siempre había mostrado interés en el manejo ganadero, sintió un fuerte impulso de querer continuar con el legado de su padre. Cuando Luis finalmente se vio obligado a dejar la dirección de la finca debido a su mala salud, Ernesto se ofreció sin dudar para tomar el relevo. A pesar de ser joven, tenía la experiencia necesaria y el amor por el campo que su padre le había transmitido.</p"
                 },
                 "start_date": {
                   "year": 1995}
-                }            
+                },  
+                {
+                    "media": {
+                      "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/graph/plots_exist.png",
+                      "caption": "DataPecuario en la sección 'Existencia'. (<a target=\"_blank\" href='https://data-pecuario.streamlit.app/'>credits</a>)"
+                    },
+                    "text": {
+                      "headline": "Saliendo de la crisis. ¿Cómo estaba la cosa?",
+                      "text": "<p>Ahora, con nuevas responsanilidades, Ernesto debía hacerse cargo de la situación. Evaluando un poco de forma general debía enfrentar primeramente la disminución de la existencia de la mayor parte del ganado productor (porcino y avícola) con una disminución de la existencia de 1995 con respecto a la  de 1990 de 170.6, 476.6, 16205.3 millones de cabezas para los ganados vacuno, porcino y avícola respectivamente. Por otro lado los ovino-caprinos mantuvieron un linea de crecimiento bastante constante hasta el 2006.</p"
+                    },
+                    "start_date": {
+                      "year": 1995}, 
+                        "end_date": { "year": 2000 }
+                    }                          
   ]
 }
