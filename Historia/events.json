@@ -130,9 +130,30 @@
           "text": "<p>A partir de 1991, Cuba enfrentó una serie de desafíos que sentaron las bases para una profunda crisis económica que perduraría hasta la actualidad. El colapso del campo socialista, junto con el endurecimiento de las políticas de bloqueo económico por parte de Estados Unidos, creó un entorno extremadamente difícil para la economía cubana. Internamente, la sociedad cubana sufrió procesos de burocratización y niveles crecientes de corrupción, lo que exacerbó la ineficiencia generalizada del sistema. Estos factores combinados llevaron a una crisis económica que afectó todos los sectores, incluyendo la agricultura. Para Luis, dueño de la finca Ojo de Agua, esta crisis se tradujo en una disminución drástica en la oferta de insumos esenciales para su producción. Los problemas de suministro afectaron directamente su capacidad para mantener y expandir su rebanco ganadero y sus cultivos. En este contexto, el Estado cubano se vio obligado a redactar una nueva ley de reforma agrícola, que buscaba modificar la tenencia de la tierra y promover una mayor eficiencia en la producción agrícola. El asunto también llevó a una reducción en la inversión pública en infraestructura agrícola. Además, la disminución del poder adquisitivo de la población local debido a la crisis económica podría haber reducido la demanda de productos agrícolas, lo que afectaría directamente la rentabilidad de la finca de Luis. </p"
         },
         "start_date": {
-          "year": 1991
+          "year": 1990
         },
         "end_date": { "year": 1997 }
-      }
+      },
+        {"text": {
+          "headline": "Crisis económica.",
+          "text": "<p>Cuba experimentó un notable cambio en su estructura ganadera, con un 63% de la masa ganadera dedicada a la producción láctea. Esta tendencia reflejaba una estrategia de desarrollo agrícola enfocada en la producción de productos lácteos. La alimentación de estos animales estaba bien planificada, adaptándose a las dos estaciones del año. Durante la época de lluvias, los animales se alimentaban principalmente de pastos y forrajes, complementados con ensilaje y heno. En la época seca, cuando el pastoreo era imposible, se recurría a subproductos de la industria azucarera. Un aspecto destacado de la alimentación láctea era la adición de concentrados. Cada vaca recibía 0,46 kg de estos concentrados a partir del quinto litro de leche producido, lo que indicaba un enfoque en la mejora de la calidad y cantidad de la producción láctea. La infraestructura necesaria para mantener esta producción láctea era impresionante. Anualmente, se importaban aproximadamente 400 000 toneladas de fertilizantes, así como miles de toneladas de alambre, pesticidas y herbicidas. Además, se requirió la importación de 16 000 tractores y 90 000 toneladas de petróleo para los trabajos agrícolas y la distribución de forraje. La alimentación del sector ganadero cubano dependía en gran medida de importaciones y subproductos industriales. Anualmente, se importaban aproximadamente 600 000 toneladas de materia prima para elaborar concentrados para el ganado, incluyendo 90 000 toneladas de urea, 70 000 toneladas de harina de soja y girasol, 30 000 toneladas de sales y minerales, y 7 000 toneladas de sosa cáustica para procesar el bagazo de los ingenios azucareros. </p"
+        },
+        "start_date": {
+          "year": 1990}, 
+            "end_date": { "year": 1997 }
+        },
+        {
+          "media": {
+            "url": "https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/img/graph/leche_area.png",
+            "caption": "DataPecuario en la sección 'Ganado' dentro de la producción. (<a target=\"_blank\" href='https://s3-us-west-2.amazonaws.com/px3fr/upload/2007/large/1-9672-09_PX3_BAZANCUBA_04.jpg'>credits</a>)"
+          },
+          "text": {
+            "headline": "Crisis económica.",
+            "text": "<p>En el año 1990 el pais alcanzó un pico de rendimiento y producción lactea con 1034.4 miles de toneladas de leche y 1855kg de leche por vaca, el equivalente a casi 9 kg de leche por vaca al día. Sin embargo, apenas dos años después, en 1992, la producción había caído dramáticamente un 50%, quedando en 622.3 millones de litros. Esta abrupta disminución tuvo un impacto devastador en la infraestructura ganadera que Luis había trabajado tanto para establecer. La condición física de los rebaños lecheros, que habían tardado 25 a 30 años en consolidarse, empeoró significativamente. En la zona lechera cercana a la capital, se registró una pérdida masiva de animales, mientras que en áreas más remotas del país, el impacto fue menor pero igualmente preocupante. Para Luis, dueño de la finca Ojo de Agua, esta situación representó un golpe duro. Sus inversiones en infraestructura ganadera y su esfuerzo por mejorar la productividad se vieron directamente afectados por esta crisis. La disminución en la producción láctea afectó no solo la economía de su finca, sino también su capacidad para mantener y expandir su rebaño ganadero En respuesta a esta crisis, el gobierno cubano inició un proceso de transformación en el sistema de producción de pastos. Se abandonó el método tradicional de pastoreo acuartonado y se adoptó un nuevo sistema de rotación de alta carga diaria. Este cambio, aunque necesario, planteó nuevos desafíos para los productores como Luis, quienes tendrían que adaptar sus prácticas de manejo y alimentación de los animales. Además, el nuevo sistema de producción introdujo la idea de 'microvaquerías', donde los trabajadores y sus familias vivían directamente en las instalaciones de crianza. Esto permitía una mejor distribución geográfica de la producción láctea, ubicando las vacas cerca de los centros urbanos. A causa de la carencia de fertilizantes, los pastos perdieron rápidamente su calidad, y la salinidad, que afecta casi a un 15 por ciento de toda la tierra agrícola, también contribuyó a degradarlos. La mortandad excesiva, la falta de fertilizantes y de pesticidas, las restricciones en el suministro de petróleo para las labores de regadío y transporte, las dificultades en la adquisición de postes, alambre y problemas relacionados con los herbicidas hormonales fueron los factores que determinaron la infestación de los pastos..</p"
+          },
+          "start_date": {
+            "year": 1990}, 
+              "end_date": { "year": 1997 }
+          }
   ]
 }
