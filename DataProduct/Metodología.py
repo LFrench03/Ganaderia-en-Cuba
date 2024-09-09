@@ -24,7 +24,7 @@ st.markdown('* *Repositorio de Yudivian Almeida con los datos geolocalizables en
 st.markdown('* *Documentación de Plotly [Entra aquí](https://plotly.com/python/)*')
 st.markdown('* *Repositorio de GitHub [Entra aquí](https://github.com/LFrench03/Ganaderia-en-Cuba.git)*')
 st.markdown("* *Enlace Timeline sobre el desarrollo y la evolución de la ganadería cubana.[Entra aquí](https://historia-pecuario.streamlit.app/)*")
-st.markdown("* *Podcast[Entra aquí](https://github.com/LFrench03/Ganaderia-en-Cuba/blob/main/podcast/RadioPecuario.mp3).")
+st.markdown('* *Podcast. [Entra aquí](https://github.com/LFrench03/Ganaderia-en-Cuba/blob/main/podcast/RadioPecuario.mp3).*')
 st.markdown('* *Documentación de Streamlit [Entra aquí](https://docs.streamlit.io/develop/api-reference)*')
 st.markdown('<p style=font-size:22px;font-weight:bold;color:rgb(0,87,214);"><i>Notas:</i></p>', unsafe_allow_html=True)
 st.markdown('* <p style=font-size:17px;font-weight:bold;color:gray;"><i>La mayor parte de los datos utilizados provienen de la ONEI y están disponibles en formato CSV en las observaciones de cada representación con los DataFrames correspondientes de las secciones del análisis. Durante el proceso de desarrollo de este proyecto se tuvieron que procesar cada uno de los datos y someterlos a un robusto Análisis Exploratorio, en cuyo proceso se determinó almacenar todo en un archivo Json como base de datos con todos los datos ya procesados. Para esta tarea se desarrollaron scripts en el lenguaje de programación Python para automatizar lo máximo posible cada uno de los procesos.</i></p>', unsafe_allow_html=True)
