@@ -20,5 +20,5 @@ Preview
 * [http://scielo.sld.cu/scielo.php?script=sci_arttext&pid=S2308-01322016000200002](http://scielo.sld.cu/scielo.php?script=sci_arttext&pid=S2308-01322016000200002)
 * [https://www.fao.org/4/x1700t/x1700t04.htm](https://www.fao.org/4/x1700t/x1700t04.htm)
 * [https://data-pecuario.streamlit.app/](https://data-pecuario.streamlit.app/)
-* (http://scielo.sld.cu/scielo.php?script=sci_arttext&pid=S0864-03942011000200001)[http://scielo.sld.cu/scielo.php?script=sci_arttext&pid=S0864-03942011000200001]
+* [http://scielo.sld.cu/scielo.php?script=sci_arttext&pid=S0864-03942011000200001](http://scielo.sld.cu/scielo.php?script=sci_arttext&pid=S0864-03942011000200001)
 * [https://www.onei.gob.cu/](https://www.onei.gob.cu/)
