@@ -3,55 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ganadería en Cuba</title>
+    <title>DataPecuario</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Ganadería en Cuba</h1>
+        <h1 style="font-family: sans-serif;font-size: 38x;font-weight: bold;"><i>DataPecuario</i></h1>
     </header>
 
     <div class="tabs">
-        <div class="tab" onclick="openTab(event, 'timeline')">Historia evolutiva del ganado en Cuba</div>
-        <div class="tab" onclick="openTab(event, 'dataproduct')">Nuestro DataProduct sobre la ganadería</div>
+        <div class="tab" onclick="openTab(event, 'inicio')">Inicio</div>
+        <div class="tab" onclick="openTab(event, 'dataproduct')">DataProduct</div>
+        <div class="tab" onclick="openTab(event, 'timeline')">Historia</div>
+        <div class="tab" onclick="openTab(event, 'podcast')">RadioPecuario</div>
     </div>
-    <div id="timeline" class="tab-content">
-       
-  <body>
-    <div class="container">
-        <img src="D:\Trabajos\Comunicacion\web\timeline.jpg" alt="Timeline"  width="600" height="300">
-        <div class="evento">
-            <h1>¿Quieres conocer más sobre la historia de la ganadería en Cuba?</h1>
-        <p class="texto"> A través de este Timeline desarrollado en Streamlit podrás explorar los eventos más importantes que han marcado el desarrollo desarrollo de la 
-            ganadería en Cuba, analizaremos cómo esta actividad ha evolucionado y se ha adaptado a los cambios históricos, económicos y sociales. Queremos que descubras cómo ha 
-            evolucionado y ha enfrentado los desafíos de cada época. ¡Adéntrate en este viaje interactivo y descubre la riqueza de la historia ganadera cubana!
-        </p>
-    </div>
-    </div>
-</body>
-        
-    </head>
-    <body>
-       
-        
-       
-    </div>
-    <div id="dataproduct" class="tab-content">
-        <div class="container">
-        <a href="https://data-pecuario.streamlit.app/">
-        <img src="D:\Trabajos\Comunicacion\web\dataproduct.png" alt="Imagen centrada horizontalmente" width="600" height="300">
-    </a>
-        <div class="evento">
-            <h1>La ganadería cubana en datos</h1>
-        <p class="texto"> Nuestro dataproduct ofrece una inmersión profunda en la rica historia y el presente de la ganadería en Cuba. A través de una interfaz 
-            intuitiva, podrás explorar datos históricos y estadísticas actuales sobre la existencia y producción de los distintos tipos de ganado. Todos los datos recopilados 
-            para el análisis fueron extraídos de la Oficina Nacional de Estadísticas e Información (ONEI).
-        </p>
-    </div>
-    </div>
-   
 
+<div id="inicio" class="tab-content">
+    <div class="container">
+        <a href="https://data-pecuario.streamlit.app/">
+        <img src="https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/brand/PNG/Identificador_horizontal.png" alt="DataProduct" width="600" height="300">
+        </a>
+        <div class="evento">
+            <h1 style="font-family: sans-serif;font-size: 38x;font-weight: bold;"><i style="color:rgb(0, 33, 66);">La ganadería cubana en datos</i></h1>
+            <p class="texto"> Basándonos en los datos proporcionados por la Oficina Nacional de Estadísticas e Información <a target="\_blank\" href='https://www.onei.gob.cu/'>ONEI</a>, nuestro principal objetivo es presentar una visión detallada de cómo ha evolucionado la ganadería en Cuba durante el período que abarca desde 1985 hasta 2022. A través del análisis exhaustivo, buscamos comprender y exponer los desafíos que enfrenta actualmente el sector ganadero cubano, como las limitaciones económicas y la alimentación del propio ganado. De esta forma, nuestro estudio se centra en identificar las tendencias más significativas y evaluar el impacto de diferentes variables sobre la producción ganadera.</p>
+        </div>
     </div>
+</div>
+<div id="dataproduct" class="tab-content">
+        <a> A </a>
+
+</div>
+
+
+<div id="timeline" class="tab-content"> 
+    <body>
+        <div class="container">
+            <img src="https://github.com/LFrench03/Ganaderia-en-Cuba/raw/main/Historia/capt.png" alt="Timeline"  width="600" height="300">
+            <div class="evento">
+                <h1>¿Quieres conocer más sobre la historia de la ganadería en Cuba?</h1>
+            <p class="texto"> A través de este Timeline desarrollado en Streamlit podrás explorar los eventos más importantes que han marcado el desarrollo desarrollo de la 
+                ganadería en Cuba, analizaremos cómo esta actividad ha evolucionado y se ha adaptado a los cambios históricos, económicos y sociales. Queremos que descubras cómo ha 
+                evolucionado y ha enfrentado los desafíos de cada época. ¡Adéntrate en este viaje interactivo y descubre la riqueza de la historia ganadera cubana!
+            </p>
+            </div>
+        </div>                 
+    </body>
+</div>
 
     <script>
         function openTab(evt, tabName) {
@@ -71,11 +68,11 @@
         document.getElementsByClassName("tab")[0].click();
     </script>
 
-    <div class="timeline">
-        <div class="event">
-            <h1>¿Quiénes somos?</h1>
-            <p>Un equipo de estudiantes de la carrera de Ciencia de Datos que ha emprendido una investigación sobre uno de los temas más controvertidos en Cuba: la ganadería. Como parte de este proyecto académico, han creado un identificador único llamado DataPecuario. Este identificador funciona como una marca para representar el conjunto resultante de la fusión de todas las partes independientes en las que se divide esta investigación exhaustiva sobre el sector pecuario cubano.
-                </p>
+<div class="timeline">
+    <div class="event">
+        <h1 style="font-family: sans-serif;font-size: 38x;font-weight: bold;"><i style="color:rgb(0, 33, 66);">¿Quiénes somos?</i></h1>
+        <p class="texto">Un equipo de estudiantes de la carrera de Ciencia de Datos que ha emprendido una investigación sobre uno de los temas más controvertidos en Cuba: la ganadería. Como parte de este proyecto académico, han creado un identificador único llamado DataPecuario. Este identificador funciona como una marca para representar el conjunto resultante de la fusión de todas las partes independientes en las que se divide esta investigación exhaustiva sobre el sector pecuario cubano.</p>
     </div>
-</body>
+
+</div>
 </html>
