@@ -69,6 +69,15 @@ header {
     display: flex;
     justify-content: space-around;
 }
+
+.containerleft {
+    display: flex;
+    justify-content:left;
+}
+.containeright {
+    display: flex;
+    justify-content:right;
+}
 .texto {
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold';
     font-size: 17px;
