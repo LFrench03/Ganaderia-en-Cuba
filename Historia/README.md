@@ -1,6 +1,6 @@
 # Aplicación
 ---
-[Ganadería cubana: Su desarrollo y evolución (*Timeline desde antes del triunfo de la revolución*)](https://historia-pecuario.streamlit.app/)
+[Ganadería cubana: Su desarrollo y evolución (*Timeline desde antes del triunfo de la revolución*)](https://historia-pecuaria.streamlit.app/)
 
 ### Dependencias
 ---
