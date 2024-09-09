@@ -3,7 +3,6 @@ Data-Pecuario Website
 ![Web](https://github.com/LFrench03/Ganaderia-en-Cuba/blob/main/brand/PNG/Identificador_principal.png)
 
 ---
-### Repositorio con el resto del proyecto:
+* [Website](https://lfrench03.github.io/)
 ---
-* [Ganaderia-en-Cuba](https://github.com/LFrench03/Ganaderia-en-Cuba.git)
 
