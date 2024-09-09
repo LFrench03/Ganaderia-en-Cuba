@@ -1,4 +1,7 @@
 import json
+'''
+Script para generar la plantilla basica de la disposicion de los eventos de la historia a partir de solamente el title
+'''
 def generate_json(path):
     try:
         with open (path, encoding="utf8") as json_data:

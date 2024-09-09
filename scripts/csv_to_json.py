@@ -1,5 +1,8 @@
 import pandas as pd
 import json
+'''
+Script que se utilizo para convertir los csv en una plantilla estructurada de diccionario (luego de limpiarlos) para luego desde esa estructura inicial ir reestructurando el 'inventraio_ganado.json'
+'''
 orient = ['dict','list','series','split','records','index']# Distintos tipos de orient para la generacion del diccionario 
 def csv_to_json(ruta_csv, ruta_json):
     try:

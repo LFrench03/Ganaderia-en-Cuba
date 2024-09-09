@@ -1,5 +1,7 @@
 import json 
-
+'''
+Script para agregar los valores que se mostrarian en el tooltip del mapa al 'data/geojsons/cuba.geojson'
+'''
 with open("data/geojsons/cuba.geojson") as json_file:
     data = json.load(json_file)
 with open("inventario_ganado.json") as json_file2:
