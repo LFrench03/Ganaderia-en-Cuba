@@ -48,8 +48,9 @@ for year in aves:
         avesNE[year] = round(float(aves[year]) - float(avesE[year]),1)     
             
 #Datos Equido Estatal y No Estatal
-equidoE = data["equido"]["Existencia(Mcabz)"]["Estatal"]["Total"]
-equidoNE = data["equido"]["Existencia(Mcabz)"]["No estatal"]["Total"]
+equido_existencia = data["equido"]["Existencia(Mcabz)"]
+equidoE = equido_existencia["Estatal"]["Total"]
+equidoNE = equido_existencia["No estatal"]["Total"]
 
 #Dataframes Existencia
 ganado_TOTAL = pd.DataFrame({
@@ -185,14 +186,15 @@ with tab1: #Tab de Existencia
 
         with col1:
             #Datos diferentes Tipos de Aves
-            ponedoras = data["aves"]["Existencia(Mcabz)"]["Empresas avicolas estatales"]["Gallinas ponedoras"]
-            reemplazos = data["aves"]["Existencia(Mcabz)"]["Empresas avicolas estatales"]["Reemplazos de gallinas ponedoras"]
-            pollos_ceba = data["aves"]["Existencia(Mcabz)"]["Empresas avicolas estatales"]["Pollos de ceba(Miles de cabezas"]
-            carne = data["aves"]["Existencia(Mcabz)"]["Empresas avicolas estatales"]["De carne"]
-            pon1 = data["aves"]["Existencia(Mcabz)"]["Empresas avicolas estatales"]["De ponedoras"]
-            reemplazos1 = data["aves"]["Existencia(Mcabz)"]["Empresas avicolas estatales"]["Reemplazos"]["De carne"]
-            reemplazos2 = data["aves"]["Existencia(Mcabz)"]["Empresas avicolas estatales"]["Reemplazos"]["De ponedoras"]
-            otras = data["aves"]["Existencia(Mcabz)"]["Empresas avicolas estatales"]["Otras"]     
+            aves_existencia = data["aves"]["Existencia(Mcabz)"]["Empresas avicolas estatales"]
+            ponedoras = aves_existencia["Gallinas ponedoras"]
+            reemplazos = aves_existencia["Reemplazos de gallinas ponedoras"]
+            pollos_ceba = aves_existencia["Pollos de ceba(Miles de cabezas"]
+            carne = aves_existencia["De carne"]
+            pon1 = aves_existencia["De ponedoras"]
+            reemplazos1 = aves_existencia["Reemplazos"]["De carne"]
+            reemplazos2 = aves_existencia["Reemplazos"]["De ponedoras"]
+            otras = aves_existencia["Otras"]     
             
             #DataFrame diferentes Tipos de Aves
             aves_estatales_tipos = pd.DataFrame({
@@ -257,10 +259,11 @@ with tab1: #Tab de Existencia
                             file_name="aves_estatales_por_tipos.csv",
                             mime="text/csv")                 
         #Datos Existencia Ovino y Caprino por separado
-        exist_ovino = data["ovino_caprino"]["Existencia(Mcabz)"]["Total"]["Ovino"]
-        exist_caprino = data["ovino_caprino"]["Existencia(Mcabz)"]["Total"]["Caprino"]
-        exist_ovinoE = data["ovino_caprino"]["Existencia(Mcabz)"]["Estatal"]["Ovino"]
-        exist_caprinoE = data["ovino_caprino"]["Existencia(Mcabz)"]["Estatal"]["Caprino"]
+        ovino = data["ovino_caprino"]["Existencia(Mcabz)"]
+        exist_ovino = ovino["Total"]["Ovino"]
+        exist_caprino = ovino["Total"]["Caprino"]
+        exist_ovinoE = ovino["Estatal"]["Ovino"]
+        exist_caprinoE = ovino["Estatal"]["Caprino"]
             
         #DataFrame Existencia Ovino y Caprino por separado
         exist_OC = pd.DataFrame({    
@@ -320,17 +323,19 @@ with tab1: #Tab de Existencia
                             mime="text/csv")                                     
         
         #Datos tipos de Ganado Vacuno
-        ternerasH = data["vacuno"]["Hembras"]["Terneras"]
-        annojasH = data["vacuno"]["Hembras"]["Añojas"]
-        novillasH = data["vacuno"]["Hembras"]["Novillas"]
-        vacasH = data["vacuno"]["Hembras"]["Vacas"]
-        ternerosM = data["vacuno"]["Machos"]["Terneros"]
-        annojaosM = data["vacuno"]["Machos"]["Añojos"]
-        toretesM = data["vacuno"]["Machos"]["Toretes"]
-        toros_cebaM = data["vacuno"]["Machos"]["Toros de ceba"]
-        bueyesM = data["vacuno"]["Machos"]["Bueyes"]
-        sementalesM = data["vacuno"]["Machos"]["Sementales"]
-        receladoresM = data["vacuno"]["Machos"]["Receladores"]
+        vacas_hembras = data["vacuno"]["Hembras"]
+        vacas_machos = data["vacuno"]["Machos"]
+        ternerasH = vacas_hembras["Terneras"]
+        annojasH = vacas_hembras["Añojas"]
+        novillasH = vacas_hembras["Novillas"]
+        vacasH = vacas_hembras["Vacas"]
+        ternerosM = vacas_machos["Terneros"]
+        annojaosM = vacas_machos["Añojos"]
+        toretesM = vacas_machos["Toretes"]
+        toros_cebaM = vacas_machos["Toros de ceba"]
+        bueyesM = vacas_machos["Bueyes"]
+        sementalesM = vacas_machos["Sementales"]
+        receladoresM = vacas_machos["Receladores"]
 
         #DataFrame Tipos de Ganado Vacuno
         vacasDF = pd.DataFrame({
@@ -424,41 +429,41 @@ with tab1: #Tab de Existencia
 
         col1, col2 = st.columns(2)
         
-        #Datos equido
-        equinoT = data["equido"]["Existencia(Mcabz)"]["Equino"]["Total"]
-        equinoM = data["equido"]["Existencia(Mcabz)"]["Equino"]["machos"]
+        #Datos equido 
+        equinoT = equido_existencia["Equino"]["Total"]
+        equinoM = equido_existencia["Equino"]["machos"]
         equinoH = {}
         for i in equinoT:
             equinoH[i] = round(float(equinoT[i]) - float(equinoM[i]), 1)
-        asnalT = data["equido"]["Existencia(Mcabz)"]["Asnal"]["Total"]
-        asnalM = data["equido"]["Existencia(Mcabz)"]["Asnal"]["machos"]
+        asnalT = equido_existencia["Asnal"]["Total"]
+        asnalM = equido_existencia["Asnal"]["machos"]
         asnalH = {}
         for i in asnalT:
             asnalH[i] = round(float(asnalT[i]) - float(asnalM[i]), 1)
-        mular = data["equido"]["Existencia(Mcabz)"]["Mular"]
+        mular = equido_existencia["Mular"]
             
-        equinoTE = data["equido"]["Existencia(Mcabz)"]["Estatal"]["Equino"]["Total"]
-        equinoME = data["equido"]["Existencia(Mcabz)"]["Estatal"]["Equino"]["machos"]
+        equinoTE = equido_existencia["Estatal"]["Equino"]["Total"]
+        equinoME = equido_existencia["Estatal"]["Equino"]["machos"]
         equinoHE = {}
         for i in equinoT:
             equinoHE[i] = round(float(equinoTE[i]) - float(equinoME[i]), 1)
-        asnalTE = data["equido"]["Existencia(Mcabz)"]["Estatal"]["Asnal"]["Total"]
-        asnalME = data["equido"]["Existencia(Mcabz)"]["Estatal"]["Asnal"]["machos"]
+        asnalTE = equido_existencia["Estatal"]["Asnal"]["Total"]
+        asnalME = equido_existencia["Estatal"]["Asnal"]["machos"]
         asnalHE = {}
         for i in asnalTE:
             asnalHE[i] = round(float(asnalTE[i]) - float(asnalME[i]), 1)
-        mularE = data["equido"]["Existencia(Mcabz)"]["Estatal"]["Mular"]
-        equinoTNE = data["equido"]["Existencia(Mcabz)"]["No estatal"]["Equino"]["Total"]
-        equinoMNE = data["equido"]["Existencia(Mcabz)"]["No estatal"]["Equino"]["machos"]
+        mularE = equido_existencia["Estatal"]["Mular"]
+        equinoTNE = equido_existencia["No estatal"]["Equino"]["Total"]
+        equinoMNE = equido_existencia["No estatal"]["Equino"]["machos"]
         equinoHNE = {}
         for i in equinoT:
             equinoHNE[i] = round(float(equinoTNE[i]) - float(equinoMNE[i]), 1)
-        asnalTNE = data["equido"]["Existencia(Mcabz)"]["No estatal"]["Asnal"]["Total"]
-        asnalMNE = data["equido"]["Existencia(Mcabz)"]["No estatal"]["Asnal"]["machos"]
+        asnalTNE = equido_existencia["No estatal"]["Asnal"]["Total"]
+        asnalMNE = equido_existencia["No estatal"]["Asnal"]["machos"]
         asnalHNE = {}
         for i in asnalTE:
             asnalHNE[i] = round(float(asnalTNE[i]) - float(asnalMNE[i]), 1)
-        mularNE = data["equido"]["Existencia(Mcabz)"]["No estatal"]["Mular"]            
+        mularNE = equido_existencia["No estatal"]["Mular"]            
 
         #Dataframes equido  
         dfT = pd.DataFrame({
@@ -563,13 +568,18 @@ with tab2:
                 opc = st.selectbox("Seleccione un grupo", ["Total", "Estatal", "No Estatal"]) #Selectbox con opciones 
 
                 #Datos Sacrificios Total
-                sacrif_vacunoT = data["vacuno"]["Sacrificios"]["Cabezas(M)"]["Total"]
-                sacrif_porcinoT = data["porcino"]["Entregas a sacrificio"]["Total"]["Cabezas(Mcabz)"]
-                sacrif_ovT = data["ovino_caprino"]["Entregas a sacrificio"]["Cantidad(Mcabz)"]["Total"]
-                sacrif_aves = data["aves"]["Entregas a sacrificio"]["Pollos de ceba entrega a sacrificio"]["Cantidad(Mcabz)"]
+                vacas_sacr = data["vacuno"]["Sacrificios"]
+                porcino_sacr = data["porcino"]["Entregas a sacrificio"]
+                ovino_sacr = data["ovino_caprino"]["Entregas a sacrificio"]
+                aves_sacr = data["aves"]["Entregas a sacrificio"]["Pollos de ceba entrega a sacrificio"]
+
+                sacrif_vacunoT = vacas_sacr["Cabezas(M)"]["Total"]
+                sacrif_porcinoT = porcino_sacr["Total"]["Cabezas(Mcabz)"]
+                sacrif_ovT = ovino_sacr["Cantidad(Mcabz)"]["Total"]
+                sacrif_aves = aves_sacr["Cantidad(Mcabz)"]
 
                 #Datos Sacrificios Ganado Vacuno Estatales
-                sacrif_vacunoE = data["vacuno"]["Sacrificios"]["Cabezas(M)"]["Estatal"]
+                sacrif_vacunoE = vacas_sacr["Cabezas(M)"]["Estatal"]
                 #Datos Sacrificios Ganado Vacuno No estatales
                 sacrif_vacunoNE = {}        
                 for year in sacrif_vacunoT:
@@ -577,7 +587,7 @@ with tab2:
                         sacrif_vacunoNE[year] = round(float(sacrif_vacunoT[year]) - float(sacrif_vacunoE[year]), 1) 
 
                 #Datos Sacrificios Ganado Porcino Estatales
-                sacrif_porcinoE = data["porcino"]["Entregas a sacrificio"]["Estatal"]["Cabezas(Mcabz)"]["Total"]
+                sacrif_porcinoE = porcino_sacr["Estatal"]["Cabezas(Mcabz)"]["Total"]
                 sacrif_porcinoNE = {}
                 #Datos Sacrificios Ganado Porcino No Estatales
                 for year in sacrif_porcinoT:
@@ -585,7 +595,7 @@ with tab2:
                         sacrif_porcinoNE[year] = round(float(sacrif_porcinoT[year]) - float(sacrif_porcinoE[year]),1)
 
                 #Datos Sacrificios Ganado Ovino-Caprino Estatales
-                sacrif_ovE = data["ovino_caprino"]["Entregas a sacrificio"]["Cantidad(Mcabz)"]["Estatal"]
+                sacrif_ovE = ovino_sacr["Cantidad(Mcabz)"]["Estatal"]
                 sacrif_ovNE = {}
                 for year in sacrif_ovT:
                     if sacrif_ovT[year] != sacrif_ovE[year]:
@@ -672,14 +682,14 @@ with tab2:
         with st.container(border=True):
             st.markdown("#### ⚖️ Peso en pie del ganado de tipo productor")
             #Datos peso en pie y promedio
-            pesoenpie_vacuno = data["vacuno"]["Sacrificios"]["Peso en pie(Mt)"]["Total"]
-            pesoenpie_porcino = data["porcino"]["Entregas a sacrificio"]["Total"]["Peso en pie(Mt)"]
-            pesoenpie_aves = data["aves"]["Entregas a sacrificio"]["Pollos de ceba entrega a sacrificio"]["Peso en pie(Mt)"]
-            pesoenpie_ovino_carpino = data["ovino_caprino"]["Entregas a sacrificio"]["Peso en pie(Mt)"]["Total"]
-            pesoprom_vacuno = data["vacuno"]["Sacrificios"]["Peso Promedio(Kg)"]["Total"]
-            pesoprom_porcino = data["porcino"]["Entregas a sacrificio"]["Total"]["Peso promedio(kg)"]
-            pesoprom_aves = data["aves"]["Entregas a sacrificio"]["Pollos de ceba entrega a sacrificio"]["Peso promedio(kg)"]
-            pesoenprom_ovino_carpino = data["ovino_caprino"]["Entregas a sacrificio"]["Peso promedio(kg)"]["Total"]
+            pesoenpie_vacuno = vacas_sacr["Peso en pie(Mt)"]["Total"]
+            pesoenpie_porcino = porcino_sacr["Total"]["Peso en pie(Mt)"]
+            pesoenpie_aves = aves_sacr["Peso en pie(Mt)"]
+            pesoenpie_ovino_carpino = ovino_sacr["Peso en pie(Mt)"]["Total"]
+            pesoprom_vacuno = vacas_sacr["Peso Promedio(Kg)"]["Total"]
+            pesoprom_porcino = porcino_sacr["Total"]["Peso promedio(kg)"]
+            pesoprom_aves = aves_sacr["Peso promedio(kg)"]
+            pesoenprom_ovino_carpino = ovino_sacr["Peso promedio(kg)"]["Total"]
 
             pie = pd.DataFrame({
             "Vacuno": pesoenpie_vacuno,
@@ -757,8 +767,8 @@ with tab2:
 
         with st.container(border=True):
             #Datos Porcino Estatal Entregas de Sacrificio Estatal
-            porcino_estatalT= data['porcino']['Entregas a sacrificio']['Estatal']['Cabezas(Mcabz)']['Total']
-            porcino_estatalCeba = data['porcino']['Entregas a sacrificio']['Estatal']['Cabezas(Mcabz)']['Ceba']
+            porcino_estatalT= porcino_sacr['Estatal']['Cabezas(Mcabz)']['Total']
+            porcino_estatalCeba = porcino_sacr['Estatal']['Cabezas(Mcabz)']['Ceba']
             porcino_estatalResto = {}
             for year in porcino_estatalT:
                 if porcino_estatalT[year] and porcino_estatalCeba[year]:
@@ -792,15 +802,16 @@ with tab2:
 
         with st.container(border=True):
             #Datos Importaciones Carne
-            carneV = data["Importaciones"]["Carne y preparados de carne Valor(MP)"]
-            carnebovinaV = data["Importaciones"]["Carne de ganado bovino congelada deshuesada Valor(MP)"]
-            carnebovinaC = data["Importaciones"]["Carne de ganado bovino congelada deshuesada Cantidad(t)"]
-            carneporcinaV = data["Importaciones"]["Carne de ganado porcino congelada Valor (MP)"]
-            carneporcinaC = data["Importaciones"]["Carne de ganado porcino congelada Cantidad (t)"]
-            carneavesV = data["Importaciones"]["Carne y despojos comestibles de las aves Valor (MP)"]
-            carneavesC = data["Importaciones"]["Carne y despojos comestibles de las aves Cantidad (t)"]
-            carnerestoV = data["Importaciones"]["Carne y despojos de carne preparados o en conserva Valor (MP)"]
-            carnerestoC = data["Importaciones"]["Carne y despojos de carne preparados o en conserva Cantidad (t)"]
+            importaciones = data["Importaciones"]
+            carneV = importaciones["Carne y preparados de carne Valor(MP)"]
+            carnebovinaV = importaciones["Carne de ganado bovino congelada deshuesada Valor(MP)"]
+            carnebovinaC = importaciones["Carne de ganado bovino congelada deshuesada Cantidad(t)"]
+            carneporcinaV = importaciones["Carne de ganado porcino congelada Valor (MP)"]
+            carneporcinaC = importaciones["Carne de ganado porcino congelada Cantidad (t)"]
+            carneavesV = importaciones["Carne y despojos comestibles de las aves Valor (MP)"]
+            carneavesC = importaciones["Carne y despojos comestibles de las aves Cantidad (t)"]
+            carnerestoV = importaciones["Carne y despojos de carne preparados o en conserva Valor (MP)"]
+            carnerestoC = importaciones["Carne y despojos de carne preparados o en conserva Cantidad (t)"]
 
             #DataFrames
             dfV = pd.DataFrame({

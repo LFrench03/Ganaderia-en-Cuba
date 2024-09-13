@@ -811,7 +811,7 @@
       }
     },
     "Indicadores produccion leche": {
-      "Produccion(Miles de litros)": {
+      "Produccion(Miles de toneladas)": {
         "Total": {
           "1989": 1131.3,
           "1990": 1034.4,
@@ -2601,7 +2601,7 @@
       }
     },
     "Produccion de leche": {
-      "Produccion de leche(litros)": {
+      "Produccion de leche(toneladas)": {
         "Total": {
           "1993": 597.4,
           "1994": 461.2,

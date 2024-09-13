@@ -17,9 +17,10 @@ with tab1:
         col1, col2 = st.tabs(["Producción", "Rendimiento"])
         with col1:
             #Datos Leche de Vaca Total
-            produccion_leche_total = data["vacuno"]["Indicadores produccion leche"]["Produccion(Miles de litros)"]["Total"]
-            produccion_leche_estatal = data["vacuno"]["Indicadores produccion leche"]["Produccion(Miles de litros)"]["Estatal"]
-            produccion_leche_NOestatal = data["vacuno"]["Indicadores produccion leche"]["Produccion(Miles de litros)"]["No Estatal"]
+            prod_leche = data["vacuno"]["Indicadores produccion leche"]["Produccion(Miles de toneladas)"]
+            produccion_leche_total = prod_leche["Total"]
+            produccion_leche_estatal = prod_leche["Estatal"]
+            produccion_leche_NOestatal = prod_leche["No Estatal"]
 
             #DataFrame Leche de Vaca Total
             produccionDF = pd.DataFrame({  
@@ -30,8 +31,8 @@ with tab1:
             produccionDF.index.name = "Año"
 
             #Datos Leche de Vaca Total
-            cabra_leche_total = data["ovino_caprino"]["Produccion de leche"]["Produccion de leche(litros)"]["Total"]
-            cabra_estatal = data["ovino_caprino"]["Produccion de leche"]["Produccion de leche(litros)"]["Estatal"]
+            cabra_leche_total = data["ovino_caprino"]["Produccion de leche"]["Produccion de leche(toneladas)"]["Total"]
+            cabra_estatal = data["ovino_caprino"]["Produccion de leche"]["Produccion de leche(toneladas)"]["Estatal"]
             cabra_NOestatal = {}
             for year in cabra_leche_total:
                 if cabra_leche_total[year] and cabra_estatal[year]:
@@ -66,10 +67,11 @@ with tab1:
             if opcion == "Leche de Cabra":
                 mostrar(fig2)
         with col2:        
-            #Vacas de ordeño    
-            vacas_ordenno_E = data["vacuno"]["Indicadores produccion leche"]["Existencia promedio de vacas de ordeño(Mcabz)"]["Estatal"]
-            vacas_ordenno_NE = data["vacuno"]["Indicadores produccion leche"]["Existencia promedio de vacas de ordeño(Mcabz)"]["No Estatal"]
-            vacas_ordenno_T = data["vacuno"]["Indicadores produccion leche"]["Existencia promedio de vacas de ordeño(Mcabz)"]["Total"]
+            #Vacas de ordeño  
+            vacas_ordenno = data["vacuno"]["Indicadores produccion leche"]["Existencia promedio de vacas de ordeño(Mcabz)"]  
+            vacas_ordenno_E = vacas_ordenno["Estatal"]
+            vacas_ordenno_NE = vacas_ordenno["No Estatal"]
+            vacas_ordenno_T = vacas_ordenno["Total"]
             vacas_ordennoDF = pd.DataFrame({    
                 "No Estatal": vacas_ordenno_NE,
                 "Estatal": vacas_ordenno_E,    
@@ -188,14 +190,15 @@ with tab1:
                                 mime="text/csv")              
     with st.container(border=True):
         #Datos Importaciones Carne
-        lechecondV = data["Importaciones"]["Leche condensada Valor (MP)"]
-        lechecondC = data["Importaciones"]["Leche condensada Cantidad (t)"]
-        lecheenpolvoV = data["Importaciones"]["Leche en polvo Valor (MP)"]
-        lecheenpolvoC = data["Importaciones"]["Leche en polvo Cantidad (t)"]
-        mantequillaV = data["Importaciones"]["Mantequilla Valor (MP)"]
-        mantequillaC = data["Importaciones"]["Mantequilla Cantidad (t)"]
-        quesoV = data["Importaciones"]["Queso y cuajada Valor (MP)"]
-        quesoC = data["Importaciones"]["Queso y cuajada Cantidad (t)"]
+        importaciones = data["Importaciones"]
+        lechecondV = importaciones["Leche condensada Valor (MP)"]
+        lechecondC = importaciones["Leche condensada Cantidad (t)"]
+        lecheenpolvoV = importaciones["Leche en polvo Valor (MP)"]
+        lecheenpolvoC = importaciones["Leche en polvo Cantidad (t)"]
+        mantequillaV = importaciones["Mantequilla Valor (MP)"]
+        mantequillaC = importaciones["Mantequilla Cantidad (t)"]
+        quesoV = importaciones["Queso y cuajada Valor (MP)"]
+        quesoC = importaciones["Queso y cuajada Cantidad (t)"]
 
         #DataFrames
         dfV = pd.DataFrame({
@@ -321,10 +324,11 @@ with tab2:
 
 with tab3:
     with st.container(border=True):
-        pienso_por_ave = data["aves"]["Indicadores seleccionados de gallinas ponedoras"]["Pienso consumido por ave(kg)"]
-        pienso_to_huevo = data["aves"]["Indicadores seleccionados de gallinas ponedoras"]["Conversion de pienso en huevo(g)"]
-        exist_prom= data["aves"]["Indicadores seleccionados de gallinas ponedoras"]["Existencia promedio(Mcabz)"]
-        prod_huevo= data["aves"]["Indicadores seleccionados de gallinas ponedoras"]["Produccion de huevos(MMU)"]
+        gallinas_ponedoras = data["aves"]["Indicadores seleccionados de gallinas ponedoras"]
+        pienso_por_ave = gallinas_ponedoras["Pienso consumido por ave(kg)"]
+        pienso_to_huevo = gallinas_ponedoras["Conversion de pienso en huevo(g)"]
+        exist_prom= gallinas_ponedoras["Existencia promedio(Mcabz)"]
+        prod_huevo= gallinas_ponedoras["Produccion de huevos(MMU)"]
         df1 = pd.DataFrame({"Pienso consumido por Ave (Kg)":pienso_por_ave,
                             "Existencia Promedio (MCabz)": exist_prom})
         df2 = pd.DataFrame({"Pienso en Huevo (g)":pienso_to_huevo,
@@ -385,16 +389,16 @@ with tab3:
         
     with st.container(border=True):
             #Datos Importaciones Carne
-            piensoV = data["Importaciones"]["Pienso para animales (excepto cereales sin moler) Valor (MP)"]
-            tortasC = data["Importaciones"]["Tortas de soja Cantidad (t)"]
-            tortasV = data["Importaciones"]["Tortas de soja Valor (MP)"]
-            harina_piensoC = data["Importaciones"]["Harina animal para pienso Cantidad (t)"]
-            harina_piensoV = data["Importaciones"]["Harina animal para pienso Valor (MP)"]
-            preparadosC = data["Importaciones"]["Preparados del tipo utilizado para la alimentacion de animales Cantidad (t)"]
-            preparadosV = data["Importaciones"]["Preparados del tipo utilizado para la alimentacion de animales Valor (MP)"]
-            diversosV = data["Importaciones"]["Productos y preparados comestibles diversos Valor (MP)"]
-            otrosC = data["Importaciones"]["Otros preparados alimenticios Cantidad (t)"]
-            otrosV = data["Importaciones"]["Otros preparados alimenticios Valor (MP)"]
+            piensoV = importaciones["Pienso para animales (excepto cereales sin moler) Valor (MP)"]
+            tortasC = importaciones["Tortas de soja Cantidad (t)"]
+            tortasV = importaciones["Tortas de soja Valor (MP)"]
+            harina_piensoC = importaciones["Harina animal para pienso Cantidad (t)"]
+            harina_piensoV = importaciones["Harina animal para pienso Valor (MP)"]
+            preparadosC = importaciones["Preparados del tipo utilizado para la alimentacion de animales Cantidad (t)"]
+            preparadosV = importaciones["Preparados del tipo utilizado para la alimentacion de animales Valor (MP)"]
+            diversosV = importaciones["Productos y preparados comestibles diversos Valor (MP)"]
+            otrosC = importaciones["Otros preparados alimenticios Cantidad (t)"]
+            otrosV = importaciones["Otros preparados alimenticios Valor (MP)"]
 
             #DataFrames
             dfV = pd.DataFrame({

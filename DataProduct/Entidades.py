@@ -41,66 +41,6 @@ for df, year in list(zip(l1,[str(x) for x in range(2012, 2018)])):
     for id,prov in list(zip(ids, lista_prov)):
         if data["Instituciones"]["Por Provincias"][year][prov] != "Cuba":
             df[id] = data["Instituciones"]["Por Provincias"][year][prov]["Total"]
-dt2012 = pd.DataFrame({"Val":dt2012})
-dt2012["ID"] = dt2012.index
-dt2012["index"] = [x for x in range(16)]
-dt2012.set_index("index", inplace=True)
-dt2012.index.name=None
-dt2013 = pd.DataFrame({"Val":dt2013})
-dt2013["ID"] = dt2013.index
-dt2013["index"] = [x for x in range(16)]
-dt2013.set_index("index", inplace=True)
-dt2013.index.name=None
-dt2014 = pd.DataFrame({"Val":dt2014})
-dt2014["ID"] = dt2014.index
-dt2014["index"] = [x for x in range(16)]
-dt2014.set_index("index", inplace=True)
-dt2014.index.name=None
-dt2015 = pd.DataFrame({"Val":dt2015})
-dt2015["ID"] = dt2015.index
-dt2015["index"] = [x for x in range(16)]
-dt2015.set_index("index", inplace=True)
-dt2015.index.name=None
-dt2016 = pd.DataFrame({"Val":dt2016})
-dt2016["ID"] = dt2016.index
-dt2016["index"] = [x for x in range(16)]
-dt2016.set_index("index", inplace=True)
-dt2016.index.name=None
-dt2017 = pd.DataFrame({"Val":dt2017})
-dt2017["ID"] = dt2017.index
-dt2017["index"] = [x for x in range(16)]
-dt2017.set_index("index", inplace=True)
-dt2017.index.name=None
-dp2012 = pd.DataFrame({"Val":dp2012})
-dp2012["ID"] = dp2012.index
-dp2012["index"] = [x for x in range(16)]
-dp2012.set_index("index", inplace=True)
-dp2012.index.name=None
-dp2013 = pd.DataFrame({"Val":dp2013})
-dp2013["ID"] = dp2013.index
-dp2013["index"] = [x for x in range(16)]
-dp2013.set_index("index", inplace=True)
-dp2013.index.name=None
-dp2014 = pd.DataFrame({"Val":dp2014})
-dp2014["ID"] = dp2014.index
-dp2014["index"] = [x for x in range(16)]
-dp2014.set_index("index", inplace=True)
-dp2014.index.name=None
-dp2015 = pd.DataFrame({"Val":dp2015})
-dp2015["ID"] = dp2015.index
-dp2015["index"] = [x for x in range(16)]
-dp2015.set_index("index", inplace=True)
-dp2015.index.name=None
-dp2016 = pd.DataFrame({"Val":dp2016})
-dp2016["ID"] = dp2016.index
-dp2016["index"] = [x for x in range(16)]
-dp2016.set_index("index", inplace=True)
-dp2016.index.name=None
-dp2017 = pd.DataFrame({"Val":dp2017})
-dp2017["ID"] = dp2017.index
-dp2017["index"] = [x for x in range(16)]
-dp2017.set_index("index", inplace=True)
-dp2017.index.name=None
 popover = st.popover("Filtrado de datos")
 choice = popover.selectbox("Seleccione",["Entidades por provincia", "Tenientes de tierras por provincia"])
 
@@ -115,6 +55,11 @@ if choice == "Entidades por provincia":
             #Instanciando Mapa
             m = Map(location=[21.3, -79.6], tiles="CartoDB positron", zoom_start=7, control_scale=True, no_touch=True)
             province_data = l1[years.index(year)]
+            province_data = pd.DataFrame({"Val":province_data})
+            province_data["ID"] = province_data.index
+            province_data["index"] = [x for x in range(16)]
+            province_data.set_index("index", inplace=True)
+            province_data.index.name=None
             exc = pd.concat([province_data.iloc[:8,:], province_data.iloc[9:,:]], ignore_index=True, sort=False)
             #Densidades
             Choropleth(
