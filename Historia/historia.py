@@ -2,7 +2,7 @@ import streamlit as st
 from streamlit_timeline import timeline
 
 st.logo(image="brand/PNG/Identificador_horizontal.png")
-st.set_page_config(page_title="DataPecuario Timeline", layout="wide")
+st.set_page_config(page_title="DataPecuario Timeline", page_icon='Historia/Identificador.ico', layout="wide")
 
 with open("Historia/events.json", "r") as f:
     data = f.read()
